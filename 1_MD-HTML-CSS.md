@@ -8,7 +8,7 @@
 
 #### Lees je in in de geschiedenis van het internet & internetkunst of net.art.
 1. https://www.internethalloffame.org/internet-history/timeline
-2. or https://www.webfx.com/blog/web-design/the-history-of-the-internet-in-a-nutshell/
+2. https://www.webfx.com/blog/web-design/the-history-of-the-internet-in-a-nutshell/
 3. https://anthology.rhizome.org/
 4. https://www.artspace.com/magazine/art_101/art-tech/90s-net-art-52704
 
@@ -22,11 +22,12 @@ Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo ku
 
 https://nl.wikipedia.org/wiki/Markdown
 https://en.wikipedia.org/wiki/Markdown
-*2 namen het checken waard [Aaron Swartz](https://www.youtube.com/watch?v=2M0GQww1GoY) & Lawrence Lessig https://en.wikipedia.org/wiki/Lawrence_Lessig
+
+zie ook [Aaron Swartz](https://www.youtube.com/watch?v=2M0GQww1GoY) & [Lawrence Lessig](https://en.wikipedia.org/wiki/Lawrence_Lessig)
 
 ### Markdown schrijven
 #### kennismaking met Atom *A hackable text editor for the 21st Century*
-preferences, packages (core & community), git/github integration, ...
+preferences, commands, packages (core & community), markdown preview, git/github integration, ...
 
 ### tutorials
 1. https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
