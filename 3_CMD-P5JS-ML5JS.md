@@ -2,7 +2,7 @@
 # PROCESSING
 ### Huiswerk (vooraf)
 #### Installeer
-
+1. Installeer Firefox: https://www.mozilla.org/nl/firefox/new/
 #### Volg
 
 #### Bekijk
