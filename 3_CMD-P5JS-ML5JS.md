@@ -14,8 +14,8 @@
 #### Volg
 
 #### Bekijk deze online tutorials vooraf
-1. https://www.youtube.com/watch?v=8j0UDiN7my4
-2. https://www.youtube.com/watch?v=jmznx0Q1fP0
+1. p5.js: https://www.youtube.com/watch?v=8j0UDiN7my4
+2. ml5.js: https://www.youtube.com/watch?v=jmznx0Q1fP0
 
 #### Lees
 Bekijk deze lijst met interessante makers: https://github.com/theBlackBoxSociety/interestingPeople
