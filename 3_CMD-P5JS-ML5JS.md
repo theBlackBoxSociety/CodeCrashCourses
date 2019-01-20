@@ -4,6 +4,11 @@
 #### Installeer
 1. Installeer Firefox: https://www.mozilla.org/nl/firefox/new/
 2. [Atom](https://atom.io/) code editor
+3. Indien de code niet werkt dan kan je een local server opzetten op de volgende manier:
+  - open command line, command prompt, terminal
+  - type in: python -m SimpleHTTPServer
+  - soms is het nodig om de python versie aan te duiden: python2 -m SimpleHTTPServer OF python3 -m SimpleHTTPServer
+  - type localhost:8000 in je browser search bar
 
 #### Volg
 
