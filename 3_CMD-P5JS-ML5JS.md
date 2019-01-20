@@ -1,5 +1,5 @@
 *---[ A crashcourse in Code, prt 2 ]---*
-# PROCESSING
+# p5.js & ml5.js
 ### Huiswerk (vooraf)
 #### Installeer
 1. Installeer Firefox: https://www.mozilla.org/nl/firefox/new/
