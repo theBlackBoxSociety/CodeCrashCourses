@@ -12,8 +12,9 @@
 
 #### Volg
 
-#### Bekijk deze online tutorial vooraf
+#### Bekijk deze online tutorials vooraf
 1. https://www.youtube.com/watch?v=8j0UDiN7my4
+2. https://www.youtube.com/watch?v=jmznx0Q1fP0
 
 #### Lees
 Bekijk deze lijst met interessante makers: https://github.com/theBlackBoxSociety/interestingPeople
