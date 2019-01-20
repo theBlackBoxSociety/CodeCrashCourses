@@ -9,6 +9,7 @@
   - type in: python -m SimpleHTTPServer
   - soms is het nodig om de python versie aan te duiden: python2 -m SimpleHTTPServer OF python3 -m SimpleHTTPServer
   - type localhost:8000 in je browser search bar
+  - indien het nog niet werkt, druk op f12 -> venster opent met foutmeldingen in console
 
 #### Volg
 
