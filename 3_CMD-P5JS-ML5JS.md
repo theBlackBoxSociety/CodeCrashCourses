@@ -3,6 +3,8 @@
 ### Huiswerk (vooraf)
 #### Installeer
 1. Installeer Firefox: https://www.mozilla.org/nl/firefox/new/
+2. [Atom](https://atom.io/) code editor
+
 #### Volg
 
 #### Bekijk
