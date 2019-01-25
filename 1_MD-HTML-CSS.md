@@ -47,10 +47,14 @@ kennis maken met de UI, preferences, commands, packages (core & community), mark
 3. https://guides.github.com/features/mastering-markdown/  
 
 ## HTML
-https://github.com/CoderDojoSV/beginner-web
+Hypertext Markup Language (HTML) is de standaard opmaaktaal voor het maken van webpagina's en webapps. Met Cascading Style Sheets (CSS) en JavaScript vormt het een drieluik van basistechnologieën voor het World Wide Web.
 
 ## CSS
-https://github.com/CoderDojoSV/beginner-web
+Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, ...) en plaatsing van een HTML-document beschrijft. 
+
+### 2 keuzes voor tutorials die HTML & CSS combineren
+1. https://github.com/theBlackBoxSociety/html-css-one-page
+2. https://github.com/CoderDojoSV/beginner-web
 
 ## FTP / SFTP
 (S)FTP staat voor (Secure) File Transfer Protocol. FTP is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.    
