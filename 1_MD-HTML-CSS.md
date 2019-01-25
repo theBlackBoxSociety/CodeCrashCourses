@@ -1,6 +1,5 @@
 *A :collision: crashcourse in Code, prt1*
 # Markdown, HTML, CSS
-----
 ### Huiswerk (vooraf)
 #### Installeer deze programma's op je laptop:
 1. [Google Chrome](http://www.google.com/chrome)
@@ -18,7 +17,6 @@ Wij voorzien [webhosting](https://nl.wikipedia.org/wiki/Webhosting) op [kaskproj
 Bedenk een project dat je [op 4à8u](http://fffff.at/speed-project/) kan uitwerken binnen het thema en met de aangeleerde tools.
 Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo kunnen we dit bekijken en eventueel voorbereiden zodat we jullie gerichter kunnen begeleiden.
 
-----
 ## MARKDOWN
 
 ### Markdown. Wat & Waarom!
@@ -47,16 +45,11 @@ kennis maken met de UI, preferences, commands, packages (core & community), mark
 2. https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 3. https://guides.github.com/features/mastering-markdown/  
 
-----
-
 ## HTML
 https://github.com/CoderDojoSV/beginner-web
 
-----
 ## CSS
 https://github.com/CoderDojoSV/beginner-web
 
-----
 ## FTP
-----
 *-----fin-----*
