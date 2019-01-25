@@ -8,4 +8,4 @@ dates | topic | tutors
 19 & 26/02  | [Processing](2_PROCESSING.md) | Jerry & Hendrik
 05 & 12/03 | [Commandline, p5js en mj5js](3_CMD-P5JS-ML5JS.md) | Jerry
 26/03 & 02/04 | [Electronics & Arduino](4_ARDUINO.md) | Hendrik
-23 & 30/04 | [Python](5_Pythin.md) | Jerry
+23 & 30/04 | [Python](5_Python.md) | Jerry
