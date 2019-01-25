@@ -54,8 +54,9 @@ https://github.com/CoderDojoSV/beginner-web
 ## FTP / SFTP
 (S)FTP staat voor (Secure) File Transfer Protocol. Het is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.    
 Wij maken gemakshalve gebruik van een FTP-client met een UI (User Interface) waardoor we drag&drop-gewijs bestanden kunnen kopieren. Je kan ook FTP-en vanuit commandline (in de terminal), in een browservenster, maar elk OS (Operating System) heeft ook FTP-software ingebouwd.     
-FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzonderingen: bijv. `ftp.fakesite.org:21`. `ftp.fakesite.org` is het adres en `21` is de gebruikte poort. Beiden zijn nodig bij het verbinden met de FTP-server. Vaak is er ook een gebruikersnaam en paswoord vereist. Dat schrijf je dan zo `username@ftp.fakesite.org/` en `username:password@ftp.fakesite.org/`.    
-filezilla voorbeeld. Lees zeker eens deze "FTP for Beginners" post <sup>[3](#myfootnote3)</sup> als je info wilt.
+FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzonderingen: bijv. `ftp.fakesite.org:21`. `ftp.fakesite.org` is het adres en `21` is de gebruikte poort. Beiden zijn nodig bij het verbinden met de FTP-server. Vaak is er ook een gebruikersnaam en paswoord vereist. Dat schrijf je dan zo `username@ftp.fakesite.org/` en `username:password@ftp.fakesite.org/`.
+
+Lees zeker eens deze "FTP for Beginners" post <sup>[3](#myfootnote3)</sup> als je info wilt.
 
 De FileZilla ziet dit er zo uit. ![UI FileZille](images/FZ-mk.png) 
 
