@@ -4,7 +4,7 @@
 #### Installeer deze programma's op je laptop:
 1. [Google Chrome](http://www.google.com/chrome)
 2. [Atom](https://atom.io/) code editor
-3. [FireZilla](https://filezilla-project.org/) FTP client  
+3. [FireZilla](https://filezilla-project.org/) of [CyberDuck](https://cyberduck.io/) als FTP client  
 Wij voorzien [webhosting](https://nl.wikipedia.org/wiki/Webhosting) op [kaskprojecten.be](http://www.kaskprojecten.be/) of [mediakunst.be](https://mediakunst.be/)
 
 #### Lees je in in de geschiedenis van het internet & internetkunst of net.art.
@@ -51,5 +51,14 @@ https://github.com/CoderDojoSV/beginner-web
 ## CSS
 https://github.com/CoderDojoSV/beginner-web
 
-## FTP
+## FTP / SFTP
+(S)FTP staat voor (Secure) File Transfer Protocol en is een verbindingsmethode die is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.    
+Wij maken gemakshalve gebruik van een FTP-client met een UI (User Interface) waardoor je drag&drop-gewijs bestanden kan kopieren. Je kan ook FTP-en vanuit commandline (in de terminal), in een browservenster, maar elk OS (Operating System) heeft ook FTP-software ingebouwd.     
+FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzonderingen: bijvoorbeeld `ftp.fakesite.org:21`. Het adres is `ftp.fakesite.org` en `21` is de gebruikte poort. Beiden zijn nodig bij het verbinden met de FTP-server. Vaak is er ook een gebruikersnaam en paswoord vereist. Dat schrijf je dan zo `username@ftp.fakesite.org/` en `username:password@ftp.fakesite.org/`.    
+filezilla voorbeeld.
+![UI FileZille](images/FZ-mk.png) 
+
+Zie ook https://www.wired.com/2010/02/ftp_for_beginners/
+
+
 *-----fin-----*
