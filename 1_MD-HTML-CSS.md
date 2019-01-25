@@ -25,7 +25,8 @@ Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo ku
 [Markdown](https://en.wikipedia.org/wiki/Markdown)<sup>[1](#myfootnote1)</sup> is een eenvoudige manier om opmaak toe te voegen aan tekst, zoals titels, nadruk in vet of cursief, lijsten maken, etc. Het is ontworpen als een eenvoudig alternatief voor HTML met leesbaarheid indachtig. Markdown wordt vaak gebruikt om readme-bestanden te formatteren, om berichten op online discussiefora te schrijven en om rich-text te maken met behulp van een eenvoudige teksteditor maar je kan er ook een eenvoudige blog of site<sup>[2](#myfootnote2)</sup> mee maken.
 
 Voor de opmaak gebruikt Markdown interpunctie en tekens waarmee je al vertrouwd bent. Enkele voorbeelden.  
-Voor titels of koppen, gebruikt je hashtags. Dus, `# KOP 1` is een grote kop. `## KOP 1.1`zou wat kleiner zijn, `### KOP 1.1.a` zou nog kleiner zijn.
+Voor titels of koppen, gebruikt je hashtags. Dus, `# KOP 1` is een grote kop. `## KOP 1.1` zou wat kleiner zijn, `### KOP 1.1.a` zou nog kleiner zijn.
+
 Wil je een lijst maken? Typ gewoon een `-, `+` of `*` voor een item en de lijst wordt automatisch aangemaakt.  
 Om de nadruk te leggen, kan je een sterretje of asterisk (*echt?*) gebruiken voor cursief, of twee sterretjes voor vet (**echt!**).
 
