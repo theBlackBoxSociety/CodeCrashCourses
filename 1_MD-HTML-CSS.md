@@ -5,6 +5,7 @@
 1. [Google Chrome](http://www.google.com/chrome)
 2. [Atom](https://atom.io/) code editor
 3. [FireZilla](https://filezilla-project.org/) of [CyberDuck](https://cyberduck.io/) als FTP client  
+
 Wij voorzien [webhosting](https://nl.wikipedia.org/wiki/Webhosting) op [kaskprojecten.be](http://www.kaskprojecten.be/) of [mediakunst.be](https://mediakunst.be/)
 
 #### Lees je in in de geschiedenis van het internet & internetkunst of net.art.
@@ -52,13 +53,14 @@ https://github.com/CoderDojoSV/beginner-web
 https://github.com/CoderDojoSV/beginner-web
 
 ## FTP / SFTP
-(S)FTP staat voor (Secure) File Transfer Protocol. Het is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.    
+(S)FTP staat voor (Secure) File Transfer Protocol. FTP is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.    
 Wij maken gemakshalve gebruik van een FTP-client met een UI (User Interface) waardoor we drag&drop-gewijs bestanden kunnen kopieren. Je kan ook FTP-en vanuit commandline (in de terminal), in een browservenster, maar elk OS (Operating System) heeft ook FTP-software ingebouwd.     
 FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzonderingen: bijv. `ftp.fakesite.org:21`. `ftp.fakesite.org` is het adres en `21` is de gebruikte poort. Beiden zijn nodig bij het verbinden met de FTP-server. Vaak is er ook een gebruikersnaam en paswoord vereist. Dat schrijf je dan zo `username@ftp.fakesite.org/` en `username:password@ftp.fakesite.org/`.
 
-Lees zeker eens deze "FTP for Beginners" post <sup>[3](#myfootnote3)</sup> als je info wilt.
+Lees zeker eens deze "FTP for Beginners" post <sup>[3](#myfootnote3)</sup> als je info wilt en/of volg deze [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29).
 
-De FileZilla ziet dit er zo uit. ![UI FileZille](images/FZ-mk.png) 
+De FileZilla User Interface 
+[UI FileZille](images/FZ-mk.png) 
 
 <a name="myfootnote3">3</a>: https://www.wired.com/2010/02/ftp_for_beginners/
 
