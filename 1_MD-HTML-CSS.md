@@ -27,7 +27,7 @@ Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo ku
 Voor de opmaak gebruikt Markdown interpunctie en tekens waarmee je al vertrouwd bent. Enkele voorbeelden.  
 Voor titels of koppen, gebruikt je hashtags. Dus, `# KOP 1` is een grote kop. `## KOP 1.1` zou wat kleiner zijn, `### KOP 1.1.a` zou nog kleiner zijn.
 
-Wil je een lijst maken? Typ gewoon een `-`, `+` of `*` voor een item en de lijst wordt automatisch aangemaakt.    
+Wil je een lijst maken? Typ gewoon een `-`, `+`of `*`voor een item en de lijst wordt automatisch aangemaakt.    
 Om de nadruk te leggen, kan je een sterretje of asterisk (*echt?*) gebruiken voor cursief, of twee sterretjes voor vet (**echt!**).
 
 Alle andere syntax in Markdown is vergelijkbaar. Het lijkt in eerste instantie een beetje ingewikkeld, maar met een korte introductie en cheatcheet bij de hand ben je er zo mee weg.
