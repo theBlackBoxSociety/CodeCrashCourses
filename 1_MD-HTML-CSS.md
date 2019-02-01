@@ -1,5 +1,5 @@
 *A :collision: crashcourse in Code, prt1*
-# Markdown, HTML, CSS
+# :spiderweb: Markdown, HTML, CSS
 ### Huiswerk (vooraf)
 #### Installeer deze programma's op je laptop:
 1. [Google Chrome](http://www.google.com/chrome)
@@ -40,11 +40,9 @@ Alle andere syntax in Markdown is vergelijkbaar. Het lijkt in eerste instantie e
 #### introducing Atom *A hackable text editor for the 21st Century*
 kennis maken met de UI, preferences, commands, packages (core & community), markdown preview, git/github integration, ...
 
-#### 3 tutorials
-- [ ] kiezen met welke je wilt werken
-1. https://github.com/tchapi/markdown-cheatsheet
-2. https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-3. https://guides.github.com/features/mastering-markdown/  
+#### tutorials
+1. https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+2. https://guides.github.com/features/mastering-markdown/  
 
 ## HTML
 Hypertext Markup Language (HTML) is de standaard opmaaktaal voor het maken van webpagina's en webapps. Met Cascading Style Sheets (CSS) en JavaScript vormt het een drieluik van basistechnologieën voor het World Wide Web.
