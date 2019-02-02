@@ -41,4 +41,5 @@ mkdir PLUS DIRECTORY, MAAK EEN DIRECTORY AAN <br />
 whoami WIE BEN IK <br />
 ifconfig NETWERK <br />
 iwconfig DRAADLOOS NETWERK <br />
+ctrl + c OF ctrl + d EXIT EEN PROCES <br />
 
