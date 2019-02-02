@@ -1,5 +1,5 @@
 *A :collision: crashcourse in Code, prt1*
-# :spiderweb: Markdown, HTML, CSS
+# Markdown, HTML, CSS
 ### Huiswerk (vooraf)
 #### Installeer deze programma's op je laptop:
 1. [Google Chrome](http://www.google.com/chrome)
@@ -53,6 +53,8 @@ Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, .
 ### 2 keuzes voor tutorials die HTML & CSS combineren
 1. https://github.com/theBlackBoxSociety/html-css-one-page
 2. https://github.com/CoderDojoSV/beginner-web
+
+### 
 
 ## FTP / SFTP
 (S)FTP staat voor (Secure) File Transfer Protocol. FTP is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.    
