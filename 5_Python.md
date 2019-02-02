@@ -9,6 +9,7 @@ We werken tijdens deze cursus met Raspberry Pi 3 maar indien je toch op je op je
 #### Volg
 
 #### Bekijk deze online tutorials vooraf
+1. Python intro: https://www.youtube.com/watch?v=Crsp_He70no
 
 #### Lees
 ### Huiswerk (achteraf)
