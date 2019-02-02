@@ -31,4 +31,14 @@ https://www.learnenough.com/command-line-tutorial/
 https://github.com/jlevy/the-art-of-command-line
 
 
-##
+## Bruikbare command lines
+cd DIRECTORY (of sleep map in je terminal venster)
+ls BEKIJK MAPPEN VAN DIRECTORY WAARIN JE ZIT
+pwd WAAR BEN IK
+sudo su GA IN SUPER USER MODE
+su USERNAME GA UIT SUDO MODE
+mkdir PLUS DIRECTORY, MAAK EEN DIRECTORY AAN
+whoami WIE BEN IK
+ifconfig NETWERK
+iwconfig DRAADLOOS NETWERK
+
