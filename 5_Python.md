@@ -2,12 +2,14 @@
 # PYTHON
 ### Huiswerk (vooraf)
 #### Installeer
-1. Installeer ...
-2. 
+We werken tijdens deze cursus met Raspberry Pi 3 maar indien je toch op je op je laptop wil meedoen:
+  1. Installeer Python 2 & Python 3 op je laptop: https://www.python.org/downloads/release/python-2712/ &     https://www.python.org/downloads/release/python-360/
+  2. Installeer Idle, een omgeving waarin je code kunt schrijven en uitvoeren: https://www.poftut.com/download-install-and-use-python-idle-editor/
 
 #### Volg
 
 #### Bekijk deze online tutorials vooraf
+1. Python intro: https://www.youtube.com/watch?v=Crsp_He70no
 
 #### Lees
 ### Huiswerk (achteraf)
