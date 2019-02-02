@@ -32,7 +32,7 @@ https://github.com/jlevy/the-art-of-command-line
 
 
 ## Bruikbare command lines
-cd DIRECTORY (of sleep map in je terminal venster)
+cd DIRECTORY (of sleep map in je terminal venster) <br />
 ls BEKIJK MAPPEN VAN DIRECTORY WAARIN JE ZIT <br />
 pwd WAAR BEN IK <br />
 sudo su GA IN SUPER USER MODE <br />
