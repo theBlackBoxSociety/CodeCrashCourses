@@ -33,12 +33,12 @@ https://github.com/jlevy/the-art-of-command-line
 
 ## Bruikbare command lines
 cd DIRECTORY (of sleep map in je terminal venster)
-ls BEKIJK MAPPEN VAN DIRECTORY WAARIN JE ZIT
-pwd WAAR BEN IK
-sudo su GA IN SUPER USER MODE
-su USERNAME GA UIT SUDO MODE
-mkdir PLUS DIRECTORY, MAAK EEN DIRECTORY AAN
-whoami WIE BEN IK
-ifconfig NETWERK
-iwconfig DRAADLOOS NETWERK
+ls BEKIJK MAPPEN VAN DIRECTORY WAARIN JE ZIT <br />
+pwd WAAR BEN IK <br />
+sudo su GA IN SUPER USER MODE <br />
+su USERNAME GA UIT SUDO MODE <br />
+mkdir PLUS DIRECTORY, MAAK EEN DIRECTORY AAN <br />
+whoami WIE BEN IK <br />
+ifconfig NETWERK <br />
+iwconfig DRAADLOOS NETWERK <br />
 
