@@ -36,7 +36,7 @@ cd DIRECTORY (of sleep map in je terminal venster) <br />
 ls BEKIJK MAPPEN VAN DIRECTORY WAARIN JE ZIT <br />
 pwd WAAR BEN IK <br />
 sudo su GA IN SUPER USER MODE <br />
-su USERNAME GA UIT SUDO MODE <br />
+su PLUS JE USERNAME, GA UIT SUDO MODE <br />
 mkdir PLUS DIRECTORY, MAAK EEN DIRECTORY AAN <br />
 whoami WIE BEN IK <br />
 ifconfig NETWERK <br />
