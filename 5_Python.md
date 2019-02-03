@@ -10,6 +10,7 @@ We werken tijdens deze cursus met Raspberry Pi 3 maar indien je toch op je op je
 
 #### Bekijk deze online tutorials vooraf
 1. Python intro: https://www.youtube.com/watch?v=Crsp_He70no
+2. Hier vind je een lijst met Python scripts: https://github.com/theBlackBoxSociety/Source-Code-from-Tutorials/tree/master/Python
 
 #### Lees
 ### Huiswerk (achteraf)
