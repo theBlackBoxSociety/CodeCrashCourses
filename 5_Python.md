@@ -13,7 +13,7 @@ Python voor rpi: https://www.raspberrypi.org/documentation/usage/python/
 #### Bekijk deze online tutorials vooraf
 1. Python intro: https://www.youtube.com/watch?v=Crsp_He70no
 2. Hier vind je een lijst met Python scripts: https://github.com/theBlackBoxSociety/Source-Code-from-Tutorials/tree/master/Python
-3. Inspiratie: 
+##### Inspiratie: 
 - https://www.kali.org/ 
 - https://pythontips.com/2013/07/30/20-python-libraries-you-cant-live-without/ 
 - https://github.com/kylemcdonald/FreeWifi
