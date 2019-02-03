@@ -18,6 +18,7 @@ Python voor rpi: https://www.raspberrypi.org/documentation/usage/python/
 - https://pythontips.com/2013/07/30/20-python-libraries-you-cant-live-without/ 
 - https://github.com/kylemcdonald/FreeWifi
 - CREEPY, https://www.geocreepy.com/
+- 43 Dodgy Statements on Computer Art, https://www.mail-archive.com/netbehaviour@netbehaviour.org/msg11371.html
 #### Lees
 ### Huiswerk (achteraf)
 Bedenk een project dat je op 4à8u kan uitwerken binnen het thema en met de aangeleerde tools. Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo kunnen we dit bekijken en eventueel voorbereiden zodat we jullie gerichter kunnen begeleiden.
