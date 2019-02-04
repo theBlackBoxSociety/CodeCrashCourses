@@ -31,7 +31,7 @@ Om de nadruk te leggen, kan je een sterretje of asterisk (*echt?*) gebruiken voo
 
 Alle andere syntax in Markdown is vergelijkbaar. Het lijkt in eerste instantie een beetje ingewikkeld, maar met een korte introductie en cheatcheet bij de hand ben je er zo mee weg.
 
-<a name="myfootnote1">1</a>: [Aaron Swartz](https://www.youtube.com/watch?v=2M0GQww1GoY) & [Lawrence Lessig](https://en.wikipedia.org/wiki/Lawrence_Lessig)    
+<a name="myfootnote1">1</a>: ontwikkeld door John Gruber in samenwerking met Aaron Swartz, [The Internet's Own Boy](https://www.youtube.com/watch?v=2M0GQww1GoY) (docu)   
 <a name="myfootnote1">2</a>: bijv. [blot.im](https://blot.im/) maar ook [md-page
 ](https://github.com/oscarmorrison/md-page)
 
@@ -54,7 +54,8 @@ Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, .
 1. https://github.com/theBlackBoxSociety/html-css-one-page
 2. https://github.com/CoderDojoSV/beginner-web
 
-### 
+### [download deze zipfile](site.zip) 
+met een voorbeeld mappenstructuur, html en css documenten en enkele beelden om ad slag te gaan.    
 
 ## FTP / SFTP
 (S)FTP staat voor (Secure) File Transfer Protocol. FTP is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.    

@@ -1,16 +1,18 @@
 *---[ A crashcourse in Code, prt 2 ]---*
 # PROCESSING & Axidraw
 ### Huiswerk (vooraf)
-#### Installeer [Processing](https://processing.org/download/) op je laptop.
+#### Installeer 
+* [Processing](https://processing.org/download/) op je laptop.
 
-#### Volg [deze korte web-video-tutorial van Daniel Shiffman](http://hello.processing.org/).
-
-#### Bekijk enkele sketches op https://www.openprocessing.org/
+#### Volg 
+* [deze korte web-video-tutorial van Daniel Shiffman](http://hello.processing.org/).
+* en als er al [honger naar meer is, is nog meer, veel meer ...](https://www.youtube.com/user/shiffman/playlists?shelf_id=2&view=50&sort=dd) van [Dan Shiffman](https://thecodingtrain.com/)
+* of bekijk enkele sketches op [openprocessing.org](https://www.openprocessing.org/browse/#)
 
 #### Lees je in in de geschiedenis van computerkunst and generatieve kunst
-vera molnar https://www.surfacemag.com/articles/vera-molnar-in-thinking-machines-at-moma/
+~~vera molnar https://www.surfacemag.com/articles/vera-molnar-in-thinking-machines-at-moma/
 recode project http://recodeproject.com/
-form and code http://formandcode.com/code-examples/
+form and code http://formandcode.com/code-examples/~
 
 
 

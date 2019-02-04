@@ -1,4 +1,4 @@
-*---[ A crashcourse in Code, prt 4 ]---*
+*---[ A crashcourse in Code, prt 3 ]---*
 # ARDUINO
 ### Huiswerk (vooraf)
 #### Installeer

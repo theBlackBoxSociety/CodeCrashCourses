@@ -1,4 +1,4 @@
-*---[ A crashcourse in Code, prt 3 ]---*
+*---[ A crashcourse in Code, prt 4 ]---*
 # p5.js & ml5.js
 ### Huiswerk (vooraf)
 #### Installeer
@@ -42,4 +42,3 @@ whoami WIE BEN IK <br />
 ifconfig NETWERK <br />
 iwconfig DRAADLOOS NETWERK <br />
 ctrl + c OF ctrl + d EXIT EEN PROCES <br />
-
