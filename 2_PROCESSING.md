@@ -25,6 +25,10 @@ Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo ku
 
 ## AXIDRAW
 Axidraw is an XY pen plotter from Evil Mad Scientist
+### Installeer 
+* Inkscape software om de plotter aan te sturen: https://inkscape.org/ -> https://wiki.evilmadscientist.com/Axidraw_Software_Installation#Installation
+* Axidraw & Processing: https://github.com/evil-mad/AxiDraw-Processing
+* Axidraw & Python: https://axidraw.com/doc/py_api/#introduction
 https://wiki.evilmadscientist.com/AxiDraw
 tips: 
 * http://www.tylerlhobbs.com/writings/using-a-plotter
