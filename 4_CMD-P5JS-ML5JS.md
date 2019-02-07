@@ -42,3 +42,9 @@ whoami WIE BEN IK <br />
 ifconfig NETWERK <br />
 iwconfig DRAADLOOS NETWERK <br />
 ctrl + c OF ctrl + d EXIT EEN PROCES <br />
+man COMMAND<br />
+touch MAAK EEN FILE AAN BVB touch junk.html<br />
+whatis COMMAND<br />
+apropos HIERACHTER IETS WAARVOOR JE COMMANDS ZOEKT BVB apropos time<br />
+cal KALENDER<br />
+mkdir MAAK EEN NIEUWE DIRECTORY BVB mkdir junk junk2 junk3<br />
