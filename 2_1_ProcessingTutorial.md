@@ -1,5 +1,5 @@
 # Processing - Generative Art / Design Tutorial
-:flushed: level 1
+_-- :flushed: level 1 --_
 
 *The following tutorial was original compiled by Manuel Kretzer. I adapted with this** naar de scope van deze workshop met referenties naar vroege algoritmische kunst en het gebruik van de axidraw tekenmachines**.*
 
@@ -331,7 +331,7 @@ if (diam <= 400) {
 ```
 ![](images/processing/16_if_else.png)
 
-If you imagine the flow of execution as a trickle of water running down the script, by setting a conditional you’re effectively creating different channels for the stream to follow. With an if ... else clause, the stream can go one of two ways, either through the block or around. In addition to operators as described in [11. For Loop](#for) you can also use logic operators to group conditions:    
+If you imagine the flow of execution as a trickle of water running down the script, by setting a conditional you’re effectively creating different channels for the stream to follow. With an if ... else clause, the stream can go one of two ways, either through the block or around. In addition to operators as described in [12. For Loop](#for) you can also use logic operators to group conditions:    
 `||` logical OR    
 `&&` logical AND    
 `!` logical NOT
