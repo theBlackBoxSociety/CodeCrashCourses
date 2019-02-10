@@ -10,21 +10,21 @@
 ## Contents
 level 1 | level 2
 :--- | :--- 
-1. [Introduction](#intro)  | 16. Random
-2. [Sketching](#sketching)  | 17. Examples
-3. [Libraries](#libraries)  | 
-4. [Your First Program](#program) | 
-5. [The Coordinate System](#coordinate) | 
-6. [Functions](#functions) | 
-7. [Basic Shapes & Modes](#shapes) | 
-8. [Comments](#comments) | 
-9. [Drawing Order](#order) | 
-10. [Variables](#variables) | 
-11. [While Loop](#while) | 
-12. [For Loop](#for) | 
-13. [Color](#color) | 
-14. [Structure](#structure) | 
-15. [Conditionals](#conditionals) | 
+\1. [Introduction](#intro)  | 16. Random
+\2. [Sketching](#sketching)  | 17. Examples
+\3. [Libraries](#libraries)  | 
+\4. [Your First Program](#program) | 
+\5. [The Coordinate System](#coordinate) | 
+\6. [Functions](#functions) | 
+\7. [Basic Shapes & Modes](#shapes) | 
+\8. [Comments](#comments) | 
+\9. [Drawing Order](#order) | 
+\10. [Variables](#variables) | 
+\11. [While Loop](#while) | 
+\12. [For Loop](#for) | 
+\13. [Color](#color) | 
+\14. [Structure](#structure) | 
+\15. [Conditionals](#conditionals) | 
 
 16. Random
 17. Examples
