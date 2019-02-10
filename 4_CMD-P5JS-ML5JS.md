@@ -47,6 +47,8 @@ apropos HIERACHTER IETS WAARVOOR JE COMMANDS ZOEKT BVB apropos time<br />
 cal KALENDER<br />
 mkdir MAAK EEN NIEUWE DIRECTORY BVB mkdir junk junk2 junk3<br />
 
+(TAB maakt het command voor je af, tweemaal TAB geeft alle opties weer. Pijltje naar boven toont de meest recente input (historiek))
+
 ### Huiswerk (achteraf)
 Bedenk een project dat je [op 4à8u](http://fffff.at/speed-project/) kan uitwerken binnen het thema en met de aangeleerde tools.
 Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo kunnen we dit bekijken en eventueel voorbereiden zodat we jullie gerichter kunnen begeleiden.
