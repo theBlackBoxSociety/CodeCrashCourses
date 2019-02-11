@@ -7,25 +7,24 @@ _-- :flushed: level 1 --_
 
 *All sketches in this tutorial can be downloaded [here](downloads/sketches.zip).*
 
-## Contents
+#### Contents
 level 1 | level 2
 :--- | :--- 
-\1. [Introduction](#intro)  | 16. Random
-\2. [Sketching](#sketching)  | 17. Examples
-\3. [Libraries](#libraries)  | 
-\4. [Your First Program](#program) | 
-\5. [The Coordinate System](#coordinate) | 
-\6. [Functions](#functions) | 
-\7. [Basic Shapes & Modes](#shapes) | 
-\8. [Comments](#comments) | 
-\9. [Drawing Order](#order) | 
-\10. [Variables](#variables) | 
-\11. [While Loop](#while) | 
-\12. [For Loop](#for) | 
-\13. [Color](#color) | 
-\14. [Structure](#structure) | 
-\15. [Conditionals](#conditionals) | 
-
+1 [Introduction](#intro)  | 16 [Random]()
+2 [Sketching](#sketching)  | 17 [Examples]()
+3 [Libraries](#libraries)  | 
+4 [Your First Program](#program) | 
+5 [The Coordinate System](#coordinate) | 
+6 [Functions](#functions) | 
+7 [Basic Shapes & Modes](#shapes) | 
+8 [Comments](#comments) | 
+9 [Drawing Order](#order) | 
+10 [Variables](#variables) | 
+11 [While Loop](#while) | 
+12 [Color](#color) | 
+14 [Structure](#structure) | 
+15 [Conditionals](#conditionals) | 
+<!---
 16. Random
 17. Examples
 17.1 Circle Grid
@@ -38,11 +37,11 @@ level 1 | level 2
 19.2 Noise Spiral
 19.3 Polygon Scribble
 20. Export
-
+-->
 
 ## <a name="intro">1. Introduction</a>
 
-Processing is a simple programming environment that was created to make it easier to develop visually oriented applications with an emphasis on animation and providing users with instant feedback through interaction. The developers wanted a means to *“sketch”* ideas in code. 
+Processing is a simple programming environment that was created to make it easier to develop visually oriented applications with an emphasis on animation and providing users with instant feedback through interaction. The developers wanted a means to **sketch** ideas in code.
 
 As its capabilities have expanded over the past decade, Processing has come to be used for more advanced production-level work in addition to its sketching role. Originally built as a domain-specific extension to Java targeted towards artists and designers, Processing has evolved into a full-blown design and prototyping tool used for large-scale installation work, motion graphics, and complex data visualization. 
 
@@ -335,3 +334,5 @@ If you imagine the flow of execution as a trickle of water running down the scri
 `||` logical OR    
 `&&` logical AND    
 `!` logical NOT
+
+move on [the next level](2_2_ProcessingTutorial.md).
