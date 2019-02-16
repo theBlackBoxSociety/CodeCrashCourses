@@ -18,11 +18,7 @@ Tijdens deze workshop leren we **de basisprincipes van het programmeren** dmv he
 * [Arie Altena](https://ariealt.home.xs4all.nl/) schrijft over de snijpunten tussen kunst, technologie en nieuwe media. Hij is curator van het [Sonic Acts Festival](http://sonicacts.com/) en werkt als redacteur en onderzoeker voor [V2_ Institute for the Unstable Media](http://v2.nl/) in Rotterdam. Voor de publicatie naar aanleiding van Sonic Acts XI - The Anthology Of Computer Art (2006) schreef hij, samen met Lucas van der Velden, [een inleidend artikel over het ontstaan van de computerkunst](https://ariealt.home.xs4all.nl/pdf/anthology_of_computer_art_editorial.pdf). 
 * [De compArt-database Digital Art](http://dada.compart-bremen.de/main/about) (daDA) is een archief voor digitale kunst. Je vindt er biografie, referentie en afbeeldingen werken van o.a. [Vera Molnar](http://dada.compart-bremen.de/item/agent/14), [Manfred Mohr](http://dada.compart-bremen.de/item/agent/13), [Georg Nees](http://dada.compart-bremen.de/item/agent/15) en veel meer.
 * Radical Software was een Amerikaans tijdschrift over video en computerkunst dat voor het eerst verscheen in 1970, kort nadat goedkope draagbare videoapparatuur beschikbaar werd voor kunstenaars en andere potentiële videomakers. Er werden 11 nummers van Radical Software gepubliceerd van 1970 tot 1974. http://www.radicalsoftware.org
-* [recode project](http://recodeproject.com/)
-
-<!--vera molnar https://www.surfacemag.com/articles/vera-molnar-in-thinking-machines-at-moma/
-recode project http://recodeproject.com/
-form and code http://formandcode.com/code-examples/-->
+* [The Recode Project](http://recodeproject.com/) is een poging om computerkunst te preserveren door het vertalen van vroeger werk naar een moderne programmeertaal (Processing / P5JS). De code voor elk vertaald werk is open-source zodat het gedeeld kan worden, er uit geleerd en eventueel verder op gebouwd kan worden.
 
 ## PROCESSING
 [Processing](https://processing.org/) is **een open-source programmeertaal en -omgeving** of IDE<sup>[1](#myfootnote1)</sup>.
