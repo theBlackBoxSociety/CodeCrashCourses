@@ -12,32 +12,19 @@ level 1 | level 2
 :--- | :--- 
 1 [Introduction](#intro)  | 16 [Random]()
 2 [Sketching](#sketching)  | 17 [Examples]()
-3 [Libraries](#libraries)  | 
-4 [Your First Program](#program) | 
-5 [The Coordinate System](#coordinate) | 
-6 [Functions](#functions) | 
-7 [Basic Shapes & Modes](#shapes) | 
-8 [Comments](#comments) | 
-9 [Drawing Order](#order) | 
-10 [Variables](#variables) | 
-11 [While Loop](#while) | 
-12 [Color](#color) | 
+3 [Libraries](#libraries)  | 17.1 Circle Grid
+4 [Your First Program](#program) | 17.2 Square Grid
+5 [The Coordinate System](#coordinate) | 17.3 Birds Nest
+6 [Functions](#functions) | 17.4 Network
+7 [Basic Shapes & Modes](#shapes) | 18. Arrays
+8 [Comments](#comments) | 19. Examples Part
+9 [Drawing Order](#order) | 19.1 Wiggle Lines
+10 [Variables](#variables) | 19.2 Noise Spiral
+11 [While Loop](#while) | 19.3 Polygon Scribble
+12 [Color](#color) | 20. Export
 14 [Structure](#structure) | 
 15 [Conditionals](#conditionals) | 
-<!---
-16. Random
-17. Examples
-17.1 Circle Grid
-17.2 Square Grid
-17.3 Birds Nest
-17.4 Network
-18. Arrays
-19. Examples Part
-19.1 Wiggle Lines
-19.2 Noise Spiral
-19.3 Polygon Scribble
-20. Export
--->
+
 
 ## <a name="intro">1. Introduction</a>
 
@@ -309,8 +296,7 @@ is clearer when we list the order in which the code is run:
 
 ## <a name="conditionals">15. Conditionals</a>
 
-A conditional checks that a condition has been met before executing the code inside the block marked by the braces that follow it. In this case, the conditional asks whether the value of diam is less than or equal to 400. If it is, the code
-in the block executes. If not, the code in the block is skipped:
+A conditional checks that a condition has been met before executing the code inside the block marked by the braces that follow it. In this case, the conditional asks whether the value of diam is less than or equal to 400. If it is, the code in the block executes. If not, the code in the block is skipped:
 
 ```java
 // check a condition

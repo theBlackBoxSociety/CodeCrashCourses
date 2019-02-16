@@ -37,7 +37,6 @@ void draw() {
 
   /* Draw a grid of predefined symbols */
 
-
   for (int row = 0; row < rows; row++) {
     for (int col = 0; col < cols; col++) {
       drawSymbol(col, row);  //only draw if within bounds
