@@ -4,7 +4,7 @@
 > “The idea becomes a machine that makes the art.”   
 — Sol LeWitt, 1967.
 
-Tijdens deze workshop leren we **de basisprincipes van het programmeren** dmv het tekenen van geometische figuren en patronen. We zullen verwijzen en teruggrijpen naar enkele voorbeelden van **vroege computerkunst / generatieve kunst / algoritmische kunst / digitale kunst **/... De output van onze codes zullen we laten tekenen door de **Axidraw pen plotters** van Formlab.
+Tijdens deze workshop leren we **de basisprincipes van het programmeren** dmv het tekenen van geometische figuren en patronen. We zullen verwijzen en teruggrijpen naar enkele voorbeelden van **vroege computerkunst** (generatieve kunst / algoritmische kunst / digitale kunst /...) De output van onze codes zullen we laten tekenen door de **Axidraw pen plotters** van Formlab.
 
 ### Huiswerk (vooraf)
 #### Installeer [Processing](https://processing.org/download/) op je laptop.
