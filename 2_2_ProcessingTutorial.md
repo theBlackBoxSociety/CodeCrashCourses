@@ -1,7 +1,7 @@
 # Processing - Generative Art / Design Tutorial
 _-- :satisfied: level 2 --_
 
-## 16. <a name="random">Random
+## 16. <a name="random">Random</a>
 
 Unlike the smooth, linear motion common to computer graphics, motion in the physical world is usually idiosyncratic.
 We can simulate the unpredictable qualities of the world by generating random numbers. The `random()` function calculates these values; we can set a range to tune the amount of disarray in a program. The following short example prints random values to the console, with the range limited by the position of the mouse. The ‘random()’ function always returns a floating-point value, so be sure the variable on the left side of the assignment operator (=) is a float as it is here (sketch_04):
@@ -33,11 +33,11 @@ void draw() {
 ![](images/processing/18_shakingLines.png)
 _random shaking lines_
 
-## 17. <a name="randomexamples">Examples
+## 17. <a name="randomexamples">Examples</a>
 
 The following are a number of short examples during which the creation of random values plays a critical role.
 
-## 17.1 <a name="cg">Circle Grid 
+## 17.1 <a name="cg">Circle Grid</a> 
 (sketch_06)
 
 ```java
@@ -66,7 +66,7 @@ This script draws a grid of circles in varying sizes and gray-scale values. The 
 ![](images/processing/19_circleGrid.png)
 _Circle Grid_ 
 
-## <a name="sg">17.2 Square Grid 
+## <a name="sg">17.2 Square Grid</a> 
 (sketch_07)
 
 ```java
@@ -106,7 +106,7 @@ Similar to the previous script ‘Circle Grid’ this program draws a grid of sh
 _Square Grid_
 
 
-## <a name="bn">17.3 Birds Nest 
+## <a name="bn">17.3 Birds Nest</a> 
 (sketch_08)
 
 ```java
@@ -140,7 +140,7 @@ This script draws lines between random locations on a circle. The amount of line
 _Birds Nest Network_
 
 
-## 17.4 <a name="nw">Network 
+## 17.4 <a name="nw">Network</a>
 (sketch_09)
 
 ```java
@@ -185,7 +185,7 @@ _Network_
 
 This sketch is similar to the previous one, ‘Birds Nest’. However instead of drawing single lines between two points at random locations on a circle it draws lines between all points within a range of circles, hence creating a network structure. To achieve this we need to create arrays of positions to be able to connect each point with all the others.
 
-## 18. Arrays
+## <a name="arrays">18. Arrays</a>
 
 **An array is a list of variables** that share a common name. Arrays are useful because they make it possible to work with more variables without creating a new name for each. Each item in an array is called an element, and each has an index value to mark its position within the array, starting from 0. To make an array, start with the name of the data type, followed by the brackets. The name you select for the array is next, followed by the equal symbol, followed by the ‘new’ keyword, followed by the name of the data type again, with the number of elements to create within the brackets. This pattern works for arrays of all data types. A list of five items, all of type int would look like this:
 
@@ -203,9 +203,9 @@ However you define it, you can add items to each position. The following places 
 numberArray[2] = 3;
 ```
 
-## 19. Examples Part
+## <a name="arrayexamples">19. Examples Part</a>
 
-## 19.1 Wiggle Lines 
+## <a name="wl">19.1 Wiggle Lines</a> 
 (sketch_10)
 
 ```java
@@ -243,7 +243,7 @@ void draw() {
 ![](images/processing/wiggleLines.png)
 _Wiggle Lines_
 
-## 19.2 Noise Spiral 
+## <a name="ns">19.2 Noise Spiral</a> 
 (sketch_11)
 
 ```java
@@ -289,7 +289,7 @@ void draw() {
 ![](images/processing/noiseSpiral.png)
 _Noise Spiral_
 
-## 19.3 Polygon Scribble 
+## <a name="ps">19.3 Polygon Scribble</a> 
 (sketch_12)
 
 ```java
@@ -345,7 +345,7 @@ processing.org/reference/beginShape_.html) and [`endShape()`](https://processing
 Embedded are [`curveVertex()`](https://processing.org/reference/curveVertex_.html) functions, which draw spline curves
 between the assigned coordinates. The splines are closed by adding the first two coordinates [0] and [1] to the loop.
 
-## 20. Export
+## <a name="export">20. Export</a>
 
 Processing includes a number of ways on exporting the created content.
 
