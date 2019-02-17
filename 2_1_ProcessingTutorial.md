@@ -1,9 +1,7 @@
 # Processing - Generative Art / Design Tutorial
 _-- :flushed: level 1 --_
 
-*The following tutorial was original compiled by Manuel Kretzer. I adapted with this** naar de scope van deze workshop met referenties naar vroege algoritmische kunst en het gebruik van de axidraw tekenmachines**.*
-
-*It is a combination of text excerpts and illustrations from [“Learning Processing, Second Edition: A Beginner’s Guide to Programming Images, Animation, and Interaction”](http://learningprocessing.com/) by Daniel Shiffman (2015), [“Generative Art”](https://www.manning.com/books/generative-art) by Matt Pearson (2011), and [“Make: Getting Started with Processing”](https://www.makershed.com/products/getting-started-with-processing-2nd-edition) by Casey Reas and Ben Fry (2010) as well as online sources such as tutorials provided on the Processing website (https://processing.org/tutorials/).* 
+*The following tutorial was original compiled by Manuel Kretzer. It is a combination of text excerpts and illustrations from [“Learning Processing, Second Edition: A Beginner’s Guide to Programming Images, Animation, and Interaction”](http://learningprocessing.com/) by Daniel Shiffman (2015), [“Generative Art”](https://www.manning.com/books/generative-art) by Matt Pearson (2011), and [“Make: Getting Started with Processing”](https://www.makershed.com/products/getting-started-with-processing-2nd-edition) by Casey Reas and Ben Fry (2010) as well as online sources such as tutorials provided on the Processing website (https://processing.org/tutorials/).* 
 
 *All sketches in this tutorial can be downloaded [here](downloads/sketches.zip).*
 

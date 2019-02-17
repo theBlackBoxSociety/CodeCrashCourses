@@ -31,11 +31,6 @@ Om de nadruk te leggen, kan je een sterretje of asterisk (*echt?*) gebruiken voo
 
 Alle andere syntax in Markdown is vergelijkbaar. Het lijkt in eerste instantie een beetje ingewikkeld, maar met een korte introductie en cheatcheet bij de hand ben je er zo mee weg.
 
-<a name="myfootnote1">1</a>: ontwikkeld door John Gruber in samenwerking met Aaron Swartz, [The Internet's Own Boy](https://www.youtube.com/watch?v=2M0GQww1GoY) (docu)   
-<a name="myfootnote1">2</a>: bijv. [blot.im](https://blot.im/) maar ook [md-page
-](https://github.com/oscarmorrison/md-page)
-
-
 ### Markdown. In de Praktijk
 #### introducing Atom *A hackable text editor for the 21st Century*
 kennis maken met de UI, preferences, commands, packages (core & community), markdown preview, git/github integration, ...
@@ -50,12 +45,11 @@ Hypertext Markup Language (HTML) is de standaard opmaaktaal voor het maken van w
 ## CSS
 Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, ...) en plaatsing van een HTML-document beschrijft. 
 
-### 2 keuzes voor tutorials die HTML & CSS combineren
-1. https://github.com/theBlackBoxSociety/html-css-one-page
-2. https://github.com/CoderDojoSV/beginner-web
+### :point_right: [HTML & CSS tutorial](https://github.com/theBlackBoxSociety/html-css-one-page):point_left:
 
-### [download deze zipfile](site.zip) 
-met een voorbeeld mappenstructuur, html en css documenten en enkele beelden om ad slag te gaan.    
+
+### :point_right: [voorbeeld mappenstructuur met html en css documenten en enkele beelden om ad slag te gaan](site.zip):point_left:
+ 
 
 ## FTP / SFTP
 (S)FTP staat voor (Secure) File Transfer Protocol. FTP is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.    
@@ -67,7 +61,14 @@ Lees zeker eens deze "FTP for Beginners" post <sup>[3](#myfootnote3)</sup> als j
 De FileZilla User Interface 
 [UI FileZille](images/FZ-mk.png) 
 
-<a name="myfootnote3">3</a>: https://www.wired.com/2010/02/ftp_for_beginners/
+<hr>
+
+<a name="myfootnote1">1</a>: ontwikkeld door John Gruber in samenwerking met Aaron Swartz, [The Internet's Own Boy](https://www.youtube.com/watch?v=2M0GQww1GoY) (docu)
+   
+<a name="myfootnote1">2</a>: bijv. [blot.im](https://blot.im/) maar ook [md-page
+](https://github.com/oscarmorrison/md-page)
+
+<a name="myfootnote3">3</a>: [ftp for beginners](https://www.wired.com/2010/02/ftp_for_beginners/)
 
 
 *-----fin-----*
