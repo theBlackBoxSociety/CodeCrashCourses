@@ -25,10 +25,18 @@ python --version WELKE VERSIE? <br>
 python GA NAAR PYTHON OMGEVING IN TERMINAL, MEESTAL PYTHON2.7<br>
 exit() GA UIT DIE OMGEVING<br>
 python3 IDEM<br>
+python3 IDEM<br>
 python -m pip install IETS INSTALLEER EEN LIBRARY IN PYTHON2.7<br>
 python -m pip3 install IETS INSTALLEER EEN LIBRARY IN PYTHON3.<br>
 sudo su GA IN SUDO MODE<br>
 sudo apt-get install INSTALLEER EEN TOEPASSING OF APP<br>
+sudo apt-get update UPDATE<br>
+sudo apt-get upgrade<br>
+
+sudo apt-get update<br>
+sudo apt-get install aptitude<br>
+sudo aptitude install python-tk idle-python2.7 idle <br> 
+
 
 ### Huiswerk (achteraf)
 Bedenk een project dat je op 4à8u kan uitwerken binnen het thema en met de aangeleerde tools. Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo kunnen we dit bekijken en eventueel voorbereiden zodat we jullie gerichter kunnen begeleiden.
