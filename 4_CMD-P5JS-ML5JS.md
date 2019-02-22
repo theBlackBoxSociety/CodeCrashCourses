@@ -48,6 +48,7 @@ cal KALENDER<br />
 mkdir MAAK EEN NIEUWE DIRECTORY BVB mkdir junk junk2 junk3<br />
 ifconfig BEKIJK NETWERK CONFIGURATIE <br />
 iwconfig CONFIGUREER NETWERK <br />
+python -m SimpleHTTPServer OPEN EEN LOKAAL NETWERK, IN BROWSER TYPE: localhost:8000 (of welke poort je teogewezen kreeg in terminal)<br>
 
 (TAB maakt het command voor je af, tweemaal TAB geeft alle opties weer. Pijltje naar boven toont de meest recente input (historiek))
 
