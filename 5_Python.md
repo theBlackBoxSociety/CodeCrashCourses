@@ -20,6 +20,16 @@ Python voor rpi: https://www.raspberrypi.org/documentation/usage/python/
 - CREEPY, https://www.geocreepy.com/
 - 43 Dodgy Statements on Computer Art, https://www.mail-archive.com/netbehaviour@netbehaviour.org/msg11371.html
 #### Lees
+#### Bruikbare terminal commands ivm Python
+python --version WELKE VERSIE?
+python GA NAAR PYTHON OMGEVING IN TERMINAL, MEESTAL PYTHON2.7
+exit() GA UIT DIE OMGEVING
+python3 IDEM
+python -m pip install IETS INSTALLEER EEN LIBRARY IN PYTHON2.7
+python -m pip3 install IETS INSTALLEER EEN LIBRARY IN PYTHON3.
+sudo su GA IN SUDO MODE
+sudo apt-get install INSTALLEER EEN TOEPASSING OF APP
+
 ### Huiswerk (achteraf)
 Bedenk een project dat je op 4à8u kan uitwerken binnen het thema en met de aangeleerde tools. Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo kunnen we dit bekijken en eventueel voorbereiden zodat we jullie gerichter kunnen begeleiden.
 
