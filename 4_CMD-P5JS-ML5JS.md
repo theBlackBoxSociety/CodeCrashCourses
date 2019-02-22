@@ -47,7 +47,7 @@ apropos HIERACHTER IETS WAARVOOR JE COMMANDS ZOEKT BVB apropos time<br />
 cal KALENDER<br />
 mkdir MAAK EEN NIEUWE DIRECTORY BVB mkdir junk junk2 junk3<br />
 ifconfig BEKIJK NETWERK CONFIGURATIE <br />
-ifconfig CONFIGUREER NETWERK <br />
+iwconfig CONFIGUREER NETWERK <br />
 
 (TAB maakt het command voor je af, tweemaal TAB geeft alle opties weer. Pijltje naar boven toont de meest recente input (historiek))
 
