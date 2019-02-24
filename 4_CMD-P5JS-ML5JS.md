@@ -34,7 +34,7 @@ cd DIRECTORY (of sleep map in je terminal venster) <br />
 ls BEKIJK MAPPEN VAN DIRECTORY WAARIN JE ZIT <br />
 pwd WAAR BEN IK <br />
 sudo su GA IN SUPER USER MODE (betekent <b>super user do</b> om programma's uit te voeren met speciale privileges, meestal met rootrechten) <br />
-clear verwijder commands<br>
+clear VERWIJDER COMMANDS<br>
 su PLUS JE USERNAME, GA UIT SUDO MODE <br />
 mkdir PLUS DIRECTORY, MAAK EEN DIRECTORY AAN <br />
 whoami WIE BEN IK <br />
