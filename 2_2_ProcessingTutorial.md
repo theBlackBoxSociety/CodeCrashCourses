@@ -15,14 +15,14 @@ level 1 | level 2
 9 [Drawing Order](2_1_ProcessingTutorial.md#order) | 19.1 [Wiggle Lines](#wl)
 10 [Variables](2_1_ProcessingTutorial.md#variables) | 19.2 [Noise Spiral](#ns)
 11 [While Loop](2_1_ProcessingTutorial.md#while) | 19.3 [Polygon Scribble](#ps)
-12 [Color](2_1_ProcessingTutorial.md#color) | 20. [Export](#export)
+12 [For Loop](2_1_ProcessingTutorial.md#for)| 20. [Export](#export)
+13 [Color](2_1_ProcessingTutorial.md#color) |
 14 [Structure](2_1_ProcessingTutorial.md#structure) | 
 15 [Conditionals](2_1_ProcessingTutorial.md#conditionals) | 
 
 ## 16. <a name="random">Random</a>
 
-Unlike the smooth, linear motion common to computer graphics, motion in the physical world is usually idiosyncratic.
-We can simulate the unpredictable qualities of the world by generating random numbers. The `random()` function calculates these values; we can set a range to tune the amount of disarray in a program. The following short example prints random values to the console, with the range limited by the position of the mouse. The ‘random()’ function always returns a floating-point value, so be sure the variable on the left side of the assignment operator (=) is a float as it is here (sketch_04):
+Unlike the smooth, linear motion common to computer graphics, motion in the physical world is usually idiosyncratic. We can simulate the unpredictable qualities of the world by generating random numbers. The `random()` function calculates these values; we can set a range to tune the amount of disarray in a program. The following short example prints random values to the console, with the range limited by the position of the mouse. The ‘random()’ function always returns a floating-point value, so be sure the variable on the left side of the assignment operator (=) is a float as it is here (sketch_04):
 
 ```java
 void draw() {
@@ -357,11 +357,7 @@ void draw() {
 ![](images/processing/polygonScrible.png)
 _Polygon Scribble_
 
-‘Polygon Scribble’ draws random polygon shapes on the screen. For each iteration the position of the polygon
-coordinates vary slightly, which results in dynamic scribbles. The polygons are drawn using [`beginShape()`](https://
-processing.org/reference/beginShape_.html) and [`endShape()`](https://processing.org/reference/endShape_.html).
-Embedded are [`curveVertex()`](https://processing.org/reference/curveVertex_.html) functions, which draw spline curves
-between the assigned coordinates. The splines are closed by adding the first two coordinates [0] and [1] to the loop.
+‘Polygon Scribble’ draws random polygon shapes on the screen. For each iteration the position of the polygon coordinates vary slightly, which results in dynamic scribbles. The polygons are drawn using [`beginShape()`](https://processing.org/reference/beginShape_.html) and [`endShape()`](https://processing.org/reference/endShape_.html). Embedded are [`curveVertex()`](https://processing.org/reference/curveVertex_.html) functions, which draw spline curves between the assigned coordinates. The splines are closed by adding the first two coordinates [0] and [1] to the loop.
 
 ## <a name="export">20. Export</a>
 
@@ -423,8 +419,7 @@ endRecord();
 at the end of the draw() function.
 
 
-The complete ‘Polygon Scribble’ program would then look like this. Note that beginRecord() is in comments since
-otherwise a PDF would be created each time the script is run.
+The complete ‘Polygon Scribble’ program would then look like this. Note that beginRecord() is in comments since otherwise a PDF would be created each time the script is run.
 
 ```java
 import processing.pdf.*;

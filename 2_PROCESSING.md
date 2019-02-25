@@ -10,7 +10,7 @@ Tijdens deze workshop leren we **de basisprincipes van het programmeren** dmv he
 #### Installeer [Processing](https://processing.org/download/) op je laptop.
 
 #### Volg 
-* zeker [deze korte web-video-tutorial van Daniel Shiffman](http://hello.processing.org/).
+* ~~zeker [deze web-video-tutorial van Daniel Shiffman](http://hello.processing.org/)(±1 uur)~~(video's zijn offline).
 * ... en als er al [honger naar meer is, is nog meer, veel meer ...](https://www.youtube.com/user/shiffman/playlists?shelf_id=2&view=50&sort=dd) van [Dan Shiffman](https://thecodingtrain.com/)
 * of bekijk enkele sketches op [openprocessing.org](https://www.openprocessing.org/browse/#) en maak een account aan.
 

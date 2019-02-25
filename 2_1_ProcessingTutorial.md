@@ -3,7 +3,8 @@ _-- :flushed: level 1 --_
 
 *The following tutorial was original compiled by Manuel Kretzer. It is a combination of text excerpts and illustrations from [“Learning Processing, Second Edition: A Beginner’s Guide to Programming Images, Animation, and Interaction”](http://learningprocessing.com/) by Daniel Shiffman (2015), [“Generative Art”](https://www.manning.com/books/generative-art) by Matt Pearson (2011), and [“Make: Getting Started with Processing”](https://www.makershed.com/products/getting-started-with-processing-2nd-edition) by Casey Reas and Ben Fry (2010) as well as online sources such as tutorials provided on the Processing website (https://processing.org/tutorials/).* 
 
-*All sketches in this tutorial can be downloaded [here](downloads/sketches.zip).*
+*All sketches in this tutorial can be downloaded [here](downloads/processing/sketches.zip).     
+And [these](downloads/processing/recode.zip) are some examples of recoded historical algorithmical or computational artworks.*
 
 #### Contents
 level 1 | level 2
@@ -19,7 +20,8 @@ level 1 | level 2
 9 [Drawing Order](#order) | 19.1 [Wiggle Lines](2_2_ProcessingTutorial.md#wl)
 10 [Variables](#variables) | 19.2 [Noise Spiral](2_2_ProcessingTutorial.md#ns)
 11 [While Loop](#while) | 19.3 [Polygon Scribble](2_2_ProcessingTutorial.md#ps)
-12 [Color](#color) | 20. [Export](2_2_ProcessingTutorial.md#export)
+12 [For Loop](#for) | 20. [Export](2_2_ProcessingTutorial.md#export)
+13 [Color](#color) |
 14 [Structure](#structure) | 
 15 [Conditionals](#conditionals) | 
 
@@ -120,8 +122,11 @@ The basic shape primitive functions are:
 
 _common shapes in Processing and their parameters_
 
-You must have noticed that `rect()` and `ellipse()` deal differently with the location from which they are drawn. You can change this default behaviour with the functions [`rectMode()`](https://processing.org/reference/rectMode_.html) & [`ellipseMode()`](https://processing.org/reference/ellipseMode_.html) to
-either CORNER, CORNERS, CENTER, or RADIUS.
+You must have noticed that `rect()` and `ellipse()` deal differently with the location from which they are drawn. You can change this default behaviour with the functions [`rectMode()`](https://processing.org/reference/rectMode_.html) & [`ellipseMode()`](https://processing.org/reference/ellipseMode_.html) to either CORNER, CORNERS, CENTER, or RADIUS.
+
+![](images/processing/09_shapeModes.png)
+  
+_the 4 different drawmodes of a rect & ellipse_
 
 ## <a name="comments">8. Comments</a>
 
@@ -177,6 +182,10 @@ This outputs the value of the variable *'number'* to the console window 99 times
 
 Note that if you don’t include the 'number--' line inside the loop, which subtracts 1 from the number every time it loops, the condition will never be met and the loop will go on forever.
 
+![](images/processing/11_whileLoop.png)
+
+_Flow diagram of a while loop_
+
 ## <a name="for">12. For Loop</a>
 
 The for loop is used when you want to iterate through a set number of steps, rather than just wait for a condition to be satisfied. The syntax is as follows:
@@ -186,9 +195,7 @@ for (init; test; update) {
   code to be executed
 }
 ```
-The code between the curly brackets { } is called **a block**. This is the code that will be repeated on each iteration of the loop. Inside the parentheses are **three statements**, separated by semicolons, that work together to control how
-many times the code inside is run. From left to right, these statements are referred to as **the initialization** (init), **the
-test**, and **the update**. The ‘init’ typically declares a new variable to use within the for loop and assigns a value. The variable name ‘i’ is frequently used. The ‘test’ evaluates the value of this variable, and the ‘update’ changes it’s value.
+The code between the curly brackets { } is called **a block**. This is the code that will be repeated on each iteration of the loop. Inside the parentheses are **three statements**, separated by semicolons, that work together to control how many times the code inside is run. From left to right, these statements are referred to as **the initialization** (init), **the test**, and **the update**. The ‘init’ typically declares a new variable to use within the for loop and assigns a value. The variable name ‘i’ is frequently used. The ‘test’ evaluates the value of this variable, and the ‘update’ changes it’s value.
 
 ![](images/processing/11_forLoop.png)
 
@@ -203,8 +210,7 @@ common relational operators are:
 `==` Equal to    
 `!=` Not equal to
 
-The relational expression always evaluates to **true** or **false**. When it’s true, the code inside the block is run, when it’s
-false, the code inside the block is not run and the for loop ends (sketch_01).
+The relational expression always evaluates to **true** or **false**. When it’s true, the code inside the block is run, when it’s false, the code inside the block is not run and the for loop ends (sketch_01).
 
 ```Java
 size(500, 300);
@@ -219,15 +225,11 @@ for (int h = 10; h <= (height - 15); h+=10) {
 ```
 ![](images/processing/12_sketch1.png)
 
-The initial state of the for loop sets a variable h to 10. The code in the loop executes until h <= (height-15) (the end condition). Every time the loop is executed, the value of h increases by 10, according to the step you’ve defined (h += 10). This means the code inside the parentheses of the for loop will execute 28 times, with h set to 10, 20, 30 ... 270, 280. Knowing that the h variable follows this pattern, you can use it in multiple ways. The lines you’re drawing are in 10-pixel steps down the canvas, because you use h for the y value. But the alpha transparency of the lines also
-varies as h varies: the black line gets lighter, and the white line gets darker.
+The initial state of the for loop sets a variable h to 10. The code in the loop executes until h <= (height-15) (the end condition). Every time the loop is executed, the value of h increases by 10, according to the step you’ve defined (h += 10). This means the code inside the parentheses of the for loop will execute 28 times, with h set to 10, 20, 30 ... 270, 280. Knowing that the h variable follows this pattern, you can use it in multiple ways. The lines you’re drawing are in 10-pixel steps down the canvas, because you use h for the y value. But the alpha transparency of the lines also varies as h varies: the black line gets lighter, and the white line gets darker.
 
 ## <a name="color">13. Color</a>
 
-To change color in your shapes use the `background()`, `fill()`, and `stroke()` functions. The values of the parameters are
-in the range of **0 to 255**, where 255 is white, 128 is medium gray, and 0 is black. To move beyond gray-scale values, you use three parameters to specify the **red**, **green**, and **blue** components of a color. They also range from 0 to 255. Using RGB color isn’t very intuitive, so to choose colors, you can use Tools → Color Selector. By adding an optional fourth parameter to fill() or stroke(), you can control the transparency. This **fourth parameter** is known as the **alpha
-value**, and also uses the range 0 to 255 to set the amount of transparency. The value 0 defines the color as entirely transparent (it won’t display), the value 255 is entirely opaque, and the values between these extremes cause the
-colors to mix on screen (sketch_02).
+To change color in your shapes use the `background()`, `fill()`, and `stroke()` functions. The values of the parameters are in the range of **0 to 255**, where 255 is white, 128 is medium gray, and 0 is black. To move beyond gray-scale values, you use three parameters to specify the **red**, **green**, and **blue** components of a color. They also range from 0 to 255. Using RGB color isn’t very intuitive, so to choose colors, you can use Tools → Color Selector. By adding an optional fourth parameter to fill() or stroke(), you can control the transparency. This **fourth parameter** is known as the **alpha value**, and also uses the range 0 to 255 to set the amount of transparency. The value 0 defines the color as entirely transparent (it won’t display), the value 255 is entirely opaque, and the values between these extremes cause the colors to mix on screen (sketch_02).
 
 ```java
 size(255, 255);
@@ -247,9 +249,7 @@ When one for loop is embedded inside another, the number of repetitions is multi
 ## <a name="structure">14. Structure: setup() and draw()</a>
 
 In Processing scripts can be structured into two distinct parts, so-called function blocks: `setup()` and `draw()`. A function block is a way of chunking a group of commands together.    
-The code inside the setup() function block is called **once when the program launches**, so it should contain all your initialization code as setting the canvas size, setting the background color, initializing variables, and so on. The code you write inside draw() is then called
-repeatedly, **triggered on every frame**. You can set the speed with which draw() is called by using the `frameRate() function. If you give it a number (12, 24, 25, and 30 are typical), it will attempt to maintain that rate, calling draw()
-regularly. Otherwise, it will perform the frame loop as quickly as the machine can handle (sketch_03).
+The code inside the setup() function block is called **once when the program launches**, so it should contain all your initialization code as setting the canvas size, setting the background color, initializing variables, and so on. The code you write inside draw() is then called repeatedly, **triggered on every frame**. You can set the speed with which draw() is called by using the `frameRate() function. If you give it a number (12, 24, 25, and 30 are typical), it will attempt to maintain that rate, calling draw() regularly. Otherwise, it will perform the frame loop as quickly as the machine can handle (sketch_03).
 
 ```java
 int diam = 10;
@@ -280,12 +280,9 @@ void draw() {
 
 ![](images/processing/14_sketch3.gif)
 
-When you run this you’ll see a circle grow, stopping when the diameter reaches 400 pixels. The diameter and the center points are kept in variables, with the center points calculated in ‘setup()’. The frame loop then checks that the
-diameter is smaller than 400, redraws the background, draws the circle, and increases the diameter by 10 for the next time it goes around the loop. The effect is that it draws a circle of diameter 10, 20, 30, and so on until the diam
-variable gets to 400.
+When you run this you’ll see a circle grow, stopping when the diameter reaches 400 pixels. The diameter and the center points are kept in variables, with the center points calculated in ‘setup()’. The frame loop then checks that the diameter is smaller than 400, redraws the background, draws the circle, and increases the diameter by 10 for the next time it goes around the loop. The effect is that it draws a circle of diameter 10, 20, 30, and so on until the diam variable gets to 400.
 
-Notice that if you create a variable inside of setup(), you can’t use it inside of ‘draw()’ and vice versa. A variable within a function block is only available within that block - **locally**. It’s good practice to do this if a variable is only needed within a single function. Yet in order to make variables available everywhere, you need to place them somewhere else. Such variables are called global variables, because they can be used anywhere or **globally** in the program. This
-is clearer when we list the order in which the code is run:   
+Notice that if you create a variable inside of setup(), you can’t use it inside of ‘draw()’ and vice versa. A variable within a function block is only available within that block - **locally**. It’s good practice to do this if a variable is only needed within a single function. Yet in order to make variables available everywhere, you need to place them somewhere else. Such variables are called global variables, because they can be used anywhere or **globally** in the program. This is clearer when we list the order in which the code is run:   
 1. Variables declared outside of ‘setup()’ and ‘draw()’ are created.   
 2. Code inside ‘setup()’ is run once.   
 3. Code inside ‘draw()’ is run continuously.
