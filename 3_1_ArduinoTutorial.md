@@ -248,7 +248,7 @@ void loop() {
 
   // check if there was a transition
   if ((val == HIGH) && (old_val == LOW)) {
-    state = 1 - state;
+    buttonState = 1 - buttonState;
     delay(10);    // small delay for debouncing
   }
 
@@ -260,6 +260,7 @@ void loop() {
   } else {
     digitalWrite(ledPin, LOW);  // turn LED off
   }
+}
 ```
 
 Now that you’ve learned how to use a pushbutton, you should know that there are many other very basic sensors that work according to the same principle: 
