@@ -307,27 +307,23 @@ void loop() {
   delay(sensorValue);
 }
 ```
+*+ TODO extra voorbeeld met een voltage devider*
 
-## 9. Analog Out <br>𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
-PWM
 
-Writes an analog value (PWM wave) to a pin. Can be used to light a LED at varying brightnesses or drive a motor at various speeds. 
-After a call to analogWrite(), the pin will generate a steady square wave of the specified duty cycle until the next call to analogWrite() (or a call to digitalRead() or digitalWrite() on the same pin). The frequency of the PWM signal on most pins is approximately 490 Hz. On the Uno and similar boards, pins 5 and 6 have a frequency of approximately 980 Hz. Pins 3 and 11 on the Leonardo also run at 980 Hz.
+## 9. PWM <br>𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 
-On most Arduino boards (those with the ATmega168 or ATmega328), this function works on pins 3, 5, 6, 9, 10, and 11. On the Arduino Mega, it works on pins 2 - 13 and 44 - 46. 
-
-PWM, short for Pulse Width Modulation, is a technique used to encode analog signal level into digital ones. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. So we use a high resolution counter to encode a specific analog signal level by modulating the duty cycle of PMW. The PWM signal is also digitalized because in any given moment, fully on DC power supply is either 5V (ON), or 0V (OFF). The voltage or current is fed to the analog load (the device that uses the power) by repeated pulse sequence being ON or OFF. Being on, the current is fed to the load; being off, it's not. With adequate bandwidth, any analog value can be encoded using PWM. The output voltage value is calculated via the on and off time. Output voltage = (turn on time/pulse time) * maximum voltage value
-[[File:17836.png|500px|frameless|thumb]]
+PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into digital ones. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. So we use a high resolution counter to encode a specific analog signal level by modulating the duty cycle of PMW. The PWM signal is also digitalized because in any given moment, fully on DC power supply is either 5V (ON), or 0V (OFF). The voltage or current is fed to the analog load (the device that uses the power) by repeated pulse sequence being ON or OFF.    
+The output voltage value is calculated via the on and off time. Output voltage = (turn on time/pulse time) * maximum voltage value
 
 PWM has many applications: lamp brightness regulating, motor speed regulating, sound making, etc.
-The following are the three basic parameters of PMW:
-[[File:17837.png|500px|frameless|thumb]]  
-                              
+
+![pwm](images/arduino/Pulse-Width-Modulation.jpg)
+                                
 1. The amplitude of pulse width (minimum / maximum)
 2. The pulse period (The reciprocal of pulse frequency in 1 second)
 3. The voltage level（such as：0V-5V）
 
-There are 6 PMW interfaces on Arduino, namely digital pin 3, 5, 6, 9, 10, and 11. In previous experiments, we have done "button-controlled LED", using digital signal to control digital pin, also one about potentiometer. This time, we will use a potentiometer to control the brightness of the LED.
+There are 6 PMW interfaces on an Arduino Uno; Digital pins 3, 5, 6, 9, 10, and 11.    
 
 ![image](images/arduino/analogOutSimple_bb.png)
 
@@ -360,9 +356,9 @@ void loop() {
 ```
 
 **Now lets connect our Input with the Output.**
+In a previous experiment, we have done a *button-controlled LED*, using digital signal to control digital pin. Now we will use a potentiometer to control the brightness of the LED.
 
-Circuit connection
-The input of potentiometer is analog, so we connect it to analog port, and LED to PWM port. Different PWM signal can regulate the brightness of the LED.
+The input of potentiometer is analog, so we connect it to analog port, and LED to PWM port.
 
 ![image](images/arduino/analogOut.png)
 
@@ -400,7 +396,7 @@ void loop() {
 ## 10. Serial Connection <br>𝕊𝕖𝕣𝕚𝕒𝕝 ℂ𝕠𝕟𝕟𝕖𝕔𝕥𝕚𝕠𝕟
 
 
-After installing driver for Arduino, let's open Arduino software and compile code that enables Arduino to print "Hello World!" under your instruction. Of course, you can compile code for Arduino to continuously echo "Hello World!" without instruction. A simple If () statement will do the instruction trick. With the onboard LED connected to pin 13, we can instruct the LED to blink first when Arduino gets an instruction and then print "Hello World!”. 
+Let's open Arduino software and compile code that enables Arduino to print "Hello World!" under your instruction. Of course, you can compile code for Arduino to continuously echo "Hello World!" without instruction. A simple If () statement will do the instruction trick. With the onboard LED connected to pin 13, we can instruct the LED to blink first when Arduino gets an instruction and then print "Hello World!”. 
 
 ```c++
 int val;          //define variable val
@@ -425,5 +421,7 @@ void loop()
   }
 }
 ```
+*TODO serial send example*
+
 
 https://learn.sparkfun.com/tutorials/connecting-arduino-to-processing/all

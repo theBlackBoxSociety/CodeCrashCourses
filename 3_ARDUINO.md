@@ -32,25 +32,26 @@ Om je Arduino-project te programmeren, heb je een computer nodig, maar dit betek
 
 Aan de slag met Arduino! Raadpleeg [de beknopte handleiding](https://www.arduino.cc/en/Guide/HomePage). Als je op zoek bent naar inspiratie, kun je een grote verscheidenheid aan handleidingen vinden op [Arduino Project Hub](https://create.arduino.cc/projecthub). Meer uitleg over het volledige scala van officiële Arduino-producten, waaronder Boards, Modules (een kleinere formfactor van de klassieke borden), Shields (elementen die gemakkelelijk op het board aangesloten kunnen worden om extra functies toe te voegen) en Kits vindt je op de [products-page](https://www.arduino.cc/en/Main/Products).
 
-## Wat is elektriciteit?
+## ELEKTRICITEIT
 
-Voor we echt aan de slag gaan lijkt het me noodzakelijk om heel beknopt enkele basis principes van elektriciteit en elektrische circuits uit te leggen. We doen dit a.d.h.v. [de befaamde water-analogie](https://www.google.com/search?q=water+analogy+electricity&rlz=1C5CHFA_enBE830BE830&tbm=isch&source=iu&ictx=1&fir=dbS3D2uaZhjOOM%253A%252CK4Myskr2OVtrnM%252C_&vet=1&usg=AI4_-kQxWQPlProSZBU7MdNqTABPfzF32Q&sa=X&ved=2ahUKEwjEpdu29_rgAhVEbFAKHZAUCI8Q9QEwC3oECAIQGg&cshid=1552336599334250#imgdii=M9M0PrqjM8GPjM:&imgrc=3SVFvWMRRCq-oM:&vet=1) waarbij het stromen van water te vergelijken is met het stromen van elektronen. Alhoewel deze vergelijking onvolkomen is is ze nuttig omdat er genoeg overeenkomsten zijn en onze zintuigen de verschijnselen van water onmiddellijk kunnen waarnemen en we bij elektriciteit enkel de effecten kunnen zien. Deze analogie gaat enkel op voor gelijkspanning en dus niet voor wisselspanning. 
+### Wat is elektriciteit?
+Voor we echt aan de slag gaan lijkt het me noodzakelijk om heel beknopt enkele basis principes van elektriciteit en elektrische circuits uit te leggen. We doen dit a.d.h.v. [de befaamde water-analogie](https://www.google.com/search?q=water+analogy+electricity&rlz=1C5CHFA_enBE830BE830&tbm=isch&source=iu&ictx=1&fir=dbS3D2uaZhjOOM%253A%252CK4Myskr2OVtrnM%252C_&vet=1&usg=AI4_-kQxWQPlProSZBU7MdNqTABPfzF32Q&sa=X&ved=2ahUKEwjEpdu29_rgAhVEbFAKHZAUCI8Q9QEwC3oECAIQGg&cshid=1552336599334250#imgdii=M9M0PrqjM8GPjM:&imgrc=3SVFvWMRRCq-oM:&vet=1) waarbij **het stromen van water te vergelijken is met het stromen van elektronen**.     
+Alhoewel deze vergelijking onvolkomen is is ze nuttig omdat er genoeg overeenkomsten zijn en onze zintuigen de verschijnselen van water onmiddellijk kunnen waarnemen en we bij elektriciteit enkel de effecten kunnen zien. Deze analogie gaat enkel op voor gelijkspanning en dus niet voor wisselspanning. 
 
-**Wisselspanning vs Gelijkspanning**    
-Er bestaan twee soorten spanning, namelijk wisselspanning (AC – Alternating Current) en gelijkspanning (DC – Direct Current). Beide soorten bestaan naast elkaar en hebben hun eigen kenmerken.    
-Bij **wisselspanning** lopen elektronen van de pluspool naar de minpool en van de minpool naar de pluspool. **De stroom wisselt dus continu van richting**. In Europa wisselt de stroom 50 keer per seconde van richting en is de frequentie dus 50 Hertz. De stroomspanning van ons energienet is gebaseerd op een  wisselspanning met een spanning van 230V.   
-Bij **gelijkspanning** lopen elektronen alleen van de pluspool naar de minpool. De stroom loopt dus altijd in dezelfde richting. Er is dus sprake van een vaste plus en een vaste min. **De stroom zal dus altijd in dezelfde richting stromen** (van plus naar min - [of toch niet?](https://electronics.stackexchange.com/questions/181615/does-electrical-current-flow-from-positive-to-negative-or-negative-to-positive)).    
+### Wisselspanning vs Gelijkspanning    
+Er bestaan twee soorten spanning, namelijk **wisselspanning** (AC – Alternating Current) en **gelijkspanning** (DC – Direct Current). Beide soorten bestaan naast elkaar en hebben hun eigen kenmerken.    
+Bij wisselspanning lopen elektronen van de pluspool naar de minpool en van de minpool terug naar de pluspool. **De stroom wisselt dus continu van richting**. In Europa wisselt de stroom 50 keer per seconde van richting en is de frequentie dus 50 Hertz. De stroomspanning van ons energienet is gebaseerd op een  wisselspanning met een spanning van 230V.   
+Bij gelijkspanning lopen elektronen alleen van de pluspool naar de minpool. De stroom loopt dus altijd in dezelfde richting. Er is dus sprake van een vaste plus en een vaste min. **De stroom zal dus altijd in dezelfde richting stromen** (van plus naar min - [of toch niet?](https://electronics.stackexchange.com/questions/181615/does-electrical-current-flow-from-positive-to-negative-or-negative-to-positive)).    
 Hoewel het elektriciteitsnetwerk is ingericht op wisselspanning, werkt de meeste apparatuur juist op gelijkspanning. Het omzetten van AC naar DC gebeurt vaak met een netvoeding of adapter. Gelijkspanning werkt goed bij lagere spanningen.
 
+### 3 basisprincipes: Spanning, Stroom en Weerstand
+**Dus elektriciteit is de beweging van elektronen**. Deze elektronen creëren een spanning die we kunnen gebruiken om abreid te verrichten, bijv. een lamp laten branden, water te warmen, enz. 
 
-Dus ... elektriciteit is de beweging van elektronen. Deze elektronen creëren een lading die we kunnen gebruiken om abreid te verrichten, bijv. een lamp laten branden, water te warmen, enz. 
+Dit is gebaseerd op **3 basisprincipes:
+Spanning, Stroom en Weerstand**    
+Terug naar onze analogie van de watertank waaruit water stroomt. De hoeveelheid water die er uit onze kraan komt is de stroom, de waterdruk is de spanning. En de kraan en de diameter van de buis is de weerstand. 
 
-
-** 3 basisprincipes : Spanning, stroom en weerstand**    
-Terug naar onze analogie van de watertank waaruit water stroomt. De hoeveelheid water is de stroom, de waterdruk is de spanning en de waterstroom is de stroom. 
-* Water is Spanning
-* Druk = Voltage
-* Stroom = Stroom
+![image](images/arduino/wateranalogie.jpg)
 
     
 **Spanning** (of voltage) is het verschil in lading tussen twee punten.   
@@ -64,35 +65,37 @@ Terug naar onze analogie van de watertank waaruit water stroomt. De hoeveelheid 
  Debiet van het water die uit de kraan stroomt | Stroom (current)	| ampère 	|  I
  Dikte van de buis of opening van de kraan | Weerstand (resistance) | ohm | R
 
-De vergelijking hieronder laat duidelijk zien hoe deze elementen zich tot elkaar verhouden.
+De vergelijking water-elektriciteit in de tekening hieronder laat duidelijk zien hoe deze elementen zich tot elkaar verhouden.
 
 ![image](images/arduino/wateranalogie.png)
 
-De druk aan het einde van de buis kan spanning weergeven. Het water in de tank staat voor stroom. Hoe meer water in de tank, hoe hoger de lading, des te meer druk wordt gemeten aan het einde van de slang.
+De druk aan het einde van de buis kan spanning weergeven. Het water in de tank staat voor stroom. Hoe meer water in de tank, hoe hoger de spanning, des te meer druk wordt gemeten aan het einde van de buis.
 
-We kunnen deze tank zien als een batterij, een plaats waar we een bepaalde hoeveelheid energie opslaan om later vrij te geven. Als we onze tank een bepaalde hoeveelheid leegmaken, daalt de druk aan het einde van de buis. We kunnen dit zien als een afnemende spanning, zoals wanneer een zaklamp minder hard gaat schijnen als de batterijen leeg raken. De hoeveelheid water die door de slang zal stromen vermindert ook. Minder druk betekent dat er minder water door de buis stroomt. Dit brengt ons bij de stroom. Met waterdebiet meten we door het volume van het water te meten dat door de buis stroomt gedurende een bepaalde periode. Met elektriciteit meten we de hoeveelheid spanning (volt) die door het circuit stroomt gedurende een bepaalde periode. Stroom wordt gemeten in Ampère.
+We kunnen deze tank zien als een batterij, een plaats waar we een bepaalde hoeveelheid energie opslaan om later vrij te geven. Als we onze tank een bepaalde hoeveelheid leegmaken, daalt de druk aan het einde van de buis. We kunnen dit zien als een afnemende spanning, zoals wanneer een zaklamp minder hard gaat schijnen als de batterijen leeg raken. De hoeveelheid water die door de slang zal stromen vermindert ook.
 
-Stel dat onze kraan een kwartslag wordt dichtgedraaid maar dat we nog steeds hetzelfde debiet verwachten. Dat is mogelijk als we de druk (spanning) verhogen. Er stroomt nu meer water door de buis uit de tank. De toename van de spanning zal een toename van de stroom veroorzaken.
+Minder druk betekent dat er minder water door de buis stroomt. Dit brengt ons bij de stroom. Het (water)debiet meten we door het volume van het water te meten dat door de buis stroomt gedurende een bepaalde periode. Met elektriciteit meten we de hoeveelheid spanning (volt) die door het circuit stroomt gedurende een bepaalde periode. Stroom wordt gemeten in Ampère.
+
+Stel dat onze kraan een kwartslag wordt dichtgedraaid maar dat we nog steeds hetzelfde debiet verwachten. Dat is alleen mogelijk als we de druk (spanning) verhogen. Er stroomt nu meer water door de buis uit de tank. De toename van de spanning zal een toename van de stroom veroorzaken.
 
 Nu beginnen we de relatie tussen spanning en stroom te zien. Maar er is een derde factor die hier moet worden beschouwd: de breedte van de buis of de kraan die we kunnen dichtdraaien. In onze analogie is dit de weerstand.
 
 Er is pas sprake van stroom (de hoeveelheid water die door het systeem loopt) als er spanning is opgebouwd in het systeem (de waterdruk). Deze waterdruk komt pas tot stand wanneer er een bepaalde weerstand is (een open- of dichtgedraaide kraan).
 
 De verhouding tussen spanning, stroom en weerstand laat zich berekenen via de zogenaamde
-Wet van Ohm. In formulevorm ziet deze er als volgt uit:
+Wet van Ohm. Dit is de formule:
 
-U (spanning) = I (stroom) x R (weerstand)
+**U (spanning) = I (stroom) x R (weerstand)**
 
-Wanneer er twee elementen bekend zijn, dan kan het derde element hiermee worden berekend.
+Wanneer er twee elementen bekend zijn kan het derde element hiermee worden berekend.
 
 
-V=R* I
-I=V/ R
+**V = R * I**    
+**I = V / R**
 
 Dit is de enige regel die je echt moet onthouden en leren gebruiken.
 
 
-zie ook https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all
+Zie ook https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law/all
 
 <hr>
 <a name="myfootnote1">1</a>: to tinker (verb) volgens de [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/tinker): to make small changes to something, especially in an attempt to repair or improve it.
