@@ -11,6 +11,7 @@
   - type localhost:8000 in je browser search bar
   - indien het nog niet werkt, druk op f12 -> venster opent met foutmeldingen in console
  4. Je kan ook met de online editor werken: https://editor.p5js.org/
+ 5. Tijdens de lessen zullen we door [deze tutorials](https://github.com/theBlackBoxSociety/p5-workshop) gaan.
 
 #### Volg
 
