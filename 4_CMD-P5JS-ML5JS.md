@@ -10,6 +10,7 @@
   - soms is het nodig om de python versie aan te duiden: python2 -m SimpleHTTPServer OF python3 -m http.server
   - type localhost:8000 in je browser search bar
   - indien het nog niet werkt, druk op f12 -> venster opent met foutmeldingen in console
+ 4. Je kan ook met de online editor werken: https://editor.p5js.org/
 
 #### Volg
 
