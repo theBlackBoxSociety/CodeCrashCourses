@@ -4,14 +4,15 @@
 #### Installeer
 1. Installeer Firefox: https://www.mozilla.org/nl/firefox/new/
 2. [Atom](https://atom.io/) code editor
-3. Indien de code niet werkt dan kan je een local server opzetten op de volgende manier:
+3. Download [p5js](https://github.com/processing/p5.js/releases/download/0.7.3/p5.zip)
+4. Indien de code niet werkt dan kan je een local server opzetten op de volgende manier:
   - open command line, command prompt, terminal
   - type in: python -m SimpleHTTPServer
   - soms is het nodig om de python versie aan te duiden: python2 -m SimpleHTTPServer OF python3 -m http.server
   - type localhost:8000 in je browser search bar
   - indien het nog niet werkt, druk op f12 -> venster opent met foutmeldingen in console
- 4. Je kan ook met de online editor werken: https://editor.p5js.org/
- 5. Tijdens de lessen zullen we door [deze tutorials](https://github.com/theBlackBoxSociety/p5-workshop) gaan.
+ 5. Je kan ook met de online editor werken: https://editor.p5js.org/
+ 6. Tijdens de lessen zullen we door [deze tutorials](https://github.com/theBlackBoxSociety/p5-workshop) gaan.
 
 #### Volg
 
