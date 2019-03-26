@@ -17,8 +17,9 @@
 #### Volg
 
 #### Bekijk deze online tutorials vooraf
-1. p5.js: https://www.youtube.com/watch?v=8j0UDiN7my4
-2. p5.js mogelijkheden: https://creative-coding.decontextualize.com/
+1. [p5js](https:www.p5js.org): https://www.youtube.com/watch?v=8j0UDiN7my4
+2. p5js: http://hello.p5js.org/
+2. p5js mogelijkheden: https://creative-coding.decontextualize.com/
 3. ml5.js: https://www.youtube.com/watch?v=jmznx0Q1fP0
 
 #### Lees
