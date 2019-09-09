@@ -1,11 +1,17 @@
 # :rocket: CodeCrashCourses :new_moon_with_face:
 ___
-Learn the basics of programming and code in 10 weeks time with introductions in Markdown, HTML, CSS, Processing &amp; p5js, Python, ml5js and the basis of electronics with Arduino.
+Learn the basics of programming and code with introductions in [Markdown](https://en.wikipedia.org/wiki/Markdown), [HTML](https://en.wikipedia.org/wiki/HTML), [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets), [Processing](https://processing.org/) &amp; [p5.js](https://p5js.org/), [Python](https://en.wikipedia.org/wiki/Python_(programming_language)), [ml5js](https://ml5js.org/) and the basis of electronics with [Arduino](https://www.arduino.cc/).
+
+
 
 dates | topic | tutors
  :---: | --- | ---
-5 & 12/02 • 9:30-12:30| [Markdown, HTML & CSS](1_MD-HTML-CSS.md) | Hendrik
-~~19 &~~ 26/02 & 05/03 • 9:30-12:30 | [Processing](2_PROCESSING.md) | Jerry & Hendrik
-~~05 &~~ 12/03 • 9:30-12:30 | [Electronics & Arduino](3_ARDUINO.md) | Hendrik
-26/03 & 02/04 • 9:30-12:30 |[Commandline, p5js en mj5js](4_CMD-P5JS-ML5JS.md) *on Raspberry Pi* | Jerry 
-23 & 30/04 • 9:30-12:30 | [Python](5_Python.md)   *on Raspberry Pi*| Jerry
+24/9, 1/10 & 8/10 • 9:30-12:30| [Processing](PROCESSING.md) | Hendrik
+15/10, 22/10 & 29/10 • 9:30-12:30 | [Markdown, HTML & CSS](MD-HTML-CSS.md) | Hendrik
+5/11, 19/11 & 26/11 • 9:30-12:30 | P5.JS | Jerry & Hendrik
+10/12 & 17/12 • 9:30-12:30 | Arduino | Hendrik
+––– | ––– |–––
+ 28.1 • 9:30-12:30 |Commandline *on Raspberry Pi* | Jerry 
+ 4/2, 11/2 & 18/2 • 9:30-12:30 | [Python](Python.md)   *on Raspberry Pi*| Jerry
+ 25/2, 3/3, 10/3  • 9:30-12:30 | Machine Learning / ML5JS | Jerry
+ 24/3, 31/3 & 28/4 • 9:30-12:30 | Project | Jerry & Hendrik
