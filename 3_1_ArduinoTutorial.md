@@ -4,16 +4,14 @@ _-- :flushed: level 1 --_
 #### Contents
 level 1 | level 2
 :--- | :--- 
-1 Introduction | 
-2 The Arduino Platform |
-3 The Arduino Hardware | 
-3.1 the Arduino Board |
-3.2 the keyestudio Sensor Kits |
-4 The Software (IDE) |
-4.1 Arduino IDE Installation Guide |
-4.2 Port Identification & Board Selection |
-4.3 The User Interface |
-5 Getting Started: Hello World! |
+1 [Introduction](#intro) | 
+2 [The Arduino Platform](#platform) |
+3 [the Arduino Board](#board) |
+4 [The Software (IDE)](#software) |
+4.1 [Arduino IDE Installation Guide](#IDE) |
+4.2 [Port Identification & Board Selection](#portID) |
+4.3 [The User Interface](#UI) |
+5 [Getting Started: Hello World!](#started) |
 6 Wiring Diagrams & Schematics |
 7 Next step: a Pushbutton |
 8 Analog In |
@@ -23,52 +21,59 @@ level 1 | level 2
 
 ## <a name="intro">1. Introduction</a>
 
-[Arduino](https://www.arduino.cc/) is an open source physical computing platform based on a simple input/output (I/O) board and a development environment that implements the Processing language (www.processing.org). Arduino can be used to develop standalone interactive objects or can be connected to software on your computer (such as [Processing](https://processing.org/), P5JS with [the p5.bots library](https://github.com/sarahgp/p5bots), [TouchDesigner](https://www.derivative.ca/), [VVVV](https://vvvv.org/), [Max](https://cycling74.com/products/max/)), ...  
+[Arduino](https://www.arduino.cc/) is an open source physical computing platform based on a simple input/output (I/O) board and a development environment that is based on [Processing](http://www.processing.org). Arduino can be used to develop standalone interactive objects or can be connected to software on your computer, such as [Processing](https://processing.org/), P5JS with [the p5.bots library](https://github.com/sarahgp/p5bots), [TouchDesigner](https://www.derivative.ca/), [VVVV](https://vvvv.org/), [Max](https://cycling74.com/products/max/), ...  
 
-## 2. The Arduino Platform
+## <a name="platform">2. The Arduino Platform
 
-Arduino is composed of two major parts: **the Arduino board**, which is the piece of hardware you work on when you build your objects, and **the Arduino IDE**, the piece of software you run on your computer. You use the IDE to create a sketch (a computer program with a set of instructions) that you upload to the Arduino board. This program tells the board what to do.
+Arduino is composed of two major parts: **the Arduino board**, which is the piece of hardware you work on when you build your objects, and **the Arduino IDE**, the software you run on your computer. In the IDE to write a sketch (a computer program with a set of instructions) that you upload to the Arduino board. This program tells the board what to do.
 
-The latest version of the Arduino IDE can be downloaded [on the Arduino Software page](https://www.arduino.cc/en/Main/Software).
-    
-There is also [an online IDE](https://create.arduino.cc/editor) if you prefer working in the cloud. Do follow the [Getting Started with Arduino Web Editor tutorial](https://create.arduino.cc/projecthub/Arduino_Genuino/getting-started-with-arduino-web-editor-on-various-platforms-4b3e4a) before you get started.  
+Community
+https://forum.arduino.cc/
+https://www.arduino.cc/en/Tutorial/HomePage
+https://create.arduino.cc/projecthub
 
-## 3. The Arduino Hardware
+[Hackster.io](https://www.hackster.io/) is the world’s fastest growing developer community for learning, programming, and building hardware.
 
-### 3.1 the Arduino Board
+
+
+
+## <a name="hardware">3. The Arduino Board
 The Arduino board is a small microcontroller board, which is a small circuit  that contains a whole computer on a small chip. This computer is at least a thousand times less powerful than your laptop, but it’s a lot cheaper and very useful to build interesting devices. 
 
-For this tutorial we will use a [keyestudio Uno R3](https://www.keyestudio.com/keyestudio-uno-r3-atmega328p-development-board-usb-cable-for-arduino-p0513-p0513.html) arduino clone. 
+will be using an [keyestudio Uno R3](https://www.keyestudio.com/keyestudio-uno-r3-atmega328p-development-board-usb-cable-for-arduino-p0513-p0513.html) arduino clone. 
 
 ![](images/arduino/keyesudio_arduino.jpg)
 
-Looking at the Arduino board: you’ll see a black chip with 28 “legs”. That chip is the ATmega328P, the heart of your board. 
+Looking at the Arduino board: you’ll see a black chip with 28 *legs*. That chip is the ATmega328P, the heart of your board. 
 The arduino UNO features:
-- **14 Digital IO pins** (pins 0–13). These can be inputs or outputs, which is specified by the sketch you create in the IDE.
+- **14 Digital IO pins** (pins 0–13). These can be inputs or outputs, which is specified by the sketch you create.
 - **6 Analog In pins** (pins 0–5). These dedicated analog input pins take analog values (0-5V) (i.e. voltage readings from a sensor) and convert them into a number between 0 and 1023 (= 10 bit).
-- **6 PWM pins** (pins 3, 5, 6, 9, 10, and 11). These are actually 6 of the digital pins that can be reprogrammed for *analogue output* using the sketch you create in the IDE.
-- The board can be powered from your computer’s USB port (5V), most USB chargers, or an AC adapter (7-12V recommended, 2.1mm barrel tip, center positive).
-- another Atmega16U2 programmed as a USB-to-serial converter.
+- **6 PWM pins** (pins 3, 5, 6, 9, 10, and 11). These are actually 6 of the digital pins that can be reprogrammed for *analog output*.
+- The board can be **powered** from your computer’s USB port (5V), most USB chargers, or an AC adapter (7-12V recommended, 2.1mm barrel tip, center positive).
+- another Atmega16U2 programmed as a **USB-to-serial converter**.
 
 ![Image](images/arduino/uno_layout.jpg)
 *The complete parts  of an Arduino Uno*
 
 The arduino reference can be found [here](https://www.arduino.cc/en/Reference/Board).
-The complete schematic of Arduino Uno can be found [here](https://www.arduino.cc/en/uploads/Main/arduino-uno-schematic.pdf). It's complicated and you don't really need to understand it, but it's explanation can be found [here](https://www.allaboutcircuits.com/technical-articles/understanding-arduino-uno-hardware-design/).
+The complete schematic of Arduino Uno can be found [here](https://www.arduino.cc/en/uploads/Main/arduino-uno-schematic.pdf).
 
-### 3.2  The keyestudio Sensor Kits
+### The keyestudio Sensor Kits
 We will use 4 slightly different Arduino starter kits developed by Keyes. Each kit contains a UNO R3 Controller board, some sensor modules (e.g. a joystick, three axis acceleration, rotary encoder, potentiometer, soil humidity, line tracking, LM35 temperature, photocell, vibration, gas, water, PIR, color, air quality, sound, ...), some actuators (e.g. LEDs, RGB LED, passive & active buzzer, relay, ...), a Breadboard, some resistors, buttons, jumper wire & a
 USB cable. 
 
 Keyestudio also provides a wiki with detailed tutorials using the provided hardware module. The tutorial include connection diagrams and sample codes.
 See the tutorials for [Kit 1](https://wiki.keyestudio.com/Ks0178_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K1), [Kit 2](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K2), [Kit 3](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K3) & [Kit 4](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K4)
 
-
-## 4. The Software (IDE)
+## <a name="software">4. The Software (IDE)
 
 The programs you write for your Arduino are known as sketches. They are writen in C++.
+todo: iets meer uitleg
 
-### 4.1 Arduino IDE Installation Guide
+
+
+
+### <a name="IDE">4.1 Arduino IDE Installation Guide
 Download the latest stable version for your operating system from the [Arduino Software Centre.](https://www.arduino.cc/en/Main/Software).        
 #### MacOS
 1. [Download the Application zip file](https://www.arduino.cc/en/Main/Software) whose name wil be something along the lines of  Arduino-1.8.8-macosx.zip.
@@ -82,7 +87,7 @@ Download the latest stable version for your operating system from the [Arduino S
 #### Windows
 You have some options to install the Arduino IDE. Download & install it [manually](https://www.arduino.cc/en/Guide/Windows) or trough the [MS store](https://www.microsoft.com/fr-be/p/arduino-ide/9nblggh4rsd8?ocid=badge&rtc=1&activetab=pivot:overviewtab).
     
-### 4.2 Port Identification & Board Selection
+### <a name="portID">4.2 Port Identification & Board Selection
 The process for setting up your Arduino and connecting the software to your board differs also related to the computer you are using. 
 
 #### MacOS
@@ -99,10 +104,10 @@ The process for setting up your Arduino and connecting the software to your boar
 
 3. Here too. Select the right board. Go again to Tools >> Board and select "Arduino/Genuino Uno"
 
-### 4.3 The User Interface
+### <a name="UI">4.3 The User Interface
 ![The User INterface](images/arduino/arduino_ide.svg)
 
-## 5. Getting Started: Hello World!<br>  𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
+## <a name="started">5. Getting Started: Hello World!<br>  𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 
 A "Hello World!" in the Arduino sphere is a blinking LED. You just need an Arduino and a USB cable. Open an new file in the IDE, name and save it. Then type the following text into the Arduino sketch editor.
 

@@ -20,7 +20,7 @@ Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo ku
 ## ARDUINO
 [Arduino](https://www.arduino.cc/) is één van de meest populaire opensource elektronicaplatform (naast Raspberry Pi). Het is gebaseerd op eenvoudig te gebruiken hard- en software. Het is ontwikkeld met als doel de gebruikers het zo gemakkelijk mogelijk te maken met elektronische componenten te *'tinkeren'*<sup>[1](#myfootnote1)</sup>. 
 
-Door de jaren heen zijn Arduino's het brein geweest van duizenden projecten, van alledaagse objecten tot de meest complexe wetenschappelijke instrumenten. Een wereldwijde gemeenschap van makers - studenten, hobbyisten, kunstenaars, programmeurs en professionals - heeft zich rond dit open-sourceplatform verzameld, hun bijdragen hebben een ongelooflijke hoeveelheid kennis toegevoegd die zowel voor beginners als gevorderden een grote hulp kan zijn.
+Sinds  zijn Arduino's het brein  van duizenden projecten, van alledaagse objecten tot de meest complexe wetenschappelijke instrumenten. Een wereldwijde gemeenschap van makers - studenten, hobbyisten, kunstenaars, programmeurs en professionals - heeft zich rond dit open-sourceplatform verzameld, hun bijdragen hebben een ongelooflijke hoeveelheid kennis toegevoegd die zowel voor beginners als gevorderden een grote hulp kan zijn.
 
 De basis van elk Arduino-project is een Arduino-board waar een aantal standaard componenten op vast zijn gesoldeerd. Het hart van een Arduino-board is een microcontroller, veelal een Atmel ATmega. Sommige Arduino-boards hebben echter microcontrollers van bijvoorbeeld Intel of STM. Wat je verder op een Arduino-board vindt, is afhankelijk van het model. De meeste boards hebben een usb-aansluiting om met je computer te kunnen communiceren, maar er zijn ook boards beschikbaar met alleen een wifi-module. 
 
@@ -31,6 +31,12 @@ Om je Arduino-project te programmeren, heb je een computer nodig, maar dit betek
 <!--Arduino-boards kunnen ingangen uitlezen - licht op een sensor, een vinger op een knop of een Twitter-bericht, ... - en veranderen in een uitgang - een motor activeren, een LED aanzetten, iets online publiceren. Het programmeren van een Arduino-bord doe je door er een reeks instructies - een grogramma - naar de microcontroller op het bord te sturen. Hiervoor gebruik je de Arduino-programmeertaal (C++) en de Arduino IDE (gebaseerd op Processing). De Arduino-software is eenvoudig te gebruiken voor beginners, maar toch flexibel genoeg voor gevorderde gebruikers. Het werkt op Mac, Windows en Linux. -->
 
 Aan de slag met Arduino! Raadpleeg [de beknopte handleiding](https://www.arduino.cc/en/Guide/HomePage). Als je op zoek bent naar inspiratie, kun je een grote verscheidenheid aan handleidingen vinden op [Arduino Project Hub](https://create.arduino.cc/projecthub). Meer uitleg over het volledige scala van officiële Arduino-producten, waaronder Boards, Modules (een kleinere formfactor van de klassieke borden), Shields (elementen die gemakkelelijk op het board aangesloten kunnen worden om extra functies toe te voegen) en Kits vindt je op de [products-page](https://www.arduino.cc/en/Main/Products).
+
+todo
+Mijn naam is Bas van Dijk. In korte video's neem ik je mee in de wereld van Arduino. De Arduino lessen zijn opbouwend waardoor je stap voor stap verder komt. Je begint met een simpel LED en werkt door naar het maken van weerstation, eigen computerspel en nog veel meer projecten.
+
+https://arduino-lessen.nl/
+
 
 ## ELEKTRICITEIT
 
