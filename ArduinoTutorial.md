@@ -1,30 +1,27 @@
 # Arduino & basic electronics Tutorial 
 
 #### Contents
-1. [Introduction](#intro)
-2. [The Arduino Platform](#platform)
-3. [the Arduino Board](#board)
-4. [The Software (IDE)](#software)
-5. [Getting Started: Hello World!](#started)
-6. [Wiring Diagrams & Schematics](#schematics)
-7. [Next step: a Pushbutton - Digital Inputs](#digitalIn)
-8. [Advanced Sensors - Analog Inputs](#analogIn)
-9. [PWM - Analog Outputs](#analogOut)
-
+Getting Prepped | Getting Started
+--- | ---
+1. [Introduction](#intro) | 5. [Getting Started: Hello World!](#started) 
+2. [The Arduino Platform](#platform) | 6. [Wiring Diagrams & Schematics](#schematics)
+3. [the Arduino Board](#board) | 7. [Next step: a Pushbutton - Digital Inputs](#digitalIn)
+4. [The Software (IDE)](#software) | 8. [Advanced Sensors - Analog Inputs](#analogIn)
+| 9. [PWM - Analog Outputs](#analogOut)
 
 
 ## <a name="intro">1. Introduction</a>
 
-[Arduino](https://www.arduino.cc/) is an open source physical computing platform based on a simple input/output (I/O) board and a development environment that is based on [Processing](http://www.processing.org). Arduino can be used to develop standalone interactive objects or can be connected to software on your computer, such as [Processing](https://processing.org/), P5JS with [the p5.bots library](https://github.com/sarahgp/p5bots), [TouchDesigner](https://www.derivative.ca/), [VVVV](https://vvvv.org/), [Max](https://cycling74.com/products/max/), ...  
+[Arduino](https://www.arduino.cc/) is an open source physical computing platform based on a simple input/output (I/O) board and a development environment that is based on [Processing](http://www.processing.org). Arduino can be used to develop standalone interactive objects or can be connected to software on your computer, such as [Processing](https://processing.org/), the internet with a.o. [P5.JS](https://p5js.org/) with [the p5.bots library](https://github.com/sarahgp/p5bots), [TouchDesigner](https://www.derivative.ca/), [VVVV](https://vvvv.org/), [Max](https://cycling74.com/products/max/), ...  
 
 ## <a name="platform">2. The Arduino Platform
 
 Arduino is composed of two major parts: **the Arduino board**, which is the piece of hardware you work on when you build your objects, and **the Arduino IDE**, the software you run on your computer. In the IDE you write a sketch (a computer program with a set of instructions) that you upload to the Arduino board. This program tells the board what to do.
 
-Community
-https://forum.arduino.cc/
-https://www.arduino.cc/en/Tutorial/HomePage
-https://create.arduino.cc/projecthub
+Arduino has a worldwide **community** of over 30 million active users. The Arduino website is a nice place to start exploring projects built on Arduino, learn, ask for help etc.  
+☞ https://forum.arduino.cc/  
+☞ https://www.arduino.cc/en/Tutorial/HomePage   
+☞ https://create.arduino.cc/projecthub
 
 [Hackster.io](https://www.hackster.io/) is the world’s fastest growing developer community for learning, programming, and building hardware.
 
@@ -168,6 +165,7 @@ The LED can easily be substituted by other actuator as:
 - A Buzzer or beeper is a little device that makes a buzzing noise and is used for signalling.
 - A **relay** is an electrically operated switch. It uses a low voltage control signal to switch, usually higher voltage. It can also be used to control lighting, electrical and other equipment. 
 - ...
+but therefore we need to know how we can hook them up.
 
 ## <a name="schematics">6. Wiring Diagrams & Schematics
 Next we want to wire an external LED to the board. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to pin 13 on the Arduino, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a sketch or diagram with the wires and components connected to the Arduino?!
@@ -195,11 +193,11 @@ So our wiring diagram on a breadboard will look more or less like this:
 ## <a name="digitalIn">7. Next step: a Pushbutton<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
 
 ### :triangular_flag_on_post: Push the button 
-In our first example, the LED was our actuator, and our Arduino was controlling it. If we image an outside parameter to take control over this LED we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
+In our first example, the LED was our actuator, and our Arduino was controlling it. If we image an outside parameter to take control over this LED, our finger, we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
 
 Let's make our wiring diagram first.  
  
-The circuit:
+#### Circuit
 - LED attached from pin 13 to ground
 - pushbutton attached to pin 2 from +5V
 - 10K resistor attached to pin 2 from ground
@@ -209,7 +207,7 @@ The circuit:
 :scream_cat: Hold on! [What is a resistor]([https://learn.sparkfun.com/tutorials/resistors])?!  
 
 
-The code:
+#### Code
 ```c++
 // constants don't change:
 const int buttonPin = 2;
@@ -309,19 +307,19 @@ You can try some!
 
 ### :triangular_flag_on_post:  ADC
 
-In order to read this type of sensor, we need **a different type of pin**. In the lowerright part of the Arduino board, you’ll see six pins marked **“Analog In”**.   
-These are special pins that can tell us not only whether there is a voltage applied to them, but if so, also its value. The Arduino has a 10 bit **A**nalog to **D**igital **C**onverter. By using the `analogRead()` function, we can read the voltage applied to one of the pins. This function returns a number between 0 and 1023, which represents voltages between 0 and 5 volts. For example, if there is a voltage of 2.5 V applied to pin number 0, analogRead(0) returns 512.
+In order to read a more advanced sensor then a On/Off button we need **a different type of pin**. In the lower-right part of the Arduino board, you’ll see six pins marked **“Analog In”**.   
+These are special pins that can tell us not only whether there is a voltage applied to them, but if so, also its value. The Arduino has a 10 bit **A**nalog to **D**igital **C**onverter. By using the `analogRead()` function, we can read the voltage applied to one of the pins. This function returns a number between 0 and 1023, which represents voltages between 0 and 5 volts. For example, if there is a voltage of 2.5 V applied to pin number 0, `analogRead(0)` returns 512.
 
-The next sketch & electronics diagram demonstrates analog input by reading an analog sensor on analog pin 0 and turning on and off a LED connected to digital pin 2. The amount of time the LED will be on and off depends on the value obtained by analogRead(). 
+The next sketch & electronics diagram demonstrates analog input by reading an analog sensor as a potentiometer (or trimpot) on analog pin 0 and turning on and off a LED connected to digital pin 2. The amount of time the LED will be on and off depends on the value obtained by `analogRead()`. 
 
-The circuit:
+#### Circuit
 - potentiometer: center pin of the potentiometer to the analog input 0, one side pin (either one) to ground, the other side pin to +5V 
 - LED: a 220Ω resister bridges digital output 2 to the  anode (long leg) of the LED, the cathode (short leg) attached to ground.   
 Actually the resistor can also go in between the cathode and ground as in a series circuit the order of components does not matter as the current has to pass through all the parts!
 
 ![image](images/arduino/analogIn.png)
 
-The code:
+#### Code
 ```c++
 int sensorPin = A0;    // select the input pin for the potentiometer
 int ledPin = 13;      // select the pin for the LED
@@ -345,7 +343,7 @@ void loop() {
   delay(sensorValue);
 }
 ```
-:warning: As you might have noticed in the example above the blinking interval is not always changed imediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) and also [this blogpost](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/).
+:warning: As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) and also [this blogpost](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/).
 
 ### :triangular_flag_on_post: talk2me
 Wouldn't it be handy if we could check our incoming values? We actually can by establishing **serial communication** from our Arduino to our computer.   
@@ -354,7 +352,7 @@ In the code below we will map the 0-1023 values to a custom range 10-500, send t
 
 The circuit remains the same.  
 
-The code:
+#### Code
 ```c++
 int sensorPin = A0;    // select the input pin for the potentiometer
 int ledPin = 13;       // select the pin for the LED
@@ -417,8 +415,8 @@ The Keyestudio starter kits contain a lot of usefull sensor modules, as:
 
 
 ## 9. <a name="analogOut">PWM <br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
-### :triangular_flag_on_post:  PWM
-PWM short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc. We can accomplish a range of results in both applications because PWM allows us to vary how much time the signal is high as in an analog fashion. While the signal can only be high (5V) or low (0V) at any time, we can change the proportion of time the signal is high compared to when it is low over a consistent time interval. We call this modulating the duty cycle.
+### :triangular_flag_on_post:  PWM, a fading LED
+PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc. We can accomplish a range of results in both applications because PWM allows us to vary how much time the signal is high as in an analog fashion. While the signal can only be high (5V) or low (0V) at any time, we can change the proportion of time the signal is high compared to when it is low over a consistent time interval. We call this modulating the duty cycle.
 
 
 ![pwm](images/arduino/Pulse-Width-Modulation.jpg)
@@ -428,11 +426,13 @@ PWM short for **Pulse Width Modulation**, is a technique used to encode analog s
 - The voltage level（such as：0V-5V）
 
 There are 6 PMW interfaces on an Arduino Uno: Digital pins 3, 5, 6, 9, 10, and 11, all are indicated with a ~ (tilde). 
+
+We will explore this PWM magic by changing the brightness of a LED over time.  
     
-The circuit:
+#### Circuit
 ![image](images/arduino/analogOutSimple_bb.png)
 
-The code:
+#### Code
 ```c++
 int ledPin = 3;      // LED connected to digital pin 3
 int fadeAmount = 5;  // how many points to fade the LED by
@@ -467,7 +467,7 @@ In a previous experiment, we have done a *button-controlled LED*, using digital 
 
 The input of potentiometer is analog, so we connect it to analog port, and LED to PWM port.
 
-The circuit:
+#### Circuit
 ![image](images/arduino/analogOut.png)
 
 
@@ -476,7 +476,7 @@ In the program compiling process, we will use the analogWrite (PWM interface, an
 
 After downloading the program, when we rotate the potentiometer knob, we can see changes of the displaying value, also obvious change of the LED brightness on the breadboard.
 
-The code:
+#### Code
 ```c++
 /*
   Set the brightness of ledpin to a brightness specified by the
