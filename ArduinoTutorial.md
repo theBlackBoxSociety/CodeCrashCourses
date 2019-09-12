@@ -1,22 +1,16 @@
 # Arduino & basic electronics Tutorial 
-_-- :flushed: level 1 --_
 
 #### Contents
-level 1 | level 2
-:--- | :--- 
-1 [Introduction](#intro) | 
-2 [The Arduino Platform](#platform) |
-3 [the Arduino Board](#board) |
-4 [The Software (IDE)](#software) |
-4.1 [Arduino IDE Installation Guide](#IDE) |
-4.2 [Port Identification & Board Selection](#portID) |
-4.3 [The User Interface](#UI) |
-5 [Getting Started: Hello World!](#started) |
-6 Wiring Diagrams & Schematics |
-7 Next step: a Pushbutton |
-8 Analog In |
-9 Anolog Out |
-10 Serial Connection |
+1. [Introduction](#intro)
+2. [The Arduino Platform](#platform)
+3. [the Arduino Board](#board)
+4. [The Software (IDE)](#software)
+5. [Getting Started: Hello World!](#started)
+6. [Wiring Diagrams & Schematics](#schematics)
+7. [Next step: a Pushbutton - Digital Inputs](#digitalIn)
+8. [Advanced Sensors - Analog Inputs](#analogIn)
+9. [PWM - Analog Outputs](#analogOut)
+
 
 
 ## <a name="intro">1. Introduction</a>
@@ -59,15 +53,14 @@ The complete schematic of Arduino Uno can be found [here](https://www.arduino.cc
 We will use Arduino starter kits developed by Keyes. Each kit contains a UNO R3 Controller board, some sensor modules (e.g. a joystick, three axis acceleration, rotary encoder, potentiometer, soil humidity, line tracking, LM35 temperature, photocell, vibration, gas, water, PIR, color, air quality, sound, ...), some actuators (e.g. LEDs, RGB LED, passive & active buzzer, relay, ...), a Breadboard, some resistors, buttons, jumper wire & a
 USB cable. 
 
-~~Keyestudio also provides a wiki with detailed tutorials using the provided hardware module. The tutorial include connection diagrams and sample codes.
-See the tutorials for [Kit 1](https://wiki.keyestudio.com/Ks0178_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K1), [Kit 2](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K2), [Kit 3](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K3) & [Kit 4](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K4)~~
+Keyestudio also provides a wiki with detailed tutorials using the provided hardware module. The tutorial include connection diagrams and sample codes.
+See the tutorials for [Kit 1](https://wiki.keyestudio.com/Ks0178_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K1), [Kit 2](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K2), [Kit 3](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K3) & [Kit 4](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K4)
 
 ## <a name="software">4. The Software (IDE)
 The programs you write for your Arduino are known as sketches. They are written in C/C++.
 
 
-
-### <a name="IDE">4.1 Arduino IDE Installation Guide
+### <a name="IDE">:triangular_flag_on_post:  Arduino IDE Installation Guide
 Download the latest stable version for your operating system from the [Arduino Software Centre.](https://www.arduino.cc/en/Main/Software).        
 #### MacOS
 1. [Download the Application zip file](https://www.arduino.cc/en/Main/Software) whose name will be something along the lines of  Arduino-1.8.9-macosx.zip.
@@ -85,7 +78,7 @@ You have some options to install the Arduino IDE. Download & install it [manuall
 Get the latest version from the [download page](https://www.arduino.cc/en/Main/Software). You can choose between the 32, 64 and ARM versions. Install it following [this quick start guide](https://www.arduino.cc/en/Guide/Linux).
 
     
-### <a name="portID">4.2 Port Identification & Board Selection
+### <a name="portID">:triangular_flag_on_post:  Port Identification & Board Selection
 The process for setting up your Arduino and connecting the software to your board differs also related to the computer you are using. 
 
 #### MacOS / Linux
@@ -102,12 +95,13 @@ The process for setting up your Arduino and connecting the software to your boar
 
 3. Here too. Select the right board. Go again to Tools >> Board and select "Arduino/Genuino Uno"
 
-### <a name="UI">4.3 The User Interface
+### <a name="UI">:triangular_flag_on_post:  The User Interface
 ![The User INterface](images/arduino/arduino_ide.svg)
+
 
 ## <a name="started">5. Getting Started: Hello World!<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤 
 
-
+### :triangular_flag_on_post:  Hello World!
 A "Hello World!" in the Arduino sphere is a blinking LED.  
 You just need an Arduino and a USB cable. Open an new file in the IDE, name and save it.  
 Then type the following text into the Arduino sketch editor but you can skip the lines starting with a `//` as they are comments.
@@ -163,11 +157,19 @@ Arduino always expects two functions to exists: `setup()` and `loop()`. The `set
 
 Writing comments in Arduino; any text beginning with `//` is ignored or use this `/*` `*/` at the start & end for a block of comments. 
 
-See the [reference page](http://arduino.cc/en/Reference/HomePage) for documentation of Arduino language constructs. 
+### :triangular_flag_on_post: Lingua Arduino 
+The Arduino programming language can be divided in three main parts: functions, values (variables and constants), and structure. See the [reference page](http://arduino.cc/en/Reference/HomePage) for documentation of Arduino language constructs. 
 
-Do fiddle a bit with the parameters of the delays to see changes in blinking rhythm.
+### :triangular_flag_on_post: Fiddle the parameters
+You can adjust the values of the 2 delay times to see changes in blinking rhythm. Don't forget to compile and upload the code after you made changes.
 
-## 6. Wiring Diagrams & Schematics
+### :triangular_flag_on_post: Other actuators 
+The LED can easily be substituted by other actuator as:
+- A Buzzer or beeper is a little device that makes a buzzing noise and is used for signalling.
+- A **relay** is an electrically operated switch. It uses a low voltage control signal to switch, usually higher voltage. It can also be used to control lighting, electrical and other equipment. 
+- ...
+
+## <a name="schematics">6. Wiring Diagrams & Schematics
 Next we want to wire an external LED to the board. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to pin 13 on the Arduino, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a sketch or diagram with the wires and components connected to the Arduino?!
 
 Being able to read these diagrams is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
@@ -190,9 +192,9 @@ More on [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-us
 So our wiring diagram on a breadboard will look more or less like this:
 ![image](images/arduino/digitalOut.png)
 
-## 7. Next step: a Pushbutton<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
+## <a name="digitalIn">7. Next step: a Pushbutton<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
 
-:triangular_flag_on_post:  
+### :triangular_flag_on_post: Push the button 
 In our first example, the LED was our actuator, and our Arduino was controlling it. If we image an outside parameter to take control over this LED we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
 
 Let's make our wiring diagram first.  
@@ -246,7 +248,7 @@ Now here is the `digitalRead()` function and the `if` `else` instructions. The l
 
 Notice the difference between the ```==``` sign and the ```=```. The former is used when two entities are compared, and returns TRUE or FALSE. The latter assigns a value to a variable. 
 
-:triangular_flag_on_post:  
+### :triangular_flag_on_post: Sticky on/off button
 Holding your finger on the button for as long as you need light is not practical. 
 Lets program **a second behaviour** that to make the on button “stick”. We therefore must implement some form of “memory”, in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
 
@@ -291,7 +293,7 @@ void loop() {
 
 :scream_cat: Hold on! Debouncing?! [Explained and illustrated with a better / non-freezing method](https://www.arduino.cc/en/tutorial/debounce). 
 
-:triangular_flag_on_post:   
+### :triangular_flag_on_post: Other On/Off Sensors
 Now that you’ve learned how to use a pushbutton, you should know that there are other basic sensors that work according to the same *on/off* principle, as: 
 * **Switches** are just like a pushbutton, but doesn’t automatically change state when released.
 * **Thermostats** is a switch that opens when the temperature reaches a set value.
@@ -301,11 +303,14 @@ have two contacts that come together when they are near a magnet.
 * **PIR** or Passive InfraRed sensor. This small device triggers when a human being (or other living being) moves within its proximity. 
 * **Tilt switches** are electronic components that contains two contacts and a little metal ball. 
 You can try some!
+* ...
 
-## 8. Advanced Sensors<br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤
-:triangular_flag_on_post:  
+## <a name="analogIn">8. Advanced Sensors<br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤
+
+### :triangular_flag_on_post:  ADC
+
 In order to read this type of sensor, we need **a different type of pin**. In the lowerright part of the Arduino board, you’ll see six pins marked **“Analog In”**.   
-These are special pins that can tell us not only whether there is a voltage applied to them, but if so, also its value. By using the `analogRead()` function, we can read the voltage applied to one of the pins. This function returns a number between 0 and 1023, which represents voltages between 0 and 5 volts. For example, if there is a voltage of 2.5 V applied to pin number 0, analogRead(0) returns 512.
+These are special pins that can tell us not only whether there is a voltage applied to them, but if so, also its value. The Arduino has a 10 bit **A**nalog to **D**igital **C**onverter. By using the `analogRead()` function, we can read the voltage applied to one of the pins. This function returns a number between 0 and 1023, which represents voltages between 0 and 5 volts. For example, if there is a voltage of 2.5 V applied to pin number 0, analogRead(0) returns 512.
 
 The next sketch & electronics diagram demonstrates analog input by reading an analog sensor on analog pin 0 and turning on and off a LED connected to digital pin 2. The amount of time the LED will be on and off depends on the value obtained by analogRead(). 
 
@@ -340,27 +345,89 @@ void loop() {
   delay(sensorValue);
 }
 ```
-:triangular_flag_on_post:  
-serial monitor   
-:triangular_flag_on_post:  
-voorbeeld met een voltage devider  
-:triangular_flag_on_post:
-andere sensoren
+:warning: As you might have noticed in the example above the blinking interval is not always changed imediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) and also [this blogpost](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/).
 
-## 9. PWM <br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
-:triangular_flag_on_post:  
-PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into digital ones. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. So we use a high resolution counter to encode a specific analog signal level by modulating the duty cycle of PMW. The PWM signal is also digitalized because in any given moment, fully on DC power supply is either 5V (ON), or 0V (OFF). The voltage or current is fed to the analog load (the device that uses the power) by repeated pulse sequence being ON or OFF.    
-The output voltage value is calculated via the on and off time. Output voltage = (turn on time/pulse time) * maximum voltage value
+### :triangular_flag_on_post: talk2me
+Wouldn't it be handy if we could check our incoming values? We actually can by establishing **serial communication** from our Arduino to our computer.   
+We call this "serial" communication because the connection appears to both the Arduino and the computer as a serial port, even though it may actually use a USB cable. Bytes are sent one after another (serially) from the Arduino to the computer.  
+In the code below we will map the 0-1023 values to a custom range 10-500, send the 2 variables over the serial port and the Arduino Serial Monitor to view them. Click the serial monitor button in the toolbar and select the same baud rate used in the call to begin().  
 
-PWM has many applications: lamp brightness regulating, motor speed regulating, sound making, etc.
+The circuit remains the same.  
+
+The code:
+```c++
+int sensorPin = A0;    // select the input pin for the potentiometer
+int ledPin = 13;       // select the pin for the LED
+int sensorValue = 0;   // variable to store the value coming from the sensor
+int outputValue = 0;   // variable to store a scaled value of the sensorvalue 
+
+void setup() {
+  // declare the ledPin as an OUTPUT:
+  pinMode(ledPin, OUTPUT);
+  // initialize serial communications at 9600 bps:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // read the value from the sensor:
+  sensorValue = analogRead(sensorPin);
+  
+  // map or scale it to a custom range:
+  outputValue = map(sensorValue, 0, 1023, 10, 500);
+  
+  // print the results to the Serial Monitor:
+  Serial.print("sensor = ");
+  Serial.print(sensorValue);
+  Serial.print("\t output = ");
+  Serial.println(outputValue);
+  
+  // turn the ledPin on
+  digitalWrite(ledPin, HIGH);
+  // stop the program for <sensorValue> milliseconds:
+  delay(sensorValue);
+  // turn the ledPin off:
+  digitalWrite(ledPin, LOW);
+  // stop the program for for <sensorValue> milliseconds:
+  delay(sensorValue);
+}
+```   
+:mag: **A closer look at the code**  
+In the setup() function we open the serial communication set the data rate in bits per second (baud), here 9600bps, with the command `Serial.begin(9600);`.   
+
+`Serial.print()` prints the data to the serial port as human-readable ASCII text. This command can take many forms. Numbers are printed using an ASCII character for each digit. Floats are similarly printed as ASCII digits, defaulting to two decimal places. Bytes are sent as a single character. Characters and strings are sent as is.   
+For example:
+Serial.print(78) gives "78"
+Serial.print(1.23456) gives "1.23"
+Serial.print('N') gives "N"
+Serial.print("Hello world.") gives "Hello world."  
+
+`Serial.println()` takes the same forms as Serial.print() but the message is followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n').
+ 
+### :triangular_flag_on_post: more toys
+The Keyestudio starter kits contain a lot of usefull sensor modules, as:
+- An **Alcohol Sensor** :grinning: to make a breath analiser. 
+- A **Gas Sensor** or the MQ2. This sensor is suitable for detecting LPG, I-butane, propane, methane, alcohol, Hydrogen and smoke. It has high sensitivity and quick response. 
+- A **Temperature Sensor** used to detect ambient air temperature (range from 0° to 100° C).
+- A **Photocell** or LDR is a variable resistor, which produces a resistance proportional to the amount of light it senses.
+- A **joystick** is in fact a double potentiometer placed on the X & Y axis. Connecting it to two analog inputs. It also features a switch that can be connected to a digital pin. 
+- A **Soil Humidity Sensor**. Two probes are inserted into the soil and current flow through the soil from one probe to the other. The sensor will get a resistance value by reading the current changes between the two probes and convert such resistance value into moisture content. The higher moisture (less resistance), the higher conductivity the soil has.
+- and many more
+
+:warning:   If we need to leave the keyestudio playgarden and make use of other sensors we might need to do some more circuit magic for a sensor to work. A very common and simple circuit is [the voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). It turns a large voltage into a smaller one. See [this Analog Input tutorial](https://www.arduino.cc/en/tutorial/AnalogInput).
+
+
+## 9. <a name="analogOut">PWM <br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
+### :triangular_flag_on_post:  PWM
+PWM short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc. We can accomplish a range of results in both applications because PWM allows us to vary how much time the signal is high as in an analog fashion. While the signal can only be high (5V) or low (0V) at any time, we can change the proportion of time the signal is high compared to when it is low over a consistent time interval. We call this modulating the duty cycle.
+
 
 ![pwm](images/arduino/Pulse-Width-Modulation.jpg)
                                 
-1. The amplitude of pulse width (minimum / maximum)
-2. The pulse period (The reciprocal of pulse frequency in 1 second)
-3. The voltage level（such as：0V-5V）
+- The amplitude of pulse width (minimum / maximum)
+- The pulse period (The reciprocal of pulse frequency in 1 second)
+- The voltage level（such as：0V-5V）
 
-There are 6 PMW interfaces on an Arduino Uno; Digital pins 3, 5, 6, 9, 10, and 11.  
+There are 6 PMW interfaces on an Arduino Uno: Digital pins 3, 5, 6, 9, 10, and 11, all are indicated with a ~ (tilde). 
     
 The circuit:
 ![image](images/arduino/analogOutSimple_bb.png)
@@ -394,6 +461,7 @@ void loop() {
 }
 ```
 
+### :triangular_flag_on_post:  Input 2 Output
 **Now lets connect our Input with the Output.**
 In a previous experiment, we have done a *button-controlled LED*, using digital signal to control digital pin. Now we will use a potentiometer to control the brightness of the LED.
 
@@ -433,36 +501,6 @@ void loop() {
   delay(10);
 }
 ```
-
-## 10. Serial Connection <br>𝕊𝕖𝕣𝕚𝕒𝕝 ℂ𝕠𝕟𝕟𝕖𝕔𝕥𝕚𝕠𝕟
-
-
-Let's open Arduino software and compile code that enables Arduino to print "Hello World!" under your instruction. Of course, you can compile code for Arduino to continuously echo "Hello World!" without instruction. A simple If () statement will do the instruction trick. With the onboard LED connected to pin 13, we can instruct the LED to blink first when Arduino gets an instruction and then print "Hello World!”. 
-
-```c++
-int val;          //define variable val
-int ledpin = 13;  // define digital interface 13
-
-void setup()
-{
-  Serial.begin(9600);// set the baud rate at 9600 to match the software set up. When connected to a specific device, (e.g. bluetooth), the baud rate needs to be the same with it.
-  pinMode(ledpin,OUTPUT);// initialize digital pin 13 as output. When using I/O ports on an Arduino, this kind of set up is always needed.
-}
-
-void loop()
-{
-  val=Serial.read();// read the instruction or character from PC to Arduino, and assign them to Val.
-  if(val=='R')// determine if the instruction or character received is “R”.
-  {  // if it’s “R”,    
-    digitalWrite(ledpin,HIGH);// set the LED on digital pin 13 on. 
-    delay(500);
-    digitalWrite(ledpin,LOW);// set the LED on digital pin 13 off.   
-    delay(500);
-    Serial.println("Hello World!");// display“Hello World！”string.
-  }
-}
-```
-*TODO serial send example*
 
 
 https://learn.sparkfun.com/tutorials/connecting-arduino-to-processing/all
