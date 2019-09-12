@@ -502,5 +502,8 @@ void loop() {
 }
 ```
 
-
+:skull:
+TODO  
+nog iets met servo's
+arduino connectie met processing, ...
 https://learn.sparkfun.com/tutorials/connecting-arduino-to-processing/all
