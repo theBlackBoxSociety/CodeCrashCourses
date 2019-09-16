@@ -413,6 +413,8 @@ The Keyestudio starter kits contain a lot of usefull sensor modules, as:
 
 :warning:   If we need to leave the keyestudio playgarden and make use of other sensors we might need to do some more circuit magic for a sensor to work. A very common and simple circuit is [the voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). It turns a large voltage into a smaller one. See [this Analog Input tutorial](https://www.arduino.cc/en/tutorial/AnalogInput).
 
+:warning:   You might also come across an even more advanced sensor module in the Keyestudio kits. These modules are connected to the Arduino board through UART, SPI, or I2C (3 common communication peripherals found on Arduino). Lets not make it more complex then needed here. If you want to learn more [this post](https://maker.pro/arduino/tutorial/common-communication-peripherals-on-the-arduino-uart-i2c-and-spi) is a good start and the code in the Keyestudio can get you started.
+
 
 ## 9. <a name="analogOut">PWM <br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 ### :triangular_flag_on_post:  PWM, a fading LED
@@ -502,8 +504,63 @@ void loop() {
 }
 ```
 
-:skull:
-TODO  
-nog iets met servo's
-arduino connectie met processing, ...
+### :triangular_flag_on_post:  Servo Motor Control
+Now, lets substitute that LED for a **Servo Motor**.      
+Servo motors are great devices with a shaft that can turn to a specified position. Usually, they have a range from 0 to 180 degrees. Using the Arduino, we can tell a servo to go to a specified position. We will see how to connect a servo motor and then how to turn it to different positions defined by the rotation of our potentiometer. 
+
+A servo motor has everything built in: a motor, a gearbox, a feedback circuit, and most important, a motor driver. It just needs one power line, one ground, and one control pin.
+
+*There is also a second kind of servo that features a continuous rotation of the shaft, set to various speeds. This is a very useful motor for small geared vehicles.*
+
+#### Circuit
+Following are the steps to connect a servo motor to the Arduino:
+The servo motor has a female connector with three pins. 
+- The darkest (brown here) is usually the ground. Connect this to the Arduino GND.
+- Connect the power cable that in all standards should be red to 5V on the Arduino.
+- Connect the remaining line on the servo connector to a digital pin on the Arduino.    
+
+![image](images/arduino/analogOutServo.png)
+
+Note that servos can draw considerable power, so if you need to drive more than one or two, you'll probably need to power them from a separate supply (i.e. not the +5V pin on your Arduino). 
+
+
+#### Code
+In this example will will use a library that will make  the coding a lot easier.   
+Just like with most  programming platforms the Arduino Software can be extended through the use of Libraries. They provide extra functionalities and ease of use. A number of libraries come installed with the IDE, but you can also download or create your own. 
+
+To use a library in a sketch, select it from Sketch > Import Library or just type in the `#include` command.
+
+```c++
+#include <Servo.h>
+
+Servo myservo;    // create servo object to control a servo
+
+int potpin = A0;  // analog pin used to connect the potentiometer
+int val;          // variable to read the value from the analog pin
+
+void setup() {
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+  val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023)
+  val = map(val, 0, 1023, 0, 180);     // scale it to use it with the servo (value between 0 and 180)
+  myservo.write(val);                  // sets the servo position according to the scaled value
+  delay(15);                           // waits for the servo to get there
+}
+```
+Make sure you always check the modalities on how to use a library on its reference page! [This is the servo reference page](https://www.arduino.cc/en/reference/servo)
+
+The new functions used here are:
+- Servo *objectname*;
+- *objectname*.attach*(interface)* select the pin for servo. This can only use pin 9 or 10.
+- *objectname*.write*(angle)* used to control the angle of the servo (0 to 180 degree).
+
+
+You can also choose not to use a library here (and for other functions) as libraries can also introduce unnecessary dependencies & possible incompatibilities.  
+See controlling servos without the Servo Library in [this tutorial of keyestudio](https://wiki.keyestudio.com/Ks0194_keyestudio_Micro_Servo).
+
+:skull: :skull: :skull:
+**TODO**  
+- arduino connectie met processing, webpagina, ...
 https://learn.sparkfun.com/tutorials/connecting-arduino-to-processing/all

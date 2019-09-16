@@ -9,7 +9,7 @@ dates | topic | tutors
 24/9, 1/10 & 8/10 • 9:30-12:30| [Processing](PROCESSING.md) | Hendrik
 15/10, 22/10 & 29/10 • 9:30-12:30 | [Markdown, HTML & CSS](MD-HTML-CSS.md) | Hendrik
 5/11, 19/11 & 26/11 • 9:30-12:30 | P5.JS | Jerry & Hendrik
-10/12 & 17/12 • 9:30-12:30 | Arduino | Hendrik
+10/12 & 17/12 • 9:30-12:30 | [Arduino](ArduinoTutorial.md) | Hendrik
 ––– | ––– |–––
  28/1 • 9:30-12:30 |Commandline *on Raspberry Pi* | Jerry 
  4/2, 11/2 & 18/2 • 9:30-12:30 | [Python](Python.md)   *on Raspberry Pi*| Jerry
