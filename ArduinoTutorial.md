@@ -7,7 +7,7 @@ Getting Prepped | Getting Started
 2. [The Arduino Platform](#platform) | 6. [Wiring Diagrams & Schematics](#schematics)
 3. [the Arduino Board](#board) | 7. [Next step: a Pushbutton - Digital Inputs](#digitalIn)
 4. [The Software (IDE)](#software) | 8. [Advanced Sensors - Analog Inputs](#analogIn)
-| 9. [PWM - Analog Outputs](#analogOut)
+. | 9. [PWM - Analog Outputs](#analogOut)
 
 
 ## <a name="intro">1. Introduction</a>
