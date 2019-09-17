@@ -1,12 +1,3 @@
-### :triangular_flag_on_post: 7. talk2me
-Lets make a **serial communication** from our Arduino to our computer to monitor our changing numbers.
-
-In the code below we will map the 0-1023 values to a custom range 10-500, send the 2 variables over the serial port and the Arduino Serial Monitor to view them. Click the serial monitor button in the toolbar and select the same baud rate used in the call to begin().  
-
-The circuit remains the same.  
-
-#### Code
-```c++
 int sensorPin = A0;    // select the input pin for the potentiometer
 int ledPin = 2;        // select the pin for the LED
 int sensorValue = 0;   // variable to store the value coming from the sensor
@@ -41,4 +32,3 @@ void loop() {
   // stop the program for for <sensorValue> milliseconds:
   delay(sensorValue);
 }
-```   

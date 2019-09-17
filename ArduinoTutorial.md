@@ -100,33 +100,35 @@ The process for setting up your Arduino and connecting the software to your boar
 
 ### :triangular_flag_on_post:  Hello World!
 A "Hello World!" in the Arduino sphere is a blinking LED.  
-You just need an Arduino and a USB cable. Open an new file in the IDE, name and save it.  
+You just need an Arduino and a USB cable.   
+Open an new file in the IDE, name and save it.    
 Then type the following text into the Arduino sketch editor but you can skip the lines starting with a `//` as they are comments.
 
 ```C++
-const int ledPin = 13; 
-// LED connected to digital pin 13  
- 
-void setup() {
-// the setup function runs once when you press reset 
+// LED connected to digital pin 13
+const int ledPin = 13;
+
+// the setup function runs once when you press reset
 // or power the board
+void setup() {
+    // initialize digital pin 13 as an output.
   pinMode(ledPin, OUTPUT);
-// initialize digital pin 13 as an output.
+
 }
 
+  // the loop function runs over and over
 void loop() {
-// the loop function runs over and over
-  digitalWrite(ledPin, HIGH);   
   // turn the LED on (HIGH is the voltage level)
-  delay(1000);               
+  digitalWrite(ledPin, HIGH);
   // wait for 1000 milliseconds or 1 second
-  digitalWrite(ledPin, LOW);    
+  delay(1000);
   // turn the LED off by making the voltage LOW
-  delay(1000);               
+  digitalWrite(ledPin, LOW);
   // wait for another second
+  delay(1000);
 }
 ```
-Press the **Verify** button to check your code is correct.  
+Press the **Verify** button to check if your code is correct.  
 If everything is fine, you’ll see the message **“Done compiling”** appear at the bottom of the Arduino IDE. The Arduino IDE has translated your sketch into an executable program that can be run by the board.  
 Now you can **upload** it into the board.  
 Press the Upload to I/O Board button. This will reset the board and force it to stop its current functions. Then sends the current compiled sketch is send to the board, got stored it in its memory. Then the board will run it. When it went fine you'll see the message **“Done uploading”** appear to let you know the process has completed correctly.
@@ -251,15 +253,15 @@ Holding your finger on the button for as long as you need light is not practical
 Lets program **a second behaviour** that to make the on button “stick”. We therefore must implement some form of “memory”, in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
 
 ```c++ 
-// Turn on LED when the button is pressed
-// and keep it on after it is released
+/* Turn on LED when the button is pressed
+  and keep it on after it is released */
 
 const int buttonPin = 2;
 const int ledPin =  13;
 
-int buttonState = 0;  // variable for reading the pushbutton status
 int val = 0;          // val will be used to store the state of the input pin
 int old_val = 0;      // this variable stores the previous value of "val"
+int buttonState = 0;  // variable that will store the pushbutton status
 
 void setup() {
   // initialize the LED pin as an output
@@ -321,13 +323,14 @@ Actually the resistor can also go in between the cathode and ground as in a seri
 
 #### Code
 ```c++
-int sensorPin = A0;    // select the input pin for the potentiometer
-int ledPin = 13;      // select the pin for the LED
+int sensorPin = A0;   // select the input pin for the potentiometer
+int ledPin = 2;      // select the pin for the LED
 int sensorValue = 0;  // variable to store the value coming from the sensor
 
 void setup() {
-  // declare the ledPin as an OUTPUT:
+  // declare the ledPin as an OUTPUT
   pinMode(ledPin, OUTPUT);
+  // there is no need to set our analog in pin
 }
 
 void loop() {
@@ -355,30 +358,30 @@ The circuit remains the same.
 #### Code
 ```c++
 int sensorPin = A0;    // select the input pin for the potentiometer
-int ledPin = 13;       // select the pin for the LED
+int ledPin = 2;        // select the pin for the LED
 int sensorValue = 0;   // variable to store the value coming from the sensor
-int outputValue = 0;   // variable to store a scaled value of the sensorvalue 
+int outputValue = 0;   // variable to store a scaled value of the sensorvalue
 
 void setup() {
-  // declare the ledPin as an OUTPUT:
+  // declare the ledPin as an OUTPUT
   pinMode(ledPin, OUTPUT);
-  // initialize serial communications at 9600 bps:
+  // initialize serial communications at 9600 bps
   Serial.begin(9600);
 }
 
 void loop() {
   // read the value from the sensor:
   sensorValue = analogRead(sensorPin);
-  
+
   // map or scale it to a custom range:
   outputValue = map(sensorValue, 0, 1023, 10, 500);
-  
+
   // print the results to the Serial Monitor:
   Serial.print("sensor = ");
   Serial.print(sensorValue);
   Serial.print("\t output = ");
   Serial.println(outputValue);
-  
+
   // turn the ledPin on
   digitalWrite(ledPin, HIGH);
   // stop the program for <sensorValue> milliseconds:
@@ -467,42 +470,42 @@ void loop() {
 **Now lets connect our Input with the Output.**
 In a previous experiment, we have done a *button-controlled LED*, using digital signal to control digital pin. Now we will use a potentiometer to control the brightness of the LED.
 
-The input of potentiometer is analog, so we connect it to analog port, and LED to PWM port.
+The Arduino will read the analog value of the potentiometer and assign this value to PWM port. But since PWM works only in the range from 0 - 255 we need map the input from our sensor down, thus a value between 0 - 1024 to one between 0 - 255.  
 
 #### Circuit
 ![image](images/arduino/analogOut.png)
 
-
-In the program compiling process, we will use the analogWrite (PWM interface, analog value) function. In this experiment, we will read the analog value of the potentiometer and assign the value to PWM port, so there will be corresponding change to the brightness of the LED. One final part will be displaying the analog value on the screen. You can consider this as the "analog value reading" project adding the PWM analog value assigning part. Below is a sample program for your reference.
-
-
-After downloading the program, when we rotate the potentiometer knob, we can see changes of the displaying value, also obvious change of the LED brightness on the breadboard.
-
 #### Code
 ```c++
-/*
-  Set the brightness of ledpin to a brightness specified by the
-  value of the analog input
-*/
+/* Set the brightness of ledPin to a brightness specified by the
+  value of the analog input */
 
 const int ledPin = 3;      // LED connected to digital pin 9
-const int analogPin = 0;   // potentiometer connected to analog pin 0
+const int analogPin = A0;  // potentiometer connected to analog pin 0
 
-int val = 0;         // variable to store the read value
+int val = 0;               // variable to store the read value
+int ledVal;                // variable to store the output value
 
 
 void setup() {
-  // Noting here as: Analog pins are automatically set as inputs & 
+  // Noting here as: Analog pins are automatically set as inputs &
   // it is not needed to set the pin as an output before calling analogWrite()
 }
 void loop() {
   // read the value from the sensor
-  val = analogRead(analogPin); 
+  val = analogRead(analogPin);
   // turn the ledpin on at the brightness set by the sensor
-  analogWrite(ledpin, val / 4);
+  //Mapping the Values between 0 to 255 because we can give output
+  //from 0 -255 using the analogwrite funtion
+  ledVal = map(val, 0, 1023, 0, 255);
+  analogWrite(ledPin, ledVal);
   delay(10);
 }
 ```
+
+After downloading the program, when we rotate the potentiometer knob, we can see the brightness of the LED change.
+
+
 
 ### :triangular_flag_on_post:  Servo Motor Control
 Now, lets substitute our LED for a **Servo Motor**.   
@@ -544,10 +547,14 @@ void setup() {
 }
 
 void loop() {
-  val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023)
-  val = map(val, 0, 1023, 0, 180);     // scale it to use it with the servo (value between 0 and 180)
-  myservo.write(val);                  // sets the servo position according to the scaled value
-  delay(15);                           // waits for the servo to get there
+  // read the value of the potentiometer
+  val = analogRead(potpin);
+  // scale it to use it with the servo (value between 0 and 180)
+  val = map(val, 0, 1023, 0, 180);
+  // sets the servo position according to the scaled value
+  myservo.write(val);
+  // waits for the servo to get there
+  delay(15);
 }
 ```
 Make sure you always check the dos and don'ts on how to use a library on its reference page! [This is the servo reference page](https://www.arduino.cc/en/reference/servo)

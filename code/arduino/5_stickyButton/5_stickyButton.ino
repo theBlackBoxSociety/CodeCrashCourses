@@ -1,9 +1,3 @@
-### :triangular_flag_on_post: 5. Sticky On/Off Button
-
-Lets program **a second behaviour** that to make the button "stick". 
-  
-#### Code
-```c++
 /* Turn on LED when the button is pressed
   and keep it on after it is released */
 
@@ -40,4 +34,3 @@ void loop() {
     digitalWrite(ledPin, LOW);  // turn LED off
   }
 }
-```

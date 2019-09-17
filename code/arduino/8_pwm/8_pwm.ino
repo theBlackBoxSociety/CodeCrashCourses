@@ -1,15 +1,3 @@
-### :triangular_flag_on_post:  8. Analog Out, a fading LED
-PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one.
-
-There are 6 PMW interfaces on an Arduino Uno: Digital pins 3, 5, 6, 9, 10, and 11, all are indicated with a ~ (tilde). 
-
-We will explore this PWM magic by changing the brightness of a LED over time.  
-    
-#### Circuit
-![image](../../images/arduino/analogOutSimple_bb.png)
-
-#### Code
-```c++
 int ledPin = 3;      // LED connected to digital pin 3
 int fadeAmount = 5;  // how many steps to fade the LED by
 
@@ -35,4 +23,3 @@ void loop() {
     delay(30);
   }
 }
-```

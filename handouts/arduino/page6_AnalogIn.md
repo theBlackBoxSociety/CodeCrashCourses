@@ -11,13 +11,14 @@ Actually the resistor can also go in between the cathode and ground as in a seri
 
 #### Code
 ```c++
-int sensorPin = A0;    // select the input pin for the potentiometer
-int ledPin = 13;      // select the pin for the LED
+int sensorPin = A0;   // select the input pin for the potentiometer
+int ledPin = 2;      // select the pin for the LED
 int sensorValue = 0;  // variable to store the value coming from the sensor
 
 void setup() {
-  // declare the ledPin as an OUTPUT:
+  // declare the ledPin as an OUTPUT
   pinMode(ledPin, OUTPUT);
+  // there is no need to set our analog in pin
 }
 
 void loop() {
