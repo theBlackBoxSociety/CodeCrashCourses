@@ -1,14 +1,17 @@
 # Arduino & basic electronics Tutorial 
 
 #### Contents
-Getting Prepped | Getting Started
---- | ---
-1. [Introduction](#intro) | 5. [Getting Started: Hello World!](#started) 
-2. [The Arduino Platform](#platform) | 6. [Wiring Diagrams & Schematics](#schematics)
-3. [the Arduino Board](#board) | 7. [Next step: a Pushbutton - Digital Inputs](#digitalIn)
-4. [The Software (IDE)](#software) | 8. [Advanced Sensors - Analog Inputs](#analogIn)
-. | 9. [PWM - Analog Outputs](#analogOut)
-
+Getting Prepped
+1. [Introduction](#intro)
+2. [The Arduino Platform](#platform)
+3. [the Arduino Board](#board)
+4. [The Software (IDE)](#software)
+Getting Started
+5. [Getting Started: Hello World!](#started) 
+6. [Wiring Diagrams & Schematics](#schematics)
+7. [Next step: a Pushbutton - Digital Inputs](#digitalIn)
+8. [Advanced Sensors - Analog Inputs](#analogIn)
+9. [PWM - Analog Outputs](#analogOut)
 
 ## <a name="intro">1. Introduction</a>
 
