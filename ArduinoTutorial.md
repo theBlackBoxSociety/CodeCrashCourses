@@ -526,9 +526,10 @@ Our servo motor has a female connector with three pins.
 
 #### Code
 In this example we will use a specific library that will make coding a lot easier.   
-Just like with most programming platforms the Arduino Software can be extended through the use of Libraries. They provide extra functionalities and ease of use. A number of libraries come installed with the IDE, but you can also download or create your own. 
+Just like with most programming platforms the Arduino Software can be extended through the use of Libraries. They provide extra functionalities and make programming the Arduino much easier since they contain the code needed to control certain modules, sensors, etc… A number of libraries come installed with the IDE, but you can also download or create your own. 
 
-To use a library in a sketch, select it from Sketch > Import Library or just type in the `#include` command.
+
+To use a library in a sketch, select it from Sketch > Import Library or just type in the `#include <name_of_library>` command.
 
 ```c++
 #include <Servo.h>
