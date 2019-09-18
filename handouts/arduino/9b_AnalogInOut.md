@@ -1,4 +1,4 @@
-### :triangular_flag_on_post:  9 Analog Input 2 Output
+### :triangular_flag_on_post:  9b. Analog Input 2 Output
 **Now lets connect our Input with the Output.**
 In a previous experiment, we have done a *button-controlled LED*, using digital signal to control digital pin. Now we will use a potentiometer to control the brightness of the LED.
 

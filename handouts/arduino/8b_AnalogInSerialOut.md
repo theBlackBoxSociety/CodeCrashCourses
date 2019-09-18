@@ -1,4 +1,4 @@
-### :triangular_flag_on_post: 7. talk2me
+### :triangular_flag_on_post: 8b. talk2me
 Lets make a **serial communication** from our Arduino to our computer to monitor our changing numbers.
 
 In the code below we will map the 0-1023 values to a custom range 10-500, send the 2 variables over the serial port and the Arduino Serial Monitor to view them. Click the serial monitor button in the toolbar and select the same baud rate used in the call to begin().  

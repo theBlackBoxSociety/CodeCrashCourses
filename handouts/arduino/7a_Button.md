@@ -1,4 +1,4 @@
-### :triangular_flag_on_post: 4. Push the Button
+### :triangular_flag_on_post: 7a. Push the Button
 In our first example, the LED was our actuator, and our Arduino was controlling it. If we image an outside parameter to take control over this LED, our finger, we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
 
 #### Circuit

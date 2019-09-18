@@ -1,4 +1,4 @@
-### :triangular_flag_on_post: 5. Sticky On/Off Button
+### :triangular_flag_on_post: 7b. Sticky On/Off Button
 
 Lets program **a second behaviour** that to make the button "stick". 
   

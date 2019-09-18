@@ -1,4 +1,4 @@
-### :triangular_flag_on_post: 3. An LED on a Breadboard
+### :triangular_flag_on_post: 5c. An LED on a Breadboard
 
 ![image](../../images/arduino/digitalOut.png)
 

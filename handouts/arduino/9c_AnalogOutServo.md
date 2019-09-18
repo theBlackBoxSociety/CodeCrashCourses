@@ -1,4 +1,4 @@
-### :triangular_flag_on_post:  10. Servo Motor Control
+### :triangular_flag_on_post:  9c. Servo Motor Control
 Now, lets substitute that LED for a **Servo Motor**.   
     
 Servos are motors with a shaft that can turn to a specified position. They usually have a range from 0 to 180 degrees. With an Arduino we can tell a servo to go to a specified position. We will see how to connect a servo motor and then how to turn it to different positions defined by the value of our potentiometer. 

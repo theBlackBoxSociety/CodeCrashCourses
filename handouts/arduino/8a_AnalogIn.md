@@ -1,4 +1,4 @@
-### :triangular_flag_on_post:  6. Analog Sensors
+### :triangular_flag_on_post:  8a. Analog Sensors
 
 The next sketch & electronics diagram demonstrates analog input by reading an analog sensor as a potentiometer (or trimpot) on analog pin 0 and turning on and off a LED connected to digital pin 2. The amount of time the LED will be on and off depends on the value obtained by `analogRead()`. 
 
