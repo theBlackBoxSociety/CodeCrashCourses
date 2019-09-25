@@ -28,7 +28,7 @@ Processing verwief door de jaren heen een grote fanbase en wordt gebruikt door *
 Op technisch vlak bouwt de taal verder op de Java-programmeertaal<sup>[2](#myfootnote2)</sup>, maar het gebruikt een vereenvoudigd syntaxis. 
 
 
-### :point_right: [onze tutorial](2_1_ProcessingTutorial.md) :point_left:
+### :point_right: [onze tutorial](ProcessingTutorial1.md) :point_left:
 
 
 Bekijk eventueel ook:
