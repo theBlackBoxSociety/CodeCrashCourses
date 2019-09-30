@@ -13,11 +13,11 @@ And [these](downloads/processing/recode.zip) are some examples of recoded histor
 1 [Introduction](#intro) | 12 [Random](#random) :hammer_and_wrench: | 20 [Arrays]() |
 2 [Sketching](#sketching) | 13 [Conditionals](#conditionals) | 21 [Recursion]() :hammer_and_wrench:  |
 3 [Libraries](#libraries) | 14 [While Loop - Repetition](#while) :hammer_and_wrench:   | 22 [Algorithm]() :hammer_and_wrench:  |
-4 [Your First Program](#program) | 15 [For Loop - Tiling](#for) :hammer_and_wrench: | 23 [Export]() :hammer_and_wrench: |
+4 [Your First Program](#program) | 15 [For Loop - Tiling](#for) :hammer_and_wrench: | 23 [Export](#export) :hammer_and_wrench: |
 5 [The Coordinate System](#coordinate) | 16 [Color](#color) :hammer_and_wrench: |  |
 6 [Functions](#functions) | 17 [Translate & Rotate - Displacement](#displacement) :hammer_and_wrench: |  |
 7 [Lines, Basic Shapes & Modes](#shapes) :hammer_and_wrench:  | 18 [Structure](#structure) |  | 
-8 [Comments](#comments) | 19 [Advanced Shapes]()  :hammer_and_wrench: |  |
+8 [Comments](#comments) | 19 [Advanced Shapes](#shapesplus)  :hammer_and_wrench: |  |
 9 [Mathematics](#math) |  |  |
 10 [Drawing Order](#order) |  |  |
 11 [Variables](#variables) |  |  |
@@ -501,7 +501,7 @@ for (int y=0; y<height; y+=1) {
 When one for loop is embedded inside another, the number of repetitions is multiplied. For each line in y-direction (y < height) the code iterates through every pixel in x-direction (x < width) and draws a point at the respective location with a red and green color value corresponding to x and y.
 
 ## <a name="displacement">17. Translate & Rotate - Displacement :hammer_and_wrench</a>
-
+:construction:
 
 ## <a name="structure">18. Structure: setup() and draw()</a>
 
@@ -546,7 +546,72 @@ Notice that if you create a variable inside of setup(), you can’t use it insid
 
 ![](images/processing/setup_draw.png)
 
-## <a name="export">20. Export :hammer_and_wrench</a>
+## <a name="export">19. Advanced Shapes</a>
+:construction:
+
+## <a name="arrays">20. Arrays</a>
+:construction:
+**An array is a list of variables** that share a common name. Arrays are useful because they make it possible to work with more variables without creating a new name for each. Each item in an array is called an element, and each has an index value to mark its position within the array, starting from 0. To make an array, start with the name of the data type, followed by the brackets. The name you select for the array is next, followed by the equal symbol, followed by the ‘new’ keyword, followed by the name of the data type again, with the number of elements to create within the brackets. This pattern works for arrays of all data types. A list of five items, all of type int would look like this:
+
+```java
+int[] numberArray = new int[5];
+```
+You can specify what those five items are when you define the array using the braces syntax:
+
+```java
+int[] numberArray = {1, 2, 3, 4, 5};
+```
+However you define it, you can add items to each position. The following places a 3 as the third item, not the second. The first position is index 0, so the third item is index 2:
+
+```java
+numberArray[2] = 3;
+```
+
+#### :hammer_and_wrench: Wiggle Lines
+
+```java
+int border = 10; // frame around image
+int xstep = 2; // stepsize (resolution) in x direction
+int ystep = border; // rows
+float lastx;
+float lasty;
+
+void setup() {
+  size(800, 800);
+  background(255);
+  strokeWeight(1);
+  stroke(0); // stroke color black
+  noLoop();
+  noFill();
+}
+
+void draw() {
+  for (int i = ystep/2; i <= height-(border+ystep/2); i+=ystep) {
+    for (int x = border; x <= width-border; x +=xstep) {
+      float y = noise(random(border, border+ystep))*15; // random noise
+      if (x == border) {
+        lastx= 0;
+      }
+      if (lastx > 0) {
+        line(x, y+i, lastx, lasty+i);
+      }
+      lastx = x;
+      lasty = y;
+    }
+  }
+}
+```
+![](images/processing/wiggleLines.png)
+_Wiggle Lines_
+
+## <a name="recursion">21. Recursion</a>
+:construction:
+
+## <a name="algo">22. Algorithm</a>
+:construction:
+
+
+## <a name="export">23. Export :hammer_and_wrench</a>
 
 Processing includes a number of ways on exporting the created content.
 
