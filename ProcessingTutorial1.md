@@ -8,30 +8,19 @@
 And [these](downloads/processing/recode.zip) are some examples of recoded historical algorithmical or computational artworks. -->
 
 #### Contents
-1 [Introduction](#intro)     
-2 [Sketching](#sketching)     
-3 [Libraries](#libraries)     
-4 [Your First Program](#program)     
-5 [The Coordinate System](#coordinate)     
-6 [Functions](#functions)     
-7 [Lines, Basic Shapes & Modes](#shapes) :hammer_and_wrench:       
-8 [Comments](#comments)     
-9 [Mathematics](#math)     
-10 [Drawing Order](#order)      
-11 [Variables](#variables)     
-12 [Random]() :hammer_and_wrench:      
-13 [Conditionals](#conditionals)     
-14 [While Loop - Repetition](#while) :hammer_and_wrench:      
-15 [For Loop - Tiling](#for) :hammer_and_wrench:      
-16 [Color](#color) :hammer_and_wrench:      
-17 [Structure](#structure)     
-18 [Translate, Rotate & Scale - Displacement]() :hammer_and_wrench:         
-19 [Advanced Shapes]()  :hammer_and_wrench:      
-20 [Arrays]()     
-21 [Recursion]() :hammer_and_wrench:     
-22 [Algorithm]() :hammer_and_wrench:      
-23 [Export]() :hammer_and_wrench:       
-
+| Getting Started | Having Fun | Advanced Stuff |
+|--- |--- |---|
+1 [Introduction](#intro) | 12 [Random]() :hammer_and_wrench: | 20 [Arrays]() |
+2 [Sketching](#sketching) | 13 [Conditionals](#conditionals) | 21 [Recursion]() :hammer_and_wrench:  |
+3 [Libraries](#libraries) | 14 [While Loop - Repetition](#while) :hammer_and_wrench:   | 22 [Algorithm]() :hammer_and_wrench:  |
+4 [Your First Program](#program) | 15 [For Loop - Tiling](#for) :hammer_and_wrench: | 23 [Export]() :hammer_and_wrench: |
+5 [The Coordinate System](#coordinate) | 16 [Color](#color) :hammer_and_wrench: |  |
+6 [Functions](#functions) | 17 [Structure](#structure) |  |
+7 [Lines, Basic Shapes & Modes](#shapes) :hammer_and_wrench:  | 18 [Translate & Rotate - Displacement]() :hammer_and_wrench: |  | 
+8 [Comments](#comments) | 19 [Advanced Shapes]()  :hammer_and_wrench: |  |
+9 [Mathematics](#math) |  |  |
+10 [Drawing Order](#order) |  |  |
+11 [Variables](#variables) |  |  |
   
 ## <a name="intro">1. Introduction</a>
 
