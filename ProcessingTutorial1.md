@@ -10,7 +10,7 @@ And [these](downloads/processing/recode.zip) are some examples of recoded histor
 #### Contents
 | Getting Started | Having Fun | Advanced Stuff |
 |--- |--- |---|
-1 [Introduction](#intro) | 12 [Random]() :hammer_and_wrench: | 20 [Arrays]() |
+1 [Introduction](#intro) | 12 [Random](#random) :hammer_and_wrench: | 20 [Arrays]() |
 2 [Sketching](#sketching) | 13 [Conditionals](#conditionals) | 21 [Recursion]() :hammer_and_wrench:  |
 3 [Libraries](#libraries) | 14 [While Loop - Repetition](#while) :hammer_and_wrench:   | 22 [Algorithm]() :hammer_and_wrench:  |
 4 [Your First Program](#program) | 15 [For Loop - Tiling](#for) :hammer_and_wrench: | 23 [Export]() :hammer_and_wrench: |
@@ -106,7 +106,7 @@ _Finding a function in reference_
 _Description of the point() function as found in the reference_
 
 
-## <a name="shapes">7. Lines, Basic Shapes & Modes</a>
+## <a name="shapes">7. Lines, Basic Shapes & Modes :hammer_and_wrench:</a>
 
 Processing includes a group of functions to draw basic shapes or 2D primitives. Simple shapes like lines can be combined to create more complex forms like a leaf or a face. To draw a single line, we need four parameters: two for the starting location and two for the end.
 
@@ -226,10 +226,20 @@ float | float | varName = 1.2345; | A floating-point number. A number that may h
 boolean | boolean | varName = true; | A true or false value. Used for logical operations because it can only ever be one of two states.
 String | String | varName = “hello”; | A list of chars, such as a sentence. Note the capital S on String, signifying that this is a composite type (a collection of chars).
 
-:hammer_and_wrench: 
-It is to soon to unlock a new tool but we can make our line act less as foreseen. **An unpredictable line**
+## <a name="random">12. Random :hammer_and_wrench:</a>
+
+Unlike the smooth, linear motion common to computer graphics, motion in the physical world is usually idiosyncratic. We can simulate the unpredictable qualities of the world by generating random numbers. The `random()` function calculates these values; we can set a range to tune the amount of disarray in a program. The following short example prints random values to the console, with the range limited by the position of the mouse. The ‘random()’ function always returns a floating-point value, so be sure the variable on the left side of the assignment operator (=) is a float.
 
 ```java
+void draw() {
+  float r = random(0, mouseX);
+  println(r);
+}
+```
+
+#### :hammer_and_wrench:  Now we can make our line act less as foreseen.
+```java
+// Every time we run the sketch the line might change orientation
 boolean leftToRight = random(1) >= 0.5; 
 
 size(300, 300);
