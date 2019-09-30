@@ -693,7 +693,7 @@ Notice that if you create a variable inside of setup(), you can’t use it insid
 
 ![](images/processing/setup_draw.png)
 
-## <a name="export">19. Advanced Shapes</a>
+## <a name="shapesplus">19. Advanced Shapes</a>
 :construction:
 
 ## <a name="arrays">20. Arrays</a>
@@ -758,7 +758,7 @@ _Wiggle Lines_
 :construction:
 
 
-## <a name="export">23. Export :hammer_and_wrench</a>
+## <a name="export">23. Export :hammer_and_wrench:</a>
 
 Processing includes a number of ways on exporting the created content.
 
