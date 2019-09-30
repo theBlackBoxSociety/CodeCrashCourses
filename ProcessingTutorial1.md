@@ -22,7 +22,7 @@ And [these](downloads/processing/recode.zip) are some examples of recoded histor
 12 :hammer_and_wrench: [Random]()     
 12 [Conditionals](#conditionals)     
 13 :hammer_and_wrench: [While Loop - Repetition](#while)     
-14 :hammer_and_wrench: [For Loop - tiling](#for)     
+14 :hammer_and_wrench: [For Loop - Tiling](#for)     
 15 :hammer_and_wrench: [Color](#color)     
 16 [Structure](#structure)     
 17 Displacement (Translate, Rotate & Scale)     
@@ -138,8 +138,7 @@ _the 4 different drawmodes of a rect & ellipse_
 
 As you might have noticed in the code examples above the color and thickness of lines and lines around shapes can be adjusted with `stroke()` and `strokeWeight()`. We will come back to this.
 
-:hammer_and_wrench: 
-We have our **first tool** earned. Let's test it!
+### :hammer_and_wrench: We have our **first tool** earned. Let's test it!
 ```java
 size(300, 300);
 stroke(0);
