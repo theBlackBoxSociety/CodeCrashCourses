@@ -14,23 +14,23 @@ And [these](downloads/processing/recode.zip) are some examples of recoded histor
 4 [Your First Program](#program)     
 5 [The Coordinate System](#coordinate)     
 6 [Functions](#functions)     
-7 :hammer_and_wrench:  [Lines, Basic Shapes & Modes](#shapes)     
+7 [Lines, Basic Shapes & Modes](#shapes) :hammer_and_wrench:       
 8 [Comments](#comments)     
 9 [Mathematics](#math)     
 10 [Drawing Order](#order)      
 11 [Variables](#variables)     
-12 :hammer_and_wrench: [Random]()     
-12 [Conditionals](#conditionals)     
-13 :hammer_and_wrench: [While Loop - Repetition](#while)     
-14 :hammer_and_wrench: [For Loop - Tiling](#for)     
-15 :hammer_and_wrench: [Color](#color)     
-16 [Structure](#structure)     
-17 Displacement (Translate, Rotate & Scale)     
-18 Advanced Shapes: Vertex, Bezier, Bezier Vertex, ...     
-19 Arrays??     
-20 :hammer_and_wrench: [Recursion]()     
-21 :hammer_and_wrench: [Algorithm]()     
-22 :hammer_and_wrench: [Export]()      
+12 [Random]() :hammer_and_wrench:      
+13 [Conditionals](#conditionals)     
+14 [While Loop - Repetition](#while) :hammer_and_wrench:      
+15 [For Loop - Tiling](#for) :hammer_and_wrench:      
+16 [Color](#color) :hammer_and_wrench:      
+17 [Structure](#structure)     
+18 [Translate, Rotate & Scale - Displacement]() :hammer_and_wrench:         
+19 [Advanced Shapes]()  :hammer_and_wrench:      
+20 [Arrays]()     
+21 [Recursion]() :hammer_and_wrench:     
+22 [Algorithm]() :hammer_and_wrench:      
+23 [Export]() :hammer_and_wrench:       
 
   
 ## <a name="intro">1. Introduction</a>
@@ -138,24 +138,34 @@ _the 4 different drawmodes of a rect & ellipse_
 
 As you might have noticed in the code examples above the color and thickness of lines and lines around shapes can be adjusted with `stroke()` and `strokeWeight()`. We will come back to this.
 
-### :hammer_and_wrench: We have our **first tool** earned. Let's test it!
+### :hammer_and_wrench: We have our **first 2 tools** earned. Let's test them!
 ```java
+// Lines
 size(300, 300);
 stroke(0);
 background(255);
 noSmooth();
-
 // a diagonal line
 line(0, 0, width, height);
-
 // the other diagonal
 line(0, height, width, 0);
-
 // horizontal line through the middle
 line(0, height/2, width, height/2);
-
 // vertical line through the middle
 line(width/2, 0, width/2, height);
+```
+```java
+// Shapes
+size(300, 300);
+stroke(0);
+background(255);
+noFill();
+// circle
+ellipse(width/2, height/2, width, height);
+// rect
+rect(44, 44, width-88, height-88);
+// triangle
+triangle(width/2, 1, 284, 212, 16, 212);
 ```
 
 ## <a name="comments">8. Comments</a>
