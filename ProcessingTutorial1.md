@@ -1,11 +1,14 @@
 # Processing - Generative Art / Design Tutorial
 
-*The following tutorial was original compiled by Manuel Kretzer. It is a combination of text excerpts and illustrations from [“Learning Processing, Second Edition: A Beginner’s Guide to Programming Images, Animation, and Interaction”](http://learningprocessing.com/) by Daniel Shiffman (2015), [“Generative Art”](https://www.manning.com/books/generative-art) by Matt Pearson (2011), and [“Make: Getting Started with Processing”](https://www.makershed.com/products/getting-started-with-processing-2nd-edition) by Casey Reas and Ben Fry (2010) as well as online sources such as [tutorials provided on the Processing website](https://processing.org/tutorials/). * 
+*The following tutorial was original compiled by Manuel Kretzer. It is a combination of text excerpts and illustrations from [“Learning Processing, Second Edition: A Beginner’s Guide to Programming Images, Animation, and Interaction”](http://learningprocessing.com/) by Daniel Shiffman (2015) and [“Make: Getting Started with Processing”](https://www.makershed.com/products/getting-started-with-processing-2nd-edition) by Casey Reas and Ben Fry (2010) as well as online sources such as [tutorials provided on the Processing website](https://processing.org/tutorials/).*
+*The current version features an approach by the Tim Holman lecture ["Generative Art Speedrun"](https://www.youtube.com/watch?v=4Se0_w0ISYk) (2018) with the toolbelt paradigm.* 
+ 
 
 <!-- All sketches in this tutorial can be downloaded [here](downloads/processing/sketches.zip).     
 And [these](downloads/processing/recode.zip) are some examples of recoded historical algorithmical or computational artworks. -->
 
 #### Contents
+<p style="small">
 1 [Introduction](#intro)
 2 [Sketching](#sketching)
 3 [Libraries](#libraries)
@@ -29,7 +32,7 @@ And [these](downloads/processing/recode.zip) are some examples of recoded histor
 20 :hammer_and_wrench: [Recursion]()
 21 :hammer_and_wrench: [Algorithm]()
 22 :hammer_and_wrench: [Export]() 
-
+</p>
 
   
 ## <a name="intro">1. Introduction</a>
