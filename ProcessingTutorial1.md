@@ -1,7 +1,7 @@
 # Processing - Generative Art / Design Tutorial
 
-*The following tutorial was original compiled by Manuel Kretzer. It is a combination of text excerpts and illustrations from [“Learning Processing, Second Edition: A Beginner’s Guide to Programming Images, Animation, and Interaction”](http://learningprocessing.com/) by Daniel Shiffman (2015) and [“Make: Getting Started with Processing”](https://www.makershed.com/products/getting-started-with-processing-2nd-edition) by Casey Reas and Ben Fry (2010) as well as online sources such as [tutorials provided on the Processing website](https://processing.org/tutorials/).*
-*The current version features an approach by the Tim Holman lecture ["Generative Art Speedrun"](https://www.youtube.com/watch?v=4Se0_w0ISYk) (2018) with the toolbelt paradigm.* 
+*The following tutorial was original compiled by Manuel Kretzer. It is a combination of text excerpts and illustrations from [“Learning Processing, Second Edition: A Beginner’s Guide to Programming Images, Animation, and Interaction”](http://learningprocessing.com/) by Daniel Shiffman (2015) and [“Make: Getting Started with Processing”](https://www.makershed.com/products/getting-started-with-processing-2nd-edition) by Casey Reas and Ben Fry (2010) as well as online sources such as [tutorials provided on the Processing website](https://processing.org/tutorials/).*    
+*The current (Oct. 2019) version features an approach by the Tim Holman lecture ["Generative Art Speedrun"](https://www.youtube.com/watch?v=4Se0_w0ISYk) (2018) with the toolbelt paradigm, hence the :hammer_and_wrench: icons.* 
  
 
 <!-- All sketches in this tutorial can be downloaded [here](downloads/processing/sketches.zip).     
@@ -305,7 +305,7 @@ fill(0);
 if (dice < 0.333) { 
   // circle
   ellipse(width/2, height/2, width-50, height-50);
-} else if ((dice > 0.333) && (dice > 0.666)) {
+} else if ((dice > 0.333) && (dice < 0.666)) {
   // rect
   rect(44, 44, width-88, height-88);
 } else {
@@ -368,13 +368,7 @@ The code between the curly brackets { } is called **a block**. This is the code 
 _Flow diagram of a for loop_
 
 The test statement is always **a relational expression** that compares two values with a **relational operator**. As mentioned already the common relational operators are:   
-`>` Greater than    
-`<` Less than    
-`>=` Greater than or equal to    
-`<=` Less than or equal to    
-`==` Equal to    
-`!=` Not equal to
-
+`>` Greater than, `<` Less than, `>=` Greater than or equal to, `<=` Less than or equal to, `==` Equal to, `!=` Not equal to    
 The relational expression always evaluates to **true** or **false**. When it’s true, the code inside the block is run, when it’s false, the code inside the block is not run and the for loop ends.
 
 ```Java
@@ -392,7 +386,7 @@ for (int h = 10; h <= (height - 15); h+=10) {
 
 The initial state of the for loop sets a variable h to 10. The code in the loop executes until h <= (height-15) (the end condition). Every time the loop is executed, the value of h increases by 10, according to the step you’ve defined (h += 10). This means the code inside the parentheses of the for loop will execute 28 times, with h set to 10, 20, 30 ... 270, 280. Knowing that the h variable follows this pattern, you can use it in multiple ways. The lines you’re drawing are in 10-pixel steps down the canvas, because you use h for the y value. But the alpha transparency of the lines also varies as h varies: the black line gets lighter, and the white line gets darker.
 
-#### :hammer_and_wrench:  Time for some real Tiling.
+#### :hammer_and_wrench:  Time for some serious Tiling.
 ```java
 // for loop example 1
 int diam = 30;
@@ -419,7 +413,73 @@ for (int x = diam/2; x<width-diam/2; x+= diam) {
     ellipse(x, y, diam, diam);
   }
 }
+```
+#### :hammer_and_wrench:  Finally we can go the GOTO 10 example. 
+"goto 10" refers to "10 PRINT CHR$(205.5+RND(1)); : GOTO 10"      
+a random maze generation program in one line of Commodore 64 Basic.
 
+```Java
+// GOTO 10 or Random Diagonal Lines in a grid
+float dice = 0;
+int tile = 20;
+
+size(600, 600);
+background(255);
+stroke(0);
+
+for (int x = tile/2; x <= width; x+=tile) {
+  for (int y = tile/2; y <= height; y+=tile) {
+    dice = random(1);
+    if (dice <= 0.5) { 
+      line(x-tile/2, y-tile/2, x+tile/2, y+tile/2);
+    } else {
+      line(x-tile/2, y+tile/2, x+tile/2, y-tile/2);
+    }
+  }
+}
+```
+```java
+// GOTO 10 the Horizontal / Vertical approach
+float dice = 0;
+int tile = 20;
+
+size(600, 600);
+background(255);
+stroke(0);
+
+for (int x = tile/2; x <= width; x+=tile) {
+  for (int y = tile/2; y <= height; y+=tile) {
+    dice = random(1);
+    if (dice <= 0.5) { 
+      line(x, y-tile/2, x, y+tile/2);
+    } else {
+      line(x-tile/2, y, x+tile/2, y);
+    }
+  }
+}
+```
+```Java
+// Draw Random Shapes in a 10 by 10 grid
+float dice = 0;
+int tile = 30;
+int gutter = 3;
+
+size(300, 300);
+background(255);
+stroke(0);
+fill(0);
+rectMode(CENTER);
+
+for (int x = tile/2; x <= width; x+=tile) {
+  for (int y = tile/2; y <= height; y+=tile) {
+    dice = random(1);
+    if (dice <= 0.5) { 
+      ellipse(x, y, tile-gutter, tile-gutter);
+    } else {
+      rect(x, y, tile-gutter, tile-gutter);
+    }
+  }
+}
 ```
 
 ## <a name="color">16. Color :hammer_and_wrench</a>
