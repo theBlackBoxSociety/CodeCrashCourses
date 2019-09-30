@@ -8,29 +8,29 @@
 And [these](downloads/processing/recode.zip) are some examples of recoded historical algorithmical or computational artworks. -->
 
 #### Contents
-1 [Introduction](#intro)
-2 [Sketching](#sketching)
-3 [Libraries](#libraries)
-4 [Your First Program](#program)
-5 [The Coordinate System](#coordinate)
-6 [Functions](#functions)
-7 :hammer_and_wrench:  [Lines, Basic Shapes & Modes](#shapes)
-8 [Comments](#comments)
-9 [Mathematics](#math)
-10 [Drawing Order](#order) 
-11 [Variables](#variables)
-12 :hammer_and_wrench: [Random]() 
-12 [Conditionals](#conditionals)
-13 :hammer_and_wrench: [While Loop - Repetition](#while)
-14 :hammer_and_wrench: [For Loop - tiling](#for)
-15 :hammer_and_wrench: [Color](#color)
-16 [Structure](#structure)
-17 Displacement (Translate, Rotate & Scale)
-18 Advanced Shapes: Vertex, Bezier, Bezier Vertex, ...
-19 Arrays??
-20 :hammer_and_wrench: [Recursion]()
-21 :hammer_and_wrench: [Algorithm]()
-22 :hammer_and_wrench: [Export]() 
+1 [Introduction](#intro)     
+2 [Sketching](#sketching)     
+3 [Libraries](#libraries)     
+4 [Your First Program](#program)     
+5 [The Coordinate System](#coordinate)     
+6 [Functions](#functions)     
+7 :hammer_and_wrench:  [Lines, Basic Shapes & Modes](#shapes)     
+8 [Comments](#comments)     
+9 [Mathematics](#math)     
+10 [Drawing Order](#order)      
+11 [Variables](#variables)     
+12 :hammer_and_wrench: [Random]()     
+12 [Conditionals](#conditionals)     
+13 :hammer_and_wrench: [While Loop - Repetition](#while)     
+14 :hammer_and_wrench: [For Loop - tiling](#for)     
+15 :hammer_and_wrench: [Color](#color)     
+16 [Structure](#structure)     
+17 Displacement (Translate, Rotate & Scale)     
+18 Advanced Shapes: Vertex, Bezier, Bezier Vertex, ...     
+19 Arrays??     
+20 :hammer_and_wrench: [Recursion]()     
+21 :hammer_and_wrench: [Algorithm]()     
+22 :hammer_and_wrench: [Export]()      
 
   
 ## <a name="intro">1. Introduction</a>
