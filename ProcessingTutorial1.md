@@ -237,11 +237,10 @@ void draw() {
 }
 ```
 
-#### :hammer_and_wrench:  Now we can make our line act less as foreseen.
+#### :hammer_and_wrench:  Now we can make our line act less predictable.
 ```java
 // Every time we run the sketch the line might change orientation
 boolean leftToRight = random(1) >= 0.5; 
-
 size(300, 300);
 stroke(0);
 background(255);
@@ -254,8 +253,28 @@ if (leftToRight) {
   line(0, height, width, 0);
 }
 ```
+```java
+// Draw a Random Shape
+float dice = random(1);
 
-## <a name="conditionals">12. Conditionals</a>
+size(300, 300);
+stroke(0);
+background(255);
+fill(0);
+
+if (dice < 0.333) { 
+// circle
+ellipse(width/2, height/2, width-50, height-50);
+} else if ((dice > 0.333) && (dice > 0.666)) {
+// rect
+rect(44, 44, width-88, height-88);
+} else {
+// triangle
+triangle(width/2, 10, width-10, height-10, 10, height-10);
+}
+```
+
+## <a name="conditionals">13. Conditionals</a>
 
 A conditional checks that a condition has been met before executing the code inside the block marked by the braces that follow it. In the case below, the conditional asks whether the value of diam is less than or equal to 400. If it is, the code in the block executes. If not, the code in the block is skipped:
 
@@ -281,19 +300,19 @@ If you imagine the flow of execution as a trickle of water running down the scri
 With an if ... else clause, the stream can go one of two ways, either through the block or around. 
 
 **The most common relational operators are:**
-`>` Greater than
-`<`Less than
-`>=` Greater than or equal to
-`<=` Less than or equal to
-`==` Equal to
-`!=` Not equal to
+`>` Greater than     
+`<`Less than     
+`>=` Greater than or equal to     
+`<=` Less than or equal to     
+`==` Equal to     
+`!=` Not equal to     
 
 In addition you can also use **logic operators** to group conditions:    
 `||` logical OR    
 `&&` logical AND    
 `!` logical NOT
 
-## <a name="while">13. While Loop</a>
+## <a name="while">14. While Loop - Repetition :hammer_and_wrench:</a>
 
 As you write more programs, you’ll notice that patterns occur when lines of code are repeated, but with slight variations. A code structure called **a loop** makes it possible to run a line of code more than once to condense this type of repetition into fewer lines. This makes your programs more modular and easier to change.
 
@@ -311,12 +330,15 @@ Note that if you don’t include the 'number--' line inside the loop, which subt
 
 ![](images/processing/whileLoop.png)
 _Flow diagram of a while loop_
+
+
+#### :hammer_and_wrench:  Lets draw a line repeatedly with some random displacement of the 2 coordinates.
 ```java
 // a while loop example
 int x = 0;
 int y = 0;
-int size = 4;
-float displRange = 2;
+int size = 10;
+float displRange = 5;
 float displ;
 background(255);
 stroke(0);
@@ -325,10 +347,10 @@ size (800,500);
 while (x < width) {
   displ = random(-displRange,displRange);
   line (x-displ,0,x+displ,height);
-  x+=size;
+  x+=size; // this is shorthand code for x = x + size
 }
 ```
-## <a name="for">14. For Loop</a>
+## <a name="for">14. For Loop - Tiling :hammer_and_wrench</a>
 
 The for loop is used when you want to iterate through a set number of steps, rather than just wait for a condition to be satisfied. The syntax is as follows:
 
@@ -368,7 +390,7 @@ for (int h = 10; h <= (height - 15); h+=10) {
 
 The initial state of the for loop sets a variable h to 10. The code in the loop executes until h <= (height-15) (the end condition). Every time the loop is executed, the value of h increases by 10, according to the step you’ve defined (h += 10). This means the code inside the parentheses of the for loop will execute 28 times, with h set to 10, 20, 30 ... 270, 280. Knowing that the h variable follows this pattern, you can use it in multiple ways. The lines you’re drawing are in 10-pixel steps down the canvas, because you use h for the y value. But the alpha transparency of the lines also varies as h varies: the black line gets lighter, and the white line gets darker.
 
-## <a name="color">15. Color</a>
+## <a name="color">16. Color</a>
 
 To change color in your shapes use the `background()`, `fill()`, and `stroke()` functions. The values of the parameters are in the range of **0 to 255**, where 255 is white, 128 is medium gray, and 0 is black. To move beyond gray-scale values, you use three parameters to specify the **red**, **green**, and **blue** components of a color. They also range from 0 to 255. Using RGB color isn’t very intuitive, so to choose colors, you can use Tools → Color Selector. By adding an optional fourth parameter to fill() or stroke(), you can control the transparency. This **fourth parameter** is known as the **alpha value**, and also uses the range 0 to 255 to set the amount of transparency. The value 0 defines the color as entirely transparent (it won’t display), the value 255 is entirely opaque, and the values between these extremes cause the colors to mix on screen (sketch_02).
 
