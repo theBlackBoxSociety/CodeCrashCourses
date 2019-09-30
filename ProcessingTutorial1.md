@@ -256,7 +256,8 @@ if (leftToRight) {
 
 ## <a name="conditionals">13. Conditionals</a>
 
-A conditional checks that a condition has been met before executing the code inside the block marked by the braces that follow it. In the case below, the conditional asks whether the value of diam is less than or equal to 400. If it is, the code in the block executes. If not, the code in the block is skipped:
+Conditions are like questions. They allow a program to decide to take one action if the answer to a question is "true" or to do another action if the answer to the question is "false."    
+Thus, it checks that a condition has been met before executing the code inside the block marked by the braces that follow it. In the case below, the conditional asks whether the value of diam is less than or equal to 400. If it is, the code in the block executes. If not, the code in the block is skipped:
 
 ```java
 // check a condition
@@ -315,6 +316,7 @@ if (dice < 0.333) {
   triangle(border/2, 0+border/2, width-border/2, height-border/2, border/2, height-border/2);
 }
 ```
+#### :hammer_and_wrench:  Lets try a more advanced conditional with 2 tests
 ```java
 // Draw a Random Shape 
 // If it is a triangle if has 4 possible orientations
@@ -524,6 +526,55 @@ for (int x = tile/2; x <= width; x+=tile) {
   }
 }
 ```
+```Java
+// Draw a Full Grid of Random Shape 
+// Triangles can be orientated in 4 directions
+float dice = 0;
+float dice2 = 0;
+int tile = 150;
+float border = tile/10;
+
+size(300, 300);
+background(255);
+fill(0);
+noStroke();
+rectMode(CENTER);
+
+for (int x = tile/2; x <= width; x+=tile) {
+  for (int y = tile/2; y <= height; y+=tile) {
+    dice = random(1);    
+    dice2 = random(1);
+    if (dice <= 0.333) { 
+      // circle
+      println("circle");
+      ellipse(x, y, tile-border, tile-border);
+    } else if ((dice > 0.333) && (dice < 0.666)) {
+      // rect
+      println("square");
+      rect(x, y, tile-border, tile-border);
+    } else {
+      if (dice2 <= 0.25) {
+        // triangle 1
+        println("triangle 1");
+        triangle(x-tile/2+border/2, y-tile/2+border/2, x+tile/2-border/2, y+tile/2-border/2, x-tile/2+border/2, y+tile/2-border/2);
+      } else if ((dice2 > 0.25) && (dice2 <= 0.5)) {
+        // triangle 2
+        println("triangle 2");
+        triangle(x-tile/2+border/2, y-tile/2+border/2, x+tile/2-border/2, y-tile/2+border/2, x+tile/2-border/2, y+tile/2-border/2);
+      } else if ((dice2 > 0.5) && (dice2 <= 0.75)) {
+        // triangle 3
+        println("triangle 3");
+        triangle(x-tile/2+border/2, y-tile/2+border/2, x+tile/2-border/2, y-tile/2+border/2, x-tile/2+border/2, y+tile/2-border/2);
+      } else {
+        // triangle 4
+        println("triangle 4");
+        triangle(x+tile/2-border/2, y-tile/2+border/2, x+tile/2-border/2, y+tile/2-border/2, x-tile/2+border/2, y+tile/2-border/2);
+      }
+    }
+  }
+}
+```
+
 
 ## <a name="color">16. Color :hammer_and_wrench</a>
 
@@ -542,6 +593,59 @@ for (int y=0; y<height; y+=1) {
 ![](images/processing/sketch2.png)
 
 When one for loop is embedded inside another, the number of repetitions is multiplied. For each line in y-direction (y < height) the code iterates through every pixel in x-direction (x < width) and draws a point at the respective location with a red and green color value corresponding to x and y.
+
+####:hammer_and_wrench: Our last sketch with color
+```Java
+// Draw a Full Grid of Random Shape 
+// Triangles can be orientated in 4 directions
+// With colors this time
+float dice = 0;
+float dice2 = 0;
+int tile = 50;
+float border = tile/10; 
+
+size(300, 300);
+noStroke();
+background(255);
+fill(0);
+rectMode(CENTER);
+colorMode(HSB, 360, 100, 100);
+
+for (int x = tile/2; x <= width; x+=tile) {
+  for (int y = tile/2; y <= height; y+=tile) {
+    dice = random(1);    
+    dice2 = random(1);
+    fill(60*dice+60,dice2*100,100); 
+    if (dice <= 0.333) { 
+      // circle
+      println("circle");
+      ellipse(x, y, tile-border, tile-border);
+    } else if ((dice > 0.333) && (dice < 0.666)) {
+      // rect
+      println("square");
+      rect(x, y, tile-border, tile-border);
+    } else {
+      if (dice2 <= 0.25) {
+        // triangle 1
+        println("triangle 1");
+        triangle(x-tile/2+border/2, y-tile/2+border/2, x+tile/2-border/2, y+tile/2-border/2, x-tile/2+border/2, y+tile/2-border/2);
+      } else if ((dice2 > 0.25) && (dice2 <= 0.5)) {
+        // triangle 2
+        println("triangle 2");
+        triangle(x-tile/2+border/2, y-tile/2+border/2, x+tile/2-border/2, y-tile/2+border/2, x+tile/2-border/2, y+tile/2-border/2);
+      } else if ((dice2 > 0.5) && (dice2 <= 0.75)) {
+        // triangle 3
+        println("triangle 3");
+        triangle(x-tile/2+border/2, y-tile/2+border/2, x+tile/2-border/2, y-tile/2+border/2, x-tile/2+border/2, y+tile/2-border/2);
+      } else {
+        // triangle 4
+        println("triangle 4");
+        triangle(x+tile/2-border/2, y-tile/2+border/2, x+tile/2-border/2, y+tile/2-border/2, x-tile/2+border/2, y+tile/2-border/2);
+      }
+    }
+  }
+}
+```
 
 ## <a name="displacement">17. Translate & Rotate - Displacement :hammer_and_wrench</a>
 :construction:
