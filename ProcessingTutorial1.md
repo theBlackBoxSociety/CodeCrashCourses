@@ -279,7 +279,7 @@ if (diam <= 400) {
 If you imagine the flow of execution as a trickle of water running down the script, by setting a conditional you’re effectively creating different channels for the stream to follow.   
 With an if ... else clause, the stream can go one of two ways, either through the block or around. 
 
-**The most common relational operators are:**
+**The most common relational operators are:**     
 `>` Greater than     
 `<`Less than     
 `>=` Greater than or equal to     
@@ -292,25 +292,68 @@ In addition you can also use **logic operators** to group conditions:
 `&&` logical AND    
 `!` logical NOT
 
-#### :hammer_and_wrench:  And a more advanced condition with 2 tests.
+#### :hammer_and_wrench:  Lets try a more advanced conditional with 2 tests
 ```java
 // Draw a Random Shape
 float dice = random(1);
+int border = 10;
 
 size(300, 300);
 stroke(0);
 background(255);
 fill(0);
+rectMode(CENTER);
 
 if (dice < 0.333) { 
   // circle
-  ellipse(width/2, height/2, width-50, height-50);
+  ellipse(width/2, height/2, width-border, height-border);
 } else if ((dice > 0.333) && (dice < 0.666)) {
   // rect
-  rect(44, 44, width-88, height-88);
+  rect(width/2, height/2, width-border, height-border);
 } else {
   // triangle
-  triangle(width/2, 10, width-10, height-10, 10, height-10);
+  triangle(border/2, 0+border/2, width-border/2, height-border/2, border/2, height-border/2);
+}
+```
+```java
+// Draw a Random Shape 
+// If it is a triangle if has 4 possible orientations
+float dice = random(1);
+float dice2 = random(1);
+int border = 10;
+
+size(300, 300);
+stroke(0);
+background(255);
+fill(0);
+rectMode(CENTER);
+
+if (dice <= 0.333) { 
+  // circle
+  println("circle");
+  ellipse(width/2, height/2, width-border, height-border);
+} else if ((dice > 0.333) && (dice < 0.666)) {
+  // rect
+  println("square");
+  rect(width/2, height/2, width-border, height-border);
+} else {
+  if (dice2 <= 0.25) {
+    // triangle 1
+    println("triangle 1");
+    triangle(border/2, border/2, width-border/2, height-border/2, border/2, height-border/2);
+  } else if ((dice2 > 0.25) && (dice2 <= 0.5)) {
+    // triangle 2
+    println("triangle 2");
+    triangle(border/2, border/2, width-border/2, 0+border/2, width-border/2, height-border/2);
+  } else if ((dice2 > 0.5) && (dice2 <= 0.75)) {
+    // triangle 3
+    println("triangle 3");
+    triangle(border/2, border/2, width-border/2, 0+border/2, border/2, height-border/2);
+  } else {
+    // triangle 4
+    println("triangle 4");
+    triangle(width-border/2, border/2, width-border/2, height-border/2, border/2, height-border/2);
+  }
 }
 ```
 
