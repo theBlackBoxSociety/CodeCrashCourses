@@ -8,14 +8,13 @@
 And [these](downloads/processing/recode.zip) are some examples of recoded historical algorithmical or computational artworks. -->
 
 #### Contents
-<p style="small">
 1 [Introduction](#intro)
 2 [Sketching](#sketching)
 3 [Libraries](#libraries)
 4 [Your First Program](#program)
 5 [The Coordinate System](#coordinate)
 6 [Functions](#functions)
-7 :hammer_and_wrench:  [Basic Shapes & Modes](#shapes)
+7 :hammer_and_wrench:  [Lines, Basic Shapes & Modes](#shapes)
 8 [Comments](#comments)
 9 [Mathematics](#math)
 10 [Drawing Order](#order) 
@@ -32,7 +31,6 @@ And [these](downloads/processing/recode.zip) are some examples of recoded histor
 20 :hammer_and_wrench: [Recursion]()
 21 :hammer_and_wrench: [Algorithm]()
 22 :hammer_and_wrench: [Export]() 
-</p>
 
   
 ## <a name="intro">1. Introduction</a>
@@ -119,7 +117,7 @@ _Finding a function in reference_
 _Description of the point() function as found in the reference_
 
 
-## <a name="shapes">7. Basic Shapes & Modes</a>
+## <a name="shapes">7. Lines, Basic Shapes & Modes</a>
 
 Processing includes a group of functions to draw basic shapes or 2D primitives. Simple shapes like lines can be combined to create more complex forms like a leaf or a face. To draw a single line, we need four parameters: two for the starting location and two for the end.
 
