@@ -21,8 +21,8 @@ And [these](downloads/processing/recode.zip) are some examples of recoded histor
 8 [Comments](#comments) |  |  |
 9 [Mathematics](#math) |  |  |
 10 [Drawing Order](#order) |  |  |
-11 [Structure](#structure) |  |  |
-12 [Variables](#variables) |  |  |
+11 [Variables](#variables) |  |  |
+12 [Structure](#structure) |  |  |
   
 ## <a name="intro">1. Introduction</a>
 
@@ -205,50 +205,7 @@ When a program runs, the computer starts at the top and reads each line of code 
 
 _Processing drawing order_
 
-## <a name="structure">11. Structure: setup() and draw()</a>
-
-In Processing scripts can be structured into two distinct parts, so-called function blocks: `setup()` and `draw()`. A function block is a way of chunking a group of commands together.    
-The code inside the setup() function block is called **once when the program launches**, so it should contain all your initialization code as setting the canvas size, setting the background color, initializing variables, and so on. The code you write inside draw() is then called repeatedly, **triggered on every frame**. You can set the speed with which draw() is called by using the `frameRate() function. If you give it a number (12, 24, 25, and 30 are typical), it will attempt to maintain that rate, calling draw() regularly. Otherwise, it will perform the frame loop as quickly as the machine can handle (sketch_03).
-
-```java
-int diam = 10;
-float centX, centY;
-
-void setup() {
-  size(500, 300);
-  frameRate(24);
-  smooth();
-  background(180);
-  centX = width/2;
-  centY = height/2;
-  stroke(0);
-  strokeWeight(5);
-  fill(255, 50);
-}
-
-void draw() {
-  if (diam <= 400) {
-    background(180);
-    ellipse(centX, centY, diam, diam);
-    diam += 10;
-  } else {
-    diam = 10;
-  }
-}
-```
-
-![](images/processing/14_sketch3.gif)
-
-When you run this you’ll see a circle grow, stopping when the diameter reaches 400 pixels. The diameter and the center points are kept in variables, with the center points calculated in ‘setup()’. The frame loop then checks that the diameter is smaller than 400, redraws the background, draws the circle, and increases the diameter by 10 for the next time it goes around the loop. The effect is that it draws a circle of diameter 10, 20, 30, and so on until the diam variable gets to 400.
-
-Notice that if you create a variable inside of setup(), you can’t use it inside of ‘draw()’ and vice versa. A variable within a function block is only available within that block - **locally**. It’s good practice to do this if a variable is only needed within a single function. Yet in order to make variables available everywhere, you need to place them somewhere else. Such variables are called global variables, because they can be used anywhere or **globally** in the program. This is clearer when we list the order in which the code is run:   
-1. Variables declared outside of ‘setup()’ and ‘draw()’ are created.   
-2. Code inside ‘setup()’ is run once.   
-3. Code inside ‘draw()’ is run continuously.
-
-![](images/processing/setup_draw.png)
-
-## <a name="variables">12. Variables</a>
+## <a name="variables">11. Variables</a>
 
 A variable stores a value **in memory** so that it can be used later in a program. The variable can be used many times within a single program, and the value is easily changed while the program is running. When you create variables, you determine **the name**, **the data type**, and **the value**.   
 
@@ -270,3 +227,45 @@ int | int | varName = 12; | An integer (a whole number). Can be positive or nega
 float | float | varName = 1.2345; | A floating-point number. A number that may have a decimal point.
 boolean | boolean | varName = true; | A true or false value. Used for logical operations because it can only ever be one of two states.
 String | String | varName = “hello”; | A list of chars, such as a sentence. Note the capital S on String, signifying that this is a composite type (a collection of chars).
+
+## <a name="structure">12. Structure: setup() and draw()</a>
+
+In Processing scripts can be structured into two distinct parts, so-called function blocks: `setup()` and `draw()`. A function block is a way of chunking a group of commands together.
+    
+The code inside the setup() function block is called **once when the program launches**, so it should contain all your initialization code as setting the canvas size, setting the background color, initializing variables, and so on. 
+
+The code you write inside draw() is then called repeatedly, **triggered on every frame**. You can set the speed with which draw() is called by using the `frameRate()` function. If you give it a number (12, 24, 25, and 30 are typical), it will attempt to maintain that rate, calling draw() regularly. Otherwise, it will perform the frame loop as quickly as the machine can handle (sketch_03).
+
+```java
+int diam = 5;
+
+void setup() {
+  size(500, 300);
+  frameRate(24);
+  background(180);
+  stroke(0);
+  strokeWeight(5);
+  fill(255);
+}
+
+void draw() {
+  background(180);
+  ellipse(width/2, height/2, diam, diam);
+  diam += 1;
+}
+```
+
+![](images/processing/sketch3.gif)
+
+When you run this you’ll see a circle grow slowly. The diameter is kept in a variable. The frame loop redraws the background, draws the circle, and increases the diameter by 1. The effect is that the circle grows pixel by pixel and finally grows bigger then our screen. 
+
+Notice that if you create a variable inside of setup(), you can’t use it inside of `draw()` and vice versa. A variable within a function block is only available within that block - **locally**. It’s good practice to do this if a variable is only needed within a single function. Yet in order to make variables available everywhere, you need to place them somewhere else. Such variables are called global variables, because they can be used anywhere or **globally** in the program. 
+
+This is clearer when we list the order in which the code is run:   
+1. Variables declared outside of `setup()` and `draw()` are created.   
+2. Code inside `setup()` is run once.   
+3. Code inside `draw()` is run continuously.
+
+![](images/processing/setup_draw.png)
+
+Usually one writes programs that use these two basic functions. For our goals, drawings or designs that will be plotted by pen plotters, that is not always necessary. It is however necessary for the export function (see 23 [Export](ProcessingTutorial3.md#export)) and therefore we will continue to use it. With the `noLoop()` function you can interrupt the loop and with the `exit()` function you can stop the program yourself.

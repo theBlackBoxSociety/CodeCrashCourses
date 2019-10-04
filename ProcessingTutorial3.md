@@ -15,8 +15,8 @@ _-- Advanced Stuff -- _
 8 [Comments](ProcessingTutorial1.md#comments) |  |  |
 9 [Mathematics](ProcessingTutorial1.md#math) |  |  |
 10 [Drawing Order](ProcessingTutorial1.md#order) |  |  |
-11 [Structure](ProcessingTutorial1.md#structure) |  |  |
-12 [Variables](ProcessingTutorial1.md#variables) |  |  |
+11 [Variables](ProcessingTutorial1.md#variables) |  |  |
+12 [Structure](ProcessingTutorial1.md#structure) |  |  |
   
 ## <a name="arrays">20. Arrays</a>
 :construction:
