@@ -268,4 +268,6 @@ This is clearer when we list the order in which the code is run:
 
 ![](images/processing/setup_draw.png)
 
-Usually one writes programs that use these two basic functions. For our goals, drawings or designs that will be plotted by pen plotters, that is not always necessary. It is however necessary for the export function (see 23 [Export](ProcessingTutorial3.md#export)) and therefore we will continue to use it. With the `noLoop()` function you can interrupt the loop and with the `exit()` function you can stop the program yourself.
+Usually Processing sketches are structured upon these two core functions. For our goals, drawings or designs that will be plotted by pen plotters, that is not always necessary. For the export function however it necessary to use setup and draw and therefore we will continue to use it. See 23 [Export](ProcessingTutorial3.md#export). 
+
+With the `noLoop()` function you can interrupt the loop and with the `exit()` function you can stop the program yourself.
