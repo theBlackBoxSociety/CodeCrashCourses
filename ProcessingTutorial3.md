@@ -20,11 +20,7 @@ _-- Advanced Stuff -- _
   
 ## <a name="functions">Functions</a>  
 
-We now know how to call functions, use variables, and create our own variables. We’ve also seen that functions can give us a value instead of doing something.
-
-This tutorial combines all of that to allow us to create our own functions.
-
-Creating our own functions allows us to organise our code into smaller chunks and treat complicated tasks as a single step.
+We now know how to call functions, use and create variables. We’ve also seen that functions can give us a value instead of doing something. The next section combines all of that to allow us to **create our own functions**. This will let us organise our code into smaller chunks and treat complicated tasks as a single step.    
 
 To write your own function, you need to do 4 things:
 * Write the return type of the function.
@@ -33,29 +29,31 @@ To write your own function, you need to do 4 things:
 * Inside curly brackets {}, write a series of steps that will be followed whenever that function is called. This is called the body of the function.
 
 **Return Types**
-Remember that functions can either do something (like draw an ellipse or change the fill color) or give you a value (like a random value or the current time).
+Remember that functions can either do something (like draw an ellipse or change the fill color) or give you a value (like a random value or the current time).    
 
-For example, the random() function gives you a float value, which you can store in a float variable. That means that the return type of the random() function is float.
-
-Compare that to the ellipse() function, which doesn’t give you a value. It wouldn’t make any sense to try to store it in a variable. We say that the return type of the ellipse() function is void, which just means that it doesn’t return anything.
+*For example, the random() function gives you a float value, which you can store in a float variable. That means that the return type of the random() function is float. Compare that to the ellipse() function, which doesn’t give you a value. It wouldn’t make any sense to try to store it in a variable. We say that the return type of the ellipse() function is void, which just means that it doesn’t return anything.*
 
 We’ll need to keep this in mind as we write our own functions. Most of the functions we write will do something instead of giving you a value, so you’ll see a lot of void return types.
 
-Example
 Here’s a function that draws a red circle:
 
-void drawRedCircle(float circleX, float circleY, float circleDiameter){
+```java
+void drawRedCircle(float circleX, float circleY, float circleDiameter) {
   fill(255, 0, 0);
   ellipse(circleX, circleY, circleDiameter, circleDiameter);
 }
+```
 
 This function has a void return type (which just means it does something instead of giving you a value), and takes 3 parameters: circleX, circleY, and circleDiameter. In the body of the function, it changes the fill color to red and then uses the parameters to draw a circle.
 
 To call this function, we’d just use its name and give it parameters, exactly like we’ve been calling preexisting functions:
-
+```java
 drawRedCircle(100, 200, 50);
+```
+
 This allows us to treat a task that takes multiple steps (like changing the fill color to red and drawing a circle) as a single step. As we do more complicated tasks, this becomes very useful.
 
+Below a more extensive example.
 ```java
 void smiley(int x, int y, int s) {
   noFill();
@@ -78,7 +76,6 @@ void setup() {
   smiley(width/2, height/2, 200);
 }
 ```
-
   
 ## <a name="arrays">20. Arrays</a>
 **An array is a list of variables** that share a common name. Arrays are useful because they make it possible to work with more variables without creating a new name for each. Each item in an array is called **an element**, and each has an **index value** to mark its position within the array, starting from 0. 

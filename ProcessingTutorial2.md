@@ -440,6 +440,7 @@ for (int x = tile/2; x <= width; x+=tile) {
 ```
 
 ## <a name="displacement">18. Transformation & Displacement :hammer_and_wrench</a>
+### (circular) Motion?
 :construction:
 
 ### Translate, Rotate, Scale
@@ -447,10 +448,3 @@ for (int x = tile/2; x <= width; x+=tile) {
 
 ## <a name="shapes">19. Advanced Curves and Shapes</a>
 **[see the tutorial Curves by J David Eisenberg](https://processing.org/tutorials/curves/)**
-
-**Summary**
-* Use `arc()` when you need a segment of a circle or an ellipse. You can’t make continuous arcs or use them as part of a shape.
-* Use `curve()` when you need a small curve between two points. 
-* Use `curveVertex()` to make a continuous series of curves as part of a shape.
-* Use `bezier()` when you need long, smooth curves. 
-* Use `bezierVertex()` to make a continuous series of Bézier curves as part of a shape.
