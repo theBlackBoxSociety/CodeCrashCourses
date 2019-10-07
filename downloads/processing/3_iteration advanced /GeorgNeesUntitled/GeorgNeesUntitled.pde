@@ -9,11 +9,11 @@ int radius = 260;
 int min, max;
 
 void setup() {
-  size( 600, 600 );
-  background( 255 );
-  stroke( 0 );
+  size(600,600);
+  background(255);
+  stroke(0);
   noFill();
-  strokeWeight( 1 );
+  strokeWeight(1);
   min = 200;
   max = 600;
   drawCircles();
@@ -23,7 +23,7 @@ void draw() {
 }
 
 void drawCircles() {
-  background( 255 );
+  background(255);
 
   //for( int r = 0; r < 2; r++ ) {
   //for( int c = 0; c < 2; c++ ) {

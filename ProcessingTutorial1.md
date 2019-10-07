@@ -1,7 +1,7 @@
 # Processing - Generative Art / Design Tutorial
 _-- Getting Started --_
 
-*The following tutorial was original compiled by Manuel Kretzer. It is a combination of text excerpts and illustrations from [“Learning Processing, Second Edition: A Beginner’s Guide to Programming Images, Animation, and Interaction”](http://learningprocessing.com/) by Daniel Shiffman (2015) and [“Make: Getting Started with Processing”](https://www.makershed.com/products/getting-started-with-processing-2nd-edition) by Casey Reas and Ben Fry (2010) as well as online sources such as [tutorials provided on the Processing website](https://processing.org/tutorials/).*    
+*The following tutorial is a combination of text excerpts from [“Learning Processing, Second Edition: A Beginner’s Guide to Programming Images, Animation, and Interaction”](http://learningprocessing.com/) by Daniel Shiffman (2015) and [“Make: Getting Started with Processing”](https://www.makershed.com/products/getting-started-with-processing-2nd-edition) by Casey Reas and Ben Fry (2010) as well as online sources such as [tutorials provided on the Processing website](https://processing.org/tutorials/).*    
 *The current (Oct. 2019) version features an approach by the Tim Holman lecture ["Generative Art Speedrun"](https://www.youtube.com/watch?v=4Se0_w0ISYk) (2018) with the toolbelt paradigm, hence the :hammer_and_wrench: icons.* 
  
 
