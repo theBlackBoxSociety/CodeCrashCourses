@@ -16,21 +16,17 @@
 15 [While Loop - Repetition](ProcessingTutorial2.md#while) :hammer_and_wrench:
 16 [For Loop - Tiling](ProcessingTutorial2.md#for) :hammer_and_wrench:
 17 [Color](ProcessingTutorial2.md#color) :hammer_and_wrench:
+18 [Circular Motion](ProcessingTutorial2.md#motion)
+19 [Transformation](ProcessingTutorial2.md#transformation) :hammer_and_wrench:
+20 [Advanced Shapes](ProcessingTutorial2.md#shapesplus)  :hammer_and_wrench:
 
-18 [Motion, Transformation & Displacement](ProcessingTutorial2.md#displacement) :hammer_and_wrench:
-+ circular motion (sinus cosinus) 
-  Translate, Rotate, Scale
-  
-19 [Advanced Shapes](ProcessingTutorial2.md#shapesplus)  :hammer_and_wrench:
-
-[functions]
-20 [Arrays](ProcessingTutorial3.md#arrays)
-[Functions]
-21 [Recursion](ProcessingTutorial3.md#recursion) :hammer_and_wrench:
-22 [Algorithm](ProcessingTutorial3.md#algo) :hammer_and_wrench: 
-23 [Export](ProcessingTutorial3.md#export) :hammer_and_wrench:
-
-
-
-## Sources
-## Further Links
+21 [functions](ProcessingTutorial3.md#functions)
+22 [Arrays](ProcessingTutorial3.md#arrays)
+23 [Recursion](ProcessingTutorial3.md#recursion) :hammer_and_wrench:
+24 [Algorithm](ProcessingTutorial3.md#algo) :hammer_and_wrench: 
+25 [Export](ProcessingTutorial3.md#export) :hammer_and_wrench:
+26 [Object Oriented Programming](ProcessingTutorial3.md#OOP)
+27 [Anatomy of a Program](ProcessingTutorial3.md#anatomy)
+28 [Sources](ProcessingTutorial3.md#sources)
+29 [Further Links](ProcessingTutorial3.md#links)
+30 [Example Sketches Generative Art](ProcessingTutorial3.md#sketches)

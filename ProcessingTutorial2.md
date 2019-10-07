@@ -438,13 +438,13 @@ for (int x = tile/2; x <= width; x+=tile) {
   }
 }
 ```
-
-## <a name="displacement">18. Transformation & Displacement :hammer_and_wrench</a>
-### (circular) Motion?
+## <a name="motion">18. circular Motion</a>
 :construction:
+circular motion (sine / cosine functions)
+https://processing.org/tutorials/trig/
 
-### Translate, Rotate, Scale
+## <a name="transformation">19. Transformation with Translate, Rotate, Scale :hammer_and_wrench</a>
 **[see the tutorial 2D transformations by J David Eisenberg](https://processing.org/tutorials/transform2d/)**
 
-## <a name="shapes">19. Advanced Curves and Shapes</a>
+## <a name="shapes">20. Advanced Curves and Shapes</a>
 **[see the tutorial Curves by J David Eisenberg](https://processing.org/tutorials/curves/)**

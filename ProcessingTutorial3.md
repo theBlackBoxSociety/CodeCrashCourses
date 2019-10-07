@@ -1,24 +1,22 @@
 # Processing - Generative Art / Design Tutorial
-_-- Advanced Stuff -- _
+_-- Advanced Stuff --_
 
 #### Contents
-#### Contents
-| Getting Started | Having Fun | Advanced Stuff |
-|--- |--- |---|
-1 [Introduction](ProcessingTutorial1.md#intro) | 13 [Random](ProcessingTutorial2.md#random) :hammer_and_wrench: | 20 [Arrays](#arrays) |
-2 [Sketching](ProcessingTutorial1.md#sketching) | 14 [Conditionals](ProcessingTutorial2.md#conditionals) | 21 [Recursion](#recursion) :hammer_and_wrench:  |
-3 [Libraries](ProcessingTutorial1.md#libraries) | 15 [While Loop - Repetition](ProcessingTutorial2.md#while) :hammer_and_wrench:   | 22 [Algorithm](#algo) :hammer_and_wrench:  |
-4 [Your First Program](ProcessingTutorial1.md#program) | 16 [For Loop - Tiling](ProcessingTutorial2.md#for) :hammer_and_wrench: | 23 [Export](#export) :hammer_and_wrench: |
-5 [The Coordinate System](ProcessingTutorial1.md#coordinate) | 17 [Color](ProcessingTutorial2.md#color) :hammer_and_wrench: |  |
-6 [Functions](ProcessingTutorial1.md#functions) | 18 [Translate & Rotate - Displacement](ProcessingTutorial2.md#displacement) :hammer_and_wrench: |  |
-7 [Lines, Basic Shapes & Modes](ProcessingTutorial1.md#shapes) :hammer_and_wrench:  | 19 [Advanced Shapes](ProcessingTutorial2.md#shapesplus)  :hammer_and_wrench: |  | 
-8 [Comments](ProcessingTutorial1.md#comments) |  |  |
-9 [Mathematics](ProcessingTutorial1.md#math) |  |  |
-10 [Drawing Order](ProcessingTutorial1.md#order) |  |  |
-11 [Variables](ProcessingTutorial1.md#variables) |  |  |
-12 [Structure](ProcessingTutorial1.md#structure) |  |  |
+*--[Getting Started](ProcessingTutorial1.md)--*
+*--[Having Fun](ProcessingTutorial2.md)--*
+*--Advanced Stuff--*
+21 [functions](ProcessingTutorial3.md#functions)
+22 [Arrays](ProcessingTutorial3.md#arrays)
+23 [Recursion](ProcessingTutorial3.md#recursion) :hammer_and_wrench:
+24 [Algorithm](ProcessingTutorial3.md#algo) :hammer_and_wrench: 
+25 [Export](ProcessingTutorial3.md#export) :hammer_and_wrench:
+26 [Object Oriented Programming](ProcessingTutorial3.md#OOP)
+27 [Anatomy of a Program](ProcessingTutorial3.md#anatomy)
+28 [Sources](ProcessingTutorial3.md#sources)
+29 [Further Links](ProcessingTutorial3.md#links)
+30 [Example Sketches Generative Art](ProcessingTutorial3.md#sketches)
   
-## <a name="functions">Functions</a>  
+## <a name="functions">21 Functions</a>  
 
 We now know how to call functions, use and create variables. We’ve also seen that functions can give us a value instead of doing something. The next section combines all of that to allow us to **create our own functions**. This will let us organise our code into smaller chunks and treat complicated tasks as a single step.    
 
@@ -77,7 +75,7 @@ void setup() {
 }
 ```
   
-## <a name="arrays">20. Arrays</a>
+## <a name="arrays">22. Arrays</a>
 [see also the tutorial Arrays by Casey Reas and Ben Fry](https://processing.org/tutorials/arrays/)
 
 **An array is a list of variables** that share a common name. Arrays are useful because they make it possible to work with more variables without creating a new name for each. Each item in an array is called **an element**, and each has an **index value** to mark its position within the array, starting from 0. 
@@ -170,7 +168,7 @@ void draw() {
 _a Network_
 
 
-## <a name="recursion">21. Recursion</a>
+## <a name="recursion">23. Recursion</a>
 Recursion is a way of controlling the flow of a program with a function that calls itself. Unlike iteration, where we walk through a repeated series of commands step-by-step, recursion can create complex behaviour such as fractals that are impossible to make in another way.
 
 A recursive function always:
@@ -273,11 +271,11 @@ void branch(float h) {
 
 see also https://natureofcode.com/book/chapter-8-fractals/
 
-## <a name="algo">22. Algorithm</a>
+## <a name="algo">24. Algorithm</a>
 :construction:
 
 
-## <a name="export">23. Export :hammer_and_wrench:</a>
+## <a name="export">25. Export :hammer_and_wrench:</a>
 
 Processing includes a number of ways on exporting the created content.
 
@@ -393,22 +391,28 @@ String timestamp() {
 ```
 see also this tutorial https://processing.org/tutorials/print/
 
-https://processing.org/tutorials/anatomy/
 
+## <a name="OOP">Object Oriented Programming</a>
+see https://processing.org/tutorials/objects/
+:construction:
 
+## <a name="anatomy">Anatomy of a Program</a>
+see https://processing.org/tutorials/anatomy/
+:construction:
 
-
-## Sources:
-
+## <a name="sources">Sources</a>
 - “Learning Processing, Second Edition: A Beginner’s Guide to Programming
 Images, Animation, and Interaction” by Daniel Shiffman (2015)
 - “Generative Art” by Matt Pearson (2011)
 - “Make: Getting Started with Processing” by Casey Reas and Ben Fry (2010)
 - Processing documentation (https://processing.org/tutorials/)
 
-## Further Links:
-
+## <a name="links">Further Links</a>
 * https://processing.org/tutorials/
 * [http://www.generative-gestaltung.de/](http://www.generative-gestaltung.de/)
 * [http://www.openprocessing.org/](http://www.openprocessing.org/)
 * [Learning Processing youtube playlist by Dan Shiffman](https://www.youtube.com/user/shiffman/playlists?shelf_id=2&view=50&sort=dd)
+
+
+## <a name="sketches">Example Sketches Generative Art</a>
+[download a .zip archive with code examples](downloads/processing/recode.zip) 
