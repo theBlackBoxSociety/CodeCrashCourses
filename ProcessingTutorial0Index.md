@@ -1,16 +1,16 @@
-1 [Introduction](#intro)
-2 [Sketching](#sketching)
-3 [Libraries](#libraries)
-4 [Your First Program](#program)
-5 [The Coordinate System](#coordinate)
-6 [Functions](#functions)
-7 [Lines, Basic Shapes & Modes](#shapes) :hammer_and_wrench:
-8 [Comments](#comments)
-9 [Mathematics](#math)
-10 [Drawing Order](#order)
-11 [Variables](#variables)
-12 [Structure](#structure)
-
+1 [Introduction](ProcessingTutorial1.md##intro)
+2 [Sketching](ProcessingTutorial1.md##sketching)
+3 [Libraries](ProcessingTutorial1.md##libraries)
+4 [Your First Program](ProcessingTutorial1.md##program)
+5 [The Coordinate System](ProcessingTutorial1.md##coordinate)
+6 [Functions](ProcessingTutorial1.md##functions)
+7 [Lines, Basic Shapes & Modes](ProcessingTutorial1.md##shapes) :hammer_and_wrench:
+8 [Comments](ProcessingTutorial1.md##comments)
+9 [Mathematics](ProcessingTutorial1.md##math)
+10 [Drawing Order](ProcessingTutorial1.md##order)
+11 [Variables](ProcessingTutorial1.md##variables)
+12 [Structure](ProcessingTutorial1.md##structure)
+<hr>
 13 [Random](ProcessingTutorial2.md#random) :hammer_and_wrench:
 14 [Conditionals](ProcessingTutorial2.md#conditionals)
 15 [While Loop - Repetition](ProcessingTutorial2.md#while) :hammer_and_wrench:
@@ -19,7 +19,7 @@
 18 [Circular Motion](ProcessingTutorial2.md#motion)
 19 [Transformation](ProcessingTutorial2.md#transformation) :hammer_and_wrench:
 20 [Advanced Shapes](ProcessingTutorial2.md#shapesplus)  :hammer_and_wrench:
-
+<hr>
 21 [functions](ProcessingTutorial3.md#functions)
 22 [Arrays](ProcessingTutorial3.md#arrays)
 23 [Recursion](ProcessingTutorial3.md#recursion) :hammer_and_wrench:

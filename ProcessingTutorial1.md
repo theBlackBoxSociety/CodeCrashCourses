@@ -9,20 +9,22 @@ _-- Getting Started --_
 And [these](downloads/processing/recode.zip) are some examples of recoded historical algorithmical or computational artworks. -->
 
 #### Contents
-| Getting Started | Having Fun | Advanced Stuff |
-|--- |--- |---|
-1 [Introduction](#intro) | 13 [Random](ProcessingTutorial2.md#random) :hammer_and_wrench: | 20 [Arrays](ProcessingTutorial3.md#arrays) |
-2 [Sketching](#sketching) | 14 [Conditionals](ProcessingTutorial2.md#conditionals) | 21 [Recursion](ProcessingTutorial3.md#recursion) :hammer_and_wrench:  |
-3 [Libraries](#libraries) | 15 [While Loop - Repetition](ProcessingTutorial2.md#while) :hammer_and_wrench:   | 22 [Algorithm](ProcessingTutorial3.md#algo) :hammer_and_wrench:  |
-4 [Your First Program](#program) | 16 [For Loop - Tiling](ProcessingTutorial2.md#for) :hammer_and_wrench: | 23 [Export](ProcessingTutorial3.md#export) :hammer_and_wrench: |
-5 [The Coordinate System](#coordinate) | 17 [Color](ProcessingTutorial2.md#color) :hammer_and_wrench: |  |
-6 [Functions](#functions) | 18 [Translate & Rotate - Displacement](ProcessingTutorial2.md#displacement) :hammer_and_wrench: |  |
-7 [Lines, Basic Shapes & Modes](#shapes) :hammer_and_wrench:  | 19 [Advanced Shapes](ProcessingTutorial2.md#shapesplus)  :hammer_and_wrench: |  | 
-8 [Comments](#comments) |  |  |
-9 [Mathematics](#math) |  |  |
-10 [Drawing Order](#order) |  |  |
-11 [Variables](#variables) |  |  |
-12 [Structure](#structure) |  |  |
+*--Getting Started--*
+1 [Introduction](ProcessingTutorial1.md##intro)
+2 [Sketching](ProcessingTutorial1.md##sketching)
+3 [Libraries](ProcessingTutorial1.md##libraries)
+4 [Your First Program](ProcessingTutorial1.md##program)
+5 [The Coordinate System](ProcessingTutorial1.md##coordinate)
+6 [Functions](ProcessingTutorial1.md##functions)
+7 [Lines, Basic Shapes & Modes](ProcessingTutorial1.md##shapes) :hammer_and_wrench:
+8 [Comments](ProcessingTutorial1.md##comments)
+9 [Mathematics](ProcessingTutorial1.md##math)
+10 [Drawing Order](ProcessingTutorial1.md##order)
+11 [Variables](ProcessingTutorial1.md##variables)
+12 [Structure](ProcessingTutorial1.md##structure)
+*--[Having Fun](ProcessingTutorial2.md)--*
+*--[Advanced Stuff](ProcessingTutorial3.md)--*
+
   
 ## <a name="intro">1. Introduction</a>
 
