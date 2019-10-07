@@ -18,9 +18,75 @@ _-- Advanced Stuff -- _
 11 [Variables](ProcessingTutorial1.md#variables) |  |  |
 12 [Structure](ProcessingTutorial1.md#structure) |  |  |
   
+## <a name="functions">Functions</a>  
+
+We now know how to call functions, use variables, and create our own variables. We’ve also seen that functions can give us a value instead of doing something.
+
+This tutorial combines all of that to allow us to create our own functions.
+
+Creating our own functions allows us to organise our code into smaller chunks and treat complicated tasks as a single step.
+
+To write your own function, you need to do 4 things:
+* Write the return type of the function.
+* Write the name of the function.
+* Inside parenthesis (), list any parameters the function will take.
+* Inside curly brackets {}, write a series of steps that will be followed whenever that function is called. This is called the body of the function.
+
+**Return Types**
+Remember that functions can either do something (like draw an ellipse or change the fill color) or give you a value (like a random value or the current time).
+
+For example, the random() function gives you a float value, which you can store in a float variable. That means that the return type of the random() function is float.
+
+Compare that to the ellipse() function, which doesn’t give you a value. It wouldn’t make any sense to try to store it in a variable. We say that the return type of the ellipse() function is void, which just means that it doesn’t return anything.
+
+We’ll need to keep this in mind as we write our own functions. Most of the functions we write will do something instead of giving you a value, so you’ll see a lot of void return types.
+
+Example
+Here’s a function that draws a red circle:
+
+void drawRedCircle(float circleX, float circleY, float circleDiameter){
+  fill(255, 0, 0);
+  ellipse(circleX, circleY, circleDiameter, circleDiameter);
+}
+
+This function has a void return type (which just means it does something instead of giving you a value), and takes 3 parameters: circleX, circleY, and circleDiameter. In the body of the function, it changes the fill color to red and then uses the parameters to draw a circle.
+
+To call this function, we’d just use its name and give it parameters, exactly like we’ve been calling preexisting functions:
+
+drawRedCircle(100, 200, 50);
+This allows us to treat a task that takes multiple steps (like changing the fill color to red and drawing a circle) as a single step. As we do more complicated tasks, this becomes very useful.
+
+```java
+void smiley(int x, int y, int s) {
+  noFill();
+  stroke(0);
+  strokeWeight(s/40);
+  ellipse(x, y, s, s) ; // head
+  ellipse(x-s/5, y-s/5, s/5, s/5);
+  ellipse(x+s/5, y-s/5, s/5, s/5);
+  arc(x, y, s*0.65, s*0.65, 0, PI, OPEN);
+}
+
+void setup() {
+  size(520, 400);
+  background(255);
+  for (int x = 20; x < width; x+=40) {
+    for (int y = 20; y < height; y+=40) {
+      smiley(x, y, 40);
+    }
+  }
+  smiley(width/2, height/2, 200);
+}
+```
+
+  
 ## <a name="arrays">20. Arrays</a>
-:construction:
-**An array is a list of variables** that share a common name. Arrays are useful because they make it possible to work with more variables without creating a new name for each. Each item in an array is called an element, and each has an index value to mark its position within the array, starting from 0. To make an array, start with the name of the data type, followed by the brackets. The name you select for the array is next, followed by the equal symbol, followed by the ‘new’ keyword, followed by the name of the data type again, with the number of elements to create within the brackets. This pattern works for arrays of all data types. A list of five items, all of type int would look like this:
+**An array is a list of variables** that share a common name. Arrays are useful because they make it possible to work with more variables without creating a new name for each. Each item in an array is called **an element**, and each has an **index value** to mark its position within the array, starting from 0. 
+
+
+To make an array, start with the name of the **data type**, followed by **the brackets**. **The name** you select for the array is next, followed by the **equal symbol**, followed by the **‘new’** keyword, followed by the name of the **data type** again, with **the number of elements** to create within the brackets. 
+
+This pattern works for arrays of all data types. A list of five items, all of type int would look like this:
 
 ```java
 int[] numberArray = new int[5];
@@ -36,42 +102,66 @@ However you define it, you can add items to each position. The following places 
 numberArray[2] = 3;
 ```
 
-#### :hammer_and_wrench: Wiggle Lines
+```java
+size(400,150);
+strokeWeight(15);
+
+int[] x = { 
+  50, 61, 83, 69, 71, 50, 29, 31, 17, 39, 82, 93, 35, 96, 54
+};
+
+fill(0);
+// Read one array element each time through the for loop
+for (int i = 0; i < x.length; i++) {
+  line(i*(width/x.length), height, i*(width/x.length), height-x[i]);
+}
+```
+
+.length
+
+#### :hammer_and_wrench: An example: A Network
+
+
+
 
 ```java
-int border = 10; // frame around image
-int xstep = 2; // stepsize (resolution) in x direction
-int ystep = border; // rows
-float lastx;
-float lasty;
+// A Network
+int points = 20;
+int[] x = new int[points];
+int[] y = new int[points];
 
 void setup() {
-  size(800, 800);
-  background(255);
+  size(800, 500);
+  for (int i = 0; i<points; i++) {
+    x[i] = int(random(width));
+    y[i] = int(random(height));
+  }
   strokeWeight(1);
-  stroke(0); // stroke color black
-  noLoop();
-  noFill();
+  fill(0);
+  textSize(16);
 }
 
 void draw() {
-  for (int i = ystep/2; i <= height-(border+ystep/2); i+=ystep) {
-    for (int x = border; x <= width-border; x +=xstep) {
-      float y = noise(random(border, border+ystep))*15; // random noise
-      if (x == border) {
-        lastx= 0;
-      }
-      if (lastx > 0) {
-        line(x, y+i, lastx, lasty+i);
-      }
-      lastx = x;
-      lasty = y;
+  background(255);
+  strokeWeight(0.5);
+  for (int i =0; i<points; i++) {
+    for (int j = i+1; j<points; j++) {
+      noStroke();
+      ellipse(x[i], y[i], 10, 10);
+      text(i,x[i]+5, y[i]+10);
+      stroke(0);
+      line(x[i], y[i], x[j], y[j]);
+      
     }
   }
 }
+
 ```
-![](images/processing/wiggleLines.png)
-_Wiggle Lines_
+![](images/processing/network.png)
+_a Network_
+
+See also https://processing.org/tutorials/arrays/
+
 
 ## <a name="recursion">21. Recursion</a>
 :construction:
@@ -111,7 +201,7 @@ void recursion(float x, float y, float s) {
     recursion(x + (s/2), y, s*0.5);
     recursion(x - (s/2), y, s*0.5);
     // and a a third recursion in half size and placed on top of the shape
-    //recursion(x, y- (s/2), s*0.5);
+    recursion(x, y- (s/2), s*0.5);
   }
 }
 ```
