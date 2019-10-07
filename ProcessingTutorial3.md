@@ -23,10 +23,10 @@ _-- Advanced Stuff -- _
 We now know how to call functions, use and create variables. We’ve also seen that functions can give us a value instead of doing something. The next section combines all of that to allow us to **create our own functions**. This will let us organise our code into smaller chunks and treat complicated tasks as a single step.    
 
 To write your own function, you need to do 4 things:
-* Write the return type of the function.
-* Write the name of the function.
-* Inside parenthesis (), list any parameters the function will take.
-* Inside curly brackets {}, write a series of steps that will be followed whenever that function is called. This is called the body of the function.
+* Write the **return type** of the function.
+* Write the **name** of the function.
+* Inside parenthesis **()**, list any **parameters** the function will take.
+* Inside curly brackets **{}**, write **a series of steps** that will be followed whenever that function is called. This is called the body of the function.
 
 **Return Types**
 Remember that functions can either do something (like draw an ellipse or change the fill color) or give you a value (like a random value or the current time).    
@@ -53,7 +53,7 @@ drawRedCircle(100, 200, 50);
 
 This allows us to treat a task that takes multiple steps (like changing the fill color to red and drawing a circle) as a single step. As we do more complicated tasks, this becomes very useful.
 
-Below a more extensive example.
+**Below a more extensive example with smileys.**
 ```java
 void smiley(int x, int y, int s) {
   noFill();
@@ -78,26 +78,37 @@ void setup() {
 ```
   
 ## <a name="arrays">20. Arrays</a>
+[see also the tutorial Arrays by Casey Reas and Ben Fry](https://processing.org/tutorials/arrays/)
+
 **An array is a list of variables** that share a common name. Arrays are useful because they make it possible to work with more variables without creating a new name for each. Each item in an array is called **an element**, and each has an **index value** to mark its position within the array, starting from 0. 
 
-
-To make an array, start with the name of the **data type**, followed by **the brackets**. **The name** you select for the array is next, followed by the **equal symbol**, followed by the **‘new’** keyword, followed by the name of the **data type** again, with **the number of elements** to create within the brackets. 
-
-This pattern works for arrays of all data types. A list of five items, all of type int would look like this:
+So if you have an Array called cities[] then you might have items in that array called Gent, Brugge, Brussel and Antwerpen. We could then easily refer to any one of these items in the array by referring to the Array index number. Here is what the code would look like:
 
 ```java
-int[] numberArray = new int[5];
-```
-You can specify what those five items are when you define the array using the braces syntax:
+String [] cities;          // Declare
+cities = new String[4];    // Create
+cities[0] = "Gent";        // Assign
+cities[1] = "Brugge";
+cities[2] = "Brussel";
+cities[3] = "Antwerpen";
 
-```java
-int[] numberArray = {1, 2, 3, 4, 5};
+println(cities[2]);
 ```
-However you define it, you can add items to each position. The following places a 3 as the third item, not the second. The first position is index 0, so the third item is index 2:
+The [] square bracket symbol denote that we are using an Array.    
 
-```java
-numberArray[2] = 3;
+You define an array first by **the data type** of object that will be held in it (in this case a String), followed by the **[] square brackets**, then **the name** of the Array.    
+Then we need to create it. We repeat the given name, have **an equal sign** followed by **the word 'new'**. The new part tells Processing to free up some memory for the Array. We then denote the same Data Type that we were using in the beginning of the line of code. Finally, in the [] square brackets we put **how many items we want the array to hold**.
+
+Thus: 
+```Java
+DataType [] ArrayName      
+ArrayName = new DataType[length];
 ```
+or shortened:
+```Java
+DataType [] ArrayName = new DataType[length];
+```
+You can also declare, create & assign an array in one go. 
 
 ```java
 size(400,150);
@@ -114,12 +125,13 @@ for (int i = 0; i < x.length; i++) {
 }
 ```
 
-.length
+The `x.length` statement above queries the number of elements in an array. This .length is called dot operator.
+```java
+int[] data = { 19, 40, 75, 76, 90 };
+println(data.length); // Prints "5" to the console
+```
 
 #### :hammer_and_wrench: An example: A Network
-
-
-
 
 ```java
 // A Network
@@ -157,12 +169,8 @@ void draw() {
 ![](images/processing/network.png)
 _a Network_
 
-See also https://processing.org/tutorials/arrays/
-
 
 ## <a name="recursion">21. Recursion</a>
-:construction:
-
 Recursion is a way of controlling the flow of a program with a function that calls itself. Unlike iteration, where we walk through a repeated series of commands step-by-step, recursion can create complex behaviour such as fractals that are impossible to make in another way.
 
 A recursive function always:
@@ -264,8 +272,6 @@ void branch(float h) {
 ```
 
 see also https://natureofcode.com/book/chapter-8-fractals/
-
-
 
 ## <a name="algo">22. Algorithm</a>
 :construction:
