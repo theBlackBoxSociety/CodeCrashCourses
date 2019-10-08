@@ -438,6 +438,39 @@ for (int x = tile/2; x <= width; x+=tile) {
 :construction:
 circular motion (sine / cosine functions)
 https://processing.org/tutorials/trig/
+```Java
+/* CIRCULAR MOTION
+ Cos motion -> constant middleX / middleY  + cos(angle) * scalar. 
+ Sin motion is the same.
+ Sin motion + cos motion = Circular motion
+ */
+int middleX, middleY;
+float angle = 0;
+float scalar = 10;
+float speed = 0.05;
+float diam = 10;
+
+void setup() {
+  size(500, 500);
+  middleX = width/2;
+  middleY = height/2;
+  smooth();
+  noFill();
+}
+
+void draw() {
+  //background(0);
+  float x = middleX + sin(angle) * scalar;
+  float y = middleY + cos(angle) * scalar;
+  ellipse(x, y, diam, diam);
+  angle = angle + speed;
+  scalar = scalar + speed;
+  if (scalar > width/2) {
+    noLoop();
+  }
+}
+```
+
 
 ## <a name="transformation">19. Transformation with Translate, Rotate, Scale :hammer_and_wrench</a>
 **[see the tutorial 2D transformations by J David Eisenberg](https://processing.org/tutorials/transform2d/)**

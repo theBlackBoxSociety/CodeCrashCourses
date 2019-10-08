@@ -177,6 +177,29 @@ A recursive function always:
  
 There are different ways to set a limit. You can use a variable to count the recursion depth, and stop when the depth is enough for you. You could also set a limit by drawing shapes that get smaller and smaller, and then stop when they are small enough.
 
+```Java
+void setup() {
+  size(600, 500);
+  background(255);
+}
+
+void draw() {
+  noFill();
+  drawCircle(width/2, height/2, width*0.75);
+  noLoop();
+}
+
+void drawCircle(int x, int y, float radius) {
+  ellipse(x, y, radius, radius);
+  if (radius > 2) {
+    radius *= 0.75;
+    // The drawCircle() function is calling itself recursively.
+    drawCircle(x, y, radius);
+  }
+}
+
+```
+
 
 ```java
 void setup() {
