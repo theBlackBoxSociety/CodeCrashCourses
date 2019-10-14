@@ -1,7 +1,6 @@
 *---[ A crashcourse in Code]---*
 
-# Web literacy for artists 
-Een inleiding in **Markdown**, **HTML**, **CSS** (en wat Javascript)
+# Web literacy for artists / Markdown, HTML, CSS (en Javascript)
 
 > ”The single most important thing you need in order to have a career in the arts is persistence. The second most important thing you need is talent. The third most important thing is a grounding in how the online world works. Its that Important”
 > Cory Doctorow
@@ -9,8 +8,8 @@ Een inleiding in **Markdown**, **HTML**, **CSS** (en wat Javascript)
 
 Het internet biedt ongebreidelde mogelijkheden voor kunstenaars, het kan tegelijkertijd een onderwerp, een werkplaats, een canvas, een tentoonstellings-, reflectie- of publiciteitsplatform zijn. Tijdens deze korte workshop gaan we kort in op het historisch en hedendaags perspectief van zowel de technologie als het artistiek potentieel. En we gaan ook zelf aan de slag met verschillende webtechnologiën.
 
-### Todo: 
-**Installeer deze programma's op je laptop**
+#### Todo: 
+Installeer deze programma's op je laptop
 1. [Firefox](https://www.mozilla.org/) & [Google Chrome](http://www.google.com/chrome)
 2. [Atom](https://atom.io/) code editor
 3. [FireZilla](https://filezilla-project.org/) of [CyberDuck](https://cyberduck.io/) als FTP client  
@@ -19,11 +18,11 @@ Wij voorzien eventueel [webhosting](https://nl.wikipedia.org/wiki/Webhosting) op
 
 Bedenk een project dat je [op 4à8u](http://fffff.at/speed-project/) kan uitwerken binnen het thema en met de aangeleerde tools.
 
-## NET.Art / NET.histories
+## NET Art / NET histories
 * De [Internet Hall of Fame's Living History Timeline](https://www.internethalloffame.org/internet-history/timeline) geeft een overzicht van de geschiedenis van het internet en belicht de pioniers die hebben bijgedragen aan voortdurende ontwikkeling en innovatie van internet over de hele wereld.
 * [Rhizome's Net Art Anthology](https://anthology.rhizome.org/), is een heel lovenswaardig initiatief dat een 100 exemplarische NET.art kunstwerken (gemaakt tussen ca. 1980 en 2010) in digitale conservatie heeft genomen. Dit project ging vergezeld van een tentoonstelling "The Art Happens Here", die in de winter van 2019 in première ging in het New Museum in NYC en een nationale tournee zal ondernemen in 2020. 
-* [een keynote-presentatie van Christiane Paul]((https://www.youtube.com/watch?v=IBHcKspN1cU)). De lezing was onderdeel van ‘Lives of Net Art’, een reeks evenementen waarin wordt onderzocht hoe hedendaagse kunstenaars internet gebruiken, en reflecteert op de mogelijkheden die internet kunstenaars vanaf de jaren 1990 tot heden heeft geboden. 
-* [How To / Why Make Internet Art is a hypermedia series](https://www.youtube.com/watch?v=0DZ0wBjFKg4&list=PLoQrXDiSBWYHqUGdQkojL9jj9iIUtS0ct&index=1) is een video reeks van [Nick Briz](http://nickbriz.com/) over web-geletterdheid. Nick Briz is new-media artist/educator/organizer >> focused on digital culture + digital literacy. 
+* [Keynote-presentatie van Christiane Paul]((https://www.youtube.com/watch?v=IBHcKspN1cU)). De lezing was onderdeel van ‘Lives of Net Art’, een reeks evenementen waarin wordt onderzocht hoe hedendaagse kunstenaars internet gebruiken, en reflecteert op de mogelijkheden die internet kunstenaars vanaf de jaren 1990 tot heden heeft geboden. 
+* [How To / Why Make Internet Art is a hypermedia series](https://www.youtube.com/watch?v=0DZ0wBjFKg4&list=PLoQrXDiSBWYHqUGdQkojL9jj9iIUtS0ct&index=1) is een reeks video's van [Nick Briz](http://nickbriz.com/) over web-geletterdheid. Nick Briz is new-media artist/educator/organizer >> focused on digital culture + digital literacy. 
 
 
 ## MARKDOWN
@@ -56,7 +55,7 @@ Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, .
 ### :point_right: [HTML & CSS tutorial](https://github.com/theBlackBoxSociety/html-css-one-page):point_left:
 
 
-### :point_right: [voorbeeld mappenstructuur met html en css documenten en enkele beelden om ad slag te gaan](site.zip):point_left:
+### :point_right: [voorbeeld mappenstructuur met html en css documenten](site.zip):point_left:
  
 
 ## FTP / SFTP
