@@ -1,22 +1,30 @@
-*A :collision: crashcourse in Code, prt1*
-# Markdown, HTML, CSS
-### Huiswerk (vooraf)
-#### Installeer deze programma's op je laptop:
-1. [Google Chrome](http://www.google.com/chrome)
+*---[ A crashcourse in Code]---*
+
+# Web literacy for artists 
+Een inleiding in **Markdown**, **HTML**, **CSS** (en wat Javascript)
+
+< "The single most important thing you need in order to have a career in the arts is persistence. The second most important thing you need is talent. The third most important thing is a grounding in how the online world works. Its that Important"
+- Cory Doctorow
+from Information Doesn't Want to Be Free: Laws for the Internet Age. 2014 
+
+Het internet biedt ongeremde mogelijkheden voor kunstenaars, het is tegelijkertijd een studio of werkplaats, canvas en galerij. Tijdens deze korte workshop gaan we kort in op het historisch perspectief van zowel de technologie als het artistiek potentieel. Maar we gaan ook zelf aan de slag met verschillende technieken om een website op het internet te publiceren.
+
+### Todo: 
+**Installeer deze programma's op je laptop**
+1. [Firefox](https://www.mozilla.org/) & [Google Chrome](http://www.google.com/chrome)
 2. [Atom](https://atom.io/) code editor
 3. [FireZilla](https://filezilla-project.org/) of [CyberDuck](https://cyberduck.io/) als FTP client  
 
-Wij voorzien [webhosting](https://nl.wikipedia.org/wiki/Webhosting) op [kaskprojecten.be](http://www.kaskprojecten.be/) of [mediakunst.be](https://mediakunst.be/)
+Wij voorzien eventueel [webhosting](https://nl.wikipedia.org/wiki/Webhosting) op [kaskprojecten.be](http://www.kaskprojecten.be/) of [mediakunst.be](https://mediakunst.be/)
 
-#### Lees je in in de geschiedenis van het internet & internetkunst of net.art.
-* https://www.internethalloffame.org/internet-history/timeline
-* https://www.webfx.com/blog/web-design/the-history-of-the-internet-in-a-nutshell/
-* https://anthology.rhizome.org/
-* https://www.artspace.com/magazine/art_101/art-tech/90s-net-art-52704
-
-### Huiswerk (achteraf)
 Bedenk een project dat je [op 4à8u](http://fffff.at/speed-project/) kan uitwerken binnen het thema en met de aangeleerde tools.
-Stuur je idee(ën) hiervoor door naar Jerry en Hendrik vóór het weekend. Zo kunnen we dit bekijken en eventueel voorbereiden zodat we jullie gerichter kunnen begeleiden.
+
+## NET.Art / NET.histories
+* De [Internet Hall of Fame's Living History Timeline](https://www.internethalloffame.org/internet-history/timeline) geeft een overzicht van de geschiedenis van het internet en belicht de pioniers die hebben bijgedragen aan voortdurende ontwikkeling en innovatie van internet over de hele wereld.
+* [Rhizome's Net Art Anthology](https://anthology.rhizome.org/), is een heel lovenswaardig initiatief dat een 100 exemplarische NET.art kunstwerken (gemaakt tussen ca. 1980 en 2010) in digitale conservatie heeft genomen. Dit project ging vergezeld van een tentoonstelling "The Art Happens Here", die in de winter van 2019 in première ging in het New Museum in NYC en een nationale tournee zal ondernemen in 2020. 
+* [een keynote-presentatie van Christiane Paul]((https://www.youtube.com/watch?v=IBHcKspN1cU)). De lezing was onderdeel van ‘Lives of Net Art’, een reeks evenementen waarin wordt onderzocht hoe hedendaagse kunstenaars internet gebruiken, en reflecteert op de mogelijkheden die internet kunstenaars vanaf de jaren 1990 tot heden heeft geboden. 
+* [How To / Why Make Internet Art is a hypermedia series](https://www.youtube.com/watch?v=0DZ0wBjFKg4&list=PLoQrXDiSBWYHqUGdQkojL9jj9iIUtS0ct&index=1) is een video reeks van [Nick Briz](http://nickbriz.com/) over web-geletterdheid. Nick Briz is new-media artist/educator/organizer >> focused on digital culture + digital literacy. 
+
 
 ## MARKDOWN
 

@@ -1,5 +1,5 @@
 *---[ A crashcourse in Code]---*
-# PROCESSING & Axidraw
+# generatieve kunst, PROCESSING & Axidraw
 
 > “The idea becomes a machine that makes the art.”   
 — Sol LeWitt, 1967.
