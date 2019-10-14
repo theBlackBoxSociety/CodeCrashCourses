@@ -3,7 +3,7 @@
 # Web literacy for artists 
 Een inleiding in **Markdown**, **HTML**, **CSS** (en wat Javascript)
 
-< "The single most important thing you need in order to have a career in the arts is persistence. The second most important thing you need is talent. The third most important thing is a grounding in how the online world works. Its that Important"
+> ”The single most important thing you need in order to have a career in the arts is persistence. The second most important thing you need is talent. The third most important thing is a grounding in how the online world works. Its that Important”
 - Cory Doctorow
 from Information Doesn't Want to Be Free: Laws for the Internet Age. 2014 
 
