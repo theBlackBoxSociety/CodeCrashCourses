@@ -47,16 +47,16 @@ kennis maken met de UI, preferences, commands, packages (core & community), mark
 2. https://guides.github.com/features/mastering-markdown/  
 
 ## HTML
-Hypertext markup language (HTML) is de belangrijkste opmaaktaal die wordt gebruikt om webpagina's op internet weer te geven. Met andere woorden, webpagina's opgebouwd uit HTML, het wordt gebruikt om tekst, afbeeldingen of andere bronnen weer te geven via een webbrowser.
+Hypertext markup language (HTML) is de belangrijkste opmaaktaal die wordt gebruikt om webpagina's op internet weer te geven. Met andere woorden, webpagina's worden opgebouwd met HTML. Het wordt gebruikt om tekst, afbeeldingen of andere bronnen weer te geven via een webbrowser.
 
-Alle HTML is platte tekst, wat betekent dat het niet is gecompileerd en door mensen kan gelezen worden. De bestandsextensie voor een HTML-bestand is .html (of .htm).
+Alle HTML is platte tekst, dat wil zeggen dat het niet gecompileerd is en door mensen kan gelezen worden. De bestandsextensie voor een HTML-bestand is .html (of .htm).
 
-HTML is geen programmeertaal maar een opmaaktaal. HTML wordt steeds gebruikt met andere technologieën omdat het enkel documenten organiseert. Samen met CSS (of Cascading Style Sheets) en JavaScript vormt het een drieluik van basistechnologieën voor het World Wide Web.
+HTML is geen programmeertaal maar een opmaaktaal. Het wordt steeds gebruikt met andere technologieën omdat het enkel documenten organiseert. Samen met CSS (of Cascading Style Sheets) en JavaScript vormt het een drieluik van basistechnologieën voor het World Wide Web.
 
 ## CSS
-Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, ...) en plaatsing van een HTML-document beschrijft. 
+Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, ...) en plaatsing van een HTML-elementen beschrijft. 
 
-Sinds de introductie van CSS kan de inhoud en vormgeving van webpagina's gescheiden worden. Dit zorgt voor een eenvoudiger beheer en meer flexibiliteit. Een CSS-bestand wordt doorgaans aan een HTML-bestand gekoppeld door middel van een link in het HTML-bestand. Met CSS kan je dus stijlelementen koppelen aan HTML-elementen. Als je dus een lettertype of kleur wil wijzigen voor alle H2-koppen in een HTML-bestand, kan dat via één stijlbeschrijving in CSS. Indien er geen CSS-bestand zou bijgevoegd zijn moet elke H2-kop in het HTML-bestand gewijzigd worden.
+Sinds de introductie van CSS kan de inhoud en vormgeving van webpagina's gescheiden worden. Dit voor een eenvoudiger beheer en meer flexibiliteit. Een CSS-bestand wordt doorgaans aan een HTML-bestand gekoppeld d.m.v. een link in het HTML-bestand. Met CSS kan je dus stijlelementen koppelen aan HTML-elementen. Als je dus het lettertype of de kleur wil wijzigen voor alle H2-titels in een HTML-bestand, kan dat via één stijlbeschrijving in CSS. Indien er geen CSS-bestand zou bijgevoegd zijn moet elke H2-kop in het HTML-bestand gewijzigd worden.
 
 ### :point_right: [HTML & CSS tutorial](https://github.com/theBlackBoxSociety/html-css-one-page):point_left:
 
