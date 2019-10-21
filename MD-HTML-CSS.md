@@ -61,7 +61,7 @@ Sinds de introductie van CSS kan de inhoud en vormgeving van webpagina's geschei
 ### :point_right: [HTML & CSS tutorial](https://github.com/theBlackBoxSociety/html-css-one-page):point_left:
 
 
-### :point_right: [voorbeeld mappenstructuur met html en css documenten](site.zip):point_left:
+<!--### :point_right: [voorbeeld mappenstructuur met html en css documenten](site.zip):point_left:-->
  
 
 ## FTP / SFTP
