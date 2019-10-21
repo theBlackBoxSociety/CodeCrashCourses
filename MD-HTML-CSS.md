@@ -47,10 +47,16 @@ kennis maken met de UI, preferences, commands, packages (core & community), mark
 2. https://guides.github.com/features/mastering-markdown/  
 
 ## HTML
-Hypertext Markup Language (HTML) is de standaard opmaaktaal voor het maken van webpagina's en webapps. Met Cascading Style Sheets (CSS) en JavaScript vormt het een drieluik van basistechnologieën voor het World Wide Web.
+Hypertext markup language (HTML) is de belangrijkste opmaaktaal die wordt gebruikt om webpagina's op internet weer te geven. Met andere woorden, webpagina's opgebouwd uit HTML, het wordt gebruikt om tekst, afbeeldingen of andere bronnen weer te geven via een webbrowser.
+
+Alle HTML is platte tekst, wat betekent dat het niet is gecompileerd en door mensen kan gelezen worden. De bestandsextensie voor een HTML-bestand is .html (of .htm).
+
+HTML is geen programmeertaal maar een opmaaktaal. HTML wordt steeds gebruikt met andere technologieën omdat het enkel documenten organiseert. Samen met CSS (of Cascading Style Sheets) en JavaScript vormt het een drieluik van basistechnologieën voor het World Wide Web.
 
 ## CSS
 Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, ...) en plaatsing van een HTML-document beschrijft. 
+
+Sinds de introductie van CSS kan de inhoud en vormgeving van webpagina's gescheiden worden. Dit zorgt voor een eenvoudiger beheer en meer flexibiliteit. Een CSS-bestand wordt doorgaans aan een HTML-bestand gekoppeld door middel van een link in het HTML-bestand. Met CSS kan je dus stijlelementen koppelen aan HTML-elementen. Als je dus een lettertype of kleur wil wijzigen voor alle H2-koppen in een HTML-bestand, kan dat via één stijlbeschrijving in CSS. Indien er geen CSS-bestand zou bijgevoegd zijn moet elke H2-kop in het HTML-bestand gewijzigd worden.
 
 ### :point_right: [HTML & CSS tutorial](https://github.com/theBlackBoxSociety/html-css-one-page):point_left:
 
@@ -65,7 +71,7 @@ Wij zullen gebruik maken van een FTP-client met een UI (User Interface) waardoor
 
 FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzonderingen: `ftp.mediakunst.be:21`. `ftp.mediakunst.be` is het adres en `21` is de gebruikte poort. Beiden zijn nodig bij het verbinden met de FTP-server. Vaak is er ook een gebruikersnaam en paswoord vereist. Dat schrijf je dan zo `username@ftp.mediakunst.be` en `username:password@ftp.mediakunst.be`.
 
-Lees zeker eens deze **[FTP for Beginners](https://www.wired.com/2010/02/ftp_for_beginners/)** post als je info wilt en/of volg deze [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29).
+Lees zeker eens deze [FTP for Beginners](https://www.wired.com/2010/02/ftp_for_beginners/) post als je info wilt en/of volg deze [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29).
 
 Via Hogent hebben jullie een persoonlijke webruimte. Deze vind je terug onder http://users.hogent.be/~gebruikersnaam (bvb: ~hlep557)<sup>[3](#myfootnote3)</sup>.    
 Gegevens voor de FTP-client: 
