@@ -12,7 +12,7 @@ Het internet biedt ongebreidelde mogelijkheden voor kunstenaars, het kan tegelij
 Installeer deze programma's op je laptop
 1. [Firefox](https://www.mozilla.org/) & [Google Chrome](http://www.google.com/chrome)
 2. [Atom](https://atom.io/) code editor
-3. [FireZilla](https://filezilla-project.org/) of [CyberDuck](https://cyberduck.io/) als FTP client  
+3. [FileZilla](https://filezilla-project.org/) of [CyberDuck](https://cyberduck.io/) als FTP client  
 
 Wij voorzien eventueel [webhosting](https://nl.wikipedia.org/wiki/Webhosting) op [kaskprojecten.be](http://www.kaskprojecten.be/) of [mediakunst.be](https://mediakunst.be/)
 
@@ -21,7 +21,7 @@ Bedenk een project dat je [op 4à8u](http://fffff.at/speed-project/) kan uitwerk
 ## NET Art / NET histories
 * De [Internet Hall of Fame's Living History Timeline](https://www.internethalloffame.org/internet-history/timeline) geeft een overzicht van de geschiedenis van het internet en belicht de pioniers die hebben bijgedragen aan voortdurende ontwikkeling en innovatie van internet over de hele wereld.
 * [Rhizome's Net Art Anthology](https://anthology.rhizome.org/), is een heel lovenswaardig initiatief dat een 100 exemplarische NET.art kunstwerken (gemaakt tussen ca. 1980 en 2010) in digitale conservatie heeft genomen. Dit project ging vergezeld van een tentoonstelling "The Art Happens Here", die in de winter van 2019 in première ging in het New Museum in NYC en een nationale tournee zal ondernemen in 2020. 
-* [Keynote-presentatie van Christiane Paul]((https://www.youtube.com/watch?v=IBHcKspN1cU)). De lezing was onderdeel van ‘Lives of Net Art’, een reeks evenementen waarin wordt onderzocht hoe hedendaagse kunstenaars internet gebruiken, en reflecteert op de mogelijkheden die internet kunstenaars vanaf de jaren 1990 tot heden heeft geboden. 
+* [Keynote-presentatie van Christiane Paul](https://www.youtube.com/watch?v=IBHcKspN1cU). De lezing was onderdeel van ‘Lives of Net Art’, een reeks evenementen waarin wordt onderzocht hoe hedendaagse kunstenaars internet gebruiken, en reflecteert op de mogelijkheden die internet kunstenaars vanaf de jaren 1990 tot heden heeft geboden. 
 * [How To / Why Make Internet Art is a hypermedia series](https://www.youtube.com/watch?v=0DZ0wBjFKg4&list=PLoQrXDiSBWYHqUGdQkojL9jj9iIUtS0ct&index=1) is een reeks video's van [Nick Briz](http://nickbriz.com/) over web-geletterdheid. Nick Briz is new-media artist/educator/organizer >> focused on digital culture + digital literacy. 
 
 
@@ -59,14 +59,19 @@ Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, .
  
 
 ## FTP / SFTP
-(S)FTP staat voor (Secure) File Transfer Protocol. FTP is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.    
-Wij maken gemakshalve gebruik van een FTP-client met een UI (User Interface) waardoor we drag&drop-gewijs bestanden kunnen kopieren. Je kan ook FTP-en vanuit commandline (in de terminal), in een browservenster, maar elk OS (Operating System) heeft ook FTP-software ingebouwd.     
-FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzonderingen: bijv. `ftp.fakesite.org:21`. `ftp.fakesite.org` is het adres en `21` is de gebruikte poort. Beiden zijn nodig bij het verbinden met de FTP-server. Vaak is er ook een gebruikersnaam en paswoord vereist. Dat schrijf je dan zo `username@ftp.fakesite.org/` en `username:password@ftp.fakesite.org/`.
+(S)FTP staat voor (Secure) File Transfer Protocol. FTP is ontworpen voor het overbrengen van bestanden van een externe server naar een lokale computer en omgekeerd.   
+ 
+Wij zullen gebruik maken van een FTP-client met een UI (User Interface) waardoor we drag&drop-gewijs bestanden kunnen kopieren. Je kan ook FTP-en vanuit commandline (in de terminal), in een browservenster, maar elk OS (Operating System) heeft ook FTP-software ingebouwd.     
 
-Lees zeker eens deze "FTP for Beginners" post <sup>[3](#myfootnote3)</sup> als je info wilt en/of volg deze [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29).
+FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzonderingen: `ftp.mediakunst.be:21`. `ftp.mediakunst.be` is het adres en `21` is de gebruikte poort. Beiden zijn nodig bij het verbinden met de FTP-server. Vaak is er ook een gebruikersnaam en paswoord vereist. Dat schrijf je dan zo `username@ftp.mediakunst.be` en `username:password@ftp.mediakunst.be`.
 
-De FileZilla User Interface 
-[UI FileZille](images/FZ-mk.png) 
+Lees zeker eens deze **FTP for Beginners** post <sup>[3](#myfootnote3)</sup> als je info wilt en/of volg deze [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29).
+
+Via Hogent hebben jullie een persoonlijke webruimte. Deze vind je terug onder http://users.hogent.be/~gebruikersnaam (bvb: ~hlep557)<sup>[4](#myfootnote4)</sup>. Via [mijn.hogent.be](http://mijn.hogent.be) kan je ervoor kiezen een alias aan te maken.    
+Gegevens voor de FTP-client: 
+* server: users.hogent.be
+* user: EDU\username
+* psw: ….
 
 <hr>
 
@@ -77,5 +82,6 @@ De FileZilla User Interface
 
 <a name="myfootnote3">3</a>: [ftp for beginners](https://www.wired.com/2010/02/ftp_for_beginners/)
 
+<a name="myfootnote4">4</a>: Een **~** of **tilde** type je op MAC met azerty keyboard met alt + n gevolgd door een spatie. Op windows is er een toets voorzien in combinatie met Alt Gr.
 
 *-----fin-----*
