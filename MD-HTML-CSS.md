@@ -65,9 +65,9 @@ Wij zullen gebruik maken van een FTP-client met een UI (User Interface) waardoor
 
 FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzonderingen: `ftp.mediakunst.be:21`. `ftp.mediakunst.be` is het adres en `21` is de gebruikte poort. Beiden zijn nodig bij het verbinden met de FTP-server. Vaak is er ook een gebruikersnaam en paswoord vereist. Dat schrijf je dan zo `username@ftp.mediakunst.be` en `username:password@ftp.mediakunst.be`.
 
-Lees zeker eens deze **FTP for Beginners** post <sup>[3](#myfootnote3)</sup> als je info wilt en/of volg deze [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29).
+Lees zeker eens deze **[FTP for Beginners](https://www.wired.com/2010/02/ftp_for_beginners/)** post als je info wilt en/of volg deze [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29).
 
-Via Hogent hebben jullie een persoonlijke webruimte. Deze vind je terug onder http://users.hogent.be/~gebruikersnaam (bvb: ~hlep557)<sup>[4](#myfootnote4)</sup>.    
+Via Hogent hebben jullie een persoonlijke webruimte. Deze vind je terug onder http://users.hogent.be/~gebruikersnaam (bvb: ~hlep557)<sup>[3](#myfootnote3)</sup>.    
 Gegevens voor de FTP-client: 
 * server / host: users.hogent.be
 * port: 21
@@ -81,11 +81,9 @@ www: de locatie voor de data van je persoonlijke website
 
 <a name="myfootnote1">1</a>: ontwikkeld door John Gruber in samenwerking met Aaron Swartz, [The Internet's Own Boy](https://www.youtube.com/watch?v=2M0GQww1GoY) (docu)
    
-<a name="myfootnote1">2</a>: bijv. [blot.im](https://blot.im/) maar ook [md-page
+<a name="myfootnote2">2</a>: bijv. [blot.im](https://blot.im/) maar ook [md-page
 ](https://github.com/oscarmorrison/md-page)
 
-<a name="myfootnote3">3</a>: [ftp for beginners](https://www.wired.com/2010/02/ftp_for_beginners/)
-
-<a name="myfootnote4">4</a>: Een **~** of **tilde** type je op MAC met azerty keyboard met alt + n gevolgd door een spatie. Op windows is er een toets voorzien in combinatie met Alt Gr.
+<a name="myfootnote3">3</a>: Een **~** of **tilde** type je op MAC met azerty keyboard met alt + n gevolgd door een spatie. Op windows is er een toets voorzien in combinatie met Alt Gr.
 
 *-----fin-----*
