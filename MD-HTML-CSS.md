@@ -69,9 +69,13 @@ Lees zeker eens deze **FTP for Beginners** post <sup>[3](#myfootnote3)</sup> als
 
 Via Hogent hebben jullie een persoonlijke webruimte. Deze vind je terug onder http://users.hogent.be/~gebruikersnaam (bvb: ~hlep557)<sup>[4](#myfootnote4)</sup>. Via [mijn.hogent.be](http://mijn.hogent.be) kan je ervoor kiezen een alias aan te maken.    
 Gegevens voor de FTP-client: 
-* server: users.hogent.be
+* server / host: users.hogent.be
+* port: 21
 * user: EDU\username
 * psw: ….
+Als je verbinding hebt gemaakt krijgt 2 mappen te zien. Er kunnen enkel data in deze 2 submappen geplaatst worden, niet in de hoofdmap.     
+data: de locatie voor je persoonlijke data
+www: de locatie voor de data van je persoonlijke website
 
 <hr>
 
