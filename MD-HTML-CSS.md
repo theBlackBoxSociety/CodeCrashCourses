@@ -67,7 +67,7 @@ FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzo
 
 Lees zeker eens deze **FTP for Beginners** post <sup>[3](#myfootnote3)</sup> als je info wilt en/of volg deze [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29).
 
-Via Hogent hebben jullie een persoonlijke webruimte. Deze vind je terug onder http://users.hogent.be/~gebruikersnaam (bvb: ~hlep557)<sup>[4](#myfootnote4)</sup>. Via [mijn.hogent.be](http://mijn.hogent.be) kan je ervoor kiezen een alias aan te maken.    
+Via Hogent hebben jullie een persoonlijke webruimte. Deze vind je terug onder http://users.hogent.be/~gebruikersnaam (bvb: ~hlep557)<sup>[4](#myfootnote4)</sup>.    
 Gegevens voor de FTP-client: 
 * server / host: users.hogent.be
 * port: 21
