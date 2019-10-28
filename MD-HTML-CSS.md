@@ -73,15 +73,22 @@ FTP-adressen hebben een vergelijkbare opbouw als een webadres met een paar uitzo
 
 Lees zeker eens deze [FTP for Beginners](https://www.wired.com/2010/02/ftp_for_beginners/) post als je info wilt en/of volg deze [FileZilla Client Tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29).
 
-Via Hogent hebben jullie een persoonlijke webruimte. Deze vind je terug onder http://users.hogent.be/~gebruikersnaam (bvb: ~hlep557)<sup>[3](#myfootnote3)</sup>.    
+Via Hogent hebben jullie een **persoonlijke webruimte**. Deze vind je terug onder http://users.hogent.be/~gebruikersnaam (bvb: ~hlep557)<sup>[3](#myfootnote3)</sup>.    
 Gegevens voor de FTP-client: 
-* server / host: users.hogent.be
-* port: 21
-* user: EDU\username
-* psw: ….
+* server or host: **users.hogent.be**
+* port: **21**
+* user: **EDU\username**
+* psw: **…**.
+
 Als je verbinding hebt gemaakt krijgt 2 mappen te zien. Er kunnen enkel data in deze 2 submappen geplaatst worden, niet in de hoofdmap.     
-data: de locatie voor je persoonlijke data
+data: de locatie voor je persoonlijke data (backup)
 www: de locatie voor de data van je persoonlijke website
+
+![cyberduck](images/HTML/cyberduck.png)
+_Cyberduck UI & Bookmark window_
+
+![filezilla](images/HTML/filezilla.png)
+_Filezilla UI & login bar_
 
 <hr>
 
