@@ -8,7 +8,7 @@ dates | topic | tutors
  :---: | --- | ---
 25/9, 1/10 & 8/10 • 9:30-12:30| [Processing](PROCESSING.md) | Hendrik
 15/10, 22/10, 29/10 & 5/11 • 9:30-12:30 | [Markdown, HTML & CSS](MD-HTML-CSS.md) | Hendrik
-19/11 & 26/11 • 9:30-12:30 | P5.JS | Jerry
+19/11 & 26/11 • 9:30-12:30 | [P5.JS](P5JS.md) | Jerry
 10/12 & 17/12 • 9:30-12:30 | Project | Jerry en Hendrik
 ––– | ––– |–––
  28/1 • 9:30-12:30 | Commandline *on Raspberry Pi* | Jerry 
