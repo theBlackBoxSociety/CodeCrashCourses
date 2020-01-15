@@ -7,11 +7,10 @@ zoals: Dullaart, Kogan & Depoorter.
 
 2. Algemene introductie van de impact en status van AI vandaag en verkenning van online AI-applicaties.
 
-3. Het is belangrijk om AI 'in het wild' te ervaren. Dus we zullen 2 omgevingen verkennen waar we AI uit de eerste hand 
+3. Het is belangrijk om AI 'in het wild' te ervaren. Dus we zullen 3 omgevingen verkennen waar we AI uit de eerste hand 
 leren kennen. Dieper ingaan op deze AI hands-on tools zoals RunwayML & ml5js:
 
 #ml5js
-
 ml5js is een programmeertaal die p5js gebruikt, een codeertaal bovenop JavaScript. JavaScript wordt beschouwd als de meest 
 gebruikte taal voor online apps. Van de ml5js-site:
  
@@ -25,6 +24,11 @@ documentatie over gegevensverzameling en -gebruik. "
 Probeer de voorbeelden in de p5-editor: https://editor.p5js.org/ml5/sketches
 Tijdens de cursus zullen we de online ml5js-voorbeelden bespreken en hun gebruik en mogelijke implementatie in projecten 
 verduidelijken. We gaan over de 4 categorieën: Beeld - geluid Tekst - hulpmiddelen
+
+##Teachable machines (Google) (https://teachablemachine.withgoogle.com/)
+Train een computer om je eigen afbeeldingen, geluiden en poses te herkennen.
+Een snelle, eenvoudige manier om machine learning-modellen voor sites, apps en meer te maken - geen expertise of 
+codering vereist. De getrainde modellen die je hiermee maakt zijn importeerbaar in ml5/p5js.
 
 ##RunwayML
 RunwayML (machine learning) is een nieuwe app die de kracht van kunstmatige intelligentie naar uw creatieve projecten brengt 
