@@ -60,18 +60,18 @@ gereproduceerd of kunnen storingen worden opgelost. Mediakunst komt vaak voort u
 bovengenoemde documentatie van groot belang is.
 
 Verder lezen / bekijken:
-https://github.com/ml5js/ml5-examples
-https://editor.p5js.org/ml5/sketches
-https://teachablemachine.withgoogle.com/
-https://www.youtube.com/channel/UCH8hfoiNbC5mdoS3dADEPKg/videos
-https://www.quantamagazine.org/iyad-rahwan-is-the-anthropologist-of-artificial-intelligence-20190826/
-https://aiweirdness.com/
-https://en.wikipedia.org/wiki/OpenAI
-https://caim.v2.nl/
-https://ml4a.github.io/
-https://github.com/shiffman/ChatBot-Workshop
-https://jerrygalle.files.wordpress.com/2018/12/ditto.pdf
-https://github.com/ml5js/ml5-examples
-https://www.alliedmedia.org/files/peoples-guide-ai.pdf
-https://mimionuoha.com/
-https://github.com/hukkelas/DeepPrivacy
+* https://github.com/ml5js/ml5-examples
+* https://editor.p5js.org/ml5/sketches
+* https://teachablemachine.withgoogle.com/
+* https://www.youtube.com/channel/UCH8hfoiNbC5mdoS3dADEPKg/videos
+* https://www.quantamagazine.org/iyad-rahwan-is-the-anthropologist-of-artificial-intelligence-20190826/
+* https://aiweirdness.com/
+* https://en.wikipedia.org/wiki/OpenAI
+* https://caim.v2.nl/
+* https://ml4a.github.io/
+* https://github.com/shiffman/ChatBot-Workshop
+* https://jerrygalle.files.wordpress.com/2018/12/ditto.pdf
+* https://github.com/ml5js/ml5-examples
+* https://www.alliedmedia.org/files/peoples-guide-ai.pdf
+* https://mimionuoha.com/
+* https://github.com/hukkelas/DeepPrivacy
