@@ -59,6 +59,7 @@ Als je nu de functie `ellipse(50, 50, 80, 80);` aan setup (of draw) toevoegt, he
 * En volg Dan Shiffman zijn [p5.js with Brackets Tutorial](https://www.youtube.com/watch?v=nmZbhManVcY) waarin je Brackets steeds vervangt door Atom (met live server powers via [de atom-live-server package](https://atom.io/packages/atom-live-server)).
 
 ## Vervolg?
+* [P5.JS cheat sheet](https://bmoren.github.io/p5js-cheat-sheet/index.html)
 * Lees de [Processing transition tutorial](https://github.com/processing/p5.js/wiki/Processing-transition) voor meer informatie over het converteren van een sketch in Processing naar p5.js.
 * Bekijk de [reference-page](https://p5js.org/reference/) voor volledige documentatie.
 * Bekijk de [learn](https://p5js.org/learn/) en [examples](https://p5js.org/examples/) pagina's.
