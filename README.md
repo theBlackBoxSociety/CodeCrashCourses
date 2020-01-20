@@ -11,8 +11,7 @@ dates | topic | tutors
 19/11 & 26/11 • 9:30-12:30 | [P5.JS](P5JS.md) | Jerry
 10/12 & 17/12 • 9:30-12:30 | Project | Jerry en Hendrik
 ––– | ––– |–––
- 28/1 • 9:30-12:30 | Commandline *on Raspberry Pi* | Jerry 
- 4/2, 11/2 & 18/2 • 9:30-12:30 | [Python](Python.md)   *on Raspberry Pi*| Jerry
- 25/2, 3/3, 10/3  • 9:30-12:30 | Machine Learning / ML5JS | Jerry
+ 28/1 • 9:30-12:30 | [Arduino](ARDUINO.md) | Hendrik 
+ 4/2, 11/2 & 18/2 • 9:30-12:30 | [Machine Learning / ML5JS](ml5js.md) | Jerry
+ 25/2, 3/3, 10/3  • 9:30-12:30 | MAX | Jerry & Hendrik
  24/3, 31/3 & 28/4 • 9:30-12:30 | Project | Jerry & Hendrik
-<!--[Arduino](ArduinoTutorial.md)-->
