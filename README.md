@@ -14,5 +14,5 @@ dates | topic | tutors
 28/1 • 10:30-12:30 | No Code Class / feedback |
 4/2 • 9:30-12:30 | [Arduino](ARDUINO.md) | Hendrik 
 11/2, 18/2 & 25/2 • 9:30-12:30 | [Machine Learning / ML5JS](ml5js.md) | Jerry
-3/3, 10/3 & 24/3 • 9:30-12:30 | MAX | Jerry & Hendrik
+3/3, 10/3 & 24/3 • 9:30-12:30 | [MAX](max.md) | Jerry & Hendrik
 31/3 & 28/4 • 9:30-12:30 | Project | Jerry & Hendrik
