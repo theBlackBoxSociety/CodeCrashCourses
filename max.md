@@ -5,7 +5,7 @@
 
 MAX groeide over de jaren heen, het is onstaan midden de jaren 80, uit tot een erg uitgebreid en krachtig platform. Het wordt voornamelijk gebruikt door artiesten, componisten, wetenschappers, docenten, studenten en softwareontwerpers. Het voorziet in tools om te werken met midi, data, geluid en muziek **“msp~”**, bitmap beelden, video en 3D **“jitter”**, interactiviteit en connectiviteit met andere toepassingen en hardware ... 
 
-☞ [Made with MAX](https://cycling74.com/products/made-with-max)
+☞ [Made with MAX](https://cycling74.com/products/made-with-max) section on C74 website
 
 <hr>
 
@@ -27,13 +27,16 @@ Naast MAX zijn er nog heel wat andere visuele programmeer omgevingen. [Op deze p
 * [Federico Foderaro](https://www.federicofoderaro.com/patches.html) | an audio-visual artist, media technologist, programmer and Max/MSP teacher.
 * ...
 
-☞ Enkele [DEMO](downloads/max/Demos.zip) patchers dat ik heb verzameld: Shatter by Andrew Benson, sev2011 by Katsuhiro Chiba, ryoz_ikedar_bl by Koutaro Fukui, proceduralgeometry by Chris Vik, planetarium by Matsui, clatmtn by Koutaro Fukui, cibobruciato by Rino Petrozziello, 1681.cvrtne.iiiii by uhitokiyosue aka mesa.elech/tele
+☞ Verzameld [DEMO](downloads/max/Demos.zip) patchers: Shatter by Andrew Benson, sev2011 by Katsuhiro Chiba, ryoz_ikedar_bl by Koutaro Fukui, proceduralgeometry by Chris Vik, planetarium by Matsui, clatmtn by Koutaro Fukui, cibobruciato by Rino Petrozziello, 1681.cvrtne.iiiii by uhitokiyosue aka mesa.elech/tele
 <hr>
 
 ## [Getting started](https://cycling74.com/get-started)
 Deze initiatie zal niet alle mogelijkheden van MAX behandelen, maar richt zich op enkele belangrijke concepten en mechanismen die met MAX mogelijk zijn. We zullen werken met: de weergave van beeld (video en stills) en geluid, synthese van beeld en geluid, effecten, algoritmische compositie, cross-mediale mappings (bijv. het beeld zal de audio beïnvloeden en vice versa), interactiviteit (bijv. met input van toetsenbord, muis, camera, microfoon, arduino), ...
+
 ☞ [Getting started page](https://cycling74.com/get-started) on the Cycling74 site.
+
 ☞ [Max 8 Documentation](https://docs.cycling74.com/MAX8) on the Cycling74 site.
+
 ☞ [Max Cheat Sheet](downloads/max/MAX_cheatsheet_v2.pdf)
 <hr>
 
