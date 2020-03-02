@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 59.0, 104.0, 825.0, 420.0 ],
+		"rect" : [ 34.0, 79.0, 825.0, 420.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,11 +38,29 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-9",
+					"bubble" : 1,
+					"bubblepoint" : 1.0,
+					"fontname" : "Arial",
+					"fontsize" : 14.0,
+					"id" : "obj-17",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 259.0, 128.0, 150.0, 20.0 ],
+					"patching_rect" : [ 250.0, 89.0, 110.0, 42.0 ],
+					"style" : "",
+					"text" : "click to open the patchers",
+					"textcolor" : [ 0.862745, 0.009587, 0.050288, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 284.0, 133.0, 150.0, 20.0 ],
 					"style" : ""
 				}
 
@@ -58,7 +76,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 90.0, 381.0, 29.5, 17.0 ],
-					"presentation_rect" : [ 423.0, 363.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "open"
 				}
@@ -74,7 +91,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 27.5, 378.0, 46.0, 17.0 ],
-					"presentation_rect" : [ 348.0, 368.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "CREDITS"
 				}
@@ -90,9 +106,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 90.0, 405.0, 50.0, 19.0 ],
+					"patching_rect" : [ 90.0, 405.0, 43.0, 19.0 ],
 					"style" : "",
-					"text" : "pcontrol _"
+					"text" : "pcontrol"
 				}
 
 			}
@@ -163,7 +179,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 21.0, 178.0, 300.0, 21.0 ],
-									"presentation_rect" : [ 21.0, 178.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "you can find it in the Package Manager (file menu)"
 								}
@@ -178,7 +193,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 21.0, 69.0, 580.0, 21.0 ],
-									"presentation_rect" : [ 21.0, 66.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Max-for-the-Visual-Arts compiled by Nicolas Marechal"
 								}
@@ -194,7 +208,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 21.0, 112.0, 463.0, 65.0 ],
-									"presentation_rect" : [ 21.0, 112.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Max for the Visual Arts (Max 7) is a self-learning tool and a repository for the Max patches made or used on the BA interaction design arts (IDA) and the MA interactive design communication (IDC) at the London College of Communication (University of the Arts London, United Kingdom)."
 								}
@@ -421,9 +434,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 447.0, 87.0, 36.0, 19.0 ],
+					"patching_rect" : [ 447.0, 87.0, 28.0, 19.0 ],
 					"style" : "",
-					"text" : "print _"
+					"text" : "print"
 				}
 
 			}

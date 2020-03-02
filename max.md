@@ -15,14 +15,15 @@ Naast MAX zijn er nog heel wat andere visuele programmeer omgevingen. [Op deze p
 
 
 ## Inspirerende Personen & Projecten 
-* AGF / Antye Greie-Ripatti / [Poemproducer](http://www.poemproducer.com/) uses language, sound, politics & explores speech within the audible depths of anti-rhythmic post-internet assemblages. [interview on C74](https://cycling74.com/forums/an-interview-with-antye-greie-ripatti-agf/)
+* AGF / Antye Greie-Ripatti / [Poemproducer](http://www.poemproducer.com/) uses language, sound, politics & explores speech within the audible depths of anti-rhythmic post-internet assemblages. [interview on C74](https://cycling74.com/forums/an-interview-with-antye-greie-ripatti-agf/), Song [my patch](https://www.youtube.com/watch?v=7o5pPcqcS_k) from the album Westernization Completed (2004).
 * [Damian Taylor](https://www.damiantaylor.com/) | record producer, engineer, mixer, writer and programmer best known for his work with artists including The Prodigy, Björk, Arcade Fire, ... 
 * [Luke Dubois](https://lukedubois.com/) | American composer, performer, conceptual new media artist, programmer, record producer and pedagogue based in New York City.
-* http://www.av3ry.net/  https://cycling74.com/projects/av3ry
-* http://www.timohoogland.com/
-* https://www.federicofoderaro.com/patches.html
-* [Koutaro Fukui](http://ondomusic.com/) 
-☞ download [DEMOS](downloads/max/Demos.zip)
+* [AV3RY](http://www.av3ry.net/) | an AI musician, poet and visual artist created by [Alexander Schubert](http://www.alexanderschubert.net). Read more [here](https://cycling74.com/projects/av3ry)
+* Timo Hoogland(http://www.timohoogland.com/) | Dutch livecoder, music technologist & educator. 
+* [Federico Foderaro](https://www.federicofoderaro.com/patches.html) | an audio-visual artist, media technologist, programmer and Max/MSP teacher.
+* ...
+
+☞ Some [DEMO](downloads/max/Demos.zip) patchers that I have collected over time (including Shatter by Andrew Benson, sev2011 by Katsuhiro Chiba, ryoz_ikedar_bl by Koutaro Fukui, proceduralgeometry by Chris Vik, planetarium by Matsui, clatmtn by Koutaro Fukui, cibobruciato by Rino Petrozziello, 1681.cvrtne.iiiii by uhitokiyosue aka mesa.elech/tele)
 
 ## [Getting started](https://cycling74.com/get-started)
 Deze initiatie zal niet alle mogelijkheden van MAX behandelen, maar richt zich op enkele belangrijke concepten en mechanismen die met MAX mogelijk zijn. We zullen werken met: de weergave van beeld (video en stills) en geluid, synthese van beeld en geluid, effecten, algoritmische compositie, cross-mediale mappings (bijv. het beeld zal de audio beïnvloeden en vice versa), interactiviteit (bijv. met input van toetsenbord, muis, camera, microfoon, arduino), ...
