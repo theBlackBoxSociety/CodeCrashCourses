@@ -53,7 +53,6 @@ Download **[deze patches](downloads/max/A_brief_introduction.zip)** (zip file ±
 ### 02_maxObjects.maxpat
 * Objects, Messages, UI-objecten; Bang, Toggle, Integer & Float
 * Messages 
-The message box contains a variable (a value, a list of values, text, ...) typed into it. You can change that (with the patcher window unlocked). When you click or bang it it will send the message down a patch cord to another Max object. 
 * Logic
 * Variables: werken met de tokens $1, $2, etc.
 * De verschillende onderdelen van MAX
