@@ -51,8 +51,7 @@ Download **[deze patches](downloads/max/A_brief_introduction.zip)** (zip file ±
 * Patchcords
 
 ### 02_maxObjects.maxpat
-* Objects, Messages, UI-objecten; Bang, Toggle, Integer & Float
-* Messages 
+* Objects, Messages & the UI-objecten: Bang, Toggle, Integer & Float
 * Logic
 * Variables: werken met de tokens $1, $2, etc.
 * De verschillende onderdelen van MAX
@@ -60,12 +59,9 @@ Download **[deze patches](downloads/max/A_brief_introduction.zip)** (zip file ±
   * MSP 
   * & Beap
   * Jitter 
-  * & Vizzie https://cycling74.com/tutorials/vizzie-video-experiments-curriculum-outline
-  https://cycling74.com/tutorials/a-brief-introduction-to-vizzie
-  * & Jitter openGL
-  https://docs.cycling74.com/MAX8/vignettes/working_with_opengl_topic
-  * GEN
-  https://cycling74.com/tutorials/gen~-for-beginners-part-1-a-place-to-start
+  * & Vizzie [C74 vizzie video experiments curriculum outline](https://cycling74.com/tutorials/vizzie-video-experiments-curriculum-outline) & [C74 a brief introduction to vizzie](https://cycling74.com/tutorials/a-brief-introduction-to-vizzie)
+  * & Jitter openGL [C74 working with opengl topic](https://docs.cycling74.com/MAX8/vignettes/working_with_opengl_topic)
+  * GEN [C74 gen~ for beginners part 1](https://cycling74.com/tutorials/gen~-for-beginners-part-1-a-place-to-start)
   * Max for Live
   * Node for MAX
   
@@ -93,7 +89,7 @@ Download **[deze patches](downloads/max/A_brief_introduction.zip)** (zip file ±
 9. clean
 10. optimise
 video op de CPU vs video op de GPU 
-zie ook https://cycling74.com/tutorials/best-practices-in-jitter-part-1
+zie ook [C74 best practices in jitter](https://cycling74.com/tutorials/best-practices-in-jitter-part-1)
 11. under construction
 12. version
 
