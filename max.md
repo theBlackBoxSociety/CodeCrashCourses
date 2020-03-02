@@ -4,15 +4,19 @@
 **[MAX](https://cycling74.com/products/max)** is [een visuele programmeeromgeving](https://en.wikipedia.org/wiki/Visual_programming_language). Het programmeren gebeurt adhv visuele uitdrukkingen of ruimtelijke ordeningen van tekst en grafische elementen. Het programmeren in MAX heet **“patchen“**, visuele elementen of **“object boxes”** worden verbonden met draadjes of **“patchcords“**. Deze diagrammen laten zien hoe de data door het programma 'stroomt'. Met Max kan je onmiddellijk de resultaten zien en horen bij elke verandering die je maakt. Het is een heel intuitieve manier van programmeren waarin doen en denken kan samengaan. 
 
 MAX groeide over de jaren heen, het is onstaan midden de jaren 80, uit tot een erg uitgebreid en krachtig platform. Het wordt voornamelijk gebruikt door artiesten, componisten, wetenschappers, docenten, studenten en softwareontwerpers. Het voorziet in tools om te werken met midi, data, geluid en muziek **“msp~”**, bitmap beelden, video en 3D **“jitter”**, interactiviteit en connectiviteit met andere toepassingen en hardware ... 
+
 ☞ [Made with MAX](https://cycling74.com/products/made-with-max)
 
+<hr>
+
 Naast MAX zijn er nog heel wat andere visuele programmeer omgevingen. [Op deze pagina](https://github.com/ivanreese/visual-programming-codex/blob/master/implementations.md) vind je ze bijna allemaal opgelijst. Deze lijken me zeker het bekijken waard of vormen een mogelijk alternatief voor MAX.
-* [Pure Data](https://puredata.info/) [Cross-platform] | Open source visual programming language for multimedia. [Purr Data](https://github.com/agraef/purr-data/releases) is de meest recente versie.
-* [VVVV](https://vvvv.org/) [Win] | Hybrid visual/textual live-programming environment for easy prototyping and development.
-* [TouchDesigner](https://derivative.ca/) [Mac, Win] | Visual development platform to create realtime projects.
-* [NodeBox](https://www.nodebox.net/) [Mac, Win] | Cross-platform, node-based GUI for efficient data visualizations and generative design.
+* [Pure Data](https://puredata.info/) [Cross-platform] *Open source visual programming language for multimedia* [Purr Data](https://github.com/agraef/purr-data/releases) is de meest recente versie.
+* [VVVV](https://vvvv.org/) [Win] *Hybrid visual/textual live-programming environment for easy prototyping and development*
+* [TouchDesigner](https://derivative.ca/) [Mac, Win] *Visual development platform to create realtime projects*
+* [NodeBox](https://www.nodebox.net/) [Mac, Win] * Cross-platform, node-based GUI for efficient data visualizations and generative design*
 * ...
 
+<hr>
 
 ## Inspirerende Personen & Projecten 
 * AGF / Antye Greie-Ripatti / [Poemproducer](http://www.poemproducer.com/) uses language, sound, politics & explores speech within the audible depths of anti-rhythmic post-internet assemblages. [interview on C74](https://cycling74.com/forums/an-interview-with-antye-greie-ripatti-agf/), Song [my patch](https://www.youtube.com/watch?v=7o5pPcqcS_k) from the album Westernization Completed (2004).
@@ -23,13 +27,15 @@ Naast MAX zijn er nog heel wat andere visuele programmeer omgevingen. [Op deze p
 * [Federico Foderaro](https://www.federicofoderaro.com/patches.html) | an audio-visual artist, media technologist, programmer and Max/MSP teacher.
 * ...
 
-☞ Some [DEMO](downloads/max/Demos.zip) patchers that I have collected over time (including Shatter by Andrew Benson, sev2011 by Katsuhiro Chiba, ryoz_ikedar_bl by Koutaro Fukui, proceduralgeometry by Chris Vik, planetarium by Matsui, clatmtn by Koutaro Fukui, cibobruciato by Rino Petrozziello, 1681.cvrtne.iiiii by uhitokiyosue aka mesa.elech/tele)
+☞ Enkele [DEMO](downloads/max/Demos.zip) patchers dat ik heb verzameld: Shatter by Andrew Benson, sev2011 by Katsuhiro Chiba, ryoz_ikedar_bl by Koutaro Fukui, proceduralgeometry by Chris Vik, planetarium by Matsui, clatmtn by Koutaro Fukui, cibobruciato by Rino Petrozziello, 1681.cvrtne.iiiii by uhitokiyosue aka mesa.elech/tele
+<hr>
 
 ## [Getting started](https://cycling74.com/get-started)
 Deze initiatie zal niet alle mogelijkheden van MAX behandelen, maar richt zich op enkele belangrijke concepten en mechanismen die met MAX mogelijk zijn. We zullen werken met: de weergave van beeld (video en stills) en geluid, synthese van beeld en geluid, effecten, algoritmische compositie, cross-mediale mappings (bijv. het beeld zal de audio beïnvloeden en vice versa), interactiviteit (bijv. met input van toetsenbord, muis, camera, microfoon, arduino), ...
 ☞ [Getting started page](https://cycling74.com/get-started) on the Cycling74 site.
 ☞ [Max 8 Documentation](https://docs.cycling74.com/MAX8) on the Cycling74 site.
 ☞ [Max Cheat Sheet](downloads/max/MAX_cheatsheet_v2.pdf)
+<hr>
 
 ## A Brief MAX Introduction 
 Download **[deze patches](downloads/max/A_brief_introduction.zip)** (zip file ±14MB). De tutorial bestaat uit 6 basis patchers maar de meeste patchers hebben links naar andere subpatchers die een apart segment belichten of verduidellijken. 
@@ -94,13 +100,16 @@ zie ook https://cycling74.com/tutorials/best-practices-in-jitter-part-1
 
 ### 06_maxhelp_a_day.maxpat
 *Leer door het rondneuzen in de helpfiles.*
+<hr>
 
 ## A More elaborated (but messy) MAX overview
 Download [deze patches](downloads/max/A_More_Elaborated_Overview.zip) (zip file ±5MB) 
 
+Deze ininitiatie is een stuk uitgebreider en volgt een duidelijke opdeling tussen werken met video, geluid, Open GL, etc maar is ontwikkeld voor een vroegere MAX versie (6).
+<hr>
+
 ## Tutorials en lessen van anderen
 * [KADENZE](https://www.kadenze.com/courses/programming-MAX-structuring-interactive-software-for-digital-arts-i/info)
-* See this Overview of Video Lessons for Max Users
-https://cycling74.com/articles/an-introduction-to-free-video-lessons-for-max-msp-users
-https://www.youtube.com/channel/UCcj4IblMypOlKPYU7aRsQRg
-https://www.youtube.com/playlist?list=PLRc5WfOZXC4ktigvYCDhek0475hizrnM5
+* Cycling74 artikel "[An Introduction to Video Lessons for Max Users](https://cycling74.com/articles/an-introduction-to-free-video-lessons-for-max-msp-users)"
+* [Dear John Reed Tutorials](https://www.youtube.com/channel/UCcj4IblMypOlKPYU7aRsQRg)
+* [Amazing Max Tutorials](https://www.youtube.com/playlist?list=PLRc5WfOZXC4ktigvYCDhek0475hizrnM5)
