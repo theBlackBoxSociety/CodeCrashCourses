@@ -10,14 +10,14 @@
 5 [Getting Started: Hello World!](#started)   
 6 [Wiring Diagrams & Schematics](#schematics)  
 7 [Next step: a Pushbutton - Digital Inputs](#digitalIn)  
-8 [Advanced Sensors - Analog Inputs](#analogIn)  
+8 [Advanced Sensors - Analog Inputs](#analogIn) & [Serial Communication](#serial)
 9 [PWM - Analog Outputs](#analogOut)
 
 ## <a name="intro">1. Introduction</a>
 
 [Arduino](https://www.arduino.cc/) is an open source physical computing platform based on a simple input/output (I/O) board and a development environment that is based on [Processing](http://www.processing.org). Arduino can be used to develop standalone interactive objects or can be connected to software on your computer, such as [Processing](https://processing.org/), the internet with a.o. [P5.JS](https://p5js.org/) with [the p5.bots library](https://github.com/sarahgp/p5bots), [TouchDesigner](https://www.derivative.ca/), [VVVV](https://vvvv.org/), [Max](https://cycling74.com/products/max/), ...  
 
-## <a name="platform">2. The Arduino Platform
+## <a name="platform">2. The Arduino Platform</a>
 
 Arduino is composed of two major parts: **the Arduino board**, which is the piece of hardware you work on when you build your objects, and **the Arduino IDE**, the software you run on your computer. In the IDE you write a sketch (a computer program with a set of instructions) that you upload to the Arduino board. This program tells the board what to do.
 
@@ -26,10 +26,8 @@ Arduino has a worldwide **community** of over 30 million active users. The Ardui
 ☞ https://www.arduino.cc/en/Tutorial/HomePage   
 ☞ https://create.arduino.cc/projecthub
 
-[Hackster.io](https://www.hackster.io/) is the world’s fastest growing developer community for learning, programming, and building hardware.
-
-## <a name="hardware">3. The Arduino Board
-The Arduino board is a small microcontroller or, in other words, a small computer chip on a circuitboard. This computer is at least a thousand times less powerful than your laptop, but it’s a lot cheaper and very useful to build interesting devices. 
+## <a name="hardware">3. The Arduino Board</a>
+The Arduino board is a small microcontroller or, in other words, a small computer chip on a circuitboard. This computer is at least a thousand times less powerful than your laptop, but it is also a lot cheaper and very useful to build interesting devices. 
 
 We will be using an [keyestudio Uno R3](https://www.keyestudio.com/keyestudio-uno-r3-atmega328p-development-board-usb-cable-for-arduino-p0513-p0513.html) arduino clone. 
 
@@ -38,10 +36,11 @@ We will be using an [keyestudio Uno R3](https://www.keyestudio.com/keyestudio-un
 Looking at the Arduino board: you’ll see a black chip with 28 *legs*. That chip is the ATmega328P, the heart of your board. 
 The arduino UNO / ATmega328 features:
 - **14 Digital IO pins** (pins 0–13). These can be inputs or outputs, which is specified by the sketch you create.
-- **6 Analog In pins** (pins 0–5). These dedicated analog input pins take analog values (0-5V) (i.e. voltage readings from a sensor) and convert them into a number between 0 and 1023 (= 10 bit).
-- **6 PWM pins** (pins 3, 5, 6, 9, 10, and 11). These are actually 6 of the digital pins that can be reprogrammed for *analog output*.
+- **6 Analog In pins** (pins A0–5). These dedicated analog input pins take analog values (0-5V) (i.e. voltage readings from a sensor) and convert them into a number between 0 and 1023 (or 1024 values = 10 bit).
+- **6 PWM pins** (pins 3, 5, 6, 9, 10, and 11). These are actually 6 of the digital pins that can be reprogrammed for *analog output*. They are indicated with a ~(tilde).
 - The board can be **powered** from your computer’s USB port (5V), most USB chargers, or an AC adapter (7-12V recommended, 2.1mm barrel tip, center positive).
 - And another Atmega16U2 programmed as a **USB-to-serial converter**.
+- ...
 
 ![Image](images/arduino/uno_layout.jpg)
 *The complete parts  of an Arduino Uno*
@@ -56,20 +55,16 @@ USB cable.
 Keyestudio also provides a wiki with detailed tutorials using the provided hardware module. The tutorial include connection diagrams and sample codes.
 See the tutorials for [Kit 1](https://wiki.keyestudio.com/Ks0178_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K1), [Kit 2](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K2), [Kit 3](https://wiki.keyestudio.com/Ks0180_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K3) & [Kit 4](https://wiki.keyestudio.com/Ks0181_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K4)
 
-## <a name="software">4. The Software (IDE)
+## <a name="software">4. The Software (IDE)</a>
 The programs you write for your Arduino are known as sketches. They are written in C/C++.
 
 
-### <a name="IDE">:triangular_flag_on_post:  Arduino IDE Installation Guide
+### <a name="IDE">:triangular_flag_on_post:  Arduino IDE Installation Guide</a>
 Download the latest stable version for your operating system from the [Arduino Software Centre.](https://www.arduino.cc/en/Main/Software).        
 #### MacOS
-1. [Download the Application zip file](https://www.arduino.cc/en/Main/Software) whose name will be something along the lines of  Arduino-1.8.9-macosx.zip.
-2. Extract the zip file.
-3. Open the extracted folder. 
-![Image](images/arduino/Mac_Download.jpg)
-4. Copy the Arduino application into the Applications folder 
-![image](images/arduino/MAC_App.jpg)
-5. You are done! 
+Download the Application zip file](https://www.arduino.cc/en/Main/Software) whose name will be something along the lines of  Arduino-1.8.13-macosx.zip.
+
+Extract the zip file. Open the extracted folder and copy the Arduino application into the Applications folder. You are done! 
 
 #### Windows
 You have some options to install the Arduino IDE. Download & install it [manually](https://www.arduino.cc/en/Guide/Windows) or trough the [MS store](https://www.microsoft.com/fr-be/p/arduino-ide/9nblggh4rsd8?ocid=badge&rtc=1&activetab=pivot:overviewtab).
@@ -77,8 +72,8 @@ You have some options to install the Arduino IDE. Download & install it [manuall
 #### Linux
 Get the latest version from the [download page](https://www.arduino.cc/en/Main/Software). You can choose between the 32, 64 and ARM versions. Install it following [this quick start guide](https://www.arduino.cc/en/Guide/Linux).
 
-    
-### <a name="portID">:triangular_flag_on_post:  Port Identification & Board Selection
+
+### <a name="portID">:triangular_flag_on_post:  Port Identification & Board Selection</a>
 The process for setting up your Arduino and connecting the software to your board differs also related to the computer you are using. 
 
 #### MacOS / Linux
@@ -95,17 +90,30 @@ The process for setting up your Arduino and connecting the software to your boar
 
 3. Here too. Select the right board. Go again to Tools >> Board and select "Arduino/Genuino Uno"
 
-### <a name="UI">:triangular_flag_on_post:  The User Interface
+### <a name="UI">:triangular_flag_on_post:  The User Interface</a>
 ![The User INterface](images/arduino/arduino_ide.svg)
 
 
-## <a name="started">5. Getting Started: Hello World!<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤 
+## <a name="started">5. Getting Started: Hello World!<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤</a> 
 
 ### :triangular_flag_on_post:  Hello World!
 A "Hello World!" in the Arduino sphere is a blinking LED.  
 You just need an Arduino and a USB cable.   
-Open an new file in the IDE, name and save it.    
-Then type the following text into the Arduino sketch editor but you can skip the lines starting with a `//` as they are comments.
+Open a new file in the IDE. The lines of code below are already written. They form the basis of every program. More about that later. 
+
+```C++
+void setup() {
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
+```
+Name and save it.
+Then type the following text into the Arduino sketch editor but you can skip the lines starting with a `//` as they are comments. You will see that you also don't need to type the `void setup(){}` and `void loop(){}` parts.
 
 ```C++
 // LED connected to digital pin 13
@@ -137,7 +145,7 @@ Now you can **upload** it into the board.
 Press the Upload to I/O Board button. This will reset the board and force it to stop its current functions. Then sends the current compiled sketch is send to the board, got stored it in its memory. Then the board will run it. When it went fine you'll see the message **“Done uploading”** appear to let you know the process has completed correctly.
 
 Note the 2 RX and TX LEDs on the board. These flash every time a byte is sent or received. They will flicker during the upload process. If you don’t see that, or if you get an error message instead of “Done uploading”, then there is a communication problem between your computer and Arduino. Make sure you’ve selected the right serial port and confirm that the correct model of Arduino is selected.
-   
+
 Once the code is in your Arduino board, it will stay there until you put another sketch on it. 
 
 Assuming that the sketch has been uploaded correctly, you will see the LED turn on for a second and then turn off for a second.
@@ -172,7 +180,7 @@ The LED can easily be substituted by other actuator as:
 - ...
 but therefore we need to know how we can hook them up.
 
-## <a name="schematics">6. Wiring Diagrams & Schematics
+## <a name="schematics">6. Wiring Diagrams & Schematics</a>
 Next we want to wire an external LED to the board. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to pin 13 on the Arduino, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a sketch or diagram with the wires and components connected to the Arduino?!
 
 Being able to read these diagrams is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
@@ -195,18 +203,18 @@ More on [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-us
 So our wiring diagram on a breadboard will look more or less like this:
 ![image](images/arduino/digitalOut.png)
 
-## <a name="digitalIn">7. Next step: a Pushbutton<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
+## <a name="digitalIn">7. Next step: a Pushbutton<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤</a>
 
 ### :triangular_flag_on_post: Push the button 
 In our first example, the LED was our actuator, and our Arduino was controlling it. If we image an outside parameter to take control over this LED, our finger, we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
 
 Let's make our wiring diagram first.  
- 
+
 #### Circuit
 - LED attached from pin 13 to ground
 - pushbutton attached to pin 2 from +5V
 - 10K resistor attached to pin 2 from ground
- 
+
 ![image](images/arduino/digitalIn.png)
 
 :scream_cat: Hold on! [What is a resistor]([https://learn.sparkfun.com/tutorials/resistors])?!  
@@ -308,7 +316,7 @@ have two contacts that come together when they are near a magnet.
 You can try some!
 * ...
 
-## <a name="analogIn">8. Advanced Sensors<br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤
+## <a name="analogIn">8. Advanced Sensors<br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤</a>
 
 ### :triangular_flag_on_post:  ADC
 
@@ -351,8 +359,8 @@ void loop() {
 ```
 :warning: As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) and also [this blogpost](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/).
 
-### :triangular_flag_on_post: talk2me
-Wouldn't it be handy if we could check our incoming values? We actually can by establishing **serial communication** from our Arduino to our computer.   
+### <a name="serial">:triangular_flag_on_post: talk2me</a>
+Wouldn't it be handy if we could check our incoming values? We actually can by establishing **Serial Communication** from our Arduino to our computer.   
 We call this "serial" communication because the connection appears to both the Arduino and the computer as a serial port, even though it may actually use a USB cable. Bytes are sent one after another (serially) from the Arduino to the computer.  
 In the code below we will map the 0-1023 values to a custom range 10-500, send the 2 variables over the serial port and the Arduino Serial Monitor to view them. Click the serial monitor button in the toolbar and select the same baud rate used in the call to begin().  
 
@@ -394,7 +402,7 @@ void loop() {
   // stop the program for for <sensorValue> milliseconds:
   delay(sensorValue);
 }
-```   
+```
 :mag: **A closer look at the code**  
 In the setup() function we open the serial communication set the data rate in bits per second (baud), here 9600bps, with the command `Serial.begin(9600);`.   
 
@@ -406,7 +414,7 @@ Serial.print('N') gives "N"
 Serial.print("Hello world.") gives "Hello world."  
 
 `Serial.println()` takes the same forms as Serial.print() but the message is followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n').
- 
+
 ### :triangular_flag_on_post: more toys
 The Keyestudio starter kits contain a lot of usefull sensor modules, as:
 - An **Alcohol Sensor** :grinning: to make a breath analiser. 
@@ -422,7 +430,7 @@ The Keyestudio starter kits contain a lot of usefull sensor modules, as:
 :warning:   You might also come across an even more advanced sensor module in the Keyestudio kits. These modules are connected to the Arduino board through UART, SPI, or I2C (3 common communication peripherals found on Arduino). Lets not make it more complex then needed here. If you want to learn more [this post](https://maker.pro/arduino/tutorial/common-communication-peripherals-on-the-arduino-uart-i2c-and-spi) is a good start and the code in the Keyestudio can get you started.
 
 
-## 9. <a name="analogOut">PWM <br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
+## 9. <a name="analogOut">PWM <br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤</a>
 ### :triangular_flag_on_post:  PWM, a fading LED
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc. We can accomplish a range of results in both applications because PWM allows us to vary how much time the signal is high as in an analog fashion. While the signal can only be high (5V) or low (0V) at any time, we can change the proportion of time the signal is high compared to when it is low over a consistent time interval. We call this modulating the duty cycle.
 

@@ -1,12 +1,21 @@
-### :triangular_flag_on_post: 5a. Hello World!
+### :triangular_flag_on_post:  Hello World!
+A "Hello World!" in the Arduino sphere is a blinking LED.  
+You just need an Arduino and a USB cable.   
+Open a new file in the IDE. The lines of code below are already written. They form the basis of every program. More about that later. 
 
-A "Hello World!" in the Arduino sphere is a **blinking LED**.  
-  
-You just need an Arduino and a USB cable. 
+```C++
+void setup() {
+  // put your setup code here, to run once:
 
-Open an new file in the IDE, name and save it.  
+}
 
-Then type the following text into the Arduino sketch editor but you can skip the lines starting with a `//` as they are comments.
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
+```
+Name and save it.
+Then type the following text into the Arduino sketch editor but you can skip the lines starting with a `//` as they are comments. You will see that you also don't need to type the `void setup(){}` and `void loop(){}` parts.
 
 ```C++
 // LED connected to digital pin 13
