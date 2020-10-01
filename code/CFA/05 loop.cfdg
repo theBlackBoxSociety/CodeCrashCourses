@@ -1,0 +1,22 @@
+// loop
+
+
+startshape rozetta
+
+
+shape rozetta
+{
+  // 1
+  loop 10 [ x 1 ] primitives []
+  
+  // 2
+  // loop 36 [ r -10 ] primitives [ y 8 ]
+  // note how transformations are used here
+}
+
+shape primitives
+{
+  SQUARE [ y -1 ]
+  TRIANGLE []
+  CIRCLE [ y 1.2 ]
+}

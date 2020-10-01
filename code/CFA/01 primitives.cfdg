@@ -1,0 +1,12 @@
+// primitives
+
+
+startshape primitives
+
+
+shape primitives
+{
+  SQUARE []
+  // TRIANGLE []
+  // CIRCLE []
+}

@@ -1,0 +1,67 @@
+// underground
+
+// 1: startshape: section
+// 2: startshape: subway
+
+
+startshape section
+
+
+shape section
+rule 1000   // chosen most of the time
+{
+	CIRCLE []
+	section [ y 0.1 ]
+}
+
+// add a terminus
+// the recursion stops here
+rule 1
+{
+	CIRCLE [ s 3 ]
+	CIRCLE [ s 1 b 1 ]
+  // notice that "section[]" is not called
+}
+
+
+/*
+// add turns
+rule 1 { section [ r 45 ] }
+rule 1 { section [ r -45 ] }
+rule 1 { section [ r 90 ] }
+rule 1 { section [ r -90 ] }
+*/
+
+/*
+// add stations
+rule 4 
+{
+	SQUARE [ s 3 r 45 ]
+	section []
+}
+*/
+
+
+/*
+// cross-section
+rule 0.45
+{
+	section []
+  
+  // call another line 
+  // perpendicular to the current one
+	subway [ rotate 90 ]
+}
+*/
+
+
+
+// add colour to the lines
+// and draw lines from the middle
+// so stations appear at both ends
+shape subway
+rule 
+{
+  section [  b 0.7 sat 1 hue 55 ]
+  section [  b 0.7 sat 1 hue 55 rotate 180 ]
+}

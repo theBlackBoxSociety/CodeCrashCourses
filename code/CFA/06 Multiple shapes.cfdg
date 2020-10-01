@@ -1,0 +1,37 @@
+// multiple shapes
+
+
+startshape ring
+
+
+// 1: draw a ring
+shape ring
+{
+  // note how transformations are used here
+  loop 36 [ rotate 10 ] rozetta [ y 120 ]
+  // shorthand rotate: r
+}
+
+// 2: nest rings inside of rings
+/*
+shape swoosh
+{
+  loop 50 [ r 5 scale .86 ] ring []
+  // shorthand scale: s
+}
+*/
+
+
+
+// from the previous file
+shape rozetta
+{
+  loop 36 [ r -10 ] primitives[ y 8 ] 
+}
+
+shape primitives
+{
+  SQUARE [ y -1 ]
+  TRIANGLE []
+  CIRCLE [ y 1.2 ]
+}

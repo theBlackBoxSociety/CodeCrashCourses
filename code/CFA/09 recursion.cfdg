@@ -1,0 +1,12 @@
+// Recursion
+
+
+startshape aaa
+
+
+// adjust scale, but don't go above 0.999
+shape aaa
+{
+  CIRCLE []
+  aaa [ s 0.95 x 1 r 20 ]
+}

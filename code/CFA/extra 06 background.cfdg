@@ -1,0 +1,22 @@
+// background
+
+// turns out the default background is solid white, 
+// so to change it, we should treat it 
+// like any other transformation
+
+
+startshape spotlight
+
+
+// The background has a default 
+// transformation of [ h 0 sat 0 b 1 a 1 ]
+// This means it's opaque white
+// Let's change the brightness from 1 to 0
+// to make the background black:
+CF::Background = [ b -1 ]
+
+shape spotlight
+{
+  CIRCLE [ b 1 sat 1 h 50 s 1 0.5 ]
+  spotlight [ y .04 s 0.98 h -2 a -0.1 ] // light cone
+}

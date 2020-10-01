@@ -1,0 +1,31 @@
+// Color
+
+// to use colors in CFA, you should become familia with HSB (Hue Saturation Brightness), which may be new to you if you have only used RGB colors in other programs.
+// To practice, use GIMP or any application that has a color chooser that can be set to use HSB values.
+// Probably one of the biggest differences is that Hue goes from 0 to 360 and then loops through again if the values go over 360. 
+// Just learn a few of the basics with Hue and you'll adjust easily:
+//  0 = Red
+// 60 = Yellow
+// 120 = Green
+// 180 = Cyan
+// 240 = Blue
+// 300 = Magenta
+
+
+startshape colorwheel
+
+
+shape swatch  
+{
+  SQUARE [ h 240 sat 1 b 1 ] // a blue square
+}
+
+
+
+// HSB makes it easy to loop through a spectrum of colors
+shape colorwheel
+{
+  loop 360 [ h 1 x 1 r 1 ] swatch [ s 1 80 ]
+}
+
+

@@ -1,0 +1,22 @@
+// Two shapes
+
+// 1: startshape: primitives
+// 2: startshape: rozetta
+
+
+startshape primitives
+
+
+shape primitives
+{
+  SQUARE [ y -1 ]
+  TRIANGLE []
+  CIRCLE [ y 1.2 ]
+}
+
+shape rozetta
+{
+  primitives []
+  primitives [ x 1 ]
+  primitives [ x 2 ]
+}

@@ -1,0 +1,36 @@
+// random
+
+// Random was introduced in colour.
+// Now used in other transformations.
+
+
+startshape grass
+
+
+// 1: random rotation
+shape worm
+{
+  loop 500 [ y .2 r rand(-5,5) ] CIRCLE []
+}
+
+
+// 2: random location and size
+shape grass
+{
+  loop 100
+  [
+    x rand(-20,20) 
+    y rand(-10,10) 
+    s rand(0.9,1.1)
+    a rand(0.1,-0.2) // alpha "a" for transparency
+  ] worm []
+}
+
+
+// 3: random selection between shapes
+/*
+shape worm
+{
+  CIRCLE [ s 1..3 ]
+}
+*/
