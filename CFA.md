@@ -72,6 +72,8 @@ And these are [the tutorial files](code/CFA/CFA.zip) (zip compressed)
 * transparency: a (from alpha)
 	1 = opaque
 	0 = transparent
+
+* background & tiling
 `CF::Background = [hue 163 b -.875 saturation .75]` = murky green
 `CF::Tile = [s 10]`
 `CF::Tile = [s 0 10]` if one of the 2 numbers is zero, it tiles as a horizontal or vertical band
