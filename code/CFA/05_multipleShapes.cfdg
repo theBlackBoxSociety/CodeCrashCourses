@@ -16,7 +16,7 @@ shape ring
 /*
 shape swoosh
 {
-  loop 50 [ r 5 scale .86 ] ring []
+  loop 50 [ r 5 s .86 ] ring []
   // shorthand scale: s
 }
 */
