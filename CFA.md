@@ -4,16 +4,16 @@
 
 # Context Free Art: an introduction
 
-[Context Free Art download](https://www.contextfreeart.org/downloads.html) (mac, windoze & linux)
+[Context Free Art download](https://www.contextfreeart.org/downloads.html) (mac, windoze & linux)    
 [Oficial documentation](https://github.com/MtnViewJohn/context-free/wiki)
 
 
 ## Intro
-1. primitives
+1. [primitives](code/CFA/01_primitives.cfdg)
   * Code > Shapes (graphical output)
   * Introduce 3 primitive shapes one by one
-	*	Comments start with `//``
-2. transform
+  *	Comments start with `//`
+2. transformations
   * Position
   * Rotation
   * Brackets & formatting
@@ -21,37 +21,37 @@
   * positive rotation is CCW
   * run = compile	
 3. two shapes
-	* redefine startshape
-	* Variables
-			* text color
-			* reserved names
-			* assign, recall
-5. loop
+  * redefine startshape
+  * Variables
+    * text color
+    * reserved names
+		* assign, recall
+4. loop
 	*	Loop
 	*	2 kinds of transform operations
 	*	everything is relative
-6. Multiple shapes
+5. Multiple shapes
 		more complex shapes
 		again: 2 kinds of transform operations
 		transform: scale
-7. noise
+6. noise
 		a..b
 		rand(a,b)
-8. random
+7. random
 		Y-position relative to previous shape affected by rotation.
 		random shape select
 		seed
-9. recursion
+8. recursion
 		Dangerous
 		Terminate by size (less than 1 pixel)
-10. fractal
+9. fractal
 		Multiple series of recursion
 		variables
-11. rules
+10. rules
 		weight: control probability
 		executing specific actions without losing 
 		track of position in the recursion chain
-12. underground
+11. underground
 		step by step
 		modular approach
 		Recursion terminates by having a rule NOT calling itself
