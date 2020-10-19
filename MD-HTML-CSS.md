@@ -58,7 +58,7 @@ Cascading Style Sheets (CSS) is een taal die de vormgeving (kleur, lettertype, .
 
 Sinds de introductie van CSS kan de inhoud en vormgeving van webpagina's gescheiden worden. Dit voor een eenvoudiger beheer en meer flexibiliteit. Een CSS-bestand wordt doorgaans aan een HTML-bestand gekoppeld d.m.v. een link in het HTML-bestand. Met CSS kan je dus stijlelementen koppelen aan HTML-elementen. Als je dus het lettertype of de kleur wil wijzigen voor alle H2-titels in een HTML-bestand, kan dat via één stijlbeschrijving in CSS. Indien er geen CSS-bestand zou bijgevoegd zijn moet elke H2-kop in het HTML-bestand gewijzigd worden.
 
-### :point_right: [HTML & CSS tutorial](https://github.com/theBlackBoxSociety/html-css-one-page):point_left:
+### :point_right: [HTML & CSS tutorial](https://github.com/theBlackBoxSociety/HTML-CSS-tutorial):point_left:
 
 
 <!--### :point_right: [voorbeeld mappenstructuur met html en css documenten](site.zip):point_left:-->
