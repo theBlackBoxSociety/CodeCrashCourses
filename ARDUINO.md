@@ -1,4 +1,4 @@
-*---[ A crashcourse in Code, prt 3 ]---*
+*---[ A crashcourse in Code ]---*
 
 # ARDUINO
 
