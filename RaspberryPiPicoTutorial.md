@@ -4,17 +4,18 @@ This tutorial is based on the official guide ["Get Started with MicroPython on R
 
 You will learn the basics of physical computing <sup>[1](#1)</sup> with this powerful microcontroller board. This includes learning to know and setting up workflow, reading and reproducing circuits, program the Pico with MicroPython, ...
 
+![The Raspberry Pi Pico Board](images/pico/Pico-intro.png)
 
 #### Contents
 -- Getting Prepped --
 1. [Introduction](#intro)
 1. [the Raspberry Pi Pico Board](#hardware)
 1. [the MicroPython firmware](#firmware)
-1. [the Software](#software)
+1. [the Software](#software)    
 -- Getting Started --
 5. [What the Shell](#shell)
 6. [Over to Script Mode](#scriptmode)
-7. [Few extra Programming Principles](#pprinciples)
+7. [Few extra Programming Principles](#pprinciples)    
 -- Getting Dirty Hands --
 8. [Physical computing](#physicalcomputing)
 9. [Wiring Diagrams & Schematics](#schematics)
