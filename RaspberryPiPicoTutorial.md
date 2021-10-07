@@ -59,7 +59,7 @@ Now, turn your Pico over. You’ll see the underside has writing on it. This is 
 ![Pin Reference off the Raspberry Pi Pico Board](images/pico/Pico-pin-ref.png)
 
 :scream_cat: Wait. **What is a breadboard?**  
-A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solderless breadboard, can make physical computing projects considerably easier. Rather than having a bunch of separate components which need to be connected with wires, a breadboard lets you insert components and have them connected through metal tracks which are hidden beneath its surface. Many breadboards also include sections for power distribution, making it easier to build your circuits.
+A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solderless breadboard, is a small plastic board full of holes, each of which contains a spring-loaded contact (in metal). You can push a component’s leg into one of the holes, and it will establish an electrical connection with all of the other holes in the same vertical column of holes. Many breadboards also include sections for power distribution, making it easier to build your circuits.
 
 ![A Pico on a Breadboard](images/pico/Pico-Top-Breadboard.png)
 
@@ -201,11 +201,120 @@ while True:
     utime.sleep(1)
 ```
 
+
 ## <a name="pprinciples">7. Few extra Programming Principles</a>
 ###  :triangular_flag_on_post: another loop function: `for i in range()`
 ###  :triangular_flag_on_post: variables
 ###  :triangular_flag_on_post: conditionals
+knopje in het verhaal brengen - Inputs
 
+## Physical computing
+### :triangular_flag_on_post: Your Pico’s pins
+Most pins on the Picop work as a input/output (GPIO) pin. You can program them to act as an input or an output. Some pins have extra features and alternative modes for communicating with more complicated hardware, as analog in or PWM, but more in this later on. And other pins have a fixed purpose as providing connections for power.    
+We will generally refer to a pin by it's function and not the physical pin number.
+|    |    |    |
+|--- |--- |--- |
+| 3V3   | 3.3v power | the same voltage your Pico runs at internally, generated from the VSYS input |
+| VSYS | ~2-5v power | a pin directly connected to your Pico’s internal power supply |
+| VBUS | 5v power | 5v power taken from the Pico’s micro USB port, and used to power hardware which needs more than 3.3v |
+| GND | 0v ground | a ground connection, used to complete a circuit connected to a power source. Several of these pins are dotted around your Pico to make wiring easier |
+| GPxx | General Purpose Iput/Output pin number ‘xx’ | The GPIO pins available for your program, labelled ‘GP0’ through to ‘GP28’ |
+| GPxx_ADCx | General-purpose input/output pin number ‘xx’, with analogue input number ‘x’ | A GPIO pin which ends in ‘ADC’ and a number can be used as an analogue input as well as a digital input or output – but not both at the same time.
+ADC_VREF
+Analogue-to-digital converter (ADC) voltage reference
+A special input pin which sets a reference voltage for any analogue inputs |
+| AGND | Analogue-to-digital converter (ADC) 0 volts ground |A special ground connection for use with the ADC_VREF pin |
+| RUN | Enables or disables your Pico | The RUN header is used to start and stop your Pico from another microcontroller |
+
+
+### :triangular_flag_on_post: Electronic components
+- a breadboard
+- jumper wires, also known as jumper leads
+- a push-button switch
+- light-emitting diodes (LED)
+- resistors
+- potentiometers
+
+### :triangular_flag_on_post: Reading resistor colour codes
+![resistor color codes chart](images/pico/resistor_color_codes_chart.png)
+
+## Wiring Diagrams & Schematics
+Our next step is to wire an external LED to the board using a breadboard. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to GP 15 on the Pico with a 330Ω resistor, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a sketch or diagram with the wires and components connected to the Pico plugged into the breadboard?!
+
+Being able to read these diagrams is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
+
+Below is the schematics for the above circuit and, at the right, a much easier to read and wire diagram (made with [Fritzing](http://fritzing.org/home/)). We will mainly use this kind of wiring diagams in this tutorial.
+
+![image](images/pico/Pico-bb-ExternalLed.png)
+
+Have a look at this more elaborate tutorial [How to Read a Schematic](https://learn.sparkfun.com/tutorials/how-to-read-a-schematic).
+And also more on [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
+
+So our wiring diagram on a breadboard will look more or less like this:
+![image](images/pico/Pico-bb-ExternalLed-photo.png)
+
+Controlling an external LED in MicroPython is no different to controlling your Pico’s internal LED: only the pin number changes. Find the line:
+`led_onboard = machine.Pin(25, machine.Pin.OUT)` and change 25 to 15.
+
+```Python
+from machine import Pin
+import utime
+led = Pin(15, Pin.OUT)
+while True:
+    led.toggle()
+    utime.sleep(1)
+```
+
+## a Pushbutton - Digital Inputs
+In prior examples, the LED was our actuator, and our Pico was controlling it. If we image an outside parameter to take control over this LED, our finger for example, we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
+
+Let's make our wiring diagram first.  
+
+#### Circuit
+- LED anode (long leg) connected to pin 15 using a 330Ω resistor
+- LED anode connected to ground (GND)
+- one leg of the pushbutton connects to pin 14
+- the other leg need to connect to the Pico's 3V3 pin (you can use the powerrail to do so)
+
+If you’re using a pushbutton with four legs, your circuit will only work if you use the correct pair of legs. So you need to either use the two legs on the same side or (as on the diagram below) diagonally opposite legs.
+
+![image](images/pico/Pico-bb-switch-ExternalLed.png)
+
+#### Code
+```python
+from machine import Pin
+import utime
+
+led = Pin(15, Pin.OUT)
+button = Pin(14, Pin.IN, Pin.PULL_DOWN)
+
+while True:
+    if button.value() == 1:
+        print("you pressed the button")
+        led.value(1)
+        utime.sleep(5)
+    led.value(0)
+```
+
+Click the Run icon and save the program on your Pico. Nothing will happen until you push the button. The LED will light up. Let go of the button. After 5 seconds, the LED will go out again until you press the button again.
+
+:mag: **A closer look at the code**  
+Now here is `if` instruction followed by an `==` in the while loop. That is very important in programming. It allows the computer to test a condition and make decisions accordingly.       
+
+Notice the difference between the ```==``` sign and the ```=```. The former is used when two entities are compared, and returns TRUE or FALSE. The latter assigns a value to a variable.
+
+There’s also !=, which means not equal to – it’s the exact opposite of ==. These symbols are technically known as comparison operators.
+
+<div style=background-color:OrangeRed;>:warning: Unlike an LED, a push-button switch doesn’t need a currentlimiting resistor but it does still need a resistor, though. It needs what is known as a pull-up or pull-down resistor, depending on how your circuit works. Without a pull-up or pull-down resistor, an input is known as floating – which means it has a ‘noisy’ signal which can trigger even when you’re not pushing the button.<br>
+The resistor in this circuit is hidden in your Pico. Just like it has an onboard LED, your Pico includes an on-board programmable resistor connected to each GPIO pin. These can be set in MicroPython to pull-down resistors or pull-up resistors as required by your circuit.<br>
+What’s the difference? A pull-down resistor connects the pin to ground, meaning when the push-button isn’t pressed, the input will be 0. <br>
+A pull-up resistor connects the pin to 3V3, meaning when the push-button isn’t pressed, the input will be 1.<br>
+We will use the programmable resistors in the pull-down mode.
+</div>
+
+## Sensors - Analog Inputs
+## PWM - Analog Outputs
+## Serial Communication
 
 
 <hr>
