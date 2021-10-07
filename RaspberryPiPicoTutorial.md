@@ -211,20 +211,16 @@ knopje in het verhaal brengen - Inputs
 ## Physical computing
 ### :triangular_flag_on_post: Your Pico’s pins
 Most pins on the Picop work as a input/output (GPIO) pin. You can program them to act as an input or an output. Some pins have extra features and alternative modes for communicating with more complicated hardware, as analog in or PWM, but more in this later on. And other pins have a fixed purpose as providing connections for power.    
-We will generally refer to a pin by it's function and not the physical pin number.
+We will generally refer to a pin by it's function and not the physical pin number.     
+Below the most important **pin-functions**.
 |    |    |    |
 |--- |--- |--- |
-| 3V3   | 3.3v power | the same voltage your Pico runs at internally, generated from the VSYS input |
-| VSYS | ~2-5v power | a pin directly connected to your Pico’s internal power supply |
-| VBUS | 5v power | 5v power taken from the Pico’s micro USB port, and used to power hardware which needs more than 3.3v |
-| GND | 0v ground | a ground connection, used to complete a circuit connected to a power source. Several of these pins are dotted around your Pico to make wiring easier |
-| GPxx | General Purpose Iput/Output pin number ‘xx’ | The GPIO pins available for your program, labelled ‘GP0’ through to ‘GP28’ |
-| GPxx_ADCx | General-purpose input/output pin number ‘xx’, with analogue input number ‘x’ | A GPIO pin which ends in ‘ADC’ and a number can be used as an analogue input as well as a digital input or output – but not both at the same time.
-ADC_VREF
-Analogue-to-digital converter (ADC) voltage reference
-A special input pin which sets a reference voltage for any analogue inputs |
-| AGND | Analogue-to-digital converter (ADC) 0 volts ground |A special ground connection for use with the ADC_VREF pin |
-| RUN | Enables or disables your Pico | The RUN header is used to start and stop your Pico from another microcontroller |
+| 3V3   | 3.3v power | your Pico runs at 3.3v internally |
+| VSYS | ~2-5v power | pin directly connected to your Pico’s internal power supply |
+| VBUS | 5v power | 5v power taken from the Pico’s micro USB port > used to power components that need more than 3.3v |
+| GND | 0v ground | a ground connection, used to complete a circuit connected to a power source |
+| GPxx | General Purpose Input/Output pin number ‘xx’ | GPIO pins labelled ‘GP0’ to ‘GP28’ |
+| GPxx_ADCx | GPIO pin number ‘xx’, with analog input number ‘x’ | These can pins can also be used as an analog input |
 
 
 ### :triangular_flag_on_post: Electronic components
