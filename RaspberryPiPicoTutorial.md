@@ -7,6 +7,8 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 ![The Raspberry Pi Pico Board](images/pico/Pico-intro.png)
 
 #### Contents
+[TOC]
+
 -- Getting Prepped --
 1. [Introduction](#intro)
 1. [the Raspberry Pi Pico Board](#hardware)
@@ -15,10 +17,10 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 -- Getting Started --
 5. [What the Shell](#shell)
 6. [Over to Script Mode](#scriptmode)
-7. [Few extra Programming Principles](#pprinciples)    
+7. [Let's Get Physical](#physicalcomputing)
+8. [Wiring Diagrams & Schematics](#schematics)
 -- Getting Dirty Hands --
-8. [Physical computing](#physicalcomputing)
-9. [Wiring Diagrams & Schematics](#schematics)
+9. [Next level LED blinking](#externalled)
 1. [a Pushbutton - Digital Inputs](#digitalIn)
 1. [Sensors - Analog Inputs](#analogIn)
 1. [PWM - Analog Outputs](#analogOut)
@@ -127,7 +129,7 @@ Your program will run instantly. Python will respond, also in the Shell area, wi
 
 We are now in **interactive mode**. You can think of it like a face-to-face conversation with someone: as soon as you finish what you’re saying, the other person will respond, then wait for whatever you say next.
 
-<div style=background-color:OrangeRed;>:warning: If your program doesn’t run but instead prints a ‘syntax error’ message to the Shell area, there’s a mistake somewhere in what you’ve written. All instructions needs to be written in a very specific way: miss a bracket or a quotation mark, spell ‘print’ wrong or give it a capital P, or add extra symbols somewhere and it won’t run.</div>
+<div style="background-color:OrangeRed";>:warning: If your program doesn’t run but instead prints a ‘syntax error’ message to the Shell area, there’s a mistake somewhere in what you’ve written. All instructions needs to be written in a very specific way: miss a bracket or a quotation mark, spell ‘print’ wrong or give it a capital P, or add extra symbols somewhere and it won’t run.</div>
 
 ## <a name="scriptmode">6. Over to Script Mode</a>
 ###  :triangular_flag_on_post: switch that LED on and off
@@ -148,7 +150,7 @@ Click the Run button to run your code.
 
 Thonny will ask whether you want to save the file on This computer or the MicroPython device. Choose MicroPython device.
 
-Enter blink.py (or another) as the file name.    
+Enter blink.py (or something else) as the file name.    
 ☞ You need to enter the .py file extension so that Thonny recognises the file as a Python file.
 
 Thonny will save your program to your Raspberry Pi Pico and run it.
@@ -201,17 +203,14 @@ while True:
     utime.sleep(1)
 ```
 
+## <a name="physicalcomputing">7. Let's Get Physical</a>
+Let's get on with some real physical computing and learn more about Pico’s pins and electronic components we can connect and control.
 
-## <a name="pprinciples">7. Few extra Programming Principles</a>
-###  :triangular_flag_on_post: another loop function: `for i in range()`
-###  :triangular_flag_on_post: variables
-###  :triangular_flag_on_post: conditionals
-knopje in het verhaal brengen - Inputs
-
-## Physical computing
 ### :triangular_flag_on_post: Your Pico’s pins
 Most pins on the Picop work as a input/output (GPIO) pin. You can program them to act as an input or an output. Some pins have extra features and alternative modes for communicating with more complicated hardware, as analog in or PWM, but more in this later on. And other pins have a fixed purpose as providing connections for power.    
+
 We will generally refer to a pin by it's function and not the physical pin number.     
+
 Below the most important **pin-functions**.
 |    |    |    |
 |--- |--- |--- |
@@ -223,33 +222,44 @@ Below the most important **pin-functions**.
 | GPxx_ADCx | GPIO pin number ‘xx’, with analog input number ‘x’ | These can pins can also be used as an analog input |
 
 
-### :triangular_flag_on_post: Electronic components
-- a breadboard
-- jumper wires, also known as jumper leads
-- a push-button switch
-- light-emitting diodes (LED)
-- resistors
-- potentiometers
+### :triangular_flag_on_post: Common Components
+The following a handful of common components that we will use in the following circuits.
+#### a breadboard
+We already touched the breadboard but if you don't feel confident and want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
+#### wires
+The wire used to connect components. They come in a wide range of sizes and types. There are 2 main varieties; solid core or stranded. Solid core is stiffer, stranded wire is more flexible. We will use jumper wires, also known as jumper leads on our breadboard.
+#### switches
+Switches pass or interrupt the flow of electricity. You can attach wires to 2 contacts and they are put in contact by activating the switch. Switches can be momentary and toggles switches. A toggle switch stays in it last position. A momentary switch (or pushbutton) spring back to their default position. We will use the latter.
+#### light-emitting diodes (LED)
+LED's are the most common for of output from a microcontroller as they need very little power to be turned on. A LED is a diode that emits light. We need to understand how a diode operates.    
+A diode is like a one-way street: it only allows electricity to flow in one direction. In other words diodes are polarized. The 2 sides of a diode are called a cathode (-) and an anode (+).
+#### resistors
+Resistors give electricity something to do: the convert electricity to heat. In this way, they prevent the infamous short circuit. Resistors have 2 leads and no polarity.     
+Resistors are rated in Ohms (Ω), indicating how much resistance they offer. Below you can learn to read the colour codes.
+#### potentiometers
+Potentiometers, or pots for short, are variable resistors. They resist the flow of electricity according to the rotation angle of the shaft or knob.    
+Other common variable resistors are photocells (LDR), termistors, forcesensitive (FSR) and bendsensors.
 
 ### :triangular_flag_on_post: Reading resistor colour codes
 ![resistor color codes chart](images/pico/resistor_color_codes_chart.png)
 
-## Wiring Diagrams & Schematics
-Our next step is to wire an external LED to the board using a breadboard. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to GP 15 on the Pico with a 330Ω resistor, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a sketch or diagram with the wires and components connected to the Pico plugged into the breadboard?!
+## <a name="schematics">Wiring Diagrams & Schematics</a>
+Our next step is to wire an external LED to the board using a breadboard. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to GP 15 on the Pico with a 330Ω resistor, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a schematic  or drawing with the wires and components connected to the Pico plugged into the breadboard?!
 
-Being able to read these diagrams is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
+Being able to read these schematics and diagrams is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
 
 Below is the schematics for the above circuit and, at the right, a much easier to read and wire diagram (made with [Fritzing](http://fritzing.org/home/)). We will mainly use this kind of wiring diagams in this tutorial.
 
 ![image](images/pico/Pico-bb-ExternalLed.png)
 
 Have a look at this more elaborate tutorial [How to Read a Schematic](https://learn.sparkfun.com/tutorials/how-to-read-a-schematic).
-And also more on [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
 
-So our wiring diagram on a breadboard will look more or less like this:
+So our after wiring pico and components on the breadboard according to the schematic (and wiring diagram) it will look more or less like this:
 ![image](images/pico/Pico-bb-ExternalLed-photo.png)
 
-Controlling an external LED in MicroPython is no different to controlling your Pico’s internal LED: only the pin number changes. Find the line:
+## <a name="externalled">Next level LED blinking.
+Controlling an external LED in MicroPython is no different to controlling your Pico’s internal LED: only the pin number changes.     
+Find the line:
 `led_onboard = machine.Pin(25, machine.Pin.OUT)` and change 25 to 15.
 
 ```Python
@@ -260,6 +270,9 @@ while True:
     led.toggle()
     utime.sleep(1)
 ```
+
+Is it working? Great!     
+Some challenges: Can you modify the program to light up both the on-board and external LEDs at the same time? Can you write a program which lights up the on-board LED when the external LED is switched off, and vice versa?
 
 ## a Pushbutton - Digital Inputs
 In prior examples, the LED was our actuator, and our Pico was controlling it. If we image an outside parameter to take control over this LED, our finger for example, we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
@@ -307,6 +320,41 @@ What’s the difference? A pull-down resistor connects the pin to ground, meanin
 A pull-up resistor connects the pin to 3V3, meaning when the push-button isn’t pressed, the input will be 1.<br>
 We will use the programmable resistors in the pull-down mode.
 </div>
+
+Lets program **a second behaviour** that to make the on button “stick”. The `.toggle` function is so convenient for this application but we must also implement some form of “memory”, in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
+
+```python
+from machine import Pin
+import utime
+
+led = Pin(15, Pin.OUT)
+button = Pin(14, Pin.IN, Pin.PULL_DOWN)
+
+last_state = False
+current_state = False
+
+while True:
+    current_state = button.value()
+
+    if last_state == 0 and current_state == 1:
+        led.toggle()
+
+    last_state = current_state
+```
+
+!! ! !explain !!!! ! ! !
+
+### :triangular_flag_on_post: Other On/Off Sensors
+Now that you’ve learned how to use a pushbutton, you should know that there are other basic sensors that work according to the same *on/off* principle, as:
+* **Switches** are just like a pushbutton, but doesn’t automatically change state when released.
+* **Thermostats** is a switch that opens when the temperature reaches a set value.
+* **Magnetic switches** (or “reed relays”)
+have two contacts that come together when they are near a magnet.
+* **Carpet switches** are small mats that you can place under a carpet or a doormat to detect the presence of a human being (or heavy cat).
+* **PIR** or Passive InfraRed sensor. This small device triggers when a human being (or other living being) moves within its proximity.
+* **Tilt switches** are electronic components that contains two contacts and a little metal ball.
+You can try some!
+* ...
 
 ## Sensors - Analog Inputs
 ## PWM - Analog Outputs
