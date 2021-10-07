@@ -275,7 +275,8 @@ Is it working? Great!
 Some challenges: Can you modify the program to light up both the on-board and external LEDs at the same time? Can you write a program which lights up the on-board LED when the external LED is switched off, and vice versa?
 
 ## a Pushbutton - Digital Inputs
-In prior examples, the LED was our actuator, and our Pico was controlling it. If we image an outside parameter to take control over this LED, our finger for example, we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
+In prior examples, the LED was our actuator, and our Pico was controlling it. If we image an outside parameter to take control over this LED, our finger for example, we need **a sensor**. The simplest form of sensor available is ...
+### :triangular_flag_on_post: a Pushbutton
 
 Let's make our wiring diagram first.  
 
@@ -321,6 +322,7 @@ A pull-up resistor connects the pin to 3V3, meaning when the push-button isn’t
 We will use the programmable resistors in the pull-down mode.
 :zap::zap::zap:
 
+### :triangular_flag_on_post: One circuit many behaviour
 Lets program **a second behaviour** that to make the on button “stick”. The `.toggle` function is so convenient for this application but we must also implement some form of “memory”, in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
 
 ```python
