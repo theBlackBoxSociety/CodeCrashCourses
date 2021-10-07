@@ -129,7 +129,7 @@ Your program will run instantly. Python will respond, also in the Shell area, wi
 
 We are now in **interactive mode**. You can think of it like a face-to-face conversation with someone: as soon as you finish what you’re saying, the other person will respond, then wait for whatever you say next.
 
-<div style="background-color:OrangeRed";>:zap: If your program doesn’t run but instead prints a ‘syntax error’ message to the Shell area, there’s a mistake somewhere in what you’ve written. All instructions needs to be written in a very specific way: miss a bracket or a quotation mark, spell ‘print’ wrong or give it a capital P, or add extra symbols somewhere and it won’t run.</div>
+<div style="width:80%";>:zap: If your program doesn’t run but instead prints a ‘syntax error’ message to the Shell area, there’s a mistake somewhere in what you’ve written. All instructions needs to be written in a very specific way: miss a bracket or a quotation mark, spell ‘print’ wrong or give it a capital P, or add extra symbols somewhere and it won’t run.:zap:</div>
 
 ## <a name="scriptmode">6. Over to Script Mode</a>
 ###  :triangular_flag_on_post: switch that LED on and off
