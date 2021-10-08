@@ -36,6 +36,8 @@ port – which is how you’ll load your programs onto your Pico.
 
 Just below the micro USB port is a **small button** marked ‘**BOOTSEL**’, short for ‘boot selection’. This switches your Pico between two start-up modes when it’s first switched on. You’ll use the boot selection button later, as you get your Pico ready for programming with MicroPython.
 
+![Raspberry Pi Pico Board with part](images/pico/Pico-parts.png)
+
 At the bottom of your Pico are three smaller gold pads with the word ‘**DEBUG**’ above them. These are designed for debugging programs running on the Pico.
 
 ![Bottomview on the Raspberry Pi Pico Board](images/pico/Pico_bottom.png)
@@ -116,6 +118,7 @@ Your program will run instantly. Python will respond, also in the Shell area, wi
 We are now in **interactive mode**. You can think of it like a face-to-face conversation with someone: as soon as you finish what you’re saying, the other person will respond, then wait for whatever you say next.
 
 :zap::zap::zap: If your program doesn’t run but instead prints a ‘syntax error’ message to the Shell area, there’s a mistake somewhere in what you’ve written. All instructions needs to be written in a very specific way: miss a bracket or a quotation mark, spell ‘print’ wrong or give it a capital P, or add extra symbols somewhere and it won’t run.:zap::zap::zap:
+
 
 ## <a name="scriptmode">6. Over to Script Mode</a>
 ###  :triangular_flag_on_post: switch that LED on and off
@@ -460,6 +463,37 @@ while True:
 ```
 
 see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
+
+## Data logger
+Turn Raspberry Pi Pico into a temperature data-logging device and untether it from the computer to make it fully portable
+
+```python
+from machine import Pin, ADC
+import time
+
+sensor_temp = ADC(ADC.CORE_TEMP)
+
+conversion_factor = 3.3 / 65535
+file = open("temps.txt", "w")
+
+while True:
+    reading = sensor_temp.read_u16() * conversion_factor
+    temperature = 27 - (reading - 0.706)/0.001721
+    file.write(str(temperature) + "\n")
+    file.flush()
+    utime.sleep(10)
+```
+
+File storage and autoboot
+
+Your Pico’s file system works regardless of whether or not it’s connected to a computer. If you have a micro USB mains charger or a USB battery pack with a micro USB cable run by itself – but you’ll need a way to get your program running without having to click the Run icon in Thonny.
+
+For use without a connected computer – known as headless operation – you can save your program under a special file name: main.py. When MicroPython finds a file called main.py in its file system, it runs that automatically every time it’s powered on or reset – without you having to click Run.
+
+In Thonny, after stopping the program if running, click the File menu then Save As. Click ‘Raspberry Pi Pico’ in the pop-up that appears, then type ‘main.py’ as the file name before clicking Save. At first, nothing will seem to happen: that’s because Thonny puts your Pico into interactive mode, which stops it from automatically running the program you just saved.
+
+Your Pico’s file system is 1.375MiB in size, meaning it can hold 1,441,792 bytes of data.
+
 
 <hr>
 <a name="1">1.</a> What Is Physical Computing?     
