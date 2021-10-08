@@ -7,7 +7,50 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 
 ![The Raspberry Pi Pico Board](images/pico/Pico-intro.png)
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [Physical Computing with the Raspberry Pi PICO](#physical-computing-with-the-raspberry-pi-pico)
+	- [<a name="intro">1. Introduction</a>](#a-nameintro1-introductiona)
+	- [<a name="hardware">2. the Raspberry Pi Pico Board</a>](#a-namehardware2-the-raspberry-pi-pico-boarda)
+	- [<a name="software">3. the MicroPython firmware</a>](#a-namesoftware3-the-micropython-firmwarea)
+	- [<a name="software">4. the Software</a>](#a-namesoftware4-the-softwarea)
+		- [:triangular_flag_on_post:  Bring Thonny in](#triangularflagonpost-bring-thonny-in)
+		- [:triangular_flag_on_post:  a walk through the Thonny UI](#triangularflagonpost-a-walk-through-the-thonny-ui)
+		- [:triangular_flag_on_post: linking Thonny to Pico](#triangularflagonpost-linking-thonny-to-pico)
+	- [<a name="shell">5. What the Shell! Conversing with (Micro)Python</a>](#a-nameshell5-what-the-shell-conversing-with-micropythona)
+	- [<a name="scriptmode">6. Over to Script Mode</a>](#a-namescriptmode6-over-to-script-modea)
+		- [:triangular_flag_on_post: switch that LED on and off](#triangularflagonpost-switch-that-led-on-and-off)
+		- [:triangular_flag_on_post:  on/off in loop](#triangularflagonpost-onoff-in-loop)
+	- [<a name="physicalcomputing">7. Let's Get Physical</a>](#a-namephysicalcomputing7-lets-get-physicala)
+		- [:triangular_flag_on_post: Your Pico’s pins](#triangularflagonpost-your-picos-pins)
+		- [:triangular_flag_on_post: Common Components](#triangularflagonpost-common-components)
+			- [<a name="breadboard"> breadboard</a>](#a-namebreadboard-breadboarda)
+			- [wires](#wires)
+			- [switches](#switches)
+			- [light-emitting diodes (LED)](#light-emitting-diodes-led)
+			- [resistors](#resistors)
+			- [potentiometers](#potentiometers)
+		- [:triangular_flag_on_post: Reading resistor colour codes](#triangularflagonpost-reading-resistor-colour-codes)
+	- [<a name="schematics">8. Wiring Diagrams & Schematics</a>](#a-nameschematics8-wiring-diagrams-schematicsa)
+	- [<a name="externalled">9. Next level LED blinking.](#a-nameexternalled9-next-level-led-blinking)
+	- [<a name="pushbutton">10. a Pushbutton ☞ Digital Inputs</a>](#a-namepushbutton10-a-pushbutton-digital-inputsa)
+		- [:triangular_flag_on_post: a Pushbutton](#triangularflagonpost-a-pushbutton)
+			- [Circuit](#circuit)
+			- [Code](#code)
+		- [:triangular_flag_on_post: One circuit multiple behaviours](#triangularflagonpost-one-circuit-multiple-behaviours)
+		- [:triangular_flag_on_post: Other On/Off Sensors](#triangularflagonpost-other-onoff-sensors)
+	- [<a name="sensors">11. Sensors ☞ Analog Inputs</a>](#a-namesensors11-sensors-analog-inputsa)
+		- [:triangular_flag_on_post: let's read the value of a potentiometer](#triangularflagonpost-lets-read-the-value-of-a-potentiometer)
+			- [Circuit](#circuit)
+			- [Code](#code)
+		- [:triangular_flag_on_post: Controlling the blinking speed of our LED with a potentiometer.](#triangularflagonpost-controlling-the-blinking-speed-of-our-led-with-a-potentiometer)
+			- [Circuit](#circuit)
+			- [Code](#code)
+	- [<a name="pwm">11. PWM ☞ Analog Outputs</a>](#a-namepwm11-pwm-analog-outputsa)
+		- [:triangular_flag_on_post:  Fading an LED with PWM](#triangularflagonpost-fading-an-led-with-pwm)
+	- [Data logger](#data-logger)
+
+<!-- /TOC -->
 
 ## <a name="intro">1. Introduction</a>
 You probably have lots of microcontrollers in your house already. There’s a good chance your washing machine is controlled by a microcontroller, and maybe your watch is, and you might find one in your coffee machine or microwave. Of course, all these microcontrollers already have their programs and the manufacturers make it hard to change the software running on them. A Raspberry Pi Pico, on the other hand, can be easily reprogrammed over a USB connection.
