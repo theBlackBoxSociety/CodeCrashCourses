@@ -7,64 +7,6 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 
 ![The Raspberry Pi Pico Board](images/pico/Pico-intro.png)
 
-#### Contents
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [Physical Computing with the Raspberry Pi PICO](#physical-computing-with-the-raspberry-pi-pico)
-			- [Contents](#contents)
-	- [<a name="intro">1. Introduction</a>](#a-nameintro1-introductiona)
-	- [<a name="hardware">2. the Raspberry Pi Pico Board</a>](#a-namehardware2-the-raspberry-pi-pico-boarda)
-	- [<a name="software">3. the MicroPython firmware</a>](#a-namesoftware3-the-micropython-firmwarea)
-	- [<a name="software">4. the Software</a>](#a-namesoftware4-the-softwarea)
-		- [:triangular_flag_on_post:  Bring Thonny in](#triangularflagonpost-bring-thonny-in)
-		- [:triangular_flag_on_post:  a walk through the Thonny UI](#triangularflagonpost-a-walk-through-the-thonny-ui)
-		- [:triangular_flag_on_post: linking Thonny to Pico](#triangularflagonpost-linking-thonny-to-pico)
-	- [<a name="shell">5. What the Shell! Conversing with (Micro)Python</a>](#a-nameshell5-what-the-shell-conversing-with-micropythona)
-	- [<a name="scriptmode">6. Over to Script Mode</a>](#a-namescriptmode6-over-to-script-modea)
-		- [:triangular_flag_on_post: switch that LED on and off](#triangularflagonpost-switch-that-led-on-and-off)
-		- [:triangular_flag_on_post:  on/off in loop](#triangularflagonpost-onoff-in-loop)
-	- [<a name="physicalcomputing">7. Let's Get Physical</a>](#a-namephysicalcomputing7-lets-get-physicala)
-		- [:triangular_flag_on_post: Your Pico’s pins](#triangularflagonpost-your-picos-pins)
-		- [:triangular_flag_on_post: Common Components](#triangularflagonpost-common-components)
-			- [a breadboard](#a-breadboard)
-			- [wires](#wires)
-			- [switches](#switches)
-			- [light-emitting diodes (LED)](#light-emitting-diodes-led)
-			- [resistors](#resistors)
-			- [potentiometers](#potentiometers)
-		- [:triangular_flag_on_post: Reading resistor colour codes](#triangularflagonpost-reading-resistor-colour-codes)
-	- [<a name="schematics">Wiring Diagrams & Schematics</a>](#a-nameschematicswiring-diagrams-schematicsa)
-	- [<a name="externalled">Next level LED blinking.](#a-nameexternallednext-level-led-blinking)
-	- [a Pushbutton ☞ Digital Inputs](#a-pushbutton-digital-inputs)
-		- [:triangular_flag_on_post: a Pushbutton](#triangularflagonpost-a-pushbutton)
-			- [Circuit](#circuit)
-			- [Code](#code)
-		- [:triangular_flag_on_post: One circuit multiple behaviours](#triangularflagonpost-one-circuit-multiple-behaviours)
-		- [:triangular_flag_on_post: Other On/Off Sensors](#triangularflagonpost-other-onoff-sensors)
-	- [Sensors ☞ Analog Inputs](#sensors-analog-inputs)
-			- [Circuit](#circuit)
-			- [Code](#code)
-	- [PWM - Analog Outputs](#pwm-analog-outputs)
-	- [Serial Communication](#serial-communication)
-
-<!-- /TOC -->
-
--- Getting Prepped --
-1. [Introduction](#intro)
-1. [the Raspberry Pi Pico Board](#hardware)
-1. [the MicroPython firmware](#firmware)
-1. [the Software](#software)    
--- Getting Started --
-5. [What the Shell](#shell)
-6. [Over to Script Mode](#scriptmode)
-7. [Let's Get Physical](#physicalcomputing)
-8. [Wiring Diagrams & Schematics](#schematics)
--- Getting Dirty Hands --
-9. [Next level LED blinking](#externalled)
-1. [a Pushbutton - Digital Inputs](#digitalIn)
-1. [Sensors - Analog Inputs](#analogIn)
-1. [PWM - Analog Outputs](#analogOut)
-1. [Serial Communication](#serial)
 
 
 ## <a name="intro">1. Introduction</a>
@@ -77,6 +19,8 @@ Raspberry Pi Pico - shortened to Pico - is designed for physical computing proje
 The Pico is programmable in C/C++ and MicroPython. In this tutorial we will focus on [MicroPython](https://micropython.org/) as it is the fastest and more straightforward way to get started.
 
 MicroPython is an implementation of the Python programming language. It offers the same friendly syntax, as Python, and allows full control over Pico’s features. If you’ve programmed with Python before, you’ll find MicroPython immediately familiar. If not, don’t worry: it’s a friendly language to learn!
+
+See also [this Quick MicroPython reference for the Raspberry Pi Pico](https://docs.micropython.org/en/latest/rp2/quickref.html#).
 
 ## <a name="hardware">2. the Raspberry Pi Pico Board</a>
 This is a Raspberry Pi Pico. Let's call it the Pico to keep it short.
@@ -124,6 +68,8 @@ You can program your Pico by connecting it to a computer via USB, then dragging 
 ![Start up the Pico as a thumbdrive](images/pico/Pico_MicroPython.gif)
 
 **Alternatively** you can get a copy of the MicroPython UF2 file from a webpage<sup>[2](#2)</sup> linked from INDEX.HTM that is on RPI-RP2 flash memory and copy it to your RPI-RP2 drive. Or you could use the tool provided in Thonny > [follow this guide](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/3).
+
+See also [this Quick MicroPython reference for the Raspberry Pi Pico](https://docs.micropython.org/en/latest/rp2/quickref.html#).
 
 ## <a name="software">4. the Software</a>
 ### :triangular_flag_on_post:  Bring Thonny in
@@ -232,15 +178,15 @@ while True:
 ```
 If you run the code now, you will notice that the LED does not switch on and off but stays on. That is not quite the case. In fact, the code does exactly what we asked it to do, but the on and off switching is so fast that we don't notice it. That’s because Pico works far more quickly than you can see with the naked eye.
 
-To fix that, you need to slow your program down by introducing a delay by importing the utime<sup>[3](#3)</sup> library at the start and adding a one-second sleep delay to the loop (you'll learn more about this library later). Your program should now look like this:
+To fix that, you need to slow your program down by introducing a delay by importing the time library at the start and adding a one-second sleep delay to the loop (you'll learn more about this library later). Your program should now look like this:
 
 ```Python
 from machine import Pin
-import utime
+import time
 led = Pin(25, Pin.OUT)
 while True:
     led.toggle()
-    utime.sleep(1)
+    time.sleep(1)
 ```
 
 ## <a name="physicalcomputing">7. Let's Get Physical</a>
@@ -277,16 +223,16 @@ A diode is like a one-way street: it only allows electricity to flow in one dire
 Resistors give electricity something to do: the convert electricity to heat. In this way, they prevent the infamous short circuit. Resistors have 2 leads and no polarity.     
 Resistors are rated in Ohms (Ω), indicating how much resistance they offer. Below you can learn to read the colour codes.
 #### potentiometers
-Potentiometers, or pots for short, are variable resistors. They resist the flow of electricity according to the rotation angle of the shaft or knob.    
-Other common variable resistors are photocells (LDR), termistors, forcesensitive (FSR) and bendsensors.    
+Potentiometers, or pots for short, are variable resistors. Potentiometers have three legs. The power of a potentiometer is in the middle leg. It's  resistance varies depends on the potentiometer’s rotating (or sliding) contact (the wiper) position. It is best to use it as a voltage divider with our Pico. This means we have all 3 contacts connected: 1 to GND (or 3v3), 2 to ADC, 3 to 3V3 (or GND).       
+Other common variable resistors are photocells (LDR), termistors, force-sensitive (FSR) and bend-sensors. These are all two-legged (or “two-lead”). In order to make them work optimally on our Pico we need to add a voltage divider.    
 
-see also https://makeabilitylab.github.io/physcomp/electronics/
+See also https://makeabilitylab.github.io/physcomp/electronics/
 
 
 ### :triangular_flag_on_post: Reading resistor colour codes
 ![resistor color codes chart](images/pico/resistor_color_codes_chart.png)
 
-## <a name="schematics">Wiring Diagrams & Schematics</a>
+## <a name="schematics">8. Wiring Diagrams & Schematics</a>
 Our next step is to wire an external LED to the board using a breadboard. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to GP 15 on the Pico with a 330Ω resistor, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a schematic  or drawing with the wires and components connected to the Pico plugged into the breadboard?!
 
 Being able to read these schematics and diagrams is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
@@ -300,24 +246,24 @@ Have a look at this more elaborate tutorial [How to Read a Schematic](https://le
 So our after wiring pico and components on the breadboard according to the schematic (and wiring diagram) it will look more or less like this:
 ![image](images/pico/Pico-bb-ExternalLed-photo.png)
 
-## <a name="externalled">Next level LED blinking.
+## <a name="externalled">9. Next level LED blinking.
 Controlling an external LED in MicroPython is no different to controlling your Pico’s internal LED: only the pin number changes.     
 Find the line:
 `led_onboard = machine.Pin(25, machine.Pin.OUT)` and change 25 to 15.
 
 ```Python
 from machine import Pin
-import utime
+import time
 led = Pin(15, Pin.OUT)
 while True:
     led.toggle()
-    utime.sleep(1)
+    time.sleep(1)
 ```
 
 Is it working? Great!     
 Some challenges: Can you modify the program to light up both the on-board and external LEDs at the same time? Can you write a program which lights up the on-board LED when the external LED is switched off, and vice versa?
 
-## a Pushbutton ☞ Digital Inputs
+## <a name="pushbutton">10. a Pushbutton ☞ Digital Inputs</a>
 In prior examples, the LED was our actuator, and our Pico was controlling it. If we image an outside parameter to take control over this LED, our finger for example, we need **a sensor**. The simplest form of sensor available is ...
 ### :triangular_flag_on_post: a Pushbutton
 
@@ -336,7 +282,7 @@ If you’re using a pushbutton with four legs, your circuit will only work if yo
 #### Code
 ```python
 from machine import Pin
-import utime
+import time
 
 led = Pin(15, Pin.OUT)
 button = Pin(14, Pin.IN, Pin.PULL_DOWN)
@@ -345,7 +291,7 @@ while True:
     if button.value() == 1:
         print("you pressed the button")
         led.value(1)
-        utime.sleep(5)
+        time.sleep(5)
     led.value(0)
 ```
 
@@ -370,7 +316,7 @@ Lets program **a second behaviour** that to make the on button “stick”. The 
 
 ```python
 from machine import Pin
-import utime
+import time
 
 led = Pin(15, Pin.OUT)
 button = Pin(14, Pin.IN, Pin.PULL_DOWN)
@@ -402,7 +348,7 @@ have two contacts that come together when they are near a magnet.
 You can try some!
 * ...
 
-## Sensors ☞ Analog Inputs
+## <a name="sensors">11. Sensors ☞ Analog Inputs</a>
 A digital input is either on or off, a binary state. Your Pico can accept another type of input signal with **analog input**. The analog signal can be anything from completely off to completely on – a range of possible values. It works through a piece of hardware known as an analog-to-digital converter (ADC).    
 An ADC has two key features:
 - its resolution, measured in digital bits &
@@ -410,53 +356,110 @@ An ADC has two key features:
 The ADC in your Pico has a resolution of 12 bits, meaning that it can transform an analog signal into a digital signal as a number ranging from 0 to 4095. But - and this is a bit odd - it is transformed to a 16-bit number ranging from **0 to 65.535**, so that it behaves similar as other MicroPython microcontrollers.    
 The Pico **3 channels** brought out to the GPIO pins: GP26, GP27, and GP28, which are also known as GP26_ADC0, GP27_ADC1, and GP28_ADC2 for analog channels 0, 1, and 2. There’s also a fourth ADC channel, which is connected to a temperature sensor built into RP2040.
 
-Our wiring diagram first.  
+### :triangular_flag_on_post: let's read the value of a potentiometer
+The next program & electronics diagram demonstrates analog input by reading an analog sensor, as a potentiometer (or trimpot), on our 1st analog channel (0).
 
 #### Circuit
+- Wire the middle pin to pin GP26_ADC0 on your Pico, that is pin 10 on top.
+- Wire one of the outer pins to GND and the other one to 3V3. *These are interchangeable and determine the functionality of the wiper, e.g. turn to the left to reduce or increase the value.*
 
+![image](images/pico/Pico-bb-potentiometer.png)
 
-
-
-![image](images/pico/Pico-bb-switch-ExternalLed.png)
-
+<sup>We will use the LED in the 2nd experiment.</sup>
 #### Code
-
 ```python
 from machine import Pin, ADC
-import utime
+import time
 
 potentiometer = ADC(Pin(26))
 
 while True:
     print(potentiometer.read_u16())
-    utime.sleep_ms(5)
+    time.sleep(0.05)
+    # is similar to time.sleep_ms(50)
 ```
 
-Controlling the blinking speed of our LED with a potentiometer.
-see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
+Reading an analog input is similar identical to reading a digital input but we use the function `read_u16()` and not `value()`. The `_u16` warns that rather than receiving a binary 0 or 1 result, you’ll receive a whole number between 0 and 65.535 (called an unsigned 16-bit integer).    
 
+You will also notice that we loaded the ADC function from the machine library. Without this function our code will not work. Loading different function in one go needs a comma to separate them.    
+
+Notice the comment: `time.sleep(0.05)` is similar to `time.sleep_ms(50)` as 0.05 seconds is equal to 50 milliseconds.
+
+### :triangular_flag_on_post: Controlling the blinking speed of our LED with a potentiometer.
+In this 2nd program the value of our potentiometer will now determine the interval of the blinking LED. That speed will actually correspond to the actual voltage that passes through the variable resistor.
+
+#### Circuit
+as above
+
+#### Code
 ```python
 from machine import Pin, ADC
-import utime
+import time
 
 potentiometer = ADC(Pin(26))
 led = Pin(15, Pin.OUT)
-conversion_factor = 3.3 / (65535)
+conversion_factor = 3.3 / 65535
 
 while True:
     voltage = (potentiometer.read_u16()) * conversion_factor
     print(voltage)
     led.toggle()
-    utime.sleep(voltage)
+    time.sleep(voltage)
 ```
 
-## PWM - Analog Outputs
+The range of from 0 to 65.535 it’s not always handy and user friendy. With a simple mathematical equation we can fix this adding `conversion_factor = 3.3 / 65535` to our code.    
+This way the number that the ADC gives is recalculated into an approximation of the actual voltage it represents. 3.3 (or the maximum possible voltage that the pin can expect) divided by 65.535 (or the maximum value the analog input reading can be).    
+If you need a range from 0 to 10 you should use this `10 / 65535` formula.
+
 
 see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
 
+## <a name="pwm">11. PWM ☞ Analog Outputs</a>
+### :triangular_flag_on_post:  Fading an LED with PWM
+PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one.     
+A microcontroller’s digital output can only ever be on or off, 0 or 1. Turning a digital output on and off is known as a pulse and by altering how quickly the pin turns on and off you can change, or modulate, the width of these pulses – hence ‘pulse-width modulation’.    
+We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc.
 
-## Serial Communication
+Every GPIO pin on your Pico is capable of pulse-width modulation, but the microcontroller’s pulse-width modulation block is made up of eight slices, each with two outputs.That makes 16 PWM channels in total which can be clocked from 7Hz to 125Mhz.
 
+```python
+from machine import Pin, ADC, PWM
+import time
+
+potentiometer = ADC(Pin(26))
+led = PWM(Pin(15))
+
+led.freq(1000)
+
+while True:
+  led.duty_u16(potentiometer.read_u16())
+```
+
+This creates an LED object on pin GP15, but with a difference: it activates the pulse-width modulation output on the pin, channel B[7] – the second output of the eighth slice, counting from zero.
+
+The frequency (led.freq) tells Raspberry Pi Pico how often to switch the power between on and off for the LED.
+
+
+Click the Run icon and try turning the potentiometer all the way one way, then all the way the other. Watch the LED: this time, unless you’re using a logarithmic potentiometer, you’ll see the LED’s brightness change smoothly from completely off at one end of the potentiometer knob’s limit to fully lit at the other.
+
+```python
+from machine import Pin, PWM
+from time import sleep
+
+led = PWM(Pin(15))
+
+led.freq(1000)
+
+while True:
+    for duty in range(65025):
+        led.duty_u16(duty)
+        sleep(0.0001)
+    for duty in range(65025, 0, -1):
+        led.duty_u16(duty)
+        sleep(0.0001)
+```
+
+see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
 
 <hr>
 <a name="1">1.</a> What Is Physical Computing?     
@@ -464,8 +467,6 @@ All computing is physical. We work with computational systems by taking action w
 Physical Computing here refers especially to creating or using devices that interact with the world around them. A computer senses its environment (as touch, movement, temperature, ...), processes that information, and then performs some action (with lights, motors, ...).
 
 <a name="2">2.</a> [This webpage](https://www.raspberrypi.org/documentation/microcontrollers/) also includes a wealth of additional resources. Click on the tabs and scroll to access guides, projects, and the data book collection – a bookshelf of detailed technical documentation covering everything from the inner workings of the RP2040 microcontroller which powers your Pico to programming in both the Python and C/C++ languages.
-
-<a name="3">3.</a> utime is a MycroPython library similar to the regular python time one. It is designed for microcontrollers, like the Pico. The ‘u’ stands for ‘μ’, the Greek letter ‘mu’, which is used as a shorthand for ‘micro’.
 
 <hr>
 
