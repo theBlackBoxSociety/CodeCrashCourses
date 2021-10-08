@@ -113,9 +113,9 @@ An easy way to program in MicroPython on your Pico is with [Thonny](https://thon
 
 ![Thonny Website](images/pico/pico-thonny.png)
 
-:zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap:    
+:zap: :zap: :zap:    
 Make sure you download and install the latest version of Thonny as the Raspberry Pi Pico interpreter is not available on older versions.    
-:zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap: :zap:
+:zap: :zap: :zap:
 
 ### :black_small_square:  a walk through the Thonny UI
 
@@ -152,7 +152,9 @@ Your program will run instantly. Python will respond, also in the Shell area, wi
 
 We are now in **interactive mode**. You can think of it like a face-to-face conversation with someone: as soon as you finish what you’re saying, the other person will respond, then wait for whatever you say next.
 
-:zap::zap::zap: If your program doesn’t run but instead prints a ‘syntax error’ message to the Shell area, there’s a mistake somewhere in what you’ve written. All instructions needs to be written in a very specific way: miss a bracket or a quotation mark, spell ‘print’ wrong or give it a capital P, or add extra symbols somewhere and it won’t run.:zap::zap::zap:
+:zap: :zap: :zap:    
+If your program doesn’t run but instead prints a ‘syntax error’ message to the Shell area, there’s a mistake somewhere in what you’ve written. All instructions needs to be written in a very specific way: miss a bracket or a quotation mark, spell ‘print’ wrong or give it a capital P, or add extra symbols somewhere and it won’t run.    
+:zap: :zap: :zap:
 
 
 ## 6. Over to Script Mode
@@ -344,12 +346,13 @@ Notice the difference between the ```==``` sign and the ```=```. The former is u
 
 There’s also !=, which means not equal to – it’s the exact opposite of ==. These symbols are technically known as comparison operators.
 
-:zap::zap::zap: Unlike an LED, a push-button switch doesn’t need a currentlimiting resistor but it does still need a resistor, though. It needs what is known as **a pull-up or pull-down resistor**, depending on how your circuit works. Without a pull-up or pull-down resistor, an input is known as **floating**. This means it has a ‘noisy’ signal which can trigger even when you’re not pushing the button.    
+:zap: :zap: :zap:     
+Unlike an LED, a push-button switch doesn’t need a currentlimiting resistor but it does still need a resistor, though. It needs what is known as **a pull-up or pull-down resistor**, depending on how your circuit works. Without a pull-up or pull-down resistor, an input is known as **floating**. This means it has a ‘noisy’ signal which can trigger even when you’re not pushing the button.    
 The resistor in this circuit is hidden in your Pico. Just like it has an onboard LED, your Pico includes an on-board programmable resistor connected to each GPIO pin. These can be set in MicroPython to pull-down resistors or pull-up resistors as required by your circuit.<br>
 *What’s the difference?* A **pull-down** resistor connects the pin to **ground**, meaning when the push-button is **not pressed**, the input will be **0**.    
 A **pull-up** resistor connects the pin to **3V3**, meaning when the push-button is **not pressed**, the input will be **1**.<br>
-We will use the programmable resistors in the pull-down mode.
-:zap::zap::zap:
+We will use the programmable resistors in the pull-down mode.    
+:zap: :zap: :zap:
 
 ### :black_small_square: One circuit multiple behaviours
 Lets program **a second behaviour** that to make the on button “stick”. The `.toggle` function is convenient for this application but we must also implement some form of 'memory', in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
