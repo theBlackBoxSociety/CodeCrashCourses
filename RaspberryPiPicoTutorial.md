@@ -40,7 +40,7 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 - [13. Data logger](#13-data-logger)
 
 <!-- /TOC -->
-<details>
+</details>
 
 
 ## 1. Introduction
