@@ -1,13 +1,14 @@
 # Physical Computing with the Raspberry Pi PICO
 
-This tutorial is based on the official guide ["Get Started with MicroPython on Raspberry Pi Pico"](https://www.raspberrypi.org/products/micropython-pico/). You you can [download a PDF version](https://hackspace.raspberrypi.org/books/micropython-pico) for free.
+<sup>This tutorial is based on the official guide ["Get Started with MicroPython on Raspberry Pi Pico"](https://www.raspberrypi.org/products/micropython-pico/). You you can [download a PDF version](https://hackspace.raspberrypi.org/books/micropython-pico) for free.</sup>
 
+Hi, welcome 👋    
 You will learn the basics of physical computing <sup>[1](#1)</sup> with this powerful microcontroller board. This includes learning to know and setting up the workflow, reading and reproducing circuits, program the Pico with MicroPython, ...
 
 ![The Raspberry Pi Pico Board](images/pico/Pico-intro.png)
 
 #### Contents
-[TOC]
+TOC
 
 -- Getting Prepped --
 1. [Introduction](#intro)
@@ -238,7 +239,10 @@ Resistors give electricity something to do: the convert electricity to heat. In 
 Resistors are rated in Ohms (Ω), indicating how much resistance they offer. Below you can learn to read the colour codes.
 #### potentiometers
 Potentiometers, or pots for short, are variable resistors. They resist the flow of electricity according to the rotation angle of the shaft or knob.    
-Other common variable resistors are photocells (LDR), termistors, forcesensitive (FSR) and bendsensors.
+Other common variable resistors are photocells (LDR), termistors, forcesensitive (FSR) and bendsensors.    
+
+see also https://makeabilitylab.github.io/physcomp/electronics/
+
 
 ### :triangular_flag_on_post: Reading resistor colour codes
 ![resistor color codes chart](images/pico/resistor_color_codes_chart.png)
@@ -274,7 +278,7 @@ while True:
 Is it working? Great!     
 Some challenges: Can you modify the program to light up both the on-board and external LEDs at the same time? Can you write a program which lights up the on-board LED when the external LED is switched off, and vice versa?
 
-## a Pushbutton - Digital Inputs
+## a Pushbutton ☞ Digital Inputs
 In prior examples, the LED was our actuator, and our Pico was controlling it. If we image an outside parameter to take control over this LED, our finger for example, we need **a sensor**. The simplest form of sensor available is ...
 ### :triangular_flag_on_post: a Pushbutton
 
@@ -315,15 +319,15 @@ Notice the difference between the ```==``` sign and the ```=```. The former is u
 
 There’s also !=, which means not equal to – it’s the exact opposite of ==. These symbols are technically known as comparison operators.
 
-:zap::zap::zap: Unlike an LED, a push-button switch doesn’t need a currentlimiting resistor but it does still need a resistor, though. It needs what is known as a pull-up or pull-down resistor, depending on how your circuit works. Without a pull-up or pull-down resistor, an input is known as floating – which means it has a ‘noisy’ signal which can trigger even when you’re not pushing the button.<br>
+:zap::zap::zap: Unlike an LED, a push-button switch doesn’t need a currentlimiting resistor but it does still need a resistor, though. It needs what is known as **a pull-up or pull-down resistor**, depending on how your circuit works. Without a pull-up or pull-down resistor, an input is known as **floating**. This means it has a ‘noisy’ signal which can trigger even when you’re not pushing the button.    
 The resistor in this circuit is hidden in your Pico. Just like it has an onboard LED, your Pico includes an on-board programmable resistor connected to each GPIO pin. These can be set in MicroPython to pull-down resistors or pull-up resistors as required by your circuit.<br>
-What’s the difference? A pull-down resistor connects the pin to ground, meaning when the push-button isn’t pressed, the input will be 0. <br>
-A pull-up resistor connects the pin to 3V3, meaning when the push-button isn’t pressed, the input will be 1.<br>
+*What’s the difference?* A **pull-down** resistor connects the pin to **ground**, meaning when the push-button is **not pressed**, the input will be **0**.    
+A **pull-up** resistor connects the pin to **3V3**, meaning when the push-button is **not pressed**, the input will be **1**.<br>
 We will use the programmable resistors in the pull-down mode.
 :zap::zap::zap:
 
-### :triangular_flag_on_post: One circuit many behaviour
-Lets program **a second behaviour** that to make the on button “stick”. The `.toggle` function is so convenient for this application but we must also implement some form of “memory”, in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
+### :triangular_flag_on_post: One circuit multiple behaviours
+Lets program **a second behaviour** that to make the on button “stick”. The `.toggle` function is convenient for this application but we must also implement some form of 'memory', in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
 
 ```python
 from machine import Pin
@@ -345,6 +349,7 @@ while True:
 ```
 
 !! ! !explain !!!! ! ! !
+see https://www.youtube.com/watch?v=j0QcDQz-ukc
 
 ### :triangular_flag_on_post: Other On/Off Sensors
 Now that you’ve learned how to use a pushbutton, you should know that there are other basic sensors that work according to the same *on/off* principle, as:
@@ -358,8 +363,59 @@ have two contacts that come together when they are near a magnet.
 You can try some!
 * ...
 
-## Sensors - Analog Inputs
+## Sensors ☞ Analog Inputs
+A digital input is either on or off, a binary state. Your Pico can accept another type of input signal with **analog input**. The analog signal can be anything from completely off to completely on – a range of possible values. It works through a piece of hardware known as an analog-to-digital converter (ADC).    
+An ADC has two key features:
+- its resolution, measured in digital bits &
+- its channels, or how many analog signals it can accept and convert at once.     
+The ADC in your Pico has a resolution of 12 bits, meaning that it can transform an analog signal into a digital signal as a number ranging from 0 to 4095. But - and this is a bit odd - it is transformed to a 16-bit number ranging from **0 to 65.535**, so that it behaves similar as other MicroPython microcontrollers.    
+The Pico **3 channels** brought out to the GPIO pins: GP26, GP27, and GP28, which are also known as GP26_ADC0, GP27_ADC1, and GP28_ADC2 for analog channels 0, 1, and 2. There’s also a fourth ADC channel, which is connected to a temperature sensor built into RP2040.
+
+Our wiring diagram first.  
+
+#### Circuit
+
+
+
+
+![image](images/pico/Pico-bb-switch-ExternalLed.png)
+
+#### Code
+
+```python
+from machine import Pin, ADC
+import utime
+
+potentiometer = ADC(Pin(26))
+
+while True:
+    print(potentiometer.read_u16())
+    utime.sleep_ms(5)
+```
+
+Controlling the blinking speed of our LED with a potentiometer.
+see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
+
+```python
+from machine import Pin, ADC
+import utime
+
+potentiometer = ADC(Pin(26))
+led = Pin(15, Pin.OUT)
+conversion_factor = 3.3 / (65535)
+
+while True:
+    voltage = (potentiometer.read_u16()) * conversion_factor
+    print(voltage)
+    led.toggle()
+    utime.sleep(voltage)
+```
+
 ## PWM - Analog Outputs
+
+see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
+
+
 ## Serial Communication
 
 
