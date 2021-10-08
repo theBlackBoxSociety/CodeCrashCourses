@@ -8,7 +8,7 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 ![The Raspberry Pi Pico Board](images/pico/Pico-intro.png)
 
 <details>
-  <summary>Click to expand!</summary>
+  <summary>TOC 👈🏻 Click to expand</summary>
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [1. Introduction](#1-introduction)
