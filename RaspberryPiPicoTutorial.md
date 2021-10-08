@@ -46,10 +46,8 @@ Now, turn your Pico over. You’ll see the underside has writing on it. This is 
 
 ![Pin Reference off the Raspberry Pi Pico Board](images/pico/Pico-pin-ref.png)
 
-:scream_cat: Wait. **What is a breadboard?**  
-A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solderless breadboard, is a small plastic board full of holes, each of which contains a spring-loaded contact (in metal). You can push a component’s leg into one of the holes, and it will establish an electrical connection with all of the other holes in the same vertical column of holes. Many breadboards also include sections for power distribution, making it easier to build your circuits.
+Wait. **What is a breadboard?** See <a href="#breadboard">here</a>   
 
-![A Pico on a Breadboard](images/pico/Pico-Top-Breadboard.png)
 
 By soldering male pin headers in place pointing downwards, you can push your Pico into the breadboard to make connecting and disconnecting new hardware as easy as possible – great for experiments!
 
@@ -213,8 +211,10 @@ Below the most important **pin-functions**.
 
 ### :triangular_flag_on_post: Common Components
 The following a handful of common components that we will use in the following circuits.
-#### a breadboard
-We already touched the breadboard but if you don't feel confident and want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
+#### <a name="breadboard"> breadboard</a>
+A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solderless breadboard, is a small plastic board full of holes, each of which contains a spring-loaded contact (in metal). You can push a component’s leg into one of the holes, and it will establish an electrical connection with all of the other holes in the same vertical column of holes. Many breadboards also include sections for power distribution, making it easier to build your circuits.
+![A Pico on a Breadboard](images/pico/Pico-Top-Breadboard.png)
+ If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
 #### wires
 The wire used to connect components. They come in a wide range of sizes and types. There are 2 main varieties; solid core or stranded. Solid core is stiffer, stranded wire is more flexible. We will use jumper wires, also known as jumper leads on our breadboard.
 #### switches
