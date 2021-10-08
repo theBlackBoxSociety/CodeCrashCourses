@@ -9,6 +9,7 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 
 <details>
   <summary>TOC 👈🏻 Click to expand</summary>
+
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [1. Introduction](#1-introduction)
@@ -28,14 +29,14 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 	- [:black_small_square: Reading resistor colour codes](#blacksmallsquare-reading-resistor-colour-codes)
 - [8. Wiring Diagrams & Schematics](#8-wiring-diagrams-schematics)
 - [9. Next level LED blinking.](#9-next-level-led-blinking)
-- [10. a Pushbutton ☞ Digital Inputs](#10-a-pushbutton-digital-inputs)
+- [10. a Pushbutton 👉🏻 Digital Inputs](#10-a-pushbutton-digital-inputs)
 	- [:black_small_square: a Pushbutton](#blacksmallsquare-a-pushbutton)
 	- [:black_small_square: One circuit multiple behaviours](#blacksmallsquare-one-circuit-multiple-behaviours)
 	- [:black_small_square: Other On/Off Sensors](#blacksmallsquare-other-onoff-sensors)
-- [11. Sensors ☞ Analog Inputs](#11-sensors-analog-inputs)
+- [11. Sensors 👉🏻 Analog Inputs](#11-sensors-analog-inputs)
 	- [:black_small_square: let's read the value of a potentiometer](#blacksmallsquare-lets-read-the-value-of-a-potentiometer)
 	- [:black_small_square: Controlling the blinking speed of our LED with a potentiometer.](#blacksmallsquare-controlling-the-blinking-speed-of-our-led-with-a-potentiometer)
-- [12. PWM ☞ Analog Outputs](#12-pwm-analog-outputs)
+- [12. PWM 👉🏻 Analog Outputs](#12-pwm-analog-outputs)
 	- [:black_small_square:  Fading an LED with PWM](#blacksmallsquare-fading-an-led-with-pwm)
 - [13. Data logger](#13-data-logger)
 
@@ -80,7 +81,7 @@ Now, turn your Pico over. You’ll see the underside has writing on it. This is 
 
 ![Pin Reference off the Raspberry Pi Pico Board](images/pico/Pico-pin-ref.png)
 
-Wait. **What is a breadboard?** See <a href="#breadboard">here</a>   
+Wait. What is a breadboard? See <a href="#breadboard">here</a>.  
 
 
 By soldering male pin headers in place pointing downwards, you can push your Pico into the breadboard to make connecting and disconnecting new hardware as easy as possible – great for experiments!
@@ -112,7 +113,7 @@ An easy way to program in MicroPython on your Pico is with [Thonny](https://thon
 
 ![Thonny Website](images/pico/pico-thonny.png)
 
-:zap::zap::zap: Make sure you download and install the latest version of Thonny as the Raspberry Pi Pico interpreter is not available on older versions.:zap::zap::zap:
+<span style="color: green">:zap::zap::zap: Make sure you download and install the latest version of Thonny as the Raspberry Pi Pico interpreter is not available on older versions.:zap::zap::zap:</span>
 
 ### :black_small_square:  a walk through the Thonny UI
 
@@ -172,7 +173,7 @@ Click the Run button to run your code.
 Thonny will ask whether you want to save the file on This computer or the MicroPython device. Choose MicroPython device.
 
 Enter blink.py (or something else) as the file name.    
-☞ You need to enter the .py file extension so that Thonny recognises the file as a Python file.
+👉🏻 You need to enter the .py file extension so that Thonny recognises the file as a Python file.
 
 Thonny will save your program to your Raspberry Pi Pico and run it.
 
@@ -300,7 +301,7 @@ while True:
 Is it working? Great!     
 Some challenges: Can you modify the program to light up both the on-board and external LEDs at the same time? Can you write a program which lights up the on-board LED when the external LED is switched off, and vice versa?
 
-## 10. a Pushbutton ☞ Digital Inputs
+## 10. a Pushbutton 👉🏻 Digital Inputs
 In prior examples, the LED was our actuator, and our Pico was controlling it. If we image an outside parameter to take control over this LED, our finger for example, we need **a sensor**. The simplest form of sensor available is ...
 ### :black_small_square: a Pushbutton
 
@@ -385,7 +386,7 @@ have two contacts that come together when they are near a magnet.
 You can try some!
 * ...
 
-## 11. Sensors ☞ Analog Inputs
+## 11. Sensors 👉🏻 Analog Inputs
 A digital input is either on or off, a binary state. Your Pico can accept another type of input signal with **analog input**. The analog signal can be anything from completely off to completely on – a range of possible values. It works through a piece of hardware known as an analog-to-digital converter (ADC).    
 An ADC has two key features:
 - its resolution, measured in digital bits &
@@ -451,7 +452,7 @@ If you need a range from 0 to 10 you should use this `10 / 65535` formula.
 
 see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
 
-## 12. PWM ☞ Analog Outputs
+## 12. PWM 👉🏻 Analog Outputs
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one.     
 A microcontroller’s digital output can only ever be on or off, 0 or 1. Turning a digital output on and off is known as a pulse and by altering how quickly the pin turns on and off you can change, or modulate, the width of these pulses – hence ‘pulse-width modulation’.    
 We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc.
