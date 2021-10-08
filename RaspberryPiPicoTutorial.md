@@ -10,49 +10,49 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Physical Computing with the Raspberry Pi PICO](#physical-computing-with-the-raspberry-pi-pico)
-	- [<a name="intro">1. Introduction</a>](#a-nameintro1-introductiona)
-	- [<a name="hardware">2. the Raspberry Pi Pico Board</a>](#a-namehardware2-the-raspberry-pi-pico-boarda)
-	- [<a name="software">3. the MicroPython firmware</a>](#a-namesoftware3-the-micropython-firmwarea)
-	- [<a name="software">4. the Software</a>](#a-namesoftware4-the-softwarea)
+	- [1. Introduction](#1-introduction)
+	- [2. the Raspberry Pi Pico Board](#2-the-raspberry-pi-pico-board)
+	- [3. the MicroPython firmware](#3-the-micropython-firmware)
+	- [4. the Software](#4-the-software)
 		- [:triangular_flag_on_post:  Bring Thonny in](#triangularflagonpost-bring-thonny-in)
 		- [:triangular_flag_on_post:  a walk through the Thonny UI](#triangularflagonpost-a-walk-through-the-thonny-ui)
 		- [:triangular_flag_on_post: linking Thonny to Pico](#triangularflagonpost-linking-thonny-to-pico)
-	- [<a name="shell">5. What the Shell! Conversing with (Micro)Python</a>](#a-nameshell5-what-the-shell-conversing-with-micropythona)
-	- [<a name="scriptmode">6. Over to Script Mode</a>](#a-namescriptmode6-over-to-script-modea)
+	- [5. What the Shell! Conversing with (Micro)Python](#5-what-the-shell-conversing-with-micropython)
+	- [6. Over to Script Mode](#6-over-to-script-mode)
 		- [:triangular_flag_on_post: switch that LED on and off](#triangularflagonpost-switch-that-led-on-and-off)
 		- [:triangular_flag_on_post:  on/off in loop](#triangularflagonpost-onoff-in-loop)
-	- [<a name="physicalcomputing">7. Let's Get Physical</a>](#a-namephysicalcomputing7-lets-get-physicala)
+	- [7. Let's Get Physical](#7-lets-get-physical)
 		- [:triangular_flag_on_post: Your Pico’s pins](#triangularflagonpost-your-picos-pins)
 		- [:triangular_flag_on_post: Common Components](#triangularflagonpost-common-components)
-			- [<a name="breadboard"> breadboard</a>](#a-namebreadboard-breadboarda)
+			- [<span name="breadboard"> breadboard</span>](#span-namebreadboard-breadboardspan)
 			- [wires](#wires)
 			- [switches](#switches)
 			- [light-emitting diodes (LED)](#light-emitting-diodes-led)
 			- [resistors](#resistors)
 			- [potentiometers](#potentiometers)
 		- [:triangular_flag_on_post: Reading resistor colour codes](#triangularflagonpost-reading-resistor-colour-codes)
-	- [<a name="schematics">8. Wiring Diagrams & Schematics</a>](#a-nameschematics8-wiring-diagrams-schematicsa)
-	- [<a name="externalled">9. Next level LED blinking.](#a-nameexternalled9-next-level-led-blinking)
-	- [<a name="pushbutton">10. a Pushbutton ☞ Digital Inputs</a>](#a-namepushbutton10-a-pushbutton-digital-inputsa)
+	- [8. Wiring Diagrams & Schematics](#8-wiring-diagrams-schematics)
+	- [9. Next level LED blinking.](#9-next-level-led-blinking)
+	- [10. a Pushbutton ☞ Digital Inputs](#10-a-pushbutton-digital-inputs)
 		- [:triangular_flag_on_post: a Pushbutton](#triangularflagonpost-a-pushbutton)
 			- [Circuit](#circuit)
 			- [Code](#code)
 		- [:triangular_flag_on_post: One circuit multiple behaviours](#triangularflagonpost-one-circuit-multiple-behaviours)
 		- [:triangular_flag_on_post: Other On/Off Sensors](#triangularflagonpost-other-onoff-sensors)
-	- [<a name="sensors">11. Sensors ☞ Analog Inputs</a>](#a-namesensors11-sensors-analog-inputsa)
+	- [11. Sensors ☞ Analog Inputs](#11-sensors-analog-inputs)
 		- [:triangular_flag_on_post: let's read the value of a potentiometer](#triangularflagonpost-lets-read-the-value-of-a-potentiometer)
 			- [Circuit](#circuit)
 			- [Code](#code)
 		- [:triangular_flag_on_post: Controlling the blinking speed of our LED with a potentiometer.](#triangularflagonpost-controlling-the-blinking-speed-of-our-led-with-a-potentiometer)
 			- [Circuit](#circuit)
 			- [Code](#code)
-	- [<a name="pwm">11. PWM ☞ Analog Outputs</a>](#a-namepwm11-pwm-analog-outputsa)
+	- [12. PWM ☞ Analog Outputs](#12-pwm-analog-outputs)
 		- [:triangular_flag_on_post:  Fading an LED with PWM](#triangularflagonpost-fading-an-led-with-pwm)
-	- [Data logger](#data-logger)
+	- [13. Data logger](#13-data-logger)
 
 <!-- /TOC -->
 
-## <a name="intro">1. Introduction</a>
+## 1. Introduction
 You probably have lots of microcontrollers in your house already. There’s a good chance your washing machine is controlled by a microcontroller, and maybe your watch is, and you might find one in your coffee machine or microwave. Of course, all these microcontrollers already have their programs and the manufacturers make it hard to change the software running on them. A Raspberry Pi Pico, on the other hand, can be easily reprogrammed over a USB connection.
 
 [Raspberry Pi Pico](https://www.raspberrypi.org/products/raspberry-pi-pico/) is a microcontroller development board, meaning simply that it’s a printed circuit board housing a special type of processor designed for physical computing: the microcontroller. The RP Pico features the new [RP2040 chip](https://www.raspberrypi.org/products/rp2040/).
@@ -65,7 +65,7 @@ MicroPython is an implementation of the Python programming language. It offers t
 
 See also [this Quick MicroPython reference for the Raspberry Pi Pico](https://docs.micropython.org/en/latest/rp2/quickref.html#).
 
-## <a name="hardware">2. the Raspberry Pi Pico Board</a>
+## 2. the Raspberry Pi Pico Board
 This is a Raspberry Pi Pico. Let's call it the Pico to keep it short.
 
 ![The Raspberry Pi Pico Board](images/pico/Pico.png)
@@ -97,7 +97,7 @@ By soldering male pin headers in place pointing downwards, you can push your Pic
 You can follow [this guide](https://magpi.raspberrypi.org/articles/how-to-solder-gpio-pin-headers-to-raspberry-pi-pico) to if you need to solder the pin headers. You’ll need a soldering iron, some solder, a cleaning sponge, your Pico, and two 20-pin male header strips. If you already have a solderless breadboard, you can use it to make the soldering process easier.
 
 
-## <a name="software">3. the MicroPython firmware</a>
+## 3. the MicroPython firmware
 You can program your Pico by connecting it to a computer via USB, then dragging and dropping a file onto it.
 
 1. Download the [MicroPython UF2](https://micropython.org/download/rp2-pico/rp2-pico-latest.uf2) file.
@@ -114,7 +114,7 @@ You can program your Pico by connecting it to a computer via USB, then dragging 
 
 See also [this Quick MicroPython reference for the Raspberry Pi Pico](https://docs.micropython.org/en/latest/rp2/quickref.html#).
 
-## <a name="software">4. the Software</a>
+## 4. the Software
 ### :triangular_flag_on_post:  Bring Thonny in
 
 An easy way to program in MicroPython on your Pico is with [Thonny](https://thonny.org/), a Python IDE (integrated development environment) for learning and teaching programming.
@@ -144,7 +144,7 @@ Thonny is normally used to write programs that run on the same computer you’re
 :clap: Congratulations: you’re ready to start programming.
 
 
-## <a name="shell">5. What the Shell! Conversing with (Micro)Python</a>
+## 5. What the Shell! Conversing with (Micro)Python
 Your first MicroPython program will be a classic Hello, World!
 
 Click on the Python Shell Area (n°3) at the bottom of the Thonny window, just to the right of the interactive chevron >>> prompt and type the following instruction.
@@ -161,7 +161,7 @@ We are now in **interactive mode**. You can think of it like a face-to-face conv
 :zap::zap::zap: If your program doesn’t run but instead prints a ‘syntax error’ message to the Shell area, there’s a mistake somewhere in what you’ve written. All instructions needs to be written in a very specific way: miss a bracket or a quotation mark, spell ‘print’ wrong or give it a capital P, or add extra symbols somewhere and it won’t run.:zap::zap::zap:
 
 
-## <a name="scriptmode">6. Over to Script Mode</a>
+## 6. Over to Script Mode
 ###  :triangular_flag_on_post: switch that LED on and off
 The Shell is useful to make sure everything is working and try out quick commands. However, it’s better to put longer programs in a file.
 
@@ -207,7 +207,7 @@ from machine import Pin
 led = Pin(25, Pin.OUT)
 led.toggle()
 ```
-###  :triangular_flag_on_post:  on/off in loop
+### :triangular_flag_on_post:  on/off in loop
 Wouldn't it be easier if we didn't have to push the Run button all the time? Here comes an **infinite loop** function to the rescue.
 
 To change our program from a definite loop to an infinite loop we need to add the line `while True:` before the `led.toggle()` function.
@@ -233,7 +233,7 @@ while True:
     time.sleep(1)
 ```
 
-## <a name="physicalcomputing">7. Let's Get Physical</a>
+## 7. Let's Get Physical
 Let's get on with some real physical computing and learn more about Pico’s pins and electronic components we can connect and control.
 
 ### :triangular_flag_on_post: Your Pico’s pins
@@ -254,7 +254,7 @@ Below the most important **pin-functions**.
 
 ### :triangular_flag_on_post: Common Components
 The following a handful of common components that we will use in the following circuits.
-#### <a name="breadboard"> breadboard</a>
+#### <span name="breadboard"> breadboard</span>
 A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solderless breadboard, is a small plastic board full of holes, each of which contains a spring-loaded contact (in metal). You can push a component’s leg into one of the holes, and it will establish an electrical connection with all of the other holes in the same vertical column of holes. Many breadboards also include sections for power distribution, making it easier to build your circuits.
 ![A Pico on a Breadboard](images/pico/Pico-Top-Breadboard.png)
  If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
@@ -278,7 +278,7 @@ See also https://makeabilitylab.github.io/physcomp/electronics/
 ### :triangular_flag_on_post: Reading resistor colour codes
 ![resistor color codes chart](images/pico/resistor_color_codes_chart.png)
 
-## <a name="schematics">8. Wiring Diagrams & Schematics</a>
+## 8. Wiring Diagrams & Schematics
 Our next step is to wire an external LED to the board using a breadboard. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to GP 15 on the Pico with a 330Ω resistor, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a schematic  or drawing with the wires and components connected to the Pico plugged into the breadboard?!
 
 Being able to read these schematics and diagrams is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
@@ -292,7 +292,7 @@ Have a look at this more elaborate tutorial [How to Read a Schematic](https://le
 So our after wiring pico and components on the breadboard according to the schematic (and wiring diagram) it will look more or less like this:
 ![image](images/pico/Pico-bb-ExternalLed-photo.png)
 
-## <a name="externalled">9. Next level LED blinking.
+## 9. Next level LED blinking.
 Controlling an external LED in MicroPython is no different to controlling your Pico’s internal LED: only the pin number changes.     
 Find the line:
 `led_onboard = machine.Pin(25, machine.Pin.OUT)` and change 25 to 15.
@@ -309,7 +309,7 @@ while True:
 Is it working? Great!     
 Some challenges: Can you modify the program to light up both the on-board and external LEDs at the same time? Can you write a program which lights up the on-board LED when the external LED is switched off, and vice versa?
 
-## <a name="pushbutton">10. a Pushbutton ☞ Digital Inputs</a>
+## 10. a Pushbutton ☞ Digital Inputs
 In prior examples, the LED was our actuator, and our Pico was controlling it. If we image an outside parameter to take control over this LED, our finger for example, we need **a sensor**. The simplest form of sensor available is ...
 ### :triangular_flag_on_post: a Pushbutton
 
@@ -394,7 +394,7 @@ have two contacts that come together when they are near a magnet.
 You can try some!
 * ...
 
-## <a name="sensors">11. Sensors ☞ Analog Inputs</a>
+## 11. Sensors ☞ Analog Inputs
 A digital input is either on or off, a binary state. Your Pico can accept another type of input signal with **analog input**. The analog signal can be anything from completely off to completely on – a range of possible values. It works through a piece of hardware known as an analog-to-digital converter (ADC).    
 An ADC has two key features:
 - its resolution, measured in digital bits &
@@ -460,13 +460,14 @@ If you need a range from 0 to 10 you should use this `10 / 65535` formula.
 
 see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
 
-## <a name="pwm">11. PWM ☞ Analog Outputs</a>
-### :triangular_flag_on_post:  Fading an LED with PWM
+## 12. PWM ☞ Analog Outputs
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one.     
 A microcontroller’s digital output can only ever be on or off, 0 or 1. Turning a digital output on and off is known as a pulse and by altering how quickly the pin turns on and off you can change, or modulate, the width of these pulses – hence ‘pulse-width modulation’.    
 We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc.
 
 Every GPIO pin on your Pico is capable of pulse-width modulation, but the microcontroller’s pulse-width modulation block is made up of eight slices, each with two outputs.That makes 16 PWM channels in total which can be clocked from 7Hz to 125Mhz.
+
+### :triangular_flag_on_post:  Fading an LED with PWM
 
 ```python
 from machine import Pin, ADC, PWM
@@ -507,7 +508,7 @@ while True:
 
 see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
 
-## Data logger
+## 13. Data logger
 Turn Raspberry Pi Pico into a temperature data-logging device and untether it from the computer to make it fully portable
 
 ```python
@@ -539,12 +540,12 @@ Your Pico’s file system is 1.375MiB in size, meaning it can hold 1,441,792 byt
 
 
 <hr>
-<a name="1">1.</a> What Is Physical Computing?     
+<span name="1">1.</span> What Is Physical Computing?     
 All computing is physical. We work with computational systems by taking action with our bodies, on devices. The construction of computing devices, and their use, consumes raw materials and energy as well. In short, the virtual always has physical consequences.  
 Physical Computing here refers especially to creating or using devices that interact with the world around them. A computer senses its environment (as touch, movement, temperature, ...), processes that information, and then performs some action (with lights, motors, ...).
 
-<a name="2">2.</a> [This webpage](https://www.raspberrypi.org/documentation/microcontrollers/) also includes a wealth of additional resources. Click on the tabs and scroll to access guides, projects, and the data book collection – a bookshelf of detailed technical documentation covering everything from the inner workings of the RP2040 microcontroller which powers your Pico to programming in both the Python and C/C++ languages.
+<span name="2">2.</span> [This webpage](https://www.raspberrypi.org/documentation/microcontrollers/) also includes a wealth of additional resources. Click on the tabs and scroll to access guides, projects, and the data book collection – a bookshelf of detailed technical documentation covering everything from the inner workings of the RP2040 microcontroller which powers your Pico to programming in both the Python and C/C++ languages.
 
 <hr>
 
-<div style=text-align:center;>This tutorial is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</div>
+<div style="text-align:center;">This tutorial is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</div>
