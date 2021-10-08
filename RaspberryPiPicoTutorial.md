@@ -7,6 +7,8 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 
 ![The Raspberry Pi Pico Board](images/pico/Pico-intro.png)
 
+<details>
+  <summary>Click to expand!</summary>
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [1. Introduction](#1-introduction)
@@ -38,6 +40,8 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 - [13. Data logger](#13-data-logger)
 
 <!-- /TOC -->
+<details>
+
 
 ## 1. Introduction
 You probably have lots of microcontrollers in your house already. There’s a good chance your washing machine is controlled by a microcontroller, and maybe your watch is, and you might find one in your coffee machine or microwave. Of course, all these microcontrollers already have their programs and the manufacturers make it hard to change the software running on them. A Raspberry Pi Pico, on the other hand, can be easily reprogrammed over a USB connection.
