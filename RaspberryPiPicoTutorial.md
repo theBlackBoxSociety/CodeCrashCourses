@@ -113,7 +113,9 @@ An easy way to program in MicroPython on your Pico is with [Thonny](https://thon
 
 ![Thonny Website](images/pico/pico-thonny.png)
 
-<span style="color: green">:zap::zap::zap: Make sure you download and install the latest version of Thonny as the Raspberry Pi Pico interpreter is not available on older versions.:zap::zap::zap:</span>
+```diff
+:zap::zap::zap: Make sure you download and install the latest version of Thonny as the Raspberry Pi Pico interpreter is not available on older versions.:zap::zap::zap:
+```
 
 ### :black_small_square:  a walk through the Thonny UI
 
