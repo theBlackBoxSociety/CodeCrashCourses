@@ -39,6 +39,8 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 - [12. PWM 👉🏻 Analog Outputs](#12-pwm-analog-outputs)
 	- [:black_small_square:  Fading an LED with PWM](#blacksmallsquare-fading-an-led-with-pwm)
 - [13. Data logger](#13-data-logger)
+	- [File storage](#file-storage)
+	- [Running without a Host Computer](#running-without-a-host-computer)
 
 <!-- /TOC -->
 </details>
@@ -163,9 +165,9 @@ The Shell is useful to make sure everything is working and try out quick command
 
 Thonny can save and run MicroPython programs directly on your Raspberry Pi Pico.
 
-In this step, you will create a MicroPython program to blink the onboard LED on and off in a loop.
+In this step, you will create a MicroPython program to switch the onboard LED on.
 
-Type the following lines in the main script area (n°2) to toggle the LED.
+Type the following lines in the main script area (n°2).
 
 ```Python
 from machine import Pin
@@ -203,6 +205,8 @@ from machine import Pin
 led = Pin(25, Pin.OUT)
 led.toggle()
 ```
+`toggle()` simply inverts the state of an output on the Pico. So if the output is 1 (or HIGH) and we apply a toggle it goes to 0 (or LOW). This is an ideal function for a Blink program.
+
 ### :black_small_square:  on/off in loop
 Wouldn't it be easier if we didn't have to push the Run button all the time? Here comes an **infinite loop** function to the rescue.
 
@@ -376,8 +380,10 @@ while True:
     last_state = current_state
 ```
 
-!! ! !explain !!!! ! ! !
+:construction:!! ! ! EXPLAIN !!!! ! ! !
 see https://www.youtube.com/watch?v=j0QcDQz-ukc
+
+:construction:!! ! ! INTERUPT !!!! ! ! !
 
 ### :black_small_square: Other On/Off Sensors
 Now that you’ve learned how to use a pushbutton, you should know that there are other basic sensors that work according to the same *on/off* principle, as:
@@ -457,6 +463,8 @@ If you need a range from 0 to 10 you should use this `10 / 65535` formula.
 
 see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
 
+:construction:!! ! ! _THREAD !!!! ! ! !
+
 ## 12. PWM 👉🏻 Analog Outputs
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one.     
 A microcontroller’s digital output can only ever be on or off, 0 or 1. Turning a digital output on and off is known as a pulse and by altering how quickly the pin turns on and off you can change, or modulate, the width of these pulses – hence ‘pulse-width modulation’.    
@@ -525,9 +533,37 @@ while True:
     utime.sleep(10)
 ```
 
-File storage and autoboot
+### File storage
 
 Your Pico’s file system works regardless of whether or not it’s connected to a computer. If you have a micro USB mains charger or a USB battery pack with a micro USB cable run by itself – but you’ll need a way to get your program running without having to click the Run icon in Thonny.
+
+### Running without a Host Computer
+
+So far everything we have done has been run by loading the program onto the Pico from the Thonny IDE.
+
+But once you have your program developed you are going to want it to run on it’s own, powered either by the microUSB port or through the Pico VSYS power input.
+
+Pico Everything Demo
+
+Your program, or programs, are already stored on the Pico. So how do we tell it to run the program on boot-up?
+
+The answer is, we change the program name!
+main.py
+
+When the Pico boots up it looks for a program titled main.py. If it finds it, then it will load it and run it on startup.
+
+So if you want your program to run unattended you’ll need to save it as main.py. Later on, you can change main.py to another program if you wish, or delete it altogether.
+
+Start by loading the program you wish to run on boot into your Thonny IDE.  Now click on File and then choose Save As.
+
+You’ll be asked if you want to save on your local computer or on the Pico, you definitely want to save on the Pico.
+
+Now save your program as “main.py”.  Exactly like that, all in lowercase.
+
+Pico running on startup, without computer connection
+
+Now unplug your Pico from your computer and plug it into a suitable power source, like a USB adapter. You should see it spring to life and run the program you saved as “main.py”.
+
 
 For use without a connected computer – known as headless operation – you can save your program under a special file name: main.py. When MicroPython finds a file called main.py in its file system, it runs that automatically every time it’s powered on or reset – without you having to click Run.
 
