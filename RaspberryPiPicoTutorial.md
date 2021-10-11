@@ -32,7 +32,7 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 - [10. a Pushbutton 👉🏻 Digital Inputs](#10-a-pushbutton-digital-inputs)
 	- [:black_small_square: a Pushbutton](#blacksmallsquare-a-pushbutton)
 	- [:black_small_square: One Circuit Multiple Behaviours](#blacksmallsquare-one-circuit-multiple-behaviours)
-	- [:construction: a Pushbutton with Interrupt](#construction-a-pushbutton-with-interrupt)
+	- [:small_orange_diamond: a Pushbutton with Interrupt (optional)](#smallorangediamond-a-pushbutton-with-interrupt-optional)
 	- [:black_small_square: Other On/Off Sensors](#blacksmallsquare-other-onoff-sensors)
 - [11. Sensors 👉🏻 Analog Inputs](#11-sensors-analog-inputs)
 	- [:black_small_square: Let's Read the Value of a Potentiometer](#blacksmallsquare-lets-read-the-value-of-a-potentiometer)
@@ -40,8 +40,8 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 	- [:black_small_square:  Other analog sensors](#blacksmallsquare-other-analog-sensors)
 - [12. PWM 👉🏻 Analog Outputs](#12-pwm-analog-outputs)
 	- [:black_small_square:  Fading an LED with the Potentiometer & PWM](#blacksmallsquare-fading-an-led-with-the-potentiometer-pwm)
-	- [:black_small_square:  Fading an LED IN & OUT with PWM](#blacksmallsquare-fading-an-led-in-out-with-pwm)
-	- [:black_small_square:  Other analog sensors](#blacksmallsquare-other-analog-sensors)
+	- [:black_small_square: Fading an LED IN & OUT with PWM](#blacksmallsquare-fading-an-led-in-out-with-pwm)
+	- [:black_small_square:  Other PWM-controlled Actuators](#blacksmallsquare-other-pwm-controlled-actuators)
 - [13. Data logger](#13-data-logger)
 	- [File storage](#file-storage)
 	- [Running without a Host Computer](#running-without-a-host-computer)
@@ -274,7 +274,7 @@ Resistors give electricity something to do: the convert electricity to heat. In 
 Resistors are rated in Ohms (Ω), indicating how much resistance they offer. Below you can learn to read the colour codes.
 #### potentiometers
 Potentiometers, or pots for short, are variable resistors. Potentiometers have three legs. The power of a potentiometer is in the middle leg. It's  resistance varies depends on the potentiometer’s rotating (or sliding) contact (the wiper) position. It is best to use it as a voltage divider with our Pico. This means we have all 3 contacts connected: 1 to GND (or 3v3), 2 to ADC, 3 to 3V3 (or GND).       
-Other common variable resistors are photocells (LDR), termistors, force-sensitive (FSR) and bend-sensors. These are all two-legged (or “two-lead”). In order to make them work optimally on our Pico we need to add a voltage divider.    
+Other common variable resistors are photocells (LDR), termistors, force-sensitive (FSR) and bend-sensors. These are all two-legged (or “two-lead”). In order to make them work optimally on our Pico we need to add a 2nd resistor (later more).    
 
 See also https://makeabilitylab.github.io/physcomp/electronics/
 
@@ -283,7 +283,7 @@ See also https://makeabilitylab.github.io/physcomp/electronics/
 ![resistor color codes chart](images/pico/resistor_color_codes_chart.png)
 
 ## 8. Wiring Diagrams & Schematics
-Our next step is to wire an external LED to the board using a breadboard. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to GP 15 on the Pico with a 330Ω resistor, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a schematic  or drawing with the wires and components connected to the Pico plugged into the breadboard?!
+Our next step is to wire an external LED to the board using a breadboard. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to GP 15 on the Pico with a 330Ω resistor (220Ω works fine too), the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a schematic  or drawing with the wires and components connected to the Pico plugged into the breadboard?!
 
 Being able to read these schematics and diagrams is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
 
@@ -320,7 +320,7 @@ In prior examples, the LED was our actuator, and our Pico was controlling it. If
 Let's make our wiring diagram first.  
 
 #### Circuit
-- LED anode (long leg) connected to pin 15 using a 330Ω resistor
+- LED anode (long leg) connected to pin 15 using a 330Ω (or 220Ω) resistor
 - LED anode connected to ground (GND)
 - one leg of the pushbutton connects to pin 14
 - the other leg need to connect to the Pico's 3V3 pin (you can use the powerrail to do so)
@@ -387,7 +387,7 @@ while True:
 :construction:!! ! ! EXPLAIN !!!! ! ! !
 see https://www.youtube.com/watch?v=j0QcDQz-ukc
 
-### :construction: a Pushbutton with Interrupt
+### :small_orange_diamond: a Pushbutton with Interrupt (optional)
 
 An **Interrupt** is pretty much like it sounds like, an event that *interrupts* the normal flow of a program.  In our case we are dealing with external hardware interrupts, meaning that a signal or change of state has occurred that needs to be addressed before the program can continue.
 
@@ -477,6 +477,8 @@ You will also notice that we loaded the ADC function from the machine library. W
 
 Notice the comment: `time.sleep(0.05)` is similar to `time.sleep_ms(50)` as 0.05 seconds is equal to 50 milliseconds.
 
+Tip: Thonny has also a built in data plotter window. It visualises numbers and series of numbers  printed to the shell.
+
 ### :black_small_square: Controlling the Speed of our Blinking LED with a Potentiometer.
 In this 2nd program the value of our potentiometer will now determine the interval of the blinking LED. That speed will actually correspond to the actual voltage that passes through the variable resistor.
 
@@ -503,16 +505,17 @@ The range of from 0 to 65.535 it’s not always handy and user-friendy. With a s
 This way the number that the ADC gives is recalculated into an approximation of the actual voltage it represents. 3.3 (or the maximum possible voltage that the pin can expect) divided by 65.535 (or the maximum value the analog input reading can be).    
 If you need a range from 0 to 10 you should use this `10 / 65535` formula.
 
-see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
-
 ### :black_small_square:  Other analog sensors
-:construction: :construction: :construction:
-- LDR, FSR, .... + voltage divider resistor
--
+So, analog sensors are basically variable resistors. But only a potentiometer (and other prepared sensor-boards) have 3 legs and function in their own as a voltage divider circuit giving us their full power.     
 
+In order to make a voltage divider circuit with a 2-legged analog sensor we need to add an extra resistor (in the range of our variable resistor). In this way the variable and the fixed resistor divide the voltage in two parts. The variable resistor feeds the varying voltage to our ADC-pin and the fixed provides a path to GND.
 
-:construction:!! ! ! _THREAD !!!! ! ! !
-- misschien toch niet zo zinvol
+See the circuit below for an example with a photocell.
+
+![image](images/pico/Pico-bb-vdc.png)
+
+Other possible analog sensors are accelerometers, pressure or force sensors, light sensors, sound sensors, temperature sensors, ...    
+There are also many digital sensors nowadays. In digital sensors, the signal measured is directly converted into a digital signal output and transmitted through a digital (serial) protocol.
 
 ## 12. PWM 👉🏻 Analog Outputs
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one.     
@@ -540,10 +543,9 @@ This creates an LED object on pin GP15, but with a difference: it activates the 
 
 The frequency (led.freq) tells Raspberry Pi Pico how often to switch the power between on and off for the LED.
 
-
 Click the Run icon and try turning the potentiometer all the way one way, then all the way the other. Watch the LED: this time, unless you’re using a logarithmic potentiometer, you’ll see the LED’s brightness change smoothly from completely off at one end of the potentiometer knob’s limit to fully lit at the other.
 
-### :black_small_square:  Fading an LED IN & OUT with PWM
+### :black_small_square: Fading an LED IN & OUT with PWM
 
 ```python
 from machine import Pin, PWM
@@ -565,20 +567,22 @@ while True:
 :construction:!! ! ! EXPLAIN !!!! ! ! !
 see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
 
-### :black_small_square:  Other analog sensors
-:construction: :construction: :construction: 
+### :black_small_square:  Other PWM-controlled Actuators
+:construction: :construction: :construction:
 
 replace led with:
-- 3 LEDs
+- more LEDs, eg. RGB led (and use arrays to define and controls the pins),
 see https://makersportal.com/blog/raspberry-pi-pico-tests-with-micropython
-- transistor for connection with dc motor (speed), high power led (brightness), solenoid (push / pull power)
-see https://learn.adafruit.com/use-dc-stepper-servo-motor-solenoid-rp2040-pico/solenoids
+- servomotor (needs 5v, thus pin 40) see https://circuitdigest.com/microcontroller-projects/control-a-servo-motor-with-raspberry-pi-pico-using-pwm-in-micropython
+- transistor for connection with dc motor (speed), high power led (brightness), solenoid (push / pull power),
+see https://learn.adafruit.com/use-dc-stepper-servo-motor-solenoid-rp2040-pico/ (circuitPython ≠ microPython)
 - H-bridge dc motor driver (speed & direction)
 - a stepper driver (basically some transistors) for a stepper motor.
-- servomotor
 
 ## 13. Data logger
-Turn Raspberry Pi Pico into a temperature data-logging device and untether it from the computer to make it fully portable
+Turn Raspberry Pi Pico into a temperature data-logging device and untether it from the computer to make it fully portable.
+
+See guide ["Get Started with MicroPython on Raspberry Pi Pico"](https://www.raspberrypi.org/products/micropython-pico/) page 104
 
 ```python
 from machine import Pin, ADC
@@ -594,7 +598,7 @@ while True:
     temperature = 27 - (reading - 0.706)/0.001721
     file.write(str(temperature) + "\n")
     file.flush()
-    utime.sleep(10)
+    time.sleep(10)
 ```
 
 ### File storage
