@@ -384,8 +384,15 @@ while True:
     last_state = current_state
 ```
 
-:construction:!! ! ! EXPLAIN !!!! ! ! !
-see https://www.youtube.com/watch?v=j0QcDQz-ukc
+What
+- First we declare 2 variables: `last_state = False` because the button is not pressed when we start the program and also `current_state = False` for that same reason.    
+In the loop we:
+- read the current state of the button
+- then we check if the following condition is met: current state equals (use **==** and not *=*) 1 (meaning the button is pressed) but  also the last state equals 0 (meaning the button was not pressed before)
+- then we toggle the LED ON or OFF.
+- Finally, we write the value of the current state variable in the past state variable.
+
+Now the LED switches ON/OFF the Rising edge, meaning when we push the button. You can change the behaviour to switch the LED on the Falling edge or when you release the button with this line `if last_state == 1 and current_state == 0:`
 
 ### :small_orange_diamond: a Pushbutton with Interrupt (optional)
 
@@ -519,12 +526,16 @@ There are also many digital sensors nowadays. In digital sensors, the signal mea
 
 ## 12. PWM 👉🏻 Analog Outputs
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one.     
-A microcontroller’s digital output can only ever be on or off, 0 or 1. Turning a digital output on and off is known as a pulse and by altering how quickly the pin turns on and off you can change, or modulate, the width of these pulses – hence ‘pulse-width modulation’.    
-We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc.
+
+A microcontroller’s digital output can only be on or off, 0 or 1. Turning a digital output on and off is known as a pulse and by altering how quickly the pin turns on and off you can change, or modulate, the width of these pulses – hence ‘pulse-width modulation’.    
+We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc.    
 
 Every GPIO pin on your Pico is capable of pulse-width modulation, but the microcontroller’s pulse-width modulation block is made up of eight slices, each with two outputs.That makes 16 PWM channels in total which can be clocked from 7Hz to 125Mhz.
 
 ### :black_small_square:  Fading an LED with the Potentiometer & PWM
+
+![image](images/pico/Pico-bb-potentiometer.png)
+<sup>This is the same circuit as the potentiometer circuit above.</sup>
 
 ```python
 from machine import Pin, ADC, PWM
@@ -546,6 +557,7 @@ The frequency (led.freq) tells Raspberry Pi Pico how often to switch the power b
 Click the Run icon and try turning the potentiometer all the way one way, then all the way the other. Watch the LED: this time, unless you’re using a logarithmic potentiometer, you’ll see the LED’s brightness change smoothly from completely off at one end of the potentiometer knob’s limit to fully lit at the other.
 
 ### :black_small_square: Fading an LED IN & OUT with PWM
+In this program we remove the potentiometer and set the Pico to fade the led in and out autonomously.
 
 ```python
 from machine import Pin, PWM
@@ -556,28 +568,46 @@ led = PWM(Pin(15))
 led.freq(1000)
 
 while True:
+    # fade in loop
     for duty in range(65025):
         led.duty_u16(duty)
         sleep(0.0001)
+    # fade out loop
     for duty in range(65025, 0, -1):
         led.duty_u16(duty)
         sleep(0.0001)
 ```
 
-:construction:!! ! ! EXPLAIN !!!! ! ! !
-see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
+We welcome a new programming function, **the for loop**. This a definite loop, it will repeat one or more instructions until a end condition is reached.    
+
+we decode the fade in loop:
+- A variable named *duty*, is assigned to the loop.
+- the range instruction with only 1 argument functions as this: `range(max_value)`. It will start at the number 0 and work upwards towards, but never reaching, the number 65025. Each loop or iteration the variable duty will increase; 0, 1, 2, 3, 4, etc
+- then the colon symbol ( : ) tells MicroPython that the loop itself begins on the next line.
+- in the line `led.duty_u16(duty)` the variable number assigned to the PWM Pin.    
+
+The fade out loop is very similar. We need to iterate over a decreasing sequence. We use an extended form of range() with three arguments `range(start_value, end_value, step)`.
+So in `for duty in range(65025, 0, -1):`
+counting will start at 65025 to 0 decreasing with 1 each loop.
+
+:zap: :zap: :zap:
+But wait why is it only 65025 and not 65535 (or the biggest 16bit number) as seen before. I frankly don't know.    
+I found this. The duty is 0 to 65025 or 0% to 100%. 65025 is 255*255 (255 times 255) which is probably where that comes from. ¯\_(ツ)_/¯
+:zap: :zap: :zap:
+
 
 ### :black_small_square:  Other PWM-controlled Actuators
 :construction: :construction: :construction:
 
-replace led with:
+We can replace the LED with:
 - more LEDs, eg. RGB led (and use arrays to define and controls the pins),
 see https://makersportal.com/blog/raspberry-pi-pico-tests-with-micropython
-- servomotor (needs 5v, thus pin 40) see https://circuitdigest.com/microcontroller-projects/control-a-servo-motor-with-raspberry-pi-pico-using-pwm-in-micropython
-- transistor for connection with dc motor (speed), high power led (brightness), solenoid (push / pull power),
+- a servomotor (needs 5v, thus pin 40) see https://circuitdigest.com/microcontroller-projects/control-a-servo-motor-with-raspberry-pi-pico-using-pwm-in-micropython
+- a transistor to drive a dc motor (speed), high power LED (brightness), solenoid (push / pull power), ...
 see https://learn.adafruit.com/use-dc-stepper-servo-motor-solenoid-rp2040-pico/ (circuitPython ≠ microPython)
-- H-bridge dc motor driver (speed & direction)
-- a stepper driver (basically some transistors) for a stepper motor.
+- an H-bridge to drive a dc motor driver (speed & direction)
+- a stepper driver (basically some transistors) to control a stepper motor.
+- ...
 
 ## 13. Data logger
 Turn Raspberry Pi Pico into a temperature data-logging device and untether it from the computer to make it fully portable.
