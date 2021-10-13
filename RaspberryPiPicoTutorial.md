@@ -571,11 +571,11 @@ while True:
     # fade in loop
     for duty in range(65025):
         led.duty_u16(duty)
-        sleep(0.0001)
+        time.sleep(0.0001)
     # fade out loop
     for duty in range(65025, 0, -1):
         led.duty_u16(duty)
-        sleep(0.0001)
+        time.sleep(0.0001)
 ```
 
 We welcome a new programming function, **the for loop**. This a definite loop, it will repeat one or more instructions until a end condition is reached.    
