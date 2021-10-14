@@ -2,7 +2,7 @@
 
 <sup>This tutorial is based on the official guide ["Get Started with MicroPython on Raspberry Pi Pico"](https://www.raspberrypi.org/products/micropython-pico/). You you can [download a PDF version](https://hackspace.raspberrypi.org/books/micropython-pico) for free.</sup>
 
-Hi, welcome 👋    
+👋🏼 Hi, welcome     
 You will learn the basics of physical computing <sup>[1](#1)</sup> with this powerful microcontroller board. This includes learning to know and setting up the workflow, reading and reproducing circuits, program the Pico with MicroPython, ...
 
 ![The Raspberry Pi Pico Board](images/pico/Pico-intro.png)
