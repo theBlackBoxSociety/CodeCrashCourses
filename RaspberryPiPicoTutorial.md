@@ -12,7 +12,7 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [1. Introductio](#1-introductio)
+- [1. Introduction](#1-introduction)
 - [2. the Raspberry Pi Pico Board](#2-the-raspberry-pi-pico-board)
 - [3. the MicroPython Firmware](#3-the-micropython-firmware)
 - [4. the Software](#4-the-software)
@@ -50,7 +50,7 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 </details>
 
 
-## 1. Introductio
+## 1. Introduction
 You probably have lots of microcontrollers in your house already. There’s a good chance your washing machine is controlled by a microcontroller, and maybe your watch is, and you might find one in your coffee machine or microwave. Of course, all these microcontrollers already have their programs and the manufacturers make it hard to change the software running on them. A Raspberry Pi Pico, on the other hand, can be easily reprogrammed over a USB connection.
 
 [Raspberry Pi Pico](https://www.raspberrypi.org/products/raspberry-pi-pico/) is a microcontroller development board, meaning simply that it’s a printed circuit board housing a special type of processor designed for physical computing: the microcontroller. The RP Pico features the new [RP2040 chip](https://www.raspberrypi.org/products/rp2040/).
