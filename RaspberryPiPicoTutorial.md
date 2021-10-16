@@ -1,5 +1,5 @@
 # Physical Computing with the Raspberry Pi PICO
-<sup>last updated: 16/10/2021</sup> 
+<sup>last updated: 16/10/2021</sup>
 
 <sup>This tutorial is based on the official guide ["Get Started with MicroPython on Raspberry Pi Pico"](https://www.raspberrypi.org/products/micropython-pico/). You you can [download a PDF version](https://hackspace.raspberrypi.org/books/micropython-pico) for free.</sup>
 
@@ -387,7 +387,7 @@ while True:
     last_state = current_state
 ```
 
-What
+What is happening here?
 - First we declare 2 variables: `last_state = False` because the button is not pressed when we start the program and also `current_state = False` for that same reason.    
 In the loop we:
 - read the current state of the button
