@@ -1,8 +1,9 @@
 # Physical Computing with the Raspberry Pi PICO
+<sup>last updated: 16/10/2021</sup> 
 
 <sup>This tutorial is based on the official guide ["Get Started with MicroPython on Raspberry Pi Pico"](https://www.raspberrypi.org/products/micropython-pico/). You you can [download a PDF version](https://hackspace.raspberrypi.org/books/micropython-pico) for free.</sup>
 
-👋🏼 Hi, welcome     
+👋🏼 Hi, welcome 👋🏼    
 You will learn the basics of physical computing <sup>[1](#1)</sup> with this powerful microcontroller board. This includes learning to know and setting up the workflow, reading and reproducing circuits, program the Pico with MicroPython, ...
 
 ![The Raspberry Pi Pico Board](images/pico/Pico-intro.png)
@@ -10,43 +11,45 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 <details>
   <summary>TOC 👈🏻 Click to expand</summary>
 
+
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [1. Introduction](#1-introduction)
 - [2. the Raspberry Pi Pico Board](#2-the-raspberry-pi-pico-board)
 - [3. the MicroPython Firmware](#3-the-micropython-firmware)
 - [4. the Software](#4-the-software)
-	- [Bring Thonny in](#bring-thonny-in)
-	- [a Walk through the Thonny UI](#a-walk-through-the-thonny-ui)
-	- [Linking Thonny to Pico](#linking-thonny-to-pico)
+	- [:flags:  Bring Thonny in](#flags-bring-thonny-in)
+	- [:flags:  a Walk through the Thonny UI](#flags-a-walk-through-the-thonny-ui)
+	- [:flags: Linking Thonny to Pico](#flags-linking-thonny-to-pico)
 - [5. What the Shell! Conversing with (Micro)Python](#5-what-the-shell-conversing-with-micropython)
 - [6. Over to Script Mode](#6-over-to-script-mode)
-	- [Switch that LED ON & OFF](#switch-that-led-on-off)
-	- [ON/OFF in Loop](#onoff-in-loop)
+	- [:flags: Switch that LED ON & OFF](#flags-switch-that-led-on-off)
+	- [:flags: ON/OFF in Loop](#flags-onoff-in-loop)
 - [7. Let's Get Physical](#7-lets-get-physical)
-	- [Your Pico’s Pins](#your-picos-pins)
-	- [Common Components](#common-components)
-	- [Reading Resistor Colour Codes](#reading-resistor-colour-codes)
+	- [:flags: Your Pico’s Pins](#flags-your-picos-pins)
+	- [:flags: Common Components](#flags-common-components)
+	- [:flags: Reading Resistor Colour Codes](#flags-reading-resistor-colour-codes)
 - [8. Wiring Diagrams & Schematics](#8-wiring-diagrams-schematics)
 - [9. Next Level LED Blinking.](#9-next-level-led-blinking)
 - [10. a Pushbutton 👉🏻 Digital Inputs](#10-a-pushbutton-digital-inputs)
-	- [a Pushbutton](#a-pushbutton)
-	- [One Circuit Multiple Behaviours](#one-circuit-multiple-behaviours)
-	- [a Pushbutton with Interrupt (optional)](#a-pushbutton-with-interrupt-optional)
-	- [Other On/Off Sensors](#other-onoff-sensors)
+	- [:flags: a Pushbutton](#flags-a-pushbutton)
+	- [:flags: One Circuit Multiple Behaviours](#flags-one-circuit-multiple-behaviours)
+	- [:small_orange_diamond: a Pushbutton with Interrupt (optional)](#smallorangediamond-a-pushbutton-with-interrupt-optional)
+	- [:flags: Other On/Off Sensors](#flags-other-onoff-sensors)
 - [11. Sensors 👉🏻 Analog Inputs](#11-sensors-analog-inputs)
-	- [Let's Read the Value of a Potentiometer](#lets-read-the-value-of-a-potentiometer)
-	- [Controlling the Speed of our Blinking LED with a Potentiometer.](#controlling-the-speed-of-our-blinking-led-with-a-potentiometer)
-	- [Other analog sensors](#other-analog-sensors)
+	- [:flags: Let's Read the Value of a Potentiometer](#flags-lets-read-the-value-of-a-potentiometer)
+	- [:flags: Controlling the Speed of our Blinking LED with a Potentiometer.](#flags-controlling-the-speed-of-our-blinking-led-with-a-potentiometer)
+	- [:flags:  Other analog sensors](#flags-other-analog-sensors)
 - [12. PWM 👉🏻 Analog Outputs](#12-pwm-analog-outputs)
-	- [Fading an LED with the Potentiometer & PWM](#fading-an-led-with-the-potentiometer-pwm)
-	- [Fading an LED IN & OUT with PWM](#fading-an-led-in-out-with-pwm)
-	- [Other PWM-controlled Actuators](#other-pwm-controlled-actuators)
+	- [:flags:  Fading an LED with the Potentiometer & PWM](#flags-fading-an-led-with-the-potentiometer-pwm)
+	- [:flags: Fading an LED IN & OUT with PWM](#flags-fading-an-led-in-out-with-pwm)
+	- [:flags:  Other PWM-controlled Actuators](#flags-other-pwm-controlled-actuators)
 - [13. Data logger](#13-data-logger)
 	- [File storage](#file-storage)
 	- [Running without a Host Computer](#running-without-a-host-computer)
 
 <!-- /TOC -->
+
 </details>
 
 
@@ -113,7 +116,7 @@ You can program your Pico by connecting it to a computer via USB, then dragging 
 See also [this Quick MicroPython reference for the Raspberry Pi Pico](https://docs.micropython.org/en/latest/rp2/quickref.html#).
 
 ## 4. the Software
-### Bring Thonny in
+### :flags:  Bring Thonny in
 
 An easy way to program in MicroPython on your Pico is with [Thonny](https://thonny.org/), a Python IDE (integrated development environment) for learning and teaching programming.
 
@@ -123,7 +126,7 @@ An easy way to program in MicroPython on your Pico is with [Thonny](https://thon
 Make sure you download and install the latest version of Thonny as the Raspberry Pi Pico interpreter is not available on older versions.    
 :zap: :zap: :zap:
 
-### a Walk through the Thonny UI
+### :flags:  a Walk through the Thonny UI
 
 ![The Thonny User Interface](images/pico/pico-thonny-ui.png)
 
@@ -136,7 +139,7 @@ Make sure you download and install the latest version of Thonny as the Raspberry
 4. the **Interpreter** at the bottom-right of the Thonny window. It shows, and lets you change, the current Python interpreter or the version of Python used to run your programs.
 
 
-### Linking Thonny to Pico
+### :flags: Linking Thonny to Pico
 Thonny is normally used to write programs that run on the same computer you’re using Thonny on. To switch to writing programs on your Raspberry Pi Pico, you’ll need to choose a new Python interpreter. See point 4 above. Look at the bottom-right of the Thonny window for the word ‘Python’ followed by a version number: that’s your current interpreter.
 
 **Change it to ‘MicroPython’**. It will tell you it's version and that it’s running on ‘Raspberry Pi Pico’.
@@ -164,7 +167,7 @@ If your program doesn’t run but instead prints a ‘syntax error’ message to
 
 
 ## 6. Over to Script Mode
-### Switch that LED ON & OFF
+###  :flags: Switch that LED ON & OFF
 The Shell is useful to make sure everything is working and try out quick commands. However, it’s better to put longer programs in a file.
 
 Thonny can save and run MicroPython programs directly on your Raspberry Pi Pico.
@@ -211,7 +214,7 @@ led.toggle()
 ```
 `toggle()` simply inverts the state of an output on the Pico. So if the output is 1 (or HIGH) and we apply a toggle it goes to 0 (or LOW). This is an ideal function for a Blink program.
 
-### ON/OFF in Loop
+### :flags: ON/OFF in Loop
 Wouldn't it be easier if we didn't have to push the Run button all the time? Here comes an **infinite loop** function to the rescue.
 
 To change our program from a definite loop to an infinite loop we need to add the line `while True:` before the `led.toggle()` function.
@@ -240,7 +243,7 @@ while True:
 ## 7. Let's Get Physical
 Let's get on with some real physical computing and learn more about Pico’s pins and electronic components we can connect and control.
 
-### Your Pico’s Pins
+### :flags: Your Pico’s Pins
 Most pins on the Picop work as a input/output (GPIO) pin. You can program them to act as an input or an output. Some pins have extra features and alternative modes for communicating with more complicated hardware, as analog in or PWM, but more in this later on. And other pins have a fixed purpose as providing connections for power.    
 
 We will generally refer to a pin by it's function and not the physical pin number.     
@@ -256,7 +259,7 @@ Below the most important **pin-functions**.
 | GPxx_ADCx | GPIO pin number ‘xx’, with analog input number ‘x’ | These can pins can also be used as an analog input |
 
 
-### Common Components
+### :flags: Common Components
 The following a handful of common components that we will use in the following circuits.
 #### <span name="breadboard"> breadboard</span>
 A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solderless breadboard, is a small plastic board full of holes, each of which contains a spring-loaded contact (in metal). You can push a component’s leg into one of the holes, and it will establish an electrical connection with all of the other holes in the same vertical column of holes. Many breadboards also include sections for power distribution, making it easier to build your circuits.
@@ -279,7 +282,7 @@ Other common variable resistors are photocells (LDR), termistors, force-sensitiv
 See also https://makeabilitylab.github.io/physcomp/electronics/
 
 
-### Reading Resistor Colour Codes
+### :flags: Reading Resistor Colour Codes
 ![resistor color codes chart](images/pico/resistor_color_codes_chart.png)
 
 ## 8. Wiring Diagrams & Schematics
@@ -315,7 +318,7 @@ Some challenges: Can you modify the program to light up both the on-board and ex
 
 ## 10. a Pushbutton 👉🏻 Digital Inputs
 In prior examples, the LED was our actuator, and our Pico was controlling it. If we image an outside parameter to take control over this LED, our finger for example, we need **a sensor**. The simplest form of sensor available is ...
-### a Pushbutton
+### :flags: a Pushbutton
 
 Let's make our wiring diagram first.  
 
@@ -362,7 +365,7 @@ A **pull-up** resistor connects the pin to **3V3**, meaning when the push-button
 We will use the programmable resistors in the pull-down mode.    
 :zap: :zap: :zap:
 
-### One Circuit Multiple Behaviours
+### :flags: One Circuit Multiple Behaviours
 Lets program **a second behaviour** that to make the on button “stick”. The `.toggle` function is convenient for this application but we must also implement some form of 'memory', in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
 
 ```python
@@ -384,12 +387,17 @@ while True:
     last_state = current_state
 ```
 
-:construction:!! ! ! EXPLAIN !!!! ! ! !
-see https://www.youtube.com/watch?v=j0QcDQz-ukc
+What
+- First we declare 2 variables: `last_state = False` because the button is not pressed when we start the program and also `current_state = False` for that same reason.    
+In the loop we:
+- read the current state of the button
+- then we check if the following condition is met: current state equals (use **==** and not *=*) 1 (meaning the button is pressed) but  also the last state equals 0 (meaning the button was not pressed before)
+- then we toggle the LED ON or OFF.
+- Finally, we write the value of the current state variable in the past state variable.
 
+Now the LED switches ON/OFF the Rising edge, meaning when we push the button. You can change the behaviour to switch the LED on the Falling edge or when you release the button with this line `if last_state == 1 and current_state == 0:`
 
-
-### a Pushbutton with Interrupt (optional)
+### :small_orange_diamond: a Pushbutton with Interrupt (optional)
 
 An **Interrupt** is pretty much like it sounds like, an event that *interrupts* the normal flow of a program.  In our case we are dealing with external hardware interrupts, meaning that a signal or change of state has occurred that needs to be addressed before the program can continue.
 
@@ -430,7 +438,7 @@ while True:
     time.sleep(0.1)
 ```
 
-### Other On/Off Sensors
+### :flags: Other On/Off Sensors
 Now that you’ve learned how to use a pushbutton, you should know that there are other basic sensors that work according to the same *on/off* principle, as:
 * **Switches** are just like a pushbutton, but doesn’t automatically change state when released.
 * **Thermostats** is a switch that opens when the temperature reaches a set value.
@@ -450,7 +458,7 @@ An ADC has two key features:
 The ADC in your Pico has a resolution of 12 bits, meaning that it can transform an analog signal into a digital signal as a number ranging from 0 to 4095. But - and this is a bit odd - it is transformed to a 16-bit number ranging from **0 to 65.535**, so that it behaves similar as other MicroPython microcontrollers.    
 The Pico **3 channels** brought out to the GPIO pins: GP26, GP27, and GP28, which are also known as GP26_ADC0, GP27_ADC1, and GP28_ADC2 for analog channels 0, 1, and 2. There’s also a fourth ADC channel, which is connected to a temperature sensor built into RP2040.
 
-### Let's Read the Value of a Potentiometer
+### :flags: Let's Read the Value of a Potentiometer
 The next program & electronics diagram demonstrates analog input by reading an analog sensor, as a potentiometer (or trimpot), on our 1st analog channel (0).
 
 #### Circuit
@@ -481,7 +489,7 @@ Notice the comment: `time.sleep(0.05)` is similar to `time.sleep_ms(50)` as 0.05
 
 Tip: Thonny has also a built in data plotter window. It visualises numbers and series of numbers  printed to the shell.
 
-### Controlling the Speed of our Blinking LED with a Potentiometer.
+### :flags: Controlling the Speed of our Blinking LED with a Potentiometer.
 In this 2nd program the value of our potentiometer will now determine the interval of the blinking LED. That speed will actually correspond to the actual voltage that passes through the variable resistor.
 
 #### Circuit
@@ -507,7 +515,7 @@ The range of from 0 to 65.535 it’s not always handy and user-friendy. With a s
 This way the number that the ADC gives is recalculated into an approximation of the actual voltage it represents. 3.3 (or the maximum possible voltage that the pin can expect) divided by 65.535 (or the maximum value the analog input reading can be).    
 If you need a range from 0 to 10 you should use this `10 / 65535` formula.
 
-### Other analog sensors
+### :flags:  Other analog sensors
 So, analog sensors are basically variable resistors. But only a potentiometer (and other prepared sensor-boards) have 3 legs and function in their own as a voltage divider circuit giving us their full power.     
 
 In order to make a voltage divider circuit with a 2-legged analog sensor we need to add an extra resistor (in the range of our variable resistor). In this way the variable and the fixed resistor divide the voltage in two parts. The variable resistor feeds the varying voltage to our ADC-pin and the fixed provides a path to GND.
@@ -521,12 +529,16 @@ There are also many digital sensors nowadays. In digital sensors, the signal mea
 
 ## 12. PWM 👉🏻 Analog Outputs
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one.     
-A microcontroller’s digital output can only ever be on or off, 0 or 1. Turning a digital output on and off is known as a pulse and by altering how quickly the pin turns on and off you can change, or modulate, the width of these pulses – hence ‘pulse-width modulation’.    
-We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc.
+
+A microcontroller’s digital output can only be on or off, 0 or 1. Turning a digital output on and off is known as a pulse and by altering how quickly the pin turns on and off you can change, or modulate, the width of these pulses – hence ‘pulse-width modulation’.    
+We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc.    
 
 Every GPIO pin on your Pico is capable of pulse-width modulation, but the microcontroller’s pulse-width modulation block is made up of eight slices, each with two outputs.That makes 16 PWM channels in total which can be clocked from 7Hz to 125Mhz.
 
-### Fading an LED with the Potentiometer & PWM
+### :flags:  Fading an LED with the Potentiometer & PWM
+
+![image](images/pico/Pico-bb-potentiometer.png)
+<sup>This is the same circuit as the potentiometer circuit above.</sup>
 
 ```python
 from machine import Pin, ADC, PWM
@@ -547,7 +559,8 @@ The frequency (led.freq) tells Raspberry Pi Pico how often to switch the power b
 
 Click the Run icon and try turning the potentiometer all the way one way, then all the way the other. Watch the LED: this time, unless you’re using a logarithmic potentiometer, you’ll see the LED’s brightness change smoothly from completely off at one end of the potentiometer knob’s limit to fully lit at the other.
 
-### Fading an LED IN & OUT with PWM
+### :flags: Fading an LED IN & OUT with PWM
+In this program we remove the potentiometer and set the Pico to fade the led in and out autonomously.
 
 ```python
 from machine import Pin, PWM
@@ -558,28 +571,46 @@ led = PWM(Pin(15))
 led.freq(1000)
 
 while True:
+    # fade in loop
     for duty in range(65025):
         led.duty_u16(duty)
-        sleep(0.0001)
+        time.sleep(0.0001)
+    # fade out loop
     for duty in range(65025, 0, -1):
         led.duty_u16(duty)
-        sleep(0.0001)
+        time.sleep(0.0001)
 ```
 
-:construction:!! ! ! EXPLAIN !!!! ! ! !
-see https://www.youtube.com/watch?v=WZfekCJor7I&list=PLUwmiNOPP-7h9B5LB3iMBIyfKgj5bZFpG&index=3
+We welcome a new programming function, **the for loop**. This a definite loop, it will repeat one or more instructions until a end condition is reached.    
 
-### Other PWM-controlled Actuators
+we decode the fade in loop:
+- A variable named *duty*, is assigned to the loop.
+- the range instruction with only 1 argument functions as this: `range(max_value)`. It will start at the number 0 and work upwards towards, but never reaching, the number 65025. Each loop or iteration the variable duty will increase; 0, 1, 2, 3, 4, etc
+- then the colon symbol ( : ) tells MicroPython that the loop itself begins on the next line.
+- in the line `led.duty_u16(duty)` the variable number assigned to the PWM Pin.    
+
+The fade out loop is very similar. We need to iterate over a decreasing sequence. We use an extended form of range() with three arguments `range(start_value, end_value, step)`.
+So in `for duty in range(65025, 0, -1):`
+counting will start at 65025 to 0 decreasing with 1 each loop.
+
+:zap: :zap: :zap:
+But wait why is it only 65025 and not 65535 (or the biggest 16bit number) as seen before. I frankly don't know.    
+I found this. The duty is 0 to 65025 or 0% to 100%. 65025 is 255*255 (255 times 255) which is probably where that comes from. ¯\_(ツ)_/¯
+:zap: :zap: :zap:
+
+
+### :flags:  Other PWM-controlled Actuators
 :construction: :construction: :construction:
 
-replace led with:
+We can replace the LED with:
 - more LEDs, eg. RGB led (and use arrays to define and controls the pins),
 see https://makersportal.com/blog/raspberry-pi-pico-tests-with-micropython
-- servomotor (needs 5v, thus pin 40) see https://circuitdigest.com/microcontroller-projects/control-a-servo-motor-with-raspberry-pi-pico-using-pwm-in-micropython
-- transistor for connection with dc motor (speed), high power led (brightness), solenoid (push / pull power),
+- a servomotor (needs 5v, thus pin 40) see https://circuitdigest.com/microcontroller-projects/control-a-servo-motor-with-raspberry-pi-pico-using-pwm-in-micropython
+- a transistor to drive a dc motor (speed), high power LED (brightness), solenoid (push / pull power), ...
 see https://learn.adafruit.com/use-dc-stepper-servo-motor-solenoid-rp2040-pico/ (circuitPython ≠ microPython)
-- H-bridge dc motor driver (speed & direction)
-- a stepper driver (basically some transistors) for a stepper motor.
+- an H-bridge to drive a dc motor driver (speed & direction)
+- a stepper driver (basically some transistors) to control a stepper motor.
+- ...
 
 ## 13. Data logger
 Turn Raspberry Pi Pico into a temperature data-logging device and untether it from the computer to make it fully portable.
