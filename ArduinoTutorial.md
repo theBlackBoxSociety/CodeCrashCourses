@@ -9,7 +9,6 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with the Ardu
 <details>
   <summary>TOC 👈🏻 Click to expand</summary>
 
-
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [1. Introduction](#1-introduction)
@@ -20,21 +19,24 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with the Ardu
 	- [:flags:  Arduino IDE Installation Guide](#flags-arduino-ide-installation-guide)
 	- [:flags:  Port Identification & Board Selection](#flags-port-identification-board-selection)
 	- [:flags:  User Interface](#flags-user-interface)
-- [5. Getting Started: Hello World!<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤](#5-getting-started-hello-worldbr-)
+- [5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤](#5-getting-started-hello-world-)
 	- [:flags:  Hello World!](#flags-hello-world)
 	- [:flags: Lingua Arduino](#flags-lingua-arduino)
 	- [:flags: Fiddle the parameters](#flags-fiddle-the-parameters)
 	- [:flags: Other actuators](#flags-other-actuators)
 - [6. Wiring Diagrams & Schematics](#6-wiring-diagrams-schematics)
-- [7. Next step: a Pushbutton<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤](#7-next-step-a-pushbuttonbr-)
+- [7. Let's Get Physical](#7-lets-get-physical)
+	- [breadboard](#breadboard)
+	- [:flags: Other Common Components](#flags-other-common-components)
+- [8. Next step: a Pushbutton ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤](#8-next-step-a-pushbutton-)
 	- [:flags: Push the button](#flags-push-the-button)
 	- [:flags: Sticky on/off button](#flags-sticky-onoff-button)
 	- [:flags: Other On/Off Sensors](#flags-other-onoff-sensors)
-- [8. Advanced Sensors<br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤](#8-advanced-sensorsbr-)
+- [9. Advanced Sensors ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤](#9-advanced-sensors-)
 	- [:flags:  ADC](#flags-adc)
 	- [:flags: talk2me](#flags-talk2me)
 	- [:flags: more toys](#flags-more-toys)
-- [9. PWM <br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤](#9-pwm-br-)
+- [10. PWM ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤](#10-pwm-)
 	- [:flags:  PWM, a fading LED](#flags-pwm-a-fading-led)
 	- [:flags:  Input 2 Output](#flags-input-2-output)
 	- [:flags:  Servo Motor Control](#flags-servo-motor-control)
@@ -91,7 +93,7 @@ The programs you write for your Arduino are known as sketches. They are written 
 ### :flags:  Arduino IDE Installation Guide
 Download the latest stable version for your operating system from the [Arduino Software Centre.](https://www.arduino.cc/en/Main/Software).        
 #### MacOS
-Download the Application zip file](https://www.arduino.cc/en/Main/Software) whose name will be something along the lines of  Arduino-1.8.13-macosx.zip.
+Download the Application zip file](https://www.arduino.cc/en/Main/Software) whose name will be something along the lines of  arduino-1.8.18-macosx.zip.
 
 Extract the zip file. Open the extracted folder and copy the Arduino application into the Applications folder. You are done!
 
@@ -123,11 +125,11 @@ The process for setting up your Arduino and connecting the software to your boar
 ![The User Interface](images/arduino/arduino_ide.svg)
 
 
-## 5. Getting Started: Hello World!<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
+## 5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 
 ### :flags:  Hello World!
 A "Hello World!" in the Arduino sphere is a blinking LED.  
-You just need an Arduino and a USB cable.    
+You just need an Arduino board and a USB cable.    
 Open a new file in the IDE. The lines of code below are already written. They form the basis of every program. More about that later.
 
 ```C++
@@ -142,7 +144,7 @@ void loop() {
 }
 ```
 Name and save it.
-Then type the following text into the Arduino sketch editor but you can skip the lines starting with a `//` as they are comments. You will see that you also don't need to type the `void setup(){}` and `void loop(){}` parts.
+Then type the following text into the Arduino sketch editor but you can skip the lines starting with a `//` as they are comments.
 
 ```C++
 // LED connected to digital pin 13
@@ -173,7 +175,7 @@ If everything is fine, you’ll see the message **“Done compiling”** appear 
 Now you can **upload** it into the board.  
 Press the Upload to I/O Board button. This will reset the board and force it to stop its current functions. Then sends the current compiled sketch is send to the board, got stored it in its memory. Then the board will run it. When it went fine you'll see the message **“Done uploading”** appear to let you know the process has completed correctly.
 
-Note the 2 RX and TX LEDs on the board. These flash every time a byte is sent or received. They will flicker during the upload process. If you don’t see that, or if you get an error message instead of “Done uploading”, then there is a communication problem between your computer and Arduino. Make sure you’ve selected the right serial port and confirm that the correct model of Arduino is selected.
+:zap: Note the 2 RX and TX LEDs on the board. These flash every time a byte is sent or received. They will flicker during the upload process. If you don’t see that, or if you get an error message instead of “Done uploading”, then there is a communication problem between your computer and Arduino. Make sure you’ve selected the right serial port and confirm that the correct model of Arduino is selected.
 
 Once the code is in your Arduino board, it will stay there until you put another sketch on it.
 
@@ -183,7 +185,8 @@ Assuming that the sketch has been uploaded correctly, you will see the LED turn 
 :mag: **A closer look at the code**
 
 `const int ledPin = 13;`    
-Here we specify that the LED we’re blinking is connected to the Arduino pin 13. We are defining a variable of the **type int** with the **name ledpin** and a **value 13**. **Const** stands for constant. It modifies the behavior of the variable by making it **read-only**. The value of the variable  cannot be changed.     
+Here we specify that the LED we’re blinking is connected to the Arduino pin 13. We are defining a variable of the **type int** with the **name ledpin** and a **value 13**.    
+**Const** stands for constant. It modifies the behavior of the variable by making it **read-only**. The value of the variable cannot be changed. It is mandatory to use, `int ledPin = 13;` will also work.     
 Alternatively you can use `#define lepdin 13`. It is like an automatic search and replace for your code. In this case, it’s telling Arduino to write the number 13 every time the word *ledPin* appears.
 
 Arduino always expects two functions to exists: `setup()` and `loop()`. The `setup()` function runs once at the beginning of program execution. The `loop()` function is called repeatedly during program execution.   
@@ -220,19 +223,39 @@ Below is the schematics for the above circuit and, at the right, a much easier t
 
 Have a look at this more elaborate tutorial [How to Read a Schematic](https://learn.sparkfun.com/tutorials/how-to-read-a-schematic).
 
-Without soldering or metal-wire-knotting we are not able to make this connections. A  **solderless breadboard** comes in handy here.
+## 7. Let's Get Physical
+Let's get on with some real physical computing and electronic components we can connect and control.
+Without soldering or metal-wire-knotting we are not able to make this connections. A solderless breadboard comes in handy here.
 
-A breadboard is a small plastic board full of holes, each of which contains a spring-loaded contact. You can push
-a component’s leg into one of the holes, and it will establish an electrical connection with all of the other holes in the same vertical column of holes.
+### breadboard
+A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solderless breadboard, is a small plastic board full of holes, each of which contains a spring-loaded contact (in metal). You can push a component’s leg into one of the holes, and it will establish an electrical connection with all of the other holes in the same vertical column of holes. Many breadboards also include sections for power distribution, making it easier to build your circuits.
 
 ![image](images/arduino/breadboard.png)
 
 More on [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
 
-So our wiring diagram on a breadboard will look more or less like this:
-![image](images/arduino/digitalOut.png)
+If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
 
-## 7. Next step: a Pushbutton<br>☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
+### :flags: Other Common Components
+The following a handful of common components that we will use in the following circuits.
+
+#### wires
+The wire used to connect components. They come in a wide range of sizes and types. There are 2 main varieties; solid core or stranded. Solid core is stiffer, stranded wire is more flexible. We will use jumper wires, also known as jumper leads on our breadboard.
+#### switches
+Switches pass or interrupt the flow of electricity. You can attach wires to 2 contacts and they are put in contact by activating the switch. Switches can be momentary and toggles switches. A toggle switch stays in it last position. A momentary switch (or pushbutton) spring back to their default position. We will use the latter.
+#### light-emitting diodes (LED)
+LED's are the most common for of output from a microcontroller as they need very little power to be turned on. A LED is a diode that emits light. We need to understand how a diode operates.    
+A diode is like a one-way street: it only allows electricity to flow in one direction. In other words diodes are polarized. The 2 sides of a diode are called a cathode (-) and an anode (+).
+#### resistors
+Resistors give electricity something to do: the convert electricity to heat. In this way, they prevent the infamous short circuit. Resistors have 2 leads and no polarity.     
+Resistors are rated in Ohms (Ω), indicating how much resistance they offer. Below you can learn to read the colour codes.
+#### potentiometers
+Potentiometers, or pots for short, are variable resistors. Potentiometers have three legs. The power of a potentiometer is in the middle leg. It's  resistance varies depends on the potentiometer’s rotating (or sliding) contact (the wiper) position. It is best to use it as a voltage divider with our Pico. This means we have all 3 contacts connected: 1 to GND (or 3v3), 2 to ADC, 3 to 3V3 (or GND).       
+Other common variable resistors are photocells (LDR), termistors, force-sensitive (FSR) and bend-sensors. These are all two-legged (or “two-lead”). In order to make them work optimally on our Pico we need to add a 2nd resistor (later more).    
+
+See also https://makeabilitylab.github.io/physcomp/electronics/
+
+## 8. Next step: a Pushbutton ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
 
 ### :flags: Push the button
 In our first example, the LED was our actuator, and our Arduino was controlling it. If we image an outside parameter to take control over this LED, our finger, we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
@@ -245,9 +268,6 @@ Let's make our wiring diagram first.
 - 10K resistor attached to pin 2 from ground
 
 ![image](images/arduino/digitalIn.png)
-
-:scream_cat: Hold on! [What is a resistor]([https://learn.sparkfun.com/tutorials/resistors])?!  
-
 
 #### Code
 ```c++
@@ -345,7 +365,7 @@ have two contacts that come together when they are near a magnet.
 You can try some!
 * ...
 
-## 8. Advanced Sensors<br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤
+## 9. Advanced Sensors ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤
 
 ### :flags:  ADC
 
@@ -387,7 +407,7 @@ void loop() {
 }
 ```
 :zap: :zap: :zap:    
-As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) and also [this blogpost](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/).
+As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) and also [this blogpost](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/).    
 :zap: :zap: :zap:
 
 ### :flags: talk2me
@@ -457,14 +477,14 @@ The Keyestudio starter kits contain a lot of usefull sensor modules, as:
 - and many more
 
 :zap: :zap: :zap:    
-If we need to leave the keyestudio playgarden and make use of other sensors we might need to do some more circuit magic for a sensor to work. A very common and simple circuit is [the voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). It turns a large voltage into a smaller one. See [this Analog Input tutorial](https://www.arduino.cc/en/tutorial/AnalogInput).
+If we need to leave the keyestudio playgarden and make use of other sensors we might need to do some more circuit magic for a sensor to work. A very common and simple circuit is [the voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). It turns a large voltage into a smaller one. See [this Analog Input tutorial](https://www.arduino.cc/en/tutorial/AnalogInput).    
 :zap: :zap: :zap:
 
 :zap: :zap: :zap:    
-You might also come across an even more advanced sensor module in the Keyestudio kits. These modules are connected to the Arduino board through UART, SPI, or I2C (3 common communication peripherals found on Arduino). Lets not make it more complex then needed here. If you want to learn more [this post](https://maker.pro/arduino/tutorial/common-communication-peripherals-on-the-arduino-uart-i2c-and-spi) is a good start and the code in the Keyestudio can get you started.
+You might also come across an even more advanced sensor module in the Keyestudio kits. These modules are connected to the Arduino board through UART, SPI, or I2C (3 common communication peripherals found on Arduino). Lets not make it more complex then needed here. If you want to learn more [this post](https://maker.pro/arduino/tutorial/common-communication-peripherals-on-the-arduino-uart-i2c-and-spi) is a good start and the code in the Keyestudio can get you started.    
 :zap: :zap: :zap:
 
-## 9. PWM <br>☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
+## 10. PWM ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 ### :flags:  PWM, a fading LED
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc. We can accomplish a range of results in both applications because PWM allows us to vary how much time the signal is high as in an analog fashion. While the signal can only be high (5V) or low (0V) at any time, we can change the proportion of time the signal is high compared to when it is low over a consistent time interval. We call this modulating the duty cycle.
 
@@ -573,7 +593,7 @@ Our servo motor has a female connector with three pins.
 
 
 #### Code
-In this example we will use a specific library that will make coding a lot easier.   
+In this example we will use **a specific library** that will make coding a lot easier.   
 Just like with most programming platforms the Arduino Software can be extended through the use of Libraries. They provide extra functionalities and make programming the Arduino much easier since they contain the code needed to control certain modules, sensors, etc… A number of libraries come installed with the IDE, but you can also download or create your own.
 
 
@@ -612,10 +632,9 @@ The key functions used here are:
 You can also choose not to use a library here (and for other functions) as libraries can also introduce unnecessary dependencies & possible incompatibilities.  
 See controlling servos without the Servo Library in [this tutorial of keyestudio](https://wiki.keyestudio.com/Ks0194_keyestudio_Micro_Servo).
 
-:skull: :skull: :skull:
-**TODO**  
-- arduino connectie met processing, webpagina, ...
-https://learn.sparkfun.com/tutorials/connecting-arduino-to-processing/all
+That's it for now.    
+There is [a second part of this tutorial](ArduinoPlus.md) in the make about connecting Arduino with other programs as Max, PD, Processing, Python, a webpage, etc.    
+👋🏼
 
 <hr>
 <span name="1">1.</span> What Is Physical Computing?     
