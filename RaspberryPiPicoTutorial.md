@@ -47,6 +47,12 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with this pow
 - [13. Data logger](#13-data-logger)
 	- [File storage](#file-storage)
 	- [Running without a Host Computer](#running-without-a-host-computer)
+- [Recap of the most important programming functions](#recap-of-the-most-important-programming-functions)
+	- [Code blocks & Indetation](#code-blocks-indetation)
+	- [Importing libraries](#importing-libraries)
+	- [Declaring Variables & Objects](#declaring-variables-objects)
+	- [Loops](#loops)
+	- [Conditionals](#conditionals)
 
 <!-- /TOC -->
 
@@ -651,7 +657,17 @@ So if you want your program to run unattended you’ll need to save it as main.p
 
 After saving the program "main.py", unplug your Pico from your computer and power into a suitable power source. You should see it spring to life and run the *main* program.
 
-
+## Recap of the most important programming functions
+see https://realpython.com/python-first-steps/
+### Code blocks & Indetation
+### Importing libraries
+### Declaring Variables & Objects
+### Loops
+#### indefinite iteration (infinite)
+`while True:`
+#### definite iteration
+`for i in range()`
+### Conditionals
 
 
 <hr>
