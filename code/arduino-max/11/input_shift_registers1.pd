@@ -1,0 +1,61 @@
+#N canvas 237 36 617 582 10;
+#X msg 157 96 close;
+#X obj 116 148 select 192;
+#X obj 173 259 spigot;
+#X msg 185 321 0;
+#X msg 116 197 1;
+#X obj 135 321 spigot;
+#X msg 168 189 0;
+#X obj 116 172 t b b b;
+#X msg 116 27 devices;
+#X obj 135 365 t f b;
+#X msg 157 72 open \$1;
+#X floatatom 157 51 5 0 0 0 - - -, f 5;
+#X obj 116 219 t f f;
+#X obj 135 289 repack 8;
+#X obj 135 343 unpack f f f f f f f f;
+#X obj 135 388 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 153 388 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 171 388 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 190 388 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 208 388 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 227 388 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 245 388 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 264 388 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 116 125 comport 6 115200;
+#X connect 0 0 23 0;
+#X connect 1 0 7 0;
+#X connect 1 1 2 0;
+#X connect 2 0 13 0;
+#X connect 3 0 2 1;
+#X connect 4 0 12 0;
+#X connect 5 0 14 0;
+#X connect 6 0 5 1;
+#X connect 7 0 4 0;
+#X connect 7 1 13 0;
+#X connect 7 2 6 0;
+#X connect 8 0 23 0;
+#X connect 9 0 15 0;
+#X connect 9 1 3 0;
+#X connect 10 0 23 0;
+#X connect 11 0 10 0;
+#X connect 12 0 5 1;
+#X connect 12 1 2 1;
+#X connect 13 0 5 0;
+#X connect 14 0 9 0;
+#X connect 14 1 16 0;
+#X connect 14 2 17 0;
+#X connect 14 3 18 0;
+#X connect 14 4 19 0;
+#X connect 14 5 20 0;
+#X connect 14 6 21 0;
+#X connect 14 7 22 0;
+#X connect 23 0 1 0;

@@ -1,0 +1,13 @@
+#N canvas 480 133 450 300 10;
+#X msg 35 25 devices;
+#X obj 35 127 comport;
+#X floatatom 66 51 5 0 0 0 - - -;
+#X msg 66 72 open \$1;
+#X obj 35 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 75 96 close;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 5 0 1 0;
