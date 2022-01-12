@@ -3,19 +3,26 @@
 
 This is the second part of the physical computing with [Arduino tutorial](ArduinoTutorial.md) but it could also be a follow-up to a Max workshop. This tutorial is all about interfacing [Max](https://cycling74.com/) with the physical world.    
 
-We will learn the nuts and bolts on how *serial data* is sent between the two environments, on how to use sensor data to activate, move, or distort sound and video but also how we can control light and movement with motors and electromagnets from Max.     
-We will also see some basics of using *DMX*, a communication protocol used in lighting and event engineering, with Max.    
+There are [a number of options](https://playground.arduino.cc/Main/InterfacingWithSoftware/) for interfacing an Arduino with computer programs and mobile devices and applications, including [Max](https://playground.arduino.cc/Interfacing/MaxMSP/), [PureData or PD](https://playground.arduino.cc/Interfacing/PD/), [Processing](https://playground.arduino.cc/Interfacing/Processing/), [Python](https://playground.arduino.cc/Interfacing/Python/), ... There are also several pre-made packages, as [firmata](https://www.arduino.cc/en/Reference/Firmata), with code for Arduino and the other programs, making the coding job very simple. The disadvantage is that these packages are often quite complex and less efficient. The basics of serial communication are actually quite straightforward. Let's start with these.
+
+![](images/arduino-max/arduino-max.png)
+
+So, we will learn the nuts and bolts on how **serial data** is sent between the two environments, on how to use sensor data to activate, move, or distort sound and video but also how we can control light and movement with motors and electromagnets from Max.     
+We will also see some basics of using **DMX**, a communication protocol used in lighting and event engineering, with Max.    
 
 The sample programmes consist of Arduino sketches and Max patches. A logical structure has been provided with numbering, which is copied below. In some of the folders you will also find a pd patch. These are merely unfinished and not tested thoroughly.
-
-There are [a number of options](https://playground.arduino.cc/Main/InterfacingWithSoftware/) for interfacing an Arduino with computer programs and mobile devices and applications, including [Max](https://playground.arduino.cc/Interfacing/MaxMSP/), [PureData or PD](https://playground.arduino.cc/Interfacing/PD/), [Processing](https://playground.arduino.cc/Interfacing/Processing/), [Python](https://playground.arduino.cc/Interfacing/Python/), ...    
-There are several pre-made packages, as [firmata](https://www.arduino.cc/en/Reference/Firmata), with code-examples in Arduino and the other programs, making the coding job very simple. The disadvantage is that these packages are often quite complex and less efficient. The basics of serial communication are actually quite straightforward. Let's start with these.
 
 <details>
   <summary>TOC 👈🏻 Click to expand</summary>
 
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [1. Max→Arduino: A Digital output controlled from Max](#1-maxarduino-a-digital-output-controlled-from-max)
+- [2. Arduino→Max: A Digital Input (button) to be transferred to Max](#2-arduinomax-a-digital-input-button-to-be-transferred-to-max)
+- [3. Arduino→Max: An Analog Input (potentiometer) to be transferred to Max](#3-arduinomax-an-analog-input-potentiometer-to-be-transferred-to-max)
+	- [Notes on the Arduino code:](#notes-on-the-arduino-code)
+	- [Notes on the Max code:](#notes-on-the-max-code)
+- [4. Arduino→Max: Digital Inputs (buttons) to Max](#4-arduinomax-digital-inputs-buttons-to-max)
 
 <!-- /TOC -->
 
@@ -23,24 +30,24 @@ There are several pre-made packages, as [firmata](https://www.arduino.cc/en/Refe
 
 
 # Serial Communication Intro
-Serial communication is a simple means of sending data quickly and reliably from one device to another. The data is sent, one bit at a time, sequentially or one right after the other, over a single line. The data packages are electrical pulses, 0 volts represents a bit value of 0, and 5 a 1. Information is passed by, essentially, setting a pin (in Arduino speak) high or low. It's a little like Morse code, where you can use dits and dahs to send messages by telegram.
+Serial communication is a simple means of sending data quickly and reliably from one device to another. The data is sent, one bit at a time, one right after the other, over a single line. The data packages are electrical pulses, 5 volts represents a bit value of 1, and 0 volts a 0. In Arduino this equals setting a pin HIGH or LOW. It's a little like Morse code, where you can use dits and dahs to send messages by telegram.
 
 A minimum of three lines are used for bidirectional communication: transmit (TX), receive (RX), and ground (GND). See [this tutorial](https://learn.sparkfun.com/tutorials/serial-communication/) is you want to read more on the basics of Serial Communication.    
 
 # Arduino & Serial Communication
-All Arduino boards have at least one serial port (also known as a UART or USART): Serial. It communicates on digital pins 0 (RX) and 1 (TX). The Arduino Uno boards we use have a chip to convert the hardware serial port on the Arduino chip to USB but not all Arduino boards have this.    
+All Arduino boards have at least one serial port (also known as a UART or USART). It communicates on digital pins 0 (RX) and 1 (TX). The Arduino Uno boards we use have a chip to convert the hardware serial port on the Arduino chip to USB. Not all Arduino boards have this.    
 
-![](images/arduino-max/serialdata.gif)
-<sup>image belongs to <a href="https://www.ladyada.net/learn/arduino/lesson4.html">ladyada</a></sup>
+![](images/arduino-max/serialdata.gif)    
+<sup>image courtesy <a href="https://www.ladyada.net/learn/arduino/lesson4.html">ladyada</a></sup>
 
-We've actually used the Serial communications capability already quite a bit...that's how we send sketches to the Arduino! When you Compile/Verify what you're really doing is turning the sketch into binary data (ones and zeros). When you Upload it to the Arduino, the bits are shoved out one at a time through the USB cable to the Arduino where they are stored in the main chip.
+We've actually used the Serial communications capability already quite a bit as that is how we send sketches to the Arduino! When you Compile/Verify what you're really doing is turning the sketch into binary data (ones and zeros). When you Upload it to the Arduino, the bits are shoved out one at a time through the USB cable to the Arduino where they are stored in the main chip.
 
 # Interfacing Max with Arduino and vice versa
 This is accomplished using the **'serial'** object in Max and the Serial functionality in the Arduino.
 
 The code examples we will use are attached to this tutorial. You can find the packed in a zip file [here](code/arduino-max/arduino-max.zip). These examples are partially based on the [Built-In Examples](https://www.arduino.cc/en/Tutorial/BuiltInExamples) chapter 04.Communication.
 
-In the tutorial below no code is included. You will need to open the files in their respective applications: Arduino & Max (& Pure Data).
+In the tutorial below no code is included. You will always need to open the files in their respective applications: Arduino & Max.
 
 ## 1. Max→Arduino: A Digital output controlled from Max
 In this first example we want to control a LED with Max. Of course, the LED can be substituted by another actuator, although the circuit will probably have to be modified accordingly.    
@@ -76,7 +83,7 @@ To receive serial data in Max, the serial object must be polled at a certain tim
 
 `Serial.write();` is used here to send (or write) binary data to the serial port. This data is sent as a byte or series of bytes. A byte is consists of 8 bits and can have a value between 0 and 255.
 
-Bonus:     
+:zap: Bonus:     
 Right now, holding your finger on the button for as long as you want the video to play is not practical. We need a way to let the button stick to its current state. Like pushing the button once, starts the video. And pushing it again stops it. 'digital_input_sticky.ino' is a variation on the previous Arduino code to does this all the way.
 
 ## 3. Arduino→Max: An Analog Input (potentiometer) to be transferred to Max
@@ -199,18 +206,5 @@ My LanBox has a hardware clock which runs at 20fps, so I’m using a qmetro to u
 Finally the lcudp-pack object, which is provided by LanBox, formats the packet for the network and passes it to the udpsend object via the “FullPacket” message - and off it goes to my light show!
 
 
-# OSC
-
-
-# Routing audio
-https://jackaudio.org/
-https://github.com/mattingalls/Soundflower
-https://rogueamoeba.com/loopback/
-
-# Routing video
-syphon http://syphon.v002.info/
-
 <hr>
-
-
-<div style="text-align:center;">This tutorial is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</div>
+<div>This tutorial is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</div>
