@@ -66,7 +66,8 @@ Max uses the serial object to send and receive data serially. The Baud rate spec
 
 Notice: As we use the builtin LED on the Arduino we do not need to connect any other components. This will be different in all examples after this.    
 
-Take care: You will need to unset the serial port in Max when uploading a new program to the Arduino board (and vice versa).
+:zap: TAKE CARE!    
+The Max Serial object cannot be open at the same time as the serial monitor in the Arduino IDE, nor can you flash a new sketch to your Arduino while the Max Serial object is connected.
 
 
 ## 2. Arduino→Max: A Digital Input (button) to be transferred to Max
@@ -83,7 +84,7 @@ To receive serial data in Max, the serial object must be polled at a certain tim
 
 `Serial.write();` is used here to send (or write) binary data to the serial port. This data is sent as a byte or series of bytes. A byte is consists of 8 bits and can have a value between 0 and 255.
 
-:zap: Bonus:     
+:zap: BONUS!     
 Right now, holding your finger on the button for as long as you want the video to play is not practical. We need a way to let the button stick to its current state. Like pushing the button once, starts the video. And pushing it again stops it. 'digital_input_sticky.ino' is a variation on the previous Arduino code to does this all the way.
 
 ## 3. Arduino→Max: An Analog Input (potentiometer) to be transferred to Max
@@ -120,39 +121,35 @@ The values which it outputs are between quotes, signifying that they are in symb
 The object which converts from symbol has a pretty handy name, it’s just ‘fromsymbol’. ‘fromsymbol’ reads the input and converts it into integers, by default using the space as the separator. This is why I have used a space between each number in the Arduino code.
 
 ## 4. Arduino→Max: Digital Inputs (buttons) to Max
+This example is somewhat a combination of '2. Digital Input' and '3. Analog Input'.  Multiple, 4 in this case, pushbuttons are connected to the digital input pins and their state, pushed or not, is transferred over serial to Max in an ASCII string.    
 
+![](images/arduino-max/digital_inputs_bb.png)
 
+### The circuit is somewhat special:    
+4 pushbuttons are attached to pin 2,3,4,5 from GND. We don't need any resistors as we will use the `pinMode(INPUT_PULLUP)` method. See [this tutorial](https://www.arduino.cc/en/Tutorial/DigitalInputPullup). An internal 20K-ohm resistor is pulled to 5V. This configuration causes the input to read HIGH when the switch is open, and LOW when it is closed!
 
-// The circuit is a bit special:
-// pushbutton attached to pin 2,3,4,5 from GND
-// we don't need any resistors as we will use pinMode(INPUT_PULLUP)
-// https://www.arduino.cc/en/Tutorial/DigitalInputPullup
+### Notes on the Arduino code:
+The code uses for loops to iterate through certain functions according to the number of pins (or connected pushbuttons) used. In this way the code is modular and efficient.    
 
-
-For two inputs, the following Max patch and Arduino code provide a starting point. Note that the values are separated by a space and each set of two values is delimited by a line break:
-
+Writing a button state over serial is done in 3 steps. First we write the number of pin. We start from one (1) because we, humans, find that more logical. This is followed by a empty space and then the button state, 1 or 0, followed by a carriage return character (ASCII 13, or '\r') character. See `Serial.print()` vs `Serial.println()`.
 ```C++
-void setup()
-{
-  Serial.begin(115200);
-}
-
-void loop()
-{
-  // Read from two analog pins and put a space between values.
-  for ( int i=2; i<4; i++) {
-    Serial.print( analogRead(i) );
-    Serial.print(' ');
-  }
-  Serial.println();
-
-  delay( 100 );  // Delay a bit.
-}
+Serial.print(i+1);
+Serial.print(" ");
+Serial.println(0);
 ```
 
+### Notes on the Max code:
+In Max we just have to route button states. This is easily done with the 'route' object followed by the button number, thus the output of this function `Serial.print(i+1);`.
 
+## 5. Arduino→Max: Analog Inputs (potentiometers) to Max
+I suspect you are slowly starting to get the hang of the system. So in this example, we are connecting multiple sensors to our Arduino board. We send out the data as an ASCII string. The sensor values are separated by spaces and the sequence is terminated with a carriage return & a newline character.
 
-
+### two examples of possible circuits.
+![](images/arduino-max/analog_inputs_bb.png)    
+6 potentiometers
+![](images/arduino-max/analog_inputs2_bb.png)    
+4 sensors: a potentiometer, a LDR or fotocell and 2 force sensores.
+These last 3 need a resistor to ground. See voltage devieer.:
 
 # DMX
 from https://cycling74.com/tutorials/working-with-hardware-dmx-part-1
@@ -204,6 +201,32 @@ The swatch object is set to “Output Old Style 0-255 values” in its inspector
 The output from the sliders and toggles intended to drive the light bulbs is made into a similar message, which represents the 4 channels on my dimmer. I then join the two messages together and use them to set the contents of a third message box, which is the whole packet I need to set state in this system.
 My LanBox has a hardware clock which runs at 20fps, so I’m using a qmetro to update the state of the DMX network every 50 ms.
 Finally the lcudp-pack object, which is provided by LanBox, formats the packet for the network and passes it to the udpsend object via the “FullPacket” message - and off it goes to my light show!
+
+
+inspiration
+https://vimeo.com/59142013
+
+https://www.dwbowen.com/
+https://www.dwbowen.com/telepresentwater
+
+http://christophdeboeck.com/work/staalhemel/
+
+https://www.evdh.net/sound_modulated_light/
+http://www.marnixdenijs.nl/spatial-sounds.htm
+
+https://www.artificiel.org/projet/bulbes
+
+https://hansbeckers.be/works/
+
+Emergence by Hays + Ryan Holladay
+https://vimeo.com/171001689
+https://www.theimpersonalstereo.com/
+
+
+Edwin van der Heide Chiasm 2018
+
+
+https://www.valeryvermeulen.net/works/emo-synth/
 
 
 <hr>
