@@ -4,10 +4,10 @@
 This is the second part of the physical computing with [Arduino tutorial](ArduinoTutorial.md) but it could also be a follow-up to a Max workshop. It is all about interfacing [Max](https://cycling74.com/) with the physical world.    
 
 On the Arduino website one finds [a number of options](https://playground.arduino.cc/Main/InterfacingWithSoftware/) for interfacing an Arduino with computer programs and mobile devices and applications, including [Max](https://playground.arduino.cc/Interfacing/MaxMSP/), [PureData or PD](https://playground.arduino.cc/Interfacing/PD/), [Processing](https://playground.arduino.cc/Interfacing/Processing/), [Python](https://playground.arduino.cc/Interfacing/Python/), ...     
-Also on the Cycling74/Max website there is a manual about [Serial Communication between Max & Arduino](https://docs.cycling74.com/max8/tutorials/communicationschapter02)
-On the internet you will even find several pre-made packages, as [firmata](https://www.arduino.cc/en/Reference/Firmata), with code for Arduino and the other programs, making the coding job very simple. The disadvantage is that these packages are often quite complex and less efficient. The basics of serial communication are actually quite straightforward. Let's start with these.
+On the Cycling74/Max website there is also a manual about [Serial Communication between Max & Arduino](https://docs.cycling74.com/max8/tutorials/communicationschapter02).
+And on the internet you will even find several pre-made packages, as [firmata](https://www.arduino.cc/en/Reference/Firmata), with code for Arduino and the other programs, making the coding job very simple. The disadvantage is that these packages are often quite complex and less efficient. The basics of serial communication are actually quite straightforward. Let's start with these.
 
-![](images/arduino-max/arduino-max.png)
+![](images/arduino-max/arduino-max.jpg)
 
 Today we will see the nuts and bolts on how **serial data** is sent between the two environments, on how to use sensor data to activate, move, or distort sound and video but also how we can control light and movement with motors and electromagnets from Max.     
 We will also see some basics of using **DMX**, a communication protocol used in lighting and event engineering, with Max.    
@@ -61,12 +61,12 @@ All Arduino boards have at least one serial port (also known as a UART or USART)
 
 We've actually used the Serial communications capability already quite a bit as that is how we send sketches to the Arduino! When you Compile/Verify what you're really doing is turning the sketch into binary data (ones and zeros). When you Upload it to the Arduino, the bits are shoved out one at a time through the USB cable to the Arduino where they are stored in the main chip.
 
-[This](https://forum.arduino.cc/t/serial-input-basics-updated/382007) is a good introductory Tutorial on using serial communication with Arduino.
+[This](https://forum.arduino.cc/t/serial-input-basics-updated/382007) is a good introductory tutorial on using serial communication with Arduino.
 
 # Interfacing Max with Arduino and vice versa
-This is accomplished using the [serial object](https://docs.cycling74.com/max8/refpages/serial?q=serial) in Max and the [serial](https://www.arduino.cc/reference/en/language/functions/communication/serial/) functionality in the Arduino.
+This is accomplished using the [serial object](https://docs.cycling74.com/max8/refpages/serial?q=serial) in Max and the [serial](https://www.arduino.cc/reference/en/language/functions/communication/serial/) functionality of the Arduino.
 
-The code examples we will use are attached to this tutorial. You can find the packed in a zip file [here](code/arduino-max/Archive.zip).
+[Download the code examples for this tutorial as a zip file.](code/arduino-max/Archive.zip).
 
 In the tutorial below almost no code is included. You will always need to open the files in their respective applications: Arduino & Max.
 
@@ -83,7 +83,7 @@ Max uses the serial object to send and receive data serially. The Baud rate spec
 3. Then, Open the MAX patch, look for the right port using 'print' message and open that port. You can also change the port argument in the 'serial' object.
 4. Click the 'toggle' to switch the LED on & off. Let it blink.
 
-![](images/arduino-max/digital_output_max.png)
+![](images/arduino-max/digital_output_max.jpg)
 
 Notice: As we use the builtin LED on the Arduino we do not need to connect any other components. This will be different in all examples after this.    
 
@@ -114,10 +114,10 @@ In this second example we are going to control the playback of a video with a ta
 To receive serial data in Max, the serial object must be polled at a certain time interval. The 'qmetro' object sends a bang message to the serial object, which outputs the received data at the interval specified in metro (in ms).
 
 1. Make the circuit as below.
-![](images/arduino-max/digital_input_bb.png)
+![](images/arduino-max/digital_input_bb.jpg)
 2. Upload the 'digital_input.ino' code to your Arduino.
 3. Now, make sure your Arduino is attached, the serial monitor is closed and open the Max patch.
-![](images/arduino-max/digital_input_max.png)
+![](images/arduino-max/digital_input_max.jpg)
 4. Hold the button on your breadboard to make the video play, let go to stop it.
 
 `Serial.write();` is used here to send (or write) binary data to the serial port. This data is sent as a byte or series of bytes. A byte is consists of 8 bits and can have a value between 0 and 255.
@@ -129,10 +129,10 @@ Right now, holding your finger on the button for as long as you want the video t
 A potentiometer connected to the Arduino is used to control the frequency of a virtual oscillator in Max. Things will get a bit more complicated now as the data is not passed though as binary data but as as human-readable [ASCII](https://www.ascii-code.com/) text.
 
 1. A three-pin potentiometer is connected to the Arduino in the usual way.
-![](images/arduino-max/analog_input_bb.png)
+![](images/arduino-max/analog_input_bb.jpg)
 2. Upload the 'analog_input.ino' code to your Arduino.
 3. Open the Max patch, open the serial port and start the 'qmetro' and dsp (sound).
-![](images/arduino-max/analog_input_max.png)
+![](images/arduino-max/analog_input_max.jpg)
 4. Twiddle that knob like an expert!
 
 ### Notes on the Arduino code:
@@ -161,7 +161,7 @@ The object which converts from symbol has a pretty handy name, it’s just ‘fr
 ## 4. Arduino→Max: Digital Inputs (buttons) to Max
 This example is somewhat a combination of '2. Digital Input' and '3. Analog Input'.  Multiple, 4 in this case, pushbuttons are connected to the digital input pins and their state, pushed or not, is transferred over serial to Max in an ASCII string.    
 
-![](images/arduino-max/digital_inputs_bb.png)
+![](images/arduino-max/digital_inputs_bb.jpg)
 
 ### The circuit is somewhat special:    
 4 pushbuttons are attached to pin 2,3,4,5 from GND. We don't need any resistors as we will use the `pinMode(INPUT_PULLUP)` method. See [this tutorial](https://www.arduino.cc/en/Tutorial/DigitalInputPullup). An internal 20K-ohm resistor is pulled to 5V. This configuration causes the input to read HIGH when the switch is open, and LOW when it is closed!
@@ -183,10 +183,10 @@ In Max we just have to route button states. This is easily done with the 'route'
 I suspect you are slowly starting to get the hang of the system. So in this example, we are connecting multiple sensors to our Arduino board. We send out the data as an ASCII string. The sensor values are separated by spaces and the sequence is terminated with a carriage return & a newline character.
 
 ### two examples of many possible circuits.
-![](images/arduino-max/analog_inputs_bb.png)    
+![](images/arduino-max/analog_inputs_bb.jpg)    
 6 potentiometers - easy peasy!
 
-![](images/arduino-max/analog_inputs2_bb.png)    
+![](images/arduino-max/analog_inputs2_bb.jpg)    
 4 sensors: a potentiometer, a LDR or photocell and 2 force sensors. These last 3 need a 10 kΩ resistor connected to ground.
 
 A photocell is a variable resistor. It produces a resistance proportional to the amount of light it senses.  A force sensor is force-sensitive resistor thus also a variable resistor.
@@ -202,7 +202,7 @@ This is an example on how to use the full potential on how to use an arduino as 
 
 It is based on [Arduino2Max](https://github.com/hendrikleper/arduino2max) a sketch and patch by Daniel Jolliffe & Thomas Ouellet Fredericks.
 
-![](images/arduino-max/sensors_and_buttons.png)
+![](images/arduino-max/sensors_and_buttons.jpg)
 
 The patch and sketch more or less explain themselves. There is one new principle that comes up here and that is a Call and Response or Handshaking method. By sending an 'r' character, Max asks the Arduino to transmit new data.
 We also raised the baud rate to 115200 for faster data transfer.
@@ -213,7 +213,7 @@ In the folder you'll also find Andrew Benson's SensorBox software. That is an al
 ## 7. Max→Arduino: Analog output controlled from Max
 We reverse the communication again. Max is the sender, Arduino the receiver. There are 2 examples included. In the first we send the data in bytes (values between 0 and 255). In the 2nd we send an ASCII encoded string of values from 0 to 255. Each sequence is concludes with a newline character. Both examples are included in the max patch but there are 2 different Arduino sketches.
 
-![](images/arduino-max/analog_output_bb.png)
+![](images/arduino-max/analog_output_bb.jpg)
 a basic circuit with an external LED and resistor
 
 In Arduino we the `analogWrite()` function to generate an *analog value* to a pin. This is [not a true analog output](https://docs.arduino.cc/learn/microcontrollers/analog-output).    
@@ -224,7 +224,7 @@ The file 'getMaxBufferValue.js' is needed for a calculation in Max.
 ## 8. Max→Arduino: More Analog outputs controlled from Max
 This example is similar to the example above where an ASCII encoded string of values is sent from Max. We now send all 3 values concluded with a newline character.
 
-![](images/arduino-max/analog_outputs_bb.png)
+![](images/arduino-max/analog_outputs_bb.jpg)
 3 external LEDs are now connected to the Arduino
 
 NOTE:    
@@ -258,7 +258,7 @@ DMX, or more accurately, DMX 512, is a network protocol most commonly used for t
 
 In a typical DMX 512 network, devices are daisy chained together. The control device is at the beginning of the chain, with a cable running to one device, and a cable run from that device to the next device, and so on. DMX always travels in one direction – it is unidirectional, and the end of the chain needs to be terminated.
 
-![a picture of the simple DMX network](images/arduino-max/dmx_chain.png)
+![a picture of the simple DMX network](images/arduino-max/dmx_chain.jpg)
 In this picture, we have a laptop running our Max patch connected to a DMX controller, which in turn sends packets down the DMX network cabling to connected lighting devices.
 
 Devices in a DMX universe are specified by channel, with up to 512 channels in a single packet. A packet contains a header followed by the control data expressed as 8-bit values (bytes). Since this is 8-bit data, we use the values 0-255 (in decimal) when programming DMX data in Max.
