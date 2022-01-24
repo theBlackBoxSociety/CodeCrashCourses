@@ -1,7 +1,7 @@
 // Digital Inputs to be transferred to Max
 // - - - - - - - Multiple Buttons > Max
 
-// The circuit is a bit special:
+// The circuit is somewhat special:
 // pushbutton attached to pin 2,3,4,5 from GND
 // we don't need any resistors as we will use pinMode(INPUT_PULLUP)
 // https://www.arduino.cc/en/Tutorial/DigitalInputPullup

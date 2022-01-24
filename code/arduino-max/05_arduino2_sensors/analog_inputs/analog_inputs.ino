@@ -1,8 +1,8 @@
-// Receiving more than one analog input in PD & MAX
+// Analog Inputs (potentiometers) to Max
+// - - - - - - - Multiple sensors > Max
 
 // notice: Unconnected pins are 'floating' somewhere between 5V and 0V,
 // these will output random values
-
 
 // const variable with the number of the analog sensors we will use
 const byte numberOfPins = 6;
@@ -23,6 +23,6 @@ void loop() {
     // 
     delay(2);
   }
-  // end the printed sequence with a newline character 
+  // end the printed sequence with a carriage return & a newline character 
   Serial.println();
 }

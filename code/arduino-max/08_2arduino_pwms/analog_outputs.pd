@@ -1,0 +1,65 @@
+#N canvas 120 61 1040 683 10;
+#X msg 42 356 devices;
+#X floatatom 96 337 5 0 0 0 - - -;
+#X msg 96 357 open \$1;
+#X msg 151 357 close;
+#X text 270 289 add a line feed or new line character with its decimal
+value;
+#X floatatom 164 149 3 0 0 0 - - -;
+#X obj 164 11 vsl 20 128 2.54 254 1 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X obj 165 264 list fromsymbol;
+#X symbolatom 165 242 10 0 0 0 - - -;
+#X obj 165 289 list append 10;
+#X obj 240 335 print list;
+#X obj 96 390 comport 3;
+#X obj 165 221 makefilename %d;
+#X msg 623 365 print 51 76 41;
+#X obj 607 341 prepend set;
+#X obj 601 9 hsl 128 20 0 254 0 0 empty empty 0_________________254
+2 8 0 10 -258113 -1 -1 0 1;
+#X obj 598 63 i;
+#X obj 648 101 i;
+#X obj 648 123 t b f;
+#X obj 608 248 list fromsymbol;
+#X obj 598 156 pack 0 0 0;
+#X obj 693 118 i;
+#X obj 693 140 t b f;
+#X obj 597 212 makefilename %s;
+#X msg 769 270 print 51 76 41;
+#X obj 753 246 prepend set;
+#X msg 818 211 print 0 254 254;
+#X obj 802 187 prepend set;
+#X obj 616 32 hsl 128 20 0 254 0 0 empty empty 0_________________254
+2 8 0 10 -4034 -1 -1 12700 1;
+#X obj 635 55 hsl 128 20 0 254 0 0 empty empty 0_________________254
+2 8 0 10 -4160 -262144 -262144 12700 1;
+#X obj 391 103 thresh;
+#X connect 0 0 11 0;
+#X connect 1 0 2 0;
+#X connect 2 0 11 0;
+#X connect 3 0 11 0;
+#X connect 5 0 12 0;
+#X connect 6 0 5 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 11 0;
+#X connect 9 0 10 0;
+#X connect 12 0 8 0;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 20 0;
+#X connect 17 0 18 0;
+#X connect 18 0 20 0;
+#X connect 18 1 20 1;
+#X connect 19 0 14 0;
+#X connect 20 0 27 0;
+#X connect 21 0 22 0;
+#X connect 22 0 20 0;
+#X connect 22 1 20 2;
+#X connect 23 0 19 0;
+#X connect 23 0 25 0;
+#X connect 25 0 24 0;
+#X connect 27 0 26 0;
+#X connect 28 0 17 0;
+#X connect 29 0 21 0;

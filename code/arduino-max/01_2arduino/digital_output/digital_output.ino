@@ -3,9 +3,6 @@
 
 // a constant or read-only variable to hold the LED's pin number
 const int ledPin = 13;
-// an variable to store an integer value
-// byte would do well too if it does not exeed the range 0 to 255 
-int value;
 
 void setup()
 {
@@ -21,10 +18,11 @@ void setup()
 void loop()
 {
   // see if there's incoming serial data
-  if (Serial.available()) {
-    // will receive packets of information from Max
+  if (Serial.available() > 0) {
+    // we will receive packets of information from Max
     // space is a separator so we need to store each value
-    value = Serial.read();
+    // and do this in this variable
+    byte value = Serial.read();
     // LED is ON or OFF, 1 or 0
     digitalWrite(ledPin, value); 
   } // end serial
