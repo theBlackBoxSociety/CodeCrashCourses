@@ -1,5 +1,5 @@
 # Physical Computing with MAX and Arduino & DMX
-<sup>last updated: 24/01/2022</sup>
+<sup>last updated: 01/02/2022</sup>
 
 This is the second part of the physical computing with [Arduino tutorial](ArduinoTutorial.md) but it could also be a follow-up to a Max workshop. It is all about interfacing [Max](https://cycling74.com/) with the physical world.    
 
