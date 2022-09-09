@@ -53,10 +53,10 @@ Arduino can be used to develop standalone interactive objects or can be connecte
 
 Arduino is composed of two major parts: **the Arduino board**, which is the piece of hardware you work on when you build your objects, and **the Arduino software**, an editor (IDE) that runs on your computer or in a webbrowser. In the editor you write a sketch (a computer program with a set of instructions) that you upload to the Arduino board. This program tells the board what to do.
 
-Arduino has a worldwide **community** of over 30 million active users. The Arduino website is a nice place to start exploring projects built on Arduino, learn, ask for help etc.  
-👉🏻the [Forum](https://forum.arduino.cc/)    
-👉🏻a series of [tutorials](https://docs.arduino.cc/tutorials/)    
-👉🏻the deprecated [playground](https://playground.arduino.cc/) user section with projects and tutorials and it's new version, [the projecthub] (https://create.arduino.cc/projecthub)    
+Arduino has a worldwide **community** of over 30 million active users. The Arduino website is a nice place to start exploring projects built on Arduino, learn, ask for help etc.    
+👉 a series of [tutorials](https://docs.arduino.cc/tutorials/)    
+👉 the deprecated [playground](https://playground.arduino.cc/) user section with projects and tutorials and it's new version, [the projecthub] (https://create.arduino.cc/projecthub)    
+👉 the discussion [Forum](https://forum.arduino.cc/)
 
 ## 3. The Arduino Board
 The Arduino board is a small microcontroller or, in other words, a small computer chip on a circuitboard. This computer is at least a thousand times less powerful than your laptop, but it is also a lot cheaper and very useful to build interesting devices.
@@ -113,14 +113,14 @@ These are the complete [datasheet](https://docs.arduino.cc/static/f0b9dbf4880a49
 
 ## 4. The Software (IDE)
 The programs you write for your Arduino are known as sketches. They are written in C/C++ using a code editor. There are 3 options made available by the Arduino team to program your boards:
-- An IDE or integrated development environment. It is software you install and run on your computer. We will use a stable beta version of 2.0 (a complete rewrite of the IDE).
-- A web editor to code online. You need to make a login to save your sketches in the cloud.
-- And CLI or Command Line Interface, if you don't want to use a user interface. The CLI runs also on the back of IDE 2.0.  
+- An **IDE** or integrated development environment. It is software you install and run on your computer. We will use a stable beta version of 2.0 (a complete rewrite of the IDE).
+- A **web editor** to code online. You need to make a login to save your sketches in the cloud.
+- And **CLI** or Command Line Interface, if you don't want to use a user interface. The CLI runs also on the back of IDE 2.0.  
 
 First we wil download & install the Arduino IDE 2.0 and then we go through the process of uploading a Sketch from the IDE to the board.
 
 ### :flags:  the Arduino IDE Installation Guide
-Download the latest stable version for your operating system from the [Arduino Software Page.](https://www.arduino.cc/en/software) or alternatively start by [selecting your board on the website](https://docs.arduino.cc/) and then follow the *quickstart* guide.        
+Download the latest stable version for your operating system from the [Arduino Software Page](https://www.arduino.cc/en/software) or, alternatively, start by [selecting your board on the website](https://docs.arduino.cc/) and then follow the **quickstart** guide.        
 
 #### MacOS
 Double click Application dmg file whose name will be something along the lines of "arduino-ide_2.****_macOS_64bit.dmg" and copy the Arduino IDE app into the Applications folder. You are done!
@@ -138,27 +138,32 @@ Simply run the file downloaded from the software page.
   - tick the Allow executing file as program box.
 - You can now double click the file to launch the Arduino IDE 2 on your Linux machine.
 
-Alternatively you can also download the zip file. Unzip it, change permissions also above on the 'arduino-ide' in the folder and then run it.
+Alternatively you can also download the zip file. Unzip it, change permissions als above on the 'arduino-ide'-file in the folder and then run it.
 
 Additionally you can fix an *Add-to-Favorites option* for the Arduino IDE 2.0 application with [this guide](https://averagelinuxuser.com/ubuntu_custom_launcher_dock/)
 
 ### :flags:  Upload a Sketch with the Arduino IDE 2.0
 The process for setting up your Arduino and connecting the software to your board slightly differs related on the computer you are using and the Arduino board itself.
 
-Unlike the Arduino UNO R3, the Arduino Nano Every requires an additional step during installation. Via the **Boards manager** pane (left) you need to install the "Arduino megaAVR Boards". You can use the search input on 'every'. [More on Using the Board Manager](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager).
+You can skip this first step if you are using an Arduino UNO R3.    
+The Arduino Nano Every requires an additional step during installation. Via the **Boards manager** pane (left) you need to **install the "Arduino megaAVR Boards"**. You can use the search input on 'every'. [More on Using the Board Manager](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager).
 
 ![Image](images/arduino/boardmanager.png)    
 *screenshot of the board manager*
 
-Then, we need to select the board that we are going to use. We can do this by navigating to Tools > Port > {Board}. The board(s) that are connected to your computer should appear here, and we need to select it by clicking it.
+Then, we need to **select the board** that we are going to use. We can do this by navigating to Tools > Port > {Board}. The board(s) that are connected to your computer should appear here, and we need to select it by clicking it.
 
 ![Image](images/arduino/boardselect.png)    
 *screenshot of the board & port select procedure*
 
-To finally upload some code we first take a look at the toolbar at the top of the editor. At the very left, there are 2 buttons: a **checkmark**, used used *to verify* and **an arrow pointing right**, used *to upload*.    
+To finally upload some code we first take a look at the toolbar at the top of the editor.    
+At the very left, there are 2 buttons: a **checkmark**, used used *to verify* and **an arrow pointing right**, used *to upload*.    
 The verify tool simply goes through your sketch, checks for errors and compiles it. The upload tool does the same, but when it finishes compiling, it also uploads it to the board.
 
-On **Linux** however we probably need to take an **extra step**. It might happen that when you upload a sketch - after you have selected your board and the serial port - you get an error such as "... Permission denied". If you get this error (and also we you did not get an error), you need to **set serial port permission**.
+![Image](images/arduino/verify-upload.png)    
+*screenshot of the verify and upload buttons*
+
+:zap: On **Linux** however we probably need to take an **extra step**. It might happen that when you upload a sketch - after you have selected your board and the serial port - you get an error such as "... Permission denied". If you get this error (and also we you did not get an error), you need to **set serial port permission**.
 
 To do this, open your Terminal and type:
 ```
@@ -178,6 +183,7 @@ where <username> is your Linux user name.
 You will need to log out and log in again for this change to take effect.
 
 After this procedure, you should be able to proceed normally and upload the sketch to your board or use the Serial Monitor.
+
 
 Finally you can follow [this guide](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2) if you want to get basics of the Arduino IDE 2.0 with a detailled overview of the UI, links to special features as autocompletion and debugging.
 
