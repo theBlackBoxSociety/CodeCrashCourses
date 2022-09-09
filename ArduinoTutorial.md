@@ -54,9 +54,9 @@ Arduino can be used to develop standalone interactive objects or can be connecte
 Arduino is composed of two major parts: **the Arduino board**, which is the piece of hardware you work on when you build your objects, and **the Arduino software**, an editor (IDE) that runs on your computer or in a webbrowser. In the editor you write a sketch (a computer program with a set of instructions) that you upload to the Arduino board. This program tells the board what to do.
 
 Arduino has a worldwide **community** of over 30 million active users. The Arduino website is a nice place to start exploring projects built on Arduino, learn, ask for help etc.    
-👉 a series of [tutorials](https://docs.arduino.cc/tutorials/)    
-👉 the deprecated [playground](https://playground.arduino.cc/) user section with projects and tutorials and it's new version, [the projecthub] (https://create.arduino.cc/projecthub)    
-👉 the discussion [Forum](https://forum.arduino.cc/)
+👉🏻 a series of [tutorials](https://docs.arduino.cc/tutorials/)    
+👉🏻 the deprecated [playground](https://playground.arduino.cc/) user section with projects and tutorials and it's new version, [the projecthub] (https://create.arduino.cc/projecthub)    
+👉🏻 the discussion [Forum](https://forum.arduino.cc/)
 
 ## 3. The Arduino Board
 The Arduino board is a small microcontroller or, in other words, a small computer chip on a circuitboard. This computer is at least a thousand times less powerful than your laptop, but it is also a lot cheaper and very useful to build interesting devices.
