@@ -340,7 +340,7 @@ Let's make our wiring diagram first.
 - 10K resistor attached to pin 2 from ground
 
 ![image](images/arduino/digitalIn.png)    
-![image](images/arduino/digitalIn.png)
+![image](images/arduino/digitalInEvery.png)
 
 #### Code
 ```c++
