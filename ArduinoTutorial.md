@@ -151,7 +151,7 @@ The Arduino Nano Every requires an additional step during installation. Via the 
 ![Image](images/arduino/boardmanager.png)    
 *screenshot of the board manager*
 
-Then, we need to **select the board** that we are going to use. We can do this by navigating to Tools > Port > {Board}. The board(s) that are connected to your computer should appear here, and we need to select it by clicking it.
+Then, we need to **select the board** that we are going to use. We can do this by navigating to Tools > Port > {Board}. The board(s) that are connected to your computer should appear here, and we need to select it by clicking it. You can also do this in the toolbar as you might have noticed.    
 
 ![Image](images/arduino/boardselect.png)    
 *screenshot of the board & port select procedure*
@@ -166,27 +166,19 @@ The verify tool simply goes through your sketch, checks for errors and compiles 
 :zap: On **Linux** however we probably need to take an **extra step**.    
 It might happen that when you upload a sketch - after you have selected your board and the serial port - you get an error such as *"... Permission denied"*. If you get this error (and also if you didn't get an error), you need to **set the serial port permission**.
 
-To do this, open your Terminal and type:
-```
-ls -l /dev/ttyACM*
-```
-you will get something like:
-```
-crw-rw---- 1 root dialout 188, 0 5 apr 23.01 ttyACM0
-```
+To do this, open your Terminal and type: `ls -l /dev/ttyACM*`    
+you will get something like: `crw-rw---- 1 root dialout 188, 0 5 apr 23.01 ttyACM0`
+
 The "0" at the end of ACM might be a different number, or multiple entries might be returned. The data we need is "dialout" (is the group owner of the file).
 
-Now we just need to add our user to the group:
-```
-sudo usermod -a -G dialout <username>
-```
-where ```<username>``` is your Linux user name.
+Now we just need to add our user to the group: `sudo usermod -a -G dialout <username>`     
+where `<username>` is your Linux user name.    
 You will need to log out and log in again for this change to take effect.
 
-After this procedure, you should be able to proceed normally and upload the sketch to your board or use the Serial Monitor.
+After this procedure, you should be able to proceed normally and upload the sketch to your board.
 
 
-:zap: Finally you can follow [this guide](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2) if you want to get basics of the Arduino IDE 2.0 with a detailled overview of the UI, links to special features as autocompletion and debugging.
+:zap: To conclude this chapter you can follow [this guide](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2) if you want to get basics of the Arduino IDE 2.0 with a detailled overview of the UI, links to special features as autocompletion and debugging.
 
 ## 5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 
@@ -206,11 +198,11 @@ void loop() {
 
 }
 ```
-Name and save it.
+Name and save it.    
 Then type the following text into the Arduino sketch editor but you can skip the lines starting with a `//` as they are comments.
 
 ```C++
-// LED connected to digital pin 13
+// LED connected to digital pin 13 > works for UNO & Every
 const int ledPin = 13;
 
 // the setup function runs once when you press reset
@@ -235,8 +227,10 @@ void loop() {
 ```
 Press the **Verify** button to check if your code is correct.  
 If everything is fine, you’ll see the message **“Done compiling”** appear at the bottom of the Arduino IDE. The Arduino IDE has translated your sketch into an executable program that can be run by the board.  
-Now you can **upload** it into the board.  
-Press the Upload to I/O Board button. This will reset the board and force it to stop its current functions. Then sends the current compiled sketch is send to the board, got stored it in its memory. Then the board will run it. When it went fine you'll see the message **“Done uploading”** appear to let you know the process has completed correctly.
+Now, press the **Upload button**. This will reset the board and force it to stop its current functions. Then the current compiled sketch is send to the board and got stored in its memory. Subsequently the board will run it.     
+
+When it went fine you'll see the notifications **“Done compiling.”** and **“Done uploading.”** appear to let you know the process has completed correctly.
+
 
 :zap: Note the 2 RX and TX LEDs on the board. These flash every time a byte is sent or received. They will flicker during the upload process. If you don’t see that, or if you get an error message instead of “Done uploading”, then there is a communication problem between your computer and Arduino. Make sure you’ve selected the right serial port and confirm that the correct model of Arduino is selected.
 
@@ -249,12 +243,12 @@ Assuming that the sketch has been uploaded correctly, you will see the LED turn 
 
 `const int ledPin = 13;`    
 Here we specify that the LED we’re blinking is connected to the Arduino pin 13. We are defining a variable of the **type int** with the **name ledpin** and a **value 13**.    
-**Const** stands for constant. It modifies the behavior of the variable by making it **read-only**. The value of the variable cannot be changed. It is mandatory to use, `int ledPin = 13;` will also work.     
+**Const** stands for constant. It modifies the behavior of the variable by making it **read-only**. The value of the variable cannot be changed. It is not mandatory to use, `int ledPin = 13;` will also work.     
 Alternatively you can use `#define lepdin 13`. It is like an automatic search and replace for your code. In this case, it’s telling Arduino to write the number 13 every time the word *ledPin* appears.
 
-Arduino always expects two functions to exists: `setup()` and `loop()`. The `setup()` function runs once at the beginning of program execution. The `loop()` function is called repeatedly during program execution.   
+**Arduino always expects two functions to exists** `setup()` and `loop()`. The `setup()` function runs once at the beginning of program execution. The `loop()` function is called repeatedly during program execution.    
 
-`pinMode()` tells Arduino how to configure a certain pin. Digital pins can be used either as INPUT or OUTPUT.
+`pinMode()` tells Arduino how to configure a certain pin. Digital pins can be used either as INPUT or OUTPUT.    
 
 `digitalWrite()` is able to turn on or off any pin that has been configured as an OUTPUT. The first argument specifies which pin, the second argument specifies on (HIGH) or off (LOW). It will actually turn the output pin to 5V, and if you connect an LED, it will light up.   
 
@@ -263,10 +257,19 @@ Arduino always expects two functions to exists: `setup()` and `loop()`. The `set
 Writing comments in Arduino; any text beginning with `//` is ignored or use this `/*` `*/` at the start & end for a block of comments.
 
 ### :rotating_light: Lingua Arduino
-The Arduino programming language can be divided in three main parts: functions, values (variables and constants), and structure. See the [reference page](http://arduino.cc/en/Reference/HomePage) for documentation of Arduino language constructs.
+The Arduino programming language can be divided in three main parts: functions, values (variables and constants), and structure. See the [reference page](https://www.arduino.cc/reference/en/) for documentation of Arduino language constructs.
 
 ### :rotating_light: Fiddle the parameters
 You can adjust the values of the 2 delay times to see changes in blinking rhythm. Don't forget to compile and upload the code after you made changes.
+
+### :rotating_light: The IDE 2.0 Autocomplete Feature
+The Autocomplete Feature is a tool designed to increase your knowledge while writing code faster.    
+
+To enable (or disable) autocompletion, you need to navigate to File > Preferences and tick (or untick) the box next to "Editor Quick Suggestions".    
+
+In order to use the auto-complete feature, you first need to select your board (this feature doesn't work till the board is selected). Once that is done, the suggestions should start popping up as soon as your start typing characters, as per the documentation.    
+
+However, in some cases, this doesn't always happen  you might need to click "Ctrl + Space" for the suggestions to appear.
 
 ### :rotating_light: Other actuators
 The LED can easily be substituted by other actuator as:
@@ -276,9 +279,9 @@ The LED can easily be substituted by other actuator as:
 but therefore we need to know how we can hook them up.
 
 ## 6. Wiring Diagrams & Schematics
-Next we want to wire an external LED to the board. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to pin 13 on the Arduino, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a sketch or diagram with the wires and components connected to the Arduino?!
+Next we want to wire an external LED to the board. I could explain you here in steps how to make the connections *- the anode (longest) leg of an LED is connected to pin 13 on the Arduino UNO, the negative or cathode (shortest) leg of the LED is then connected Ground -* but wouldn't it be much easier to draw you a sketch or diagram with the wires and components connected to the Arduino?!
 
-Being able to read these diagrams is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
+Being able to read these **diagrams** is a very important part of building circuits. Schematics are universal pictograms that allow people all over the world to understand and build electronics. Every electronic component has a very unique schematic symbol. These symbols are then assembled into circuits using a variety of programs. You could also draw them out by hand. If you want to dive deeper in the world of electronics and circuit building, learning to read schematics is a very important step in doing so.
 
 Below is the schematics for the above circuit and, at the right, a much easier to read and wire diagram (made with [Fritzing](http://fritzing.org/home/)). We will mainly use this kind of wiring diagams in this tutorial.
 
@@ -293,11 +296,17 @@ Without soldering or metal-wire-knotting we are not able to make this connection
 ### breadboard
 A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solderless breadboard, is a small plastic board full of holes, each of which contains a spring-loaded contact (in metal). You can push a component’s leg into one of the holes, and it will establish an electrical connection with all of the other holes in the same vertical column of holes. Many breadboards also include sections for power distribution, making it easier to build your circuits.
 
-![image](images/arduino/breadboard.png)
+![image](images/arduino/breadboard.png)    
 
-More on [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
+If you use an Arduino Nano Every you can start by plugging it onto the breadboard in the following way.    
 
-If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
+![image](images/arduino/every_on_BB.png)    
+
+Then you plug in the LED and connect pin 13 & ground to the Arduino. Again, the anode (longest) leg of an LED is connected to pin 13 and the negative or cathode (shortest) leg of the LED is then connected Ground.    
+
+![image](images/arduino/digitalOutEvery_bb.png)    
+
+:zap: If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
 
 ### :rotating_light: Other Common Components
 The following a handful of common components that we will use in the following circuits.
@@ -316,7 +325,7 @@ Resistors are rated in Ohms (Ω), indicating how much resistance they offer. Be
 Potentiometers, or pots for short, are variable resistors. Potentiometers have three legs. The power of a potentiometer is in the middle leg. It's  resistance varies depends on the potentiometer’s rotating (or sliding) contact (the wiper) position. It is best to use it as a voltage divider with our Arduino. This means we have all 3 contacts connected: 1 to GND (or 3v3), 2 to ADC, 3 to 3V3 (or GND).       
 Other common variable resistors are photocells (LDR), termistors, force-sensitive (FSR) and bend-sensors. These are all two-legged (or “two-lead”). In order to make them work optimally on our Pico we need to add a 2nd resistor (later more).    
 
-See also https://makeabilitylab.github.io/physcomp/electronics/
+:zap: See also [this Guide](https://makeabilitylab.github.io/physcomp/electronics/) (Lessons 1-8) is you want to learn more about the fundamentals of electricity.
 
 ## 8. Next step: a Pushbutton ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
 
@@ -330,6 +339,7 @@ Let's make our wiring diagram first.
 - pushbutton attached to pin 2 from +5V
 - 10K resistor attached to pin 2 from ground
 
+![image](images/arduino/digitalIn.png)    
 ![image](images/arduino/digitalIn.png)
 
 #### Code
