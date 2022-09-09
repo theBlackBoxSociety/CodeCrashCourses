@@ -14,11 +14,11 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with the Ardu
 - [1. Introduction](#1-introduction)
 - [2. The Arduino Platform](#2-the-arduino-platform)
 - [3. The Arduino Board](#3-the-arduino-board)
-	- [The keyestudio Sensor Kits](#the-keyestudio-sensor-kits)
+	- [The UNO](#the-uno)
+	- [The Nano Every](#the-nano-every)
 - [4. The Software (IDE)](#4-the-software-ide)
-	- [:flags:  Arduino IDE Installation Guide](#flags-arduino-ide-installation-guide)
-	- [:flags:  Port Identification & Board Selection](#flags-port-identification-board-selection)
-	- [:flags:  User Interface](#flags-user-interface)
+	- [:flags:  the Arduino IDE Installation Guide](#flags-the-arduino-ide-installation-guide)
+	- [:flags:  Upload a Sketch with the Arduino IDE 2.0](#flags-upload-a-sketch-with-the-arduino-ide-20)
 - [5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤](#5-getting-started-hello-world-)
 	- [:flags:  Hello World!](#flags-hello-world)
 	- [:flags: Lingua Arduino](#flags-lingua-arduino)
@@ -42,7 +42,6 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with the Ardu
 	- [:flags:  Servo Motor Control](#flags-servo-motor-control)
 
 <!-- /TOC -->
-
 </details>
 
 ## 1. Introduction
@@ -79,7 +78,7 @@ The arduino UNO / ATmega328 features:
 - And another Atmega16U2 programmed as a **USB-to-serial converter**.
 - ...
 
-![Image](images/arduino/uno_layout.jpg)
+![Image](images/arduino/uno_layout.jpg)    
 *The complete parts of an Arduino Uno*
 
 The arduino reference can be found [here](https://docs.arduino.cc/tutorials/uno-rev3/intro-to-board).
@@ -107,7 +106,7 @@ The Nano Every / ATMega4809 features:
 - Clock Speed 20MHz, CPU Flash Memory 48KB, SRAM 6KB (ATMega4809), EEPROM 256byte
 - UART, SPI & I2C for serial communication
 
-![Image](images/arduino/every_layout.png)
+![Image](images/arduino/every_layout.png)    
 *The complete parts of an Arduino Nano Every*
 
 These are the complete [datasheet](https://docs.arduino.cc/static/f0b9dbf4880a49becb8453a10590d1ca/ABX00028-datasheet.pdf) and [schematics](https://docs.arduino.cc/static/1d097e7f46445e1d9a88348af88dcb4f/schematics.pdf) of Arduino Nano Every.
@@ -149,12 +148,12 @@ The process for setting up your Arduino and connecting the software to your boar
 
 Unlike the Arduino UNO R3, the Arduino Nano Every requires an additional step during installation. Via the **Boards manager** pane (left) you need to install the "Arduino megaAVR Boards". You can use the search input on 'every'. [More on Using the Board Manager](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager).
 
-![Image](images/arduino/boardmanager.png)
+![Image](images/arduino/boardmanager.png)    
 *screenshot of the board manager*
 
 Then, we need to select the board that we are going to use. We can do this by navigating to Tools > Port > {Board}. The board(s) that are connected to your computer should appear here, and we need to select it by clicking it.
 
-![Image](images/arduino/boardselect.png)
+![Image](images/arduino/boardselect.png)    
 *screenshot of the board & port select procedure*
 
 To finally upload some code we first take a look at the toolbar at the top of the editor. At the very left, there are 2 buttons: a **checkmark**, used used *to verify* and **an arrow pointing right**, used *to upload*.    
