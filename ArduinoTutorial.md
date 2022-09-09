@@ -1,5 +1,5 @@
 # Physical Computing with the Arduino
-<sup>last updated: 16/12/2021</sup>
+<sup>last updated: 9/9/2022</sup>
 
 👋🏼 Hi, welcome 👋🏼    
 You will learn the basics of physical computing <sup>[1](#1)</sup> with the Arduino. This includes learning to know and setting up the workflow, reading and reproducing circuits, program the Arduino, ...
@@ -47,22 +47,27 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with the Ardu
 
 ## 1. Introduction
 
-[Arduino](https://www.arduino.cc/) is an open source physical computing platform based on a simple input/output (I/O) board and a development environment that is based on [Processing](http://www.processing.org). Arduino can be used to develop standalone interactive objects or can be connected to software on your computer, such as [Processing](https://processing.org/), the internet with a.o. [P5.JS](https://p5js.org/) with [the p5.bots library](https://github.com/sarahgp/p5bots), [TouchDesigner](https://www.derivative.ca/), [VVVV](https://vvvv.org/), [Max](https://cycling74.com/products/max/), ...  
+[Arduino](https://www.arduino.cc/) is an open source physical computing platform based on a simple input/output (I/O) board and a development environment that is based on [Processing](http://www.processing.org).     
+Arduino can be used to develop standalone interactive objects or can be connected to software on your computer, such as [Processing](https://processing.org/), the internet with a.o. [P5.JS](https://p5js.org/) with [the p5.bots library](https://github.com/sarahgp/p5bots), [Pure Data](https://puredata.info/), [TouchDesigner](https://www.derivative.ca/), [VVVV](https://vvvv.org/), [Max](https://cycling74.com/products/max/), ...  
 
 ## 2. The Arduino Platform
 
-Arduino is composed of two major parts: **the Arduino board**, which is the piece of hardware you work on when you build your objects, and **the Arduino IDE**, the software you run on your computer. In the IDE you write a sketch (a computer program with a set of instructions) that you upload to the Arduino board. This program tells the board what to do.
+Arduino is composed of two major parts: **the Arduino board**, which is the piece of hardware you work on when you build your objects, and **the Arduino software**, an editor (IDE) that runs on your computer or in a webbrowser. In the editor you write a sketch (a computer program with a set of instructions) that you upload to the Arduino board. This program tells the board what to do.
 
 Arduino has a worldwide **community** of over 30 million active users. The Arduino website is a nice place to start exploring projects built on Arduino, learn, ask for help etc.  
-☞ https://forum.arduino.cc/  
-☞ https://www.arduino.cc/en/Tutorial/HomePage   
-☞ https://create.arduino.cc/projecthub
+☞ https://forum.arduino.cc/    
+☞ https://docs.arduino.cc/tutorials/    
+☞ https://playground.arduino.cc/    
+☞ https://create.arduino.cc/projecthub    
 
 ## 3. The Arduino Board
 The Arduino board is a small microcontroller or, in other words, a small computer chip on a circuitboard. This computer is at least a thousand times less powerful than your laptop, but it is also a lot cheaper and very useful to build interesting devices.
 
-We will be using an [keyestudio Uno R3](https://www.keyestudio.com/keyestudio-uno-r3-atmega328p-development-board-usb-cable-for-arduino-p0513-p0513.html) arduino clone.
+There are many different Arduino boards on the market. All official boards are listed [here](https://www.arduino.cc/en/hardware).
 
+We have 2 different Arduino boards in use: the [Arduino Uno Rev3](https://store.arduino.cc/products/arduino-uno-rev3) in both the official version and [keyestudio Uno R3](https://www.keyestudio.com/keyestudio-uno-r3-atmega328p-development-board-usb-cable-for-arduino-p0513-p0513.html) (a clone) and the [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every).
+
+### The UNO
 ![](images/arduino/keyesudio_arduino.jpg)
 
 Looking at the Arduino board: you’ll see a black chip with 28 *legs*. That chip is the ATmega328P, the heart of your board.
@@ -75,55 +80,108 @@ The arduino UNO / ATmega328 features:
 - ...
 
 ![Image](images/arduino/uno_layout.jpg)
-*The complete parts  of an Arduino Uno*
+*The complete parts of an Arduino Uno*
 
-The arduino reference can be found [here](https://www.arduino.cc/en/Reference/Board).
+The arduino reference can be found [here](https://docs.arduino.cc/tutorials/uno-rev3/intro-to-board).
 The complete schematic of Arduino Uno can be found [here](https://www.arduino.cc/en/uploads/Main/arduino-uno-schematic.pdf).
 
-### The keyestudio Sensor Kits
-We will use Arduino starter kits developed by Keyes. Each kit contains a UNO R3 Controller board, some sensor modules (e.g. a joystick, three axis acceleration, rotary encoder, potentiometer, soil humidity, line tracking, LM35 temperature, photocell, vibration, gas, water, PIR, color, air quality, sound, ...), some actuators (e.g. LEDs, RGB LED, passive & active buzzer, relay, ...), a Breadboard, some resistors, buttons, jumper wire & a
-USB cable.
+### The Nano Every
+![](images/arduino/arduino_nano_every.jpg)
 
-Keyestudio also provides a wiki with detailed tutorials using the provided hardware module. The tutorial include connection diagrams and sample codes.
-See the tutorials for [Kit 1](https://wiki.keyestudio.com/Ks0178_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K1), [Kit 2](https://wiki.keyestudio.com/Ks0179_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K2), [Kit 3](https://wiki.keyestudio.com/Ks0180_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K3) & [Kit 4](https://wiki.keyestudio.com/Ks0181_keyestudio_Sensor_Kit_for_ARDUINO_starters-_K4)
+The Arduino Nano Every is an evolution of the classic Arduino Nano sharing the same exact pinout but featuring the a more powerful processor, more CPU Flash memory and a higher clock speed. It has a tiny footprint of 45mm by 18mm.
+
+This small footprint (and low price) make it make it well suited for wearable inventions, low cost robotics, electronic musical instruments, ... A minor inconvenience is that you cannot read off the function of the various pins from the board itself. You need a [Pinout diagram](https://content.arduino.cc/assets/Pinout-NANOevery_latest.pdf) for that.
+
+The Nano Every / ATMega4809 features:
+- **20 digital I/o pins** that can be used as an input or output. They operate at 5 volts.
+- **8 analog inputs** (ADC 10 bit).
+- 5 pins are **PWM** (Pulse Width Modulation) capable (8-bit), these are 3, 5, 6, 9 & 10.
+- A **micro-USB port** that is used to power the board (5V) and to connect the board to the computer.
+- An **Inbuilt LED** connected to pin n° 13.
+- A power LED indicating that the Every is powered.
+- 2 LEDs connected to the UART pin 17(RX) and 30(TX).
+- the **Vin** pin is an INPUT. Respect the voltage limits of 7-21V to assure the proper functionality of the board.
+- the **5V** pin outputs 5V from the board when powered from the USB connector or from the VIN pin of the board.
+- the **3.3V** pin outputs 3.3V through the on-board voltage regulator.
+- 2 **GND** pins.
+- Clock Speed 20MHz, CPU Flash Memory 48KB, SRAM 6KB (ATMega4809), EEPROM 256byte
+- UART, SPI & I2C for serial communication
+
+![Image](images/arduino/every_layout.png)
+*The complete parts of an Arduino Nano Every*
+
+These are the complete [datasheet](https://docs.arduino.cc/static/f0b9dbf4880a49becb8453a10590d1ca/ABX00028-datasheet.pdf) and [schematics](https://docs.arduino.cc/static/1d097e7f46445e1d9a88348af88dcb4f/schematics.pdf) of Arduino Nano Every.
+
 
 ## 4. The Software (IDE)
-The programs you write for your Arduino are known as sketches. They are written in C/C++.
+The programs you write for your Arduino are known as sketches. They are written in C/C++ using a code editor. There are 3 options made available by the Arduino team to program your boards:
+- An IDE or integrated development environment. It is software you install and run on your computer. We will use a stable beta version of 2.0 (a complete rewrite of the IDE).
+- A web editor to code online. You need to make a login to save your sketches in the cloud.
+- And CLI or Command Line Interface, if you don't want to use a user interface. The CLI runs also on the back of IDE 2.0.  
 
-### :flags:  Arduino IDE Installation Guide
-Download the latest stable version for your operating system from the [Arduino Software Centre.](https://www.arduino.cc/en/Main/Software).        
+First we wil download & install the Arduino IDE 2.0 and then we go through the process of uploading a Sketch from the IDE to the board.
+
+### :flags:  the Arduino IDE Installation Guide
+Download the latest stable version for your operating system from the [Arduino Software Page.](https://www.arduino.cc/en/software) or alternatively start by [selecting your board on the website](https://docs.arduino.cc/) and then follow the *quickstart* guide.        
+
 #### MacOS
-Download the Application zip file](https://www.arduino.cc/en/Main/Software) whose name will be something along the lines of  arduino-1.8.18-macosx.zip.
-
-Extract the zip file. Open the extracted folder and copy the Arduino application into the Applications folder. You are done!
+Double click Application dmg file whose name will be something along the lines of "arduino-ide_2.****_macOS_64bit.dmg" and copy the Arduino IDE app into the Applications folder. You are done!
 
 #### Windows
-You have some options to install the Arduino IDE. Download & install it [manually](https://www.arduino.cc/en/Guide/Windows) or trough the [MS store](https://www.microsoft.com/fr-be/p/arduino-ide/9nblggh4rsd8?ocid=badge&rtc=1&activetab=pivot:overviewtab).
+Simply run the file downloaded from the software page.
 
 #### Linux
-Get the latest version from the [download page](https://www.arduino.cc/en/Main/Software). You can choose between the 32, 64 and ARM versions. Install it following [this quick start guide](https://www.arduino.cc/en/Guide/Linux).
+- Download the AppImage file whose name will be something along the lines of "arduino-ide_2.****_Linux_64bit.AppImage".
+- Place it in a proper location, e.g /home/username/Appimages.
+- Before we can run it we need to make it executable
+  - right-click the file,
+  - choose Properties,
+  - select Permissions tab,
+  - tick the Allow executing file as program box.
+- You can now double click the file to launch the Arduino IDE 2 on your Linux machine.
 
+Alternatively you can also download the zip file. Unzip it, change permissions also above on the 'arduino-ide' in the folder and then run it.
 
-### :flags:  Port Identification & Board Selection
-The process for setting up your Arduino and connecting the software to your board differs also related to the computer you are using.
+Additionally you can fix an *Add-to-Favorites option* for the Arduino IDE 2.0 application with [this guide](https://averagelinuxuser.com/ubuntu_custom_launcher_dock/)
 
-#### MacOS / Linux
-1. Go to Tools >> Serial Port >> then the port beginning with /dev/cu.usbmodem...
-![port detection](images/arduino/portDetection.png)
-2. Select the right board. Go again to Tools >> Board and select "Arduino/Genuino Uno"
+### :flags:  Upload a Sketch with the Arduino IDE 2.0
+The process for setting up your Arduino and connecting the software to your board slightly differs related on the computer you are using and the Arduino board itself.
 
-#### Windows
-1. Selecting a port requires an extra step on Windows. The port does not say whether it is connected to the Arduino, so you will have to go the device manager to find which port to connect to. You can find the device manager by searching for it in Start. Then select Ports to display the list of ports. In this example, the Arduino is connected to COM18.
-![port detection](images/arduino/portDetection2.png)
+Unlike the Arduino UNO R3, the Arduino Nano Every requires an additional step during installation. Via the **Boards manager** pane (left) you need to install the "Arduino megaAVR Boards". You can use the search input on 'every'. [More on Using the Board Manager](https://docs.arduino.cc/software/ide-v2/tutorials/ide-v2-board-manager).
 
-2. In the Arduino IDE, select Tools >> Ports >> The number that your Arduino is connected to.
-![port detection](images/arduino/portDetection3.png)
+![Image](images/arduino/boardmanager.png)
+*screenshot of the board manager*
 
-3. Here too. Select the right board. Go again to Tools >> Board and select "Arduino/Genuino Uno"
+Then, we need to select the board that we are going to use. We can do this by navigating to Tools > Port > {Board}. The board(s) that are connected to your computer should appear here, and we need to select it by clicking it.
 
-### :flags:  User Interface
-![The User Interface](images/arduino/arduino_ide.svg)
+![Image](images/arduino/boardselect.png)
+*screenshot of the board & port select procedure*
 
+To finally upload some code we first take a look at the toolbar at the top of the editor. At the very left, there are 2 buttons: a **checkmark**, used used *to verify* and **an arrow pointing right**, used *to upload*.    
+The verify tool simply goes through your sketch, checks for errors and compiles it. The upload tool does the same, but when it finishes compiling, it also uploads it to the board.
+
+On **Linux** however we probably need to take an **extra step**. It might happen that when you upload a sketch - after you have selected your board and the serial port - you get an error such as "... Permission denied". If you get this error (and also we you did not get an error), you need to **set serial port permission**.
+
+To do this, open your Terminal and type:
+```
+ls -l /dev/ttyACM*
+```
+you will get something like:
+```
+crw-rw---- 1 root dialout 188, 0 5 apr 23.01 ttyACM0
+```
+The "0" at the end of ACM might be a different number, or multiple entries might be returned. The data we need is "dialout" (is the group owner of the file).
+
+Now we just need to add our user to the group:
+```
+sudo usermod -a -G dialout <username>
+```
+where <username> is your Linux user name.
+You will need to log out and log in again for this change to take effect.
+
+After this procedure, you should be able to proceed normally and upload the sketch to your board or use the Serial Monitor.
+
+Finally you can follow [this guide](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2) if you want to get basics of the Arduino IDE 2.0 with a detailled overview of the UI, links to special features as autocompletion and debugging.
 
 ## 5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 

@@ -1,0 +1,64 @@
+.elementor-kit-15469{--e-global-color-primary:#6EC1E4;--e-global-color-secondary:#54595F;--e-global-color-text:#7A7A7A;--e-global-color-accent:#61CE70;--e-global-color-2d8e0b43:#4054B2;--e-global-color-46f4e015:#23A455;--e-global-color-224e5b04:#000;--e-global-color-7dd6b608:#FFF;--e-global-typography-primary-font-family:"Roboto";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Roboto Slab";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Roboto";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Roboto";--e-global-typography-accent-font-weight:500;font-size:18px;line-height:32px;}.elementor-kit-15469 h2{font-size:30px;line-height:1.3em;}.elementor-kit-15469 h3{color:#CB2D58;font-size:25px;font-weight:400;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1280px;}.elementor-widget:not(:last-child){margin-bottom:30px;}{}h1.page-title{display:var(--page-title-display);}@media(max-width:991px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}}@media(max-width:767px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}}/* Start custom CSS */header.sticky-header {
+    --header-height: 90px;
+    --opacity: 0.90;
+    --shrink-me: 0.70;
+    --sticky-background-color: #ffffff85;
+    --transition: .3s ease-in-out;
+
+    transition: background-color var(--transition),
+                background-image var(--transition),
+                backdrop-filter var(--transition),
+                opacity var(--transition);
+}
+header.sticky-header.elementor-sticky--effects {
+    background-color: var(--sticky-background-color) !important;
+    background-image: none !important;
+    opacity: var(--opacity) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.15);
+}
+header.sticky-header > .elementor-container {
+    transition: min-height var(--transition);
+}
+header.sticky-header.elementor-sticky--effects > .elementor-container {
+    min-height: calc(var(--header-height) * var(--shrink-me))!important;
+    height: calc(var(--header-height) * var(--shrink-me));
+}
+header.sticky-header .elementor-nav-menu--main .elementor-item {
+    transition: padding var(--transition);
+}
+header.sticky-header.elementor-sticky--effects .elementor-nav-menu--main .elementor-item {
+    padding-bottom: 10px!important;
+    padding-top: 10px!important;
+}
+header.sticky-header > .elementor-container .logo img {
+    transition: max-width var(--transition);
+}
+header.sticky-header.elementor-sticky--effects .logo img {
+    max-width: calc(100% * var(--shrink-me));}
+pre {font-size: 75% !important;
+    max-height: 500px;
+    direction: ltr;
+}
+pre[class*="language-"] {
+    padding-bottom: 0 !important;}
+pre::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+pre::-webkit-scrollbar
+{
+	width: 5px;
+	height:5px;
+	background-color: #F5F5F5;
+}
+
+pre::-webkit-scrollbar-thumb
+{
+	background-color: #000;
+	border: 2px solid #555555;
+}
+.elementor-posts-container .elementor-post__card .elementor-post__thumbnail {padding-bottom: 76% !important}/* End custom CSS */

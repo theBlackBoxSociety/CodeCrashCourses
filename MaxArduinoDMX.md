@@ -260,6 +260,7 @@ https://www.adafruit.com/product/815
 
 ### 12. Max→Arduino: A Stepper motor controlled from Max
 :construction: :construction: :construction: :construction:
+https://learn.adafruit.com/adafruit-motor-shield    
 code examples are finished
 
 ### 13. Max→Arduino: 2 Stepper motors controlled from Max
@@ -294,22 +295,30 @@ In Max we make use of Thomas Ouellet Fredericks [Enttec DMX USB Pro patcher](htt
 
 ### Arduino as a DMX interface
 
+
+see also https://tigoe.github.io/DMX-Examples/
+
 ### Other DMX software
 [Qlab](https://qlab.app/) or sound, video and lighting control for macOS.
 
 
 ## Inspiration & References
 * [David Bowen](https://www.dwbowen.com/)
+* [justine Emard](https://justineemard.com/supraorganism/)
 * [Christoph De Boeck](http://christophdeboeck.com/)
 * [Edwin van der Heide](https://www.evdh.net/)
 * [Marnix de Nijs](http://www.marnixdenijs.nl/)
 * [Artificiel](https://www.artificiel.org/)
 * [Hans Beckers](https://hansbeckers.be/works/)
+* [Zimoun](https://www.zimoun.net/)
 * Hays + Ryan Holladay [Emergence](https://vimeo.com/171001689)
 * [EJTECH](https://ejtech.studio/)
 * [Jo Caimo](https://ejtech.studio/)
 * [Jeroen Uyttendaele](http://www.jeroen-uyttendaele.org/)
 * ....
+
+## Other tutorials
+* https://autotel.co/posts/2015-11-11-make-mechanic-synth-2
 
 
 <hr>
