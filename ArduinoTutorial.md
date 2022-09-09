@@ -164,7 +164,7 @@ The verify tool simply goes through your sketch, checks for errors and compiles 
 *screenshot of the verify and upload buttons*
 
 :zap: On **Linux** however we probably need to take an **extra step**.    
-It might happen that when you upload a sketch - after you have selected your board and the serial port - you get an error such as "... Permission denied". If you get this error (and also if you didn't get an error), you need to **set the serial port permission**.
+It might happen that when you upload a sketch - after you have selected your board and the serial port - you get an error such as *"... Permission denied"*. If you get this error (and also if you didn't get an error), you need to **set the serial port permission**.
 
 To do this, open your Terminal and type:
 ```
@@ -191,7 +191,7 @@ After this procedure, you should be able to proceed normally and upload the sket
 ## 5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 
 ### :rotating_light:  Hello World!
-A "Hello World!" in the Arduino sphere is a blinking LED.  
+A *"Hello World!"* in the Arduino sphere is a blinking LED.  
 You just need an Arduino board and a USB cable.    
 Open a new file in the IDE. The lines of code below are already written. They form the basis of every program. More about that later.
 
@@ -475,7 +475,7 @@ As you might have noticed in the example above the blinking interval is not alwa
 
 ### :rotating_light: talk2me
 Wouldn't it be handy if we could check our incoming values? We actually can by establishing **Serial Communication** from our Arduino to our computer.   
-We call this "serial" communication because the connection appears to both the Arduino and the computer as a serial port, even though it may actually use a USB cable. Bytes are sent one after another (serially) from the Arduino to the computer.  
+We call this *"serial"* communication because the connection appears to both the Arduino and the computer as a serial port, even though it may actually use a USB cable. Bytes are sent one after another (serially) from the Arduino to the computer.  
 In the code below we will map the 0-1023 values to a custom range 10-500, send the 2 variables over the serial port and the Arduino Serial Monitor to view them. Click the serial monitor button in the toolbar and select the same baud rate used in the call to begin().  
 
 The circuit remains the same.  
