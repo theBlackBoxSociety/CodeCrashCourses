@@ -17,29 +17,29 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with the Ardu
 	- [The UNO](#the-uno)
 	- [The Nano Every](#the-nano-every)
 - [4. The Software (IDE)](#4-the-software-ide)
-	- [:flags:  the Arduino IDE Installation Guide](#flags-the-arduino-ide-installation-guide)
-	- [:flags:  Upload a Sketch with the Arduino IDE 2.0](#flags-upload-a-sketch-with-the-arduino-ide-20)
+	- [:rotating_light:  the Arduino IDE Installation Guide](#flags-the-arduino-ide-installation-guide)
+	- [:rotating_light:  Upload a Sketch with the Arduino IDE 2.0](#flags-upload-a-sketch-with-the-arduino-ide-20)
 - [5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤](#5-getting-started-hello-world-)
-	- [:flags:  Hello World!](#flags-hello-world)
-	- [:flags: Lingua Arduino](#flags-lingua-arduino)
-	- [:flags: Fiddle the parameters](#flags-fiddle-the-parameters)
-	- [:flags: Other actuators](#flags-other-actuators)
+	- [:rotating_light:  Hello World!](#flags-hello-world)
+	- [:rotating_light: Lingua Arduino](#flags-lingua-arduino)
+	- [:rotating_light: Fiddle the parameters](#flags-fiddle-the-parameters)
+	- [:rotating_light: Other actuators](#flags-other-actuators)
 - [6. Wiring Diagrams & Schematics](#6-wiring-diagrams-schematics)
 - [7. Let's Get Physical](#7-lets-get-physical)
 	- [breadboard](#breadboard)
-	- [:flags: Other Common Components](#flags-other-common-components)
+	- [:rotating_light: Other Common Components](#flags-other-common-components)
 - [8. Next step: a Pushbutton ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤](#8-next-step-a-pushbutton-)
-	- [:flags: Push the button](#flags-push-the-button)
-	- [:flags: Sticky on/off button](#flags-sticky-onoff-button)
-	- [:flags: Other On/Off Sensors](#flags-other-onoff-sensors)
+	- [:rotating_light: Push the button](#flags-push-the-button)
+	- [:rotating_light: Sticky on/off button](#flags-sticky-onoff-button)
+	- [:rotating_light: Other On/Off Sensors](#flags-other-onoff-sensors)
 - [9. Advanced Sensors ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤](#9-advanced-sensors-)
-	- [:flags:  ADC](#flags-adc)
-	- [:flags: talk2me](#flags-talk2me)
-	- [:flags: more toys](#flags-more-toys)
+	- [:rotating_light:  ADC](#flags-adc)
+	- [:rotating_light: talk2me](#flags-talk2me)
+	- [:rotating_light: more toys](#flags-more-toys)
 - [10. PWM ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤](#10-pwm-)
-	- [:flags:  PWM, a fading LED](#flags-pwm-a-fading-led)
-	- [:flags:  Input 2 Output](#flags-input-2-output)
-	- [:flags:  Servo Motor Control](#flags-servo-motor-control)
+	- [:rotating_light:  PWM, a fading LED](#flags-pwm-a-fading-led)
+	- [:rotating_light:  Input 2 Output](#flags-input-2-output)
+	- [:rotating_light:  Servo Motor Control](#flags-servo-motor-control)
 
 <!-- /TOC -->
 </details>
@@ -119,7 +119,7 @@ The programs you write for your Arduino are known as sketches. They are written 
 
 First we wil download & install the Arduino IDE 2.0 and then we go through the process of uploading a Sketch from the IDE to the board.
 
-### :flags:  the Arduino IDE Installation Guide
+### :rotating_light:  the Arduino IDE Installation Guide
 Download the latest stable version for your operating system from the [Arduino Software Page](https://www.arduino.cc/en/software) or, alternatively, start by [selecting your board on the website](https://docs.arduino.cc/) and then follow the **quickstart** guide.        
 
 #### MacOS
@@ -142,7 +142,7 @@ Alternatively you can also download the zip file. Unzip it, change permissions a
 
 Additionally you can fix an *Add-to-Favorites option* for the Arduino IDE 2.0 application with [this guide](https://averagelinuxuser.com/ubuntu_custom_launcher_dock/)
 
-### :flags:  Upload a Sketch with the Arduino IDE 2.0
+### :rotating_light:  Upload a Sketch with the Arduino IDE 2.0
 The process for setting up your Arduino and connecting the software to your board slightly differs related on the computer you are using and the Arduino board itself.
 
 You can skip this first step if you are using an Arduino UNO R3.    
@@ -163,7 +163,8 @@ The verify tool simply goes through your sketch, checks for errors and compiles 
 ![Image](images/arduino/verify-upload.png)    
 *screenshot of the verify and upload buttons*
 
-:zap: On **Linux** however we probably need to take an **extra step**. It might happen that when you upload a sketch - after you have selected your board and the serial port - you get an error such as "... Permission denied". If you get this error (and also we you did not get an error), you need to **set serial port permission**.
+:zap: On **Linux** however we probably need to take an **extra step**.    
+It might happen that when you upload a sketch - after you have selected your board and the serial port - you get an error such as "... Permission denied". If you get this error (and also if you didn't get an error), you need to **set the serial port permission**.
 
 To do this, open your Terminal and type:
 ```
@@ -179,17 +180,17 @@ Now we just need to add our user to the group:
 ```
 sudo usermod -a -G dialout <username>
 ```
-where <username> is your Linux user name.
+where ```<username>``` is your Linux user name.
 You will need to log out and log in again for this change to take effect.
 
 After this procedure, you should be able to proceed normally and upload the sketch to your board or use the Serial Monitor.
 
 
-Finally you can follow [this guide](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2) if you want to get basics of the Arduino IDE 2.0 with a detailled overview of the UI, links to special features as autocompletion and debugging.
+:zap: Finally you can follow [this guide](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started-ide-v2) if you want to get basics of the Arduino IDE 2.0 with a detailled overview of the UI, links to special features as autocompletion and debugging.
 
 ## 5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 
-### :flags:  Hello World!
+### :rotating_light:  Hello World!
 A "Hello World!" in the Arduino sphere is a blinking LED.  
 You just need an Arduino board and a USB cable.    
 Open a new file in the IDE. The lines of code below are already written. They form the basis of every program. More about that later.
@@ -261,13 +262,13 @@ Arduino always expects two functions to exists: `setup()` and `loop()`. The `set
 
 Writing comments in Arduino; any text beginning with `//` is ignored or use this `/*` `*/` at the start & end for a block of comments.
 
-### :flags: Lingua Arduino
+### :rotating_light: Lingua Arduino
 The Arduino programming language can be divided in three main parts: functions, values (variables and constants), and structure. See the [reference page](http://arduino.cc/en/Reference/HomePage) for documentation of Arduino language constructs.
 
-### :flags: Fiddle the parameters
+### :rotating_light: Fiddle the parameters
 You can adjust the values of the 2 delay times to see changes in blinking rhythm. Don't forget to compile and upload the code after you made changes.
 
-### :flags: Other actuators
+### :rotating_light: Other actuators
 The LED can easily be substituted by other actuator as:
 - A Buzzer or beeper is a little device that makes a buzzing noise and is used for signalling.
 - A **relay** is an electrically operated switch. It uses a low voltage control signal to switch, usually higher voltage. It can also be used to control lighting, electrical and other equipment.
@@ -298,7 +299,7 @@ More on [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-us
 
 If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
 
-### :flags: Other Common Components
+### :rotating_light: Other Common Components
 The following a handful of common components that we will use in the following circuits.
 
 #### wires
@@ -319,7 +320,7 @@ See also https://makeabilitylab.github.io/physcomp/electronics/
 
 ## 8. Next step: a Pushbutton ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
 
-### :flags: Push the button
+### :rotating_light: Push the button
 In our first example, the LED was our actuator, and our Arduino was controlling it. If we image an outside parameter to take control over this LED, our finger, we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
 
 Let's make our wiring diagram first.  
@@ -370,7 +371,7 @@ Now here is the `digitalRead()` function and the `if` `else` instructions. The l
 
 Notice the difference between the ```==``` sign and the ```=```. The former is used when two entities are compared, and returns TRUE or FALSE. The latter assigns a value to a variable.
 
-### :flags: Sticky on/off button
+### :rotating_light: Sticky on/off button
 Holding your finger on the button for as long as you need light is not practical.
 Lets program **a second behaviour** that to make the on button “stick”. We therefore must implement some form of “memory”, in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
 
@@ -415,7 +416,7 @@ void loop() {
 
 :scream_cat: Hold on! Debouncing?! [Explained and illustrated with a better / non-freezing method](https://www.arduino.cc/en/tutorial/debounce).
 
-### :flags: Other On/Off Sensors
+### :rotating_light: Other On/Off Sensors
 Now that you’ve learned how to use a pushbutton, you should know that there are other basic sensors that work according to the same *on/off* principle, as:
 * **Switches** are just like a pushbutton, but doesn’t automatically change state when released.
 * **Thermostats** is a switch that opens when the temperature reaches a set value.
@@ -429,7 +430,7 @@ You can try some!
 
 ## 9. Advanced Sensors ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤
 
-### :flags:  ADC
+### :rotating_light:  ADC
 
 In order to read a more advanced sensor then a On/Off button we need **a different type of pin**. In the lower-right part of the Arduino board, you’ll see six pins marked **“Analog In”**.   
 These are special pins that can tell us not only whether there is a voltage applied to them, but if so, also its value. The Arduino has a 10 bit **A**nalog to **D**igital **C**onverter. By using the `analogRead()` function, we can read the voltage applied to one of the pins. This function returns a number between 0 and 1023, which represents voltages between 0 and 5 volts. For example, if there is a voltage of 2.5 V applied to pin number 0, `analogRead(0)` returns 512.
@@ -472,7 +473,7 @@ void loop() {
 As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) and also [this blogpost](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/).    
 :zap: :zap: :zap:
 
-### :flags: talk2me
+### :rotating_light: talk2me
 Wouldn't it be handy if we could check our incoming values? We actually can by establishing **Serial Communication** from our Arduino to our computer.   
 We call this "serial" communication because the connection appears to both the Arduino and the computer as a serial port, even though it may actually use a USB cable. Bytes are sent one after another (serially) from the Arduino to the computer.  
 In the code below we will map the 0-1023 values to a custom range 10-500, send the 2 variables over the serial port and the Arduino Serial Monitor to view them. Click the serial monitor button in the toolbar and select the same baud rate used in the call to begin().  
@@ -528,7 +529,7 @@ Serial.print("Hello world.") gives "Hello world."
 
 `Serial.println()` takes the same forms as Serial.print() but the message is followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n').
 
-### :flags: more toys
+### :rotating_light: more toys
 The Keyestudio starter kits contain a lot of usefull sensor modules, as:
 - An **Alcohol Sensor** :grinning: to make a breath analiser.
 - A **Gas Sensor** or the MQ2. This sensor is suitable for detecting LPG, I-butane, propane, methane, alcohol, Hydrogen and smoke. It has high sensitivity and quick response.
@@ -547,7 +548,7 @@ You might also come across an even more advanced sensor module in the Keyestudio
 :zap: :zap: :zap:
 
 ## 10. PWM ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
-### :flags:  PWM, a fading LED
+### :rotating_light:  PWM, a fading LED
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc. We can accomplish a range of results in both applications because PWM allows us to vary how much time the signal is high as in an analog fashion. While the signal can only be high (5V) or low (0V) at any time, we can change the proportion of time the signal is high compared to when it is low over a consistent time interval. We call this modulating the duty cycle.
 
 
@@ -593,7 +594,7 @@ void loop() {
 }
 ```
 
-### :flags:  Input 2 Output
+### :rotating_light:  Input 2 Output
 **Now lets connect our Input with the Output.**
 In a previous experiment, we have done a *button-controlled LED*, using digital signal to control digital pin. Now we will use a potentiometer to control the brightness of the LED.
 
@@ -634,7 +635,7 @@ After downloading the program, when we rotate the potentiometer knob, we can see
 
 
 
-### :flags:  Servo Motor Control
+### :rotating_light:  Servo Motor Control
 Now, lets substitute our LED for a **Servo Motor**.   
 
 Servos are motors with a shaft that can turn to a specified position. They usually have a range from 0 to 180 degrees. With an Arduino we can tell a servo to go to a specified position. In this part we will see how to connect a servo motor and then how to turn it to different positions defined by the value of our potentiometer.
