@@ -309,7 +309,7 @@ Then you plug in the LED and connect pin 13 & ground to the Arduino. Again, the 
 :zap: If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
 
 ### :rotating_light: Other Common Components
-The following a handful of common components that we will use in the following circuits.
+A handful of common components that we will use in the following circuits.
 
 #### wires
 The wire used to connect components. They come in a wide range of sizes and types. There are 2 main varieties; solid core or stranded. Solid core is stiffer, stranded wire is more flexible. We will use jumper wires, also known as jumper leads on our breadboard.
@@ -325,7 +325,7 @@ Resistors are rated in Ohms (Ω), indicating how much resistance they offer. Be
 Potentiometers, or pots for short, are variable resistors. Potentiometers have three legs. The power of a potentiometer is in the middle leg. It's  resistance varies depends on the potentiometer’s rotating (or sliding) contact (the wiper) position. It is best to use it as a voltage divider with our Arduino. This means we have all 3 contacts connected: 1 to GND (or 3v3), 2 to ADC, 3 to 3V3 (or GND).       
 Other common variable resistors are photocells (LDR), termistors, force-sensitive (FSR) and bend-sensors. These are all two-legged (or “two-lead”). In order to make them work optimally on our Pico we need to add a 2nd resistor (later more).    
 
-:zap: See also [this Guide](https://makeabilitylab.github.io/physcomp/electronics/) (Lessons 1-8) is you want to learn more about the fundamentals of electricity.
+:zap: See also [this Great Website](https://makeabilitylab.github.io/physcomp/electronics/) if you want to learn more about the fundamentals of electricity, or delve deeper into physical computing.
 
 ## 8. Next step: a Pushbutton ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
 
@@ -340,7 +340,7 @@ Let's make our wiring diagram first.
 - 10K resistor attached to pin 2 from ground
 
 ![image](images/arduino/digitalIn.png)    
-![image](images/arduino/digitalInEvery.png)
+![image](images/arduino/digitalInEvery.png)    
 
 #### Code
 ```c++
@@ -424,19 +424,18 @@ void loop() {
 }
 ```
 
-:scream_cat: Hold on! Debouncing?! [Explained and illustrated with a better / non-freezing method](https://www.arduino.cc/en/tutorial/debounce).
+:scream_cat: Hold on! Debouncing?! [Explained and illustrated with a better / non-freezing method](https://docs.arduino.cc/built-in-examples/digital/Debounce).
 
 ### :rotating_light: Other On/Off Sensors
 Now that you’ve learned how to use a pushbutton, you should know that there are other basic sensors that work according to the same *on/off* principle, as:
-* **Switches** are just like a pushbutton, but doesn’t automatically change state when released.
-* **Thermostats** is a switch that opens when the temperature reaches a set value.
-* **Magnetic switches** (or “reed relays”)
-have two contacts that come together when they are near a magnet.
+* **Switches** are just like pushbuttons, but don't automatically change state when released
+* **Thermostats** are switches that open when the temperature reaches a set value
+* **Magnetic switches** (or “reed relays”) have two contacts that come together when they are near a magnet
 * **Carpet switches** are small mats that you can place under a carpet or a doormat to detect the presence of a human being (or heavy cat).
 * **PIR** or Passive InfraRed sensor. This small device triggers when a human being (or other living being) moves within its proximity.
 * **Tilt switches** are electronic components that contains two contacts and a little metal ball.
-You can try some!
 * ...
+You can try some!    
 
 ## 9. Advanced Sensors ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤
 
