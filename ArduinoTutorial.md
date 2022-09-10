@@ -339,7 +339,7 @@ Let's make our wiring diagram first.
 - pushbutton attached to pin 2 from +5V
 - 10K resistor attached to pin 2 from ground
 
-![image](images/arduino/digitalIn.png)    
+![image](images/arduino/digitalInUno.png)    
 ![image](images/arduino/digitalInEvery.png)    
 
 #### Code
@@ -451,7 +451,8 @@ The next sketch & electronics diagram demonstrates analog input by reading an an
 - LED: a 220Ω resister bridges digital output 2 to the  anode (long leg) of the LED, the cathode (short leg) attached to ground.   
 Actually the resistor can also go in between the cathode and ground as in a series circuit the order of components does not matter as the current has to pass through all the parts!
 
-![image](images/arduino/analogIn.png)
+![image](images/arduino/analogInUno.png)    
+![image](images/arduino/analogInEvery.png)
 
 #### Code
 ```c++
