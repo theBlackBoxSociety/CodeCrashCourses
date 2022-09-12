@@ -119,7 +119,7 @@ The programs you write for your Arduino are known as sketches. They are written 
 
 First we wil download & install the Arduino IDE 2.0 and then we go through the process of uploading a Sketch from the IDE to the board.
 
-### :rotating_light:  the Arduino IDE Installation Guide
+###  the Arduino IDE Installation Guide
 Download the latest stable version for your operating system from the [Arduino Software Page](https://www.arduino.cc/en/software) or, alternatively, start by [selecting your board on the website](https://docs.arduino.cc/) and then follow the **quickstart** guide.        
 
 #### MacOS
@@ -142,7 +142,7 @@ Alternatively you can also download the zip file. Unzip it, change permissions a
 
 Additionally you can fix an *Add-to-Favorites option* for the Arduino IDE 2.0 application with [this guide](https://averagelinuxuser.com/ubuntu_custom_launcher_dock/)
 
-### :rotating_light:  Upload a Sketch with the Arduino IDE 2.0
+###  Upload a Sketch with the Arduino IDE 2.0
 The process for setting up your Arduino and connecting the software to your board slightly differs related on the computer you are using and the Arduino board itself.
 
 You can skip this first step if you are using an Arduino UNO R3.    
@@ -182,7 +182,7 @@ After this procedure, you should be able to proceed normally and upload the sket
 
 ## 5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
 
-### :rotating_light:  Hello World!
+###  Hello World!
 A *"Hello World!"* in the Arduino sphere is a blinking LED.  
 You just need an Arduino board and a USB cable.    
 Open a new file in the IDE. The lines of code below are already written. They form the basis of every program. More about that later.
@@ -256,13 +256,13 @@ Alternatively you can use `#define lepdin 13`. It is like an automatic search an
 
 Writing comments in Arduino; any text beginning with `//` is ignored or use this `/*` `*/` at the start & end for a block of comments.
 
-### :rotating_light: Lingua Arduino
+### Lingua Arduino
 The Arduino programming language can be divided in three main parts: functions, values (variables and constants), and structure. See the [reference page](https://www.arduino.cc/reference/en/) for documentation of Arduino language constructs.
 
-### :rotating_light: Fiddle the parameters
+### Fiddle the parameters
 You can adjust the values of the 2 delay times to see changes in blinking rhythm. Don't forget to compile and upload the code after you made changes.
 
-### :rotating_light: The IDE 2.0 Autocomplete Feature
+### The IDE 2.0 Autocomplete Feature
 The Autocomplete Feature is a tool designed to increase your knowledge while writing code faster.    
 
 To enable (or disable) autocompletion, you need to navigate to File > Preferences and tick (or untick) the box next to "Editor Quick Suggestions".    
@@ -271,7 +271,7 @@ In order to use the auto-complete feature, you first need to select your board (
 
 However, in some cases, this doesn't always happen  you might need to click "Ctrl + Space" for the suggestions to appear.
 
-### :rotating_light: Other actuators
+### Other actuators
 The LED can easily be substituted by other actuator as:
 - A Buzzer or beeper is a little device that makes a buzzing noise and is used for signalling.
 - A **relay** is an electrically operated switch. It uses a low voltage control signal to switch, usually higher voltage. It can also be used to control lighting, electrical and other equipment.
@@ -299,17 +299,19 @@ A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solder
 ![image](images/arduino/breadboard.png)    
 
 
-Now, if you use an **Arduino Nano Every** you can start by plugging it onto the breadboard in the following way.    
+If you use an **Arduino Nano Every** you can start by plugging it onto the breadboard in the following way.    
 
 ![image](images/arduino/every_on_BB.png)    
+
 
 Then you plug in the LED and connect pin 13 & ground to the Arduino. Again, the anode (longest) leg of an LED is connected to pin 13 and the negative or cathode (shortest) leg of the LED is then connected Ground.    
 
 ![image](images/arduino/digitalOutEvery.png)    
 
+
 :zap: If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
 
-### :rotating_light: Other Common Components
+### Other Common Components
 A handful of common components that we will use in the following circuits.
 
 #### wires
@@ -330,7 +332,7 @@ Other common variable resistors are photocells (LDR), termistors, force-sensitiv
 
 ## 8. Next step: a Pushbutton ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤
 
-### :rotating_light: Push the button
+### Push the button
 In our first example, the LED was our actuator, and our Arduino was controlling it. If we image an outside parameter to take control over this LED, our finger, we need **a sensor**. And the simplest form of sensor available is **a pushbutton**.
 
 Let's make our wiring diagram first.  
@@ -382,7 +384,7 @@ Now here is the `digitalRead()` function and the `if` `else` instructions. The l
 
 Notice the difference between the ```==``` sign and the ```=```. The former is used when two entities are compared, and returns TRUE or FALSE. The latter assigns a value to a variable.
 
-### :rotating_light: Sticky on/off button
+### Sticky on/off button
 Holding your finger on the button for as long as you need light is not practical.
 Lets program **a second behaviour** that to make the on button “stick”. We therefore must implement some form of “memory”, in the form of a software mechanism that will remember when we have pressed the button and will keep the light on even after we have released it.
 
@@ -427,7 +429,7 @@ void loop() {
 
 :scream_cat: Hold on! Debouncing?! [Explained and illustrated with a better / non-freezing method](https://docs.arduino.cc/built-in-examples/digital/Debounce).
 
-### :rotating_light: Other On/Off Sensors
+### Other On/Off Sensors
 Now that you’ve learned how to use a pushbutton, you should know that there are other basic sensors that work according to the same *on/off* principle, as:
 * **Switches** are just like pushbuttons, but don't automatically change state when released
 * **Thermostats** are switches that open when the temperature reaches a set value
@@ -440,7 +442,7 @@ You can try some!
 
 ## 9. Advanced Sensors ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤
 
-### :rotating_light:  ADC
+###  ADC
 
 In order to read a more advanced sensor then a On/Off button we need **a different type of pin**. In the lower-right part of the Arduino board, you’ll see six pins marked **“Analog In”**.   
 These are special pins that can tell us not only whether there is a voltage applied to them, but if so, also its value. The Arduino has a 10 bit **A**nalog to **D**igital **C**onverter. By using the `analogRead()` function, we can read the voltage applied to one of the pins. This function returns a number between 0 and 1023, which represents voltages between 0 and 5 volts. For example, if there is a voltage of 2.5 V applied to pin number 0, `analogRead(0)` returns 512.
@@ -484,7 +486,7 @@ void loop() {
 As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) and also [this blogpost](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/).    
 :zap: :zap: :zap:
 
-### :rotating_light: talk2me
+### talk2me
 Wouldn't it be handy if we could check our incoming values? We actually can by establishing **Serial Communication** from our Arduino to our computer.   
 We call this *"serial"* communication because the connection appears to both the Arduino and the computer as a serial port, even though it may actually use a USB cable. Bytes are sent one after another (serially) from the Arduino to the computer.  
 In the code below we will map the 0-1023 values to a custom range 10-500, send the 2 variables over the serial port and the Arduino Serial Monitor to view them. Click the serial monitor button in the toolbar and select the same baud rate used in the call to begin().  
@@ -540,7 +542,7 @@ Serial.print("Hello world.") gives "Hello world."
 
 `Serial.println()` takes the same forms as Serial.print() but the message is followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n').
 
-### :rotating_light: more toys
+### more toys
 The Keyestudio starter kits contain a lot of usefull sensor modules, as:
 - An **Alcohol Sensor** :grinning: to make a breath analiser.
 - A **Gas Sensor** or the MQ2. This sensor is suitable for detecting LPG, I-butane, propane, methane, alcohol, Hydrogen and smoke. It has high sensitivity and quick response.
@@ -559,7 +561,7 @@ You might also come across an even more advanced sensor module in the Keyestudio
 :zap: :zap: :zap:
 
 ## 10. PWM ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
-### :rotating_light:  PWM, a fading LED
+###  PWM, a fading LED
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc. We can accomplish a range of results in both applications because PWM allows us to vary how much time the signal is high as in an analog fashion. While the signal can only be high (5V) or low (0V) at any time, we can change the proportion of time the signal is high compared to when it is low over a consistent time interval. We call this modulating the duty cycle.
 
 
@@ -606,7 +608,7 @@ void loop() {
 }
 ```
 
-### :rotating_light:  Input 2 Output
+###  Input 2 Output
 **Now lets connect our Input with the Output.**
 In a previous experiment, we have done a *button-controlled LED*, using digital signal to control digital pin. Now we will use a potentiometer to control the brightness of the LED.
 
@@ -648,7 +650,7 @@ After downloading the program, when we rotate the potentiometer knob, we can see
 
 
 
-### :rotating_light:  Servo Motor Control
+###  Servo Motor Control
 Now, lets substitute our LED for a **Servo Motor**.   
 
 Servos are motors with a shaft that can turn to a specified position. They usually have a range from 0 to 180 degrees. With an Arduino we can tell a servo to go to a specified position. In this part we will see how to connect a servo motor and then how to turn it to different positions defined by the value of our potentiometer.
