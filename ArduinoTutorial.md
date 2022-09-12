@@ -298,13 +298,14 @@ A [breadboard](https://en.wikipedia.org/wiki/Breadboard), also known as a solder
 
 ![image](images/arduino/breadboard.png)    
 
-If you use an Arduino Nano Every you can start by plugging it onto the breadboard in the following way.    
+
+Now, if you use an **Arduino Nano Every** you can start by plugging it onto the breadboard in the following way.    
 
 ![image](images/arduino/every_on_BB.png)    
 
 Then you plug in the LED and connect pin 13 & ground to the Arduino. Again, the anode (longest) leg of an LED is connected to pin 13 and the negative or cathode (shortest) leg of the LED is then connected Ground.    
 
-![image](images/arduino/digitalOutEvery_bb.png)    
+![image](images/arduino/digitalOutEvery.png)    
 
 :zap: If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
 
@@ -562,7 +563,7 @@ You might also come across an even more advanced sensor module in the Keyestudio
 PWM, short for **Pulse Width Modulation**, is a technique used to encode analog signal level into a digital one. A computer cannot output analog voltage but only digital voltage values such as 0V or 5V. We use it to control dimming of RGB LEDs or to control the direction of a servo motor, sound synthesis, etc. We can accomplish a range of results in both applications because PWM allows us to vary how much time the signal is high as in an analog fashion. While the signal can only be high (5V) or low (0V) at any time, we can change the proportion of time the signal is high compared to when it is low over a consistent time interval. We call this modulating the duty cycle.
 
 
-![pwm](images/arduino/Pulse-Width-Modulation.jpg)
+![pwm](images/arduino/Pulse-Width-Modulation.png)
 
 - The amplitude of pulse width (minimum / maximum)
 - The pulse period (The reciprocal of pulse frequency in 1 second)
@@ -573,7 +574,8 @@ There are 6 PMW interfaces on an Arduino Uno: Digital pins 3, 5, 6, 9, 10, and 1
 We will explore this PWM magic by changing the brightness of a LED over time.  
 
 #### Circuit
-![image](images/arduino/analogOutSimple_bb.png)
+![image](images/arduino/analogOutSimple.png)    
+![image](images/arduino/analogOutSimpleEvery.png)    
 
 #### Code
 ```c++
@@ -611,7 +613,8 @@ In a previous experiment, we have done a *button-controlled LED*, using digital 
 The Arduino will read the analog value of the potentiometer and assign this value to PWM port. But since PWM works only in the range from 0 - 255 we need map the input from our sensor down, thus a value between 0 - 1024 to one between 0 - 255.  
 
 #### Circuit
-![image](images/arduino/analogOut.png)
+![image](images/arduino/analogOut.png)    
+![image](images/arduino/analogOutEvery.png)    
 
 #### Code
 ```c++
@@ -660,7 +663,8 @@ Our servo motor has a female connector with three pins.
 - Connect the power cable that in all standards should be red to 5V on the Arduino.
 - Connect the remaining line on the servo connector to a digital 9 (or 10) on the Arduino.    
 
-![image](images/arduino/analogOutServo.png)
+![image](images/arduino/analogOutServo.png)    
+![image](images/arduino/analogOutServoEvery.png)    
 
 *Note that servos can draw considerable power, so if you need to drive more than one or two, you'll probably need to power them from a separate supply (i.e. not the +5V pin on your Arduino).*
 
@@ -706,7 +710,7 @@ You can also choose not to use a library here (and for other functions) as libra
 See controlling servos without the Servo Library in [this tutorial of keyestudio](https://wiki.keyestudio.com/Ks0194_keyestudio_Micro_Servo).
 
 That's it for now.    
-There is [a second part of this tutorial](ArduinoPlus.md) in the make about connecting Arduino with other programs as Max, PD, Processing, Python, a webpage, etc.    
+There is [a second part of this tutorial](MaxArduinoDMX.md) in the make about connecting Arduino with  Max.    
 👋🏼
 
 <hr>
