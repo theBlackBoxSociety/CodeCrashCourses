@@ -17,29 +17,30 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with the Ardu
 	- [The UNO](#the-uno)
 	- [The Nano Every](#the-nano-every)
 - [4. The Software (IDE)](#4-the-software-ide)
-	- [:rotating_light:  the Arduino IDE Installation Guide](#flags-the-arduino-ide-installation-guide)
-	- [:rotating_light:  Upload a Sketch with the Arduino IDE 2.0](#flags-upload-a-sketch-with-the-arduino-ide-20)
+	- [the Arduino IDE Installation Guide](#the-arduino-ide-installation-guide)
+	- [Upload a Sketch with the Arduino IDE 2.0](#upload-a-sketch-with-the-arduino-ide-20)
 - [5. Getting Started: Hello World! ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕆𝕦𝕥𝕡𝕦𝕥𝕤](#5-getting-started-hello-world-)
-	- [:rotating_light:  Hello World!](#flags-hello-world)
-	- [:rotating_light: Lingua Arduino](#flags-lingua-arduino)
-	- [:rotating_light: Fiddle the parameters](#flags-fiddle-the-parameters)
-	- [:rotating_light: Other actuators](#flags-other-actuators)
+	- [Hello World!](#hello-world)
+	- [Lingua Arduino](#lingua-arduino)
+	- [Fiddle the parameters](#fiddle-the-parameters)
+	- [The IDE 2.0 Autocomplete Feature](#the-ide-20-autocomplete-feature)
+	- [Other actuators](#other-actuators)
 - [6. Wiring Diagrams & Schematics](#6-wiring-diagrams-schematics)
 - [7. Let's Get Physical](#7-lets-get-physical)
 	- [breadboard](#breadboard)
-	- [:rotating_light: Other Common Components](#flags-other-common-components)
+	- [Other Common Components](#other-common-components)
 - [8. Next step: a Pushbutton ☞ 𝔻𝕚𝕘𝕚𝕥𝕒𝕝 𝕀𝕟𝕡𝕦𝕥𝕤](#8-next-step-a-pushbutton-)
-	- [:rotating_light: Push the button](#flags-push-the-button)
-	- [:rotating_light: Sticky on/off button](#flags-sticky-onoff-button)
-	- [:rotating_light: Other On/Off Sensors](#flags-other-onoff-sensors)
+	- [Push the button](#push-the-button)
+	- [Sticky on/off button](#sticky-onoff-button)
+	- [Other On/Off Sensors](#other-onoff-sensors)
 - [9. Advanced Sensors ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕀𝕟𝕡𝕦𝕥𝕤](#9-advanced-sensors-)
-	- [:rotating_light:  ADC](#flags-adc)
-	- [:rotating_light: talk2me](#flags-talk2me)
-	- [:rotating_light: more toys](#flags-more-toys)
+	- [ADC](#adc)
+	- [talk2me](#talk2me)
+	- [more toys](#more-toys)
 - [10. PWM ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤](#10-pwm-)
-	- [:rotating_light:  PWM, a fading LED](#flags-pwm-a-fading-led)
-	- [:rotating_light:  Input 2 Output](#flags-input-2-output)
-	- [:rotating_light:  Servo Motor Control](#flags-servo-motor-control)
+	- [PWM, a fading LED](#pwm-a-fading-led)
+	- [Input 2 Output](#input-2-output)
+	- [Servo Motor Control](#servo-motor-control)
 
 <!-- /TOC -->
 </details>
@@ -309,7 +310,7 @@ Then you plug in the LED and connect pin 13 & ground to the Arduino. Again, the 
 ![image](images/arduino/digitalOutEvery.png)    
 
 
-:zap: If you want some extra help check this: [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/)
+:zap: If you want some extra context and help check this wonderful [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/) Sparkfun-page.
 
 ### Other Common Components
 A handful of common components that we will use in the following circuits.
@@ -571,7 +572,8 @@ PWM, short for **Pulse Width Modulation**, is a technique used to encode analog 
 - The pulse period (The reciprocal of pulse frequency in 1 second)
 - The voltage level（such as：0V-5V）
 
-There are 6 PMW interfaces on an Arduino Uno: Digital pins 3, 5, 6, 9, 10, and 11, all are indicated with a ~ (tilde).
+There are 6 PMW interfaces on an Arduino Uno: Digital pins 3, 5, 6, 9, 10, and 11, all are indicated with a ~ (tilde).    
+The Arduino Nano Every has 1 less PMW capable pin, these are 3, 5, 6, 9 & 10.    
 
 We will explore this PWM magic by changing the brightness of a LED over time.  
 
