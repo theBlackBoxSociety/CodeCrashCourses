@@ -309,6 +309,9 @@ Then you plug in the LED and connect pin 13 & ground to the Arduino. Again, the 
 
 ![image](images/arduino/digitalOutEvery.png)    
 
+With an Arduino Uno this would make.    
+![image](images/arduino/digitalOut.png)    
+    
 
 :zap: If you want some extra context and help check this wonderful [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/) Sparkfun-page.
 
