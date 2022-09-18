@@ -1,5 +1,5 @@
 # Physical Computing with the Arduino
-<sup>last updated: 9/9/2022</sup>
+<sup>last updated: 18/9/2022</sup>
 
 👋🏼 Hi, welcome 👋🏼    
 You will learn the basics of physical computing <sup>[1](#1)</sup> with the Arduino. This includes learning to know and setting up the workflow, reading and reproducing circuits, program the Arduino, ...
@@ -311,7 +311,7 @@ Then you plug in the LED and connect pin 13 & ground to the Arduino. Again, the 
 
 With an Arduino Uno this would make.    
 ![image](images/arduino/digitalOut.png)    
-    
+
 
 :zap: If you want some extra context and help check this wonderful [How to Use a Breadboard](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/) Sparkfun-page.
 
@@ -384,9 +384,14 @@ If everything is correct, the LED will light up when you press the button. Yes?!
 
 :mag: **A closer look at the code**  
 Now here is the `digitalRead()` function and the `if` `else` instructions. The latter is a very important one in programming. It allows the computer to make decisions.       
-`digitalRead()` reads the value from a specified digital pin, either HIGH or LOW.
+`digitalRead()` reads the value from a specified digital pin, either ON (typically, HIGH or 5V) or off (typically, LOW or 0V).
 
-Notice the difference between the ```==``` sign and the ```=```. The former is used when two entities are compared, and returns TRUE or FALSE. The latter assigns a value to a variable.
+:zap: Notice the difference between the ```==``` sign and the ```=```. The former is used when two entities are compared, and returns TRUE or FALSE. The latter assigns a value to a variable.
+
+:mag: **And also some words on the circuit**
+We need the connection to ground via a resistor. There are no issues when the button is pressed. However when the switch is open, the digital input pin doesn't know exactly what to read. It floats and that is not good. This is easily solved with what’s called **a pull-down resistor** before the GND connection.
+
+:zap: If you like to keep your electronic circuitry as simple as possible, you can make use of the `INPUT_PULLUP` option in the pinMode function. In doing so **a pull-up resistor**, a resistor integrated in the Arduino board, will be set between the digital pin and VCC (5V). This resistor will make sure the state stays HIGH. When you press the button, the states becomes LOW. This is the normal logic inverted. However also the circuit is different: one leg of the push button is connected to the ground (GND), another one to a digital pin. The external resistor is no longer needed. See this [example](https://docs.arduino.cc/built-in-examples/digital/InputPullupSerial).
 
 ### Sticky on/off button
 Holding your finger on the button for as long as you need light is not practical.
@@ -431,7 +436,8 @@ void loop() {
 }
 ```
 
-:scream_cat: Hold on! Debouncing?! [Explained and illustrated with a better / non-freezing method](https://docs.arduino.cc/built-in-examples/digital/Debounce).
+:scream_cat: Hold on! What is **debouncing**?! [Explained and illustrated with a better / non-freezing method](https://docs.arduino.cc/built-in-examples/digital/Debounce).
+
 
 ### Other On/Off Sensors
 Now that you’ve learned how to use a pushbutton, you should know that there are other basic sensors that work according to the same *on/off* principle, as:
@@ -487,7 +493,7 @@ void loop() {
 }
 ```
 :zap: :zap: :zap:    
-As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://www.arduino.cc/en/Tutorial/BlinkWithoutDelay) and also [this blogpost](https://www.norwegiancreations.com/2017/09/arduino-tutorial-using-millis-instead-of-delay/).    
+As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://docs.arduino.cc/built-in-examples/digital/BlinkWithoutDelay) and also [this explanation](https://makeabilitylab.github.io/physcomp/arduino/led-blink.html#blink-without-using-delays).    
 :zap: :zap: :zap:
 
 ### talk2me
@@ -557,7 +563,7 @@ The Keyestudio starter kits contain a lot of usefull sensor modules, as:
 - and many more
 
 :zap: :zap: :zap:    
-If we need to leave the keyestudio playgarden and make use of other sensors we might need to do some more circuit magic for a sensor to work. A very common and simple circuit is [the voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). It turns a large voltage into a smaller one. See [this Analog Input tutorial](https://www.arduino.cc/en/tutorial/AnalogInput).    
+If we need to leave the keyestudio playgarden and make use of other sensors we might need to do some more circuit magic for a sensor to work. A very common and simple circuit is [the voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). It turns a large voltage into a smaller one. See [this Analog Input tutorial](https://docs.arduino.cc/built-in-examples/analog/AnalogInput).    
 :zap: :zap: :zap:
 
 :zap: :zap: :zap:    
@@ -706,7 +712,7 @@ void loop() {
   delay(15);
 }
 ```
-Make sure you always check the dos and don'ts on how to use a library on its reference page! [This is the servo reference page](https://www.arduino.cc/en/reference/servo)
+Make sure you always check the dos and don'ts on how to use a library on its reference page! [This is the servo reference page](https://www.arduino.cc/reference/en/libraries/servo/)
 
 The key functions used here are:
 - Servo *objectname*;
