@@ -1,5 +1,5 @@
 # Physical Computing with the Arduino
-<sup>last updated: 18/9/2022</sup>
+<sup>last updated: 19/9/2022</sup>
 
 👋🏼 Hi, welcome 👋🏼    
 You will learn the basics of physical computing <sup>[1](#1)</sup> with the Arduino. This includes learning to know and setting up the workflow, reading and reproducing circuits, program the Arduino, ...
@@ -391,7 +391,7 @@ Now here is the `digitalRead()` function and the `if` `else` instructions. The l
 :mag: **And also some words on the circuit**
 We need the connection to ground via a resistor. There are no issues when the button is pressed. However when the switch is open, the digital input pin doesn't know exactly what to read. It floats and that is not good. This is easily solved with what’s called **a pull-down resistor** before the GND connection.
 
-:zap: If you like to keep your electronic circuitry as simple as possible, you can make use of the `INPUT_PULLUP` option in the pinMode function. In doing so **a pull-up resistor**, a resistor integrated in the Arduino board, will be set between the digital pin and VCC (5V). This resistor will make sure the state stays HIGH. When you press the button, the states becomes LOW. This is the normal logic inverted. However also the circuit is different: one leg of the push button is connected to the ground (GND), another one to a digital pin. The external resistor is no longer needed. See this [example](https://docs.arduino.cc/built-in-examples/digital/InputPullupSerial).
+:zap: If you like to keep your electronic circuitry as simple as possible, you can make use of the `INPUT_PULLUP` option in the pinMode function. In doing so, **a pull-up resistor**, a resistor integrated in the Arduino board, will be set between the digital pin and VCC (5V). This resistor will make sure the state stays HIGH. When you press the button, the states becomes LOW. This is the normal logic inverted. However also the circuit is different: one leg of the push button is connected to the ground (GND), another one to a digital pin. The external resistor is no longer needed. See this [example](https://docs.arduino.cc/built-in-examples/digital/InputPullupSerial).
 
 ### Sticky on/off button
 Holding your finger on the button for as long as you need light is not practical.
@@ -493,7 +493,7 @@ void loop() {
 }
 ```
 :zap: :zap: :zap:    
-As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://docs.arduino.cc/built-in-examples/digital/BlinkWithoutDelay) and also [this explanation](https://makeabilitylab.github.io/physcomp/arduino/led-blink.html#blink-without-using-delays).    
+As you might have noticed in the example above the blinking interval is not always changed immediately after turning the knob. Especially when there are long breaks. The reason for this is that `delay()` pauses the program completely for time specified. We better use `millis()` when timing is key. See [the blink-without-delay example](https://docs.arduino.cc/built-in-examples/digital/BlinkWithoutDelay) and also [this explanation](https://makeabilitylab.github.io/physcomp/arduino/led-blink.html#blink-without-using-delays). There is an example in the code-section [here](/code/arduino/8c_ analogIn2digitalOut/8c_ analogIn2digitalOut.ino)    
 :zap: :zap: :zap:
 
 ### talk2me
@@ -541,7 +541,7 @@ void loop() {
 }
 ```
 :mag: **A closer look at the code**  
-In the setup() function we open the serial communication set the data rate in bits per second (baud), here 9600bps, with the command `Serial.begin(9600);`.   
+In the setup() function we open the serial communication set the data rate in bits per second (baud), here 9600bps, with the command `Serial.begin(9600);` Notice the **capital S**.    
 
 `Serial.print()` prints the data to the serial port as human-readable ASCII text. This command can take many forms. Numbers are printed using an ASCII character for each digit. Floats are similarly printed as ASCII digits, defaulting to two decimal places. Bytes are sent as a single character. Characters and strings are sent as is.   
 For example:
@@ -551,6 +551,8 @@ Serial.print('N') gives "N"
 Serial.print("Hello world.") gives "Hello world."  
 
 `Serial.println()` takes the same forms as Serial.print() but the message is followed by a carriage return character (ASCII 13, or '\r') and a newline character (ASCII 10, or '\n').
+
+See also [the Serial Reference Page](https://www.arduino.cc/reference/en/language/functions/communication/serial/)    
 
 ### more toys
 The Keyestudio starter kits contain a lot of usefull sensor modules, as:
@@ -563,11 +565,11 @@ The Keyestudio starter kits contain a lot of usefull sensor modules, as:
 - and many more
 
 :zap: :zap: :zap:    
-If we need to leave the keyestudio playgarden and make use of other sensors we might need to do some more circuit magic for a sensor to work. A very common and simple circuit is [the voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all). It turns a large voltage into a smaller one. See [this Analog Input tutorial](https://docs.arduino.cc/built-in-examples/analog/AnalogInput).    
+If we need to leave the keyestudio playgarden and make use of other sensors we might need to do some more circuit magic for a sensor to work. A very common and simple circuit is [the voltage divider](https://learn.sparkfun.com/tutorials/voltage-dividers/all) or sometimes called resistor divider. It turns a large voltage into a smaller one. See [this Analog Input tutorial](https://docs.arduino.cc/built-in-examples/analog/AnalogInput).    
 :zap: :zap: :zap:
 
 :zap: :zap: :zap:    
-You might also come across an even more advanced sensor module in the Keyestudio kits. These modules are connected to the Arduino board through UART, SPI, or I2C (3 common communication peripherals found on Arduino). Lets not make it more complex then needed here. If you want to learn more [this post](https://maker.pro/arduino/tutorial/common-communication-peripherals-on-the-arduino-uart-i2c-and-spi) is a good start and the code in the Keyestudio can get you started.    
+You might also come across even more advanced sensor modules. These modules are connected to the Arduino board through UART, SPI, or I2C (3 common communication peripherals found on Arduino). Let's not make it more complex then needed here. If you want to learn more [this post](https://maker.pro/arduino/tutorial/common-communication-peripherals-on-the-arduino-uart-i2c-and-spi) is a good start and the code in the Keyestudio can get you started.    
 :zap: :zap: :zap:
 
 ## 10. PWM ☞ 𝔸𝕟𝕒𝕝𝕠𝕘 𝕆𝕦𝕥𝕡𝕦𝕥𝕤
