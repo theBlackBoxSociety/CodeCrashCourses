@@ -1,7 +1,8 @@
 # Physical Computing with the Arduino
-<sup>last updated: 19/9/2022</sup>
+<sup>last updated: 20/9/2022</sup>
 
 👋🏼 Hi, welcome 👋🏼    
+
 You will learn the basics of physical computing <sup>[1](#1)</sup> with the Arduino. This includes learning to know and setting up the workflow, reading and reproducing circuits, program the Arduino, ...
 
 ![Arduino Board & IDE](images/arduino/intro.png)
