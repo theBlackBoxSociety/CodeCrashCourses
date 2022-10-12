@@ -1,18 +1,39 @@
-// random
+/*
+RANDOM
 
-// Random was introduced in colour.
-// Now used in other transformations.
+- Start a new project
+- Randomness was previously introduced in brightness values.
+- Let's use it in other transformations.
+- Introduction to alpha
+  - the value is the change from opaque (1).
 
+1: draw worm (random rotation every iteration)
+2: draw grass
+3: draw pebbles
+4: Concept of seeds (no true random in computers)
 
-startshape grass
+*/
 
+startshape worm
 
 // 1: random rotation
 shape worm
 {
-  loop 500 [ y .2 r rand(-5,5) ] CIRCLE []
+  // The rotation is relative to the previous iteration
+  loop 500 [ y 0.2 r rand(-3,3) ] CIRCLE []
+  /*
+  step by step:
+  - loop 1: 
+    - draw circle, 
+    - move up, 
+    - rotate
+  - loop 2: 
+    - draw circle, 
+    - move up (where previous circle rotated to), 
+    - rotate again
+  - etc...
+  */
 }
-
 
 // 2: random location and size
 shape grass
@@ -22,12 +43,13 @@ shape grass
     x rand(-20,20) 
     y rand(-10,10) 
     s rand(0.9,1.1)
-    a rand(0.1,-0.2) // alpha "a" for transparency
+    alpha rand(0.1,-0.2) // 'alpha' or 'a' for transparency
+    // notice tendency towards transparent
   ] worm []
 }
 
-
-// 3: random selection between shapes
+// 3: scatter some pebbles around
+// random selection between the two 'worm' shapes
 /*
 shape worm
 {

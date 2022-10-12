@@ -1,12 +1,18 @@
-// Recursion
+/*
+RECURSION
 
+- Start a new project
+- Dangerous: computer crashes
+    - Built-in safety in Context Free:
+    - If a shape is smaller than a pixel, the program stops.
+
+*/
 
 startshape aaa
 
-
-// adjust scale, but don't go above 0.999
+// adjust scale, but don't go above 0.9999
 shape aaa
 {
   CIRCLE []
-  aaa [ s 0.95 x 1 r 20 ]
+  // aaa [ s 0.95 x 1 r 20 ]
 }

@@ -1,20 +1,21 @@
-// Fractal 
+/*
+FRACTALS
 
+- Start a new project
+- Fractals are multiple series of recursion
+
+*/
 
 startshape fractal
-
 
 rotation = 90
 space = 0.75
 scale = 0.52
 
-
 shape fractal
 {
   TRIANGLE[]
   fractal [ y space s scale ]
-  /*
-  fractal [ x space s scale r -rotation ]
-  fractal [ x -space s scale r rotation ]
-  */
+  // fractal [ x space s scale r -rotation ]
+  // fractal [ x -space s scale r rotation ]
 }

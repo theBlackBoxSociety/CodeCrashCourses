@@ -1,11 +1,16 @@
-// Two shapes
+/*
+TWO SHAPES
 
-// 1: startshape: primitives
-// 2: startshape: rozetta
+- Continuation of the previous file
 
+1: startshape: primitives
+2: startshape: rozetta
+3: change startshape to point 
+   from one shape to the other
+
+*/
 
 startshape primitives
-
 
 shape primitives
 {
@@ -20,3 +25,5 @@ shape rozetta
   primitives [ x 1 ]
   primitives [ x 2 ]
 }
+
+

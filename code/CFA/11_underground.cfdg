@@ -1,35 +1,50 @@
-// underground
+/*
+UNDERGROUND
 
-// 1: startshape: section
-// 2: startshape: subway
+- Start a new project
+
+- Step by step
+- Modular approach
+- Recursion terminates by having a rule that doesn't call itself
+- Color
+  - Brightness
+  - Hue
+  - Saturation
+
+1: Draw a rail-section with a terminus
+2: Add turns
+3: Add stations
+4: Add cross-sections to make a whole network
 
 
-startshape section
+*/
 
+startshape underground
 
-shape section
+shape underground
+
+// straight rail
 rule 1000   // chosen most of the time
 {
-	CIRCLE []
-	section [ y 0.1 ]
+	CIRCLE [] // start with red
+	underground [ y 0.1 ] // note: no downscaling!
 }
 
 // add a terminus
 // the recursion stops here
-rule 1
+rule 1 // not chosen very often
 {
-	CIRCLE [ s 3 ]
-	CIRCLE [ s 1 b 1 ]
-  // notice that "section[]" is not called
+	CIRCLE [ s 3 ] // the outer circle
+	CIRCLE [ s 1 b 1 ] // a white circle in the middle
+  // notice that "underground[]" is not called
 }
-
 
 /*
 // add turns
-rule 1 { section [ r 45 ] }
-rule 1 { section [ r -45 ] }
-rule 1 { section [ r 90 ] }
-rule 1 { section [ r -90 ] }
+rule 1 { underground [ r 45 ] }
+rule 1 { underground [ r -45 ] }
+rule 1 { underground [ r -90 ] }
+rule 1 { underground [ r -90 ] }
 */
 
 /*
@@ -37,31 +52,24 @@ rule 1 { section [ r -90 ] }
 rule 4 
 {
 	SQUARE [ s 3 r 45 ]
-	section []
+	underground []
 }
 */
 
 
 /*
-// cross-section
-rule 0.45
+// cross-sections
+rule 0.45 // only rarely
 {
-	section []
+	underground []
   
-  // call another line 
-  // perpendicular to the current one
-	subway [ rotate 90 ]
+  // Draw another metro-line perpendicular to the current one
+	// Add colour to the lines
+  // Draw the new lines from the middle towards left and right,
+  // so end-terminals appear at both ends
+  // Rotate through the colour wheel
+  underground [  b 0.7 sat 1 hue 55 r 90 ]
+  underground [  b 0.7 sat 1 hue 55 r -90 ]
+  // add 55 to the previous hue in the color wheel
 }
 */
-
-
-
-// add colour to the lines
-// and draw lines from the middle
-// so stations appear at both ends
-shape subway
-rule 
-{
-  section [  b 0.7 sat 1 hue 55 ]
-  section [  b 0.7 sat 1 hue 55 rotate 180 ]
-}

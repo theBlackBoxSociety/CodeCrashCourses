@@ -1,18 +1,31 @@
-// noise
+/*
+NOISE
 
-// 1: draw row
-// 2: fixed pixel brightness
-// 3: random pixel brightness
-// 4: draw grid
+- Start a new project
+- Noise is basically randomness
 
+1: draw a pixel
+2: draw a row
+3: fixed pixel brightness
+  - brightness shorthand: b
+4: random pixel brightness
+  - random syntax 1: a..b
+5: draw grid
+6: variables
+  - variable name coloring (green, blue, purple)
+  - reserved names
+  - assign a variable, use a variable
+  - make X-Y resolution into variables
+    - resolution_x = 200
+    - resolution_y = 150
 
-startshape row
+*/
 
-
+startshape pixel
+  
 shape pixel
 {
   SQUARE []
-  // shorthand brightness: b
 }
 
 shape row
@@ -24,3 +37,5 @@ shape grid
 {
   loop 30 [ y 1 ] row []
 }
+
+

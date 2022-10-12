@@ -1,8 +1,13 @@
-// primitives
+/* 
+PRIMITIVES
 
+- Code generates shapes (graphical output)
+- comment syntax (inline, block)
+- cmd + R or ctrl + R to render
+
+*/
 
 startshape primitives
-
 
 shape primitives
 {

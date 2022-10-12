@@ -1,0 +1,22 @@
+/*
+TILES
+
+*/
+
+// Uncomment the line below:
+// CF::Tile = [s 1]
+
+// Render > Save Output
+// Increase output multiplier in the dialog box
+// to create more tiles
+
+startshape aa
+
+shape aa
+{
+  TRIANGLE [x 0.3 r 20 b 1 hue 50 sat 1]
+  TRIANGLE [x 0.3 r 20 s 0.8 b 1 sat 0]
+  CIRCLE [x -0.3 y 0.5 s 0.6 b 1 hue 120 sat 1]
+  CIRCLE [x -0.3 y 0.5 s 0.5 b 1 sat 0]
+  SQUARE [s 1.5 0.05 r -30 b 1 hue 0 sat 1]
+}

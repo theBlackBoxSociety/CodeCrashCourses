@@ -1,0 +1,33 @@
+/*
+LOOP
+
+- Continuation of the previous file
+- The units are relative to each other
+
+1: write the loop syntax
+2: use the loop adjustments (rotation)
+3: use the shape adjustments (y offset)
+
+*/
+
+startshape rozetta
+
+shape rozetta
+{
+  // 1:
+  loop 10 [ x 1 ] primitives []
+  
+  // 2:
+  // loop 36 [ r -10 ] primitives [ y 8 ] 
+  
+  // note how transformations are used here:
+  // All shapes are moved up the same amount and then
+  // rotated 10° more than the previous shape
+}
+
+shape primitives
+{
+  SQUARE [ y -1 ]
+  TRIANGLE []
+  CIRCLE [ y 1.2 ]
+}

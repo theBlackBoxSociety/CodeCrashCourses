@@ -1,0 +1,61 @@
+/*
+SYMMETRY
+
+Dihedral = mirror symmetry
+Cyclic = rotational symmetry
+
+info: https://github.com/MtnViewJohn/context-free/wiki/Symmetry-Operations
+
+*/
+
+// Dihedral
+
+// Horizontal mirror
+CF::Symmetry = CF::Dihedral, 1
+
+// Horizontal mirror and then repeated 3 times
+// CF::Symmetry = CF::Dihedral, 3
+
+
+// Cyclic
+
+// No mirror
+// CF::Symmetry = CF::Cyclic, 1
+
+// Also horizontal mirror
+// CF::Symmetry = CF::Cyclic, 2
+
+// The shape rotated n times around it's origin
+// CF::Symmetry = CF::Cyclic, 3
+
+
+
+
+
+
+startshape tree
+
+shape tree
+
+// stem-section
+// no weight = weight 1
+rule 1      
+{
+ SQUARE []
+ tree [ y 1 s 0.99 r 1.5 ]
+}
+
+
+// change curve direction
+rule 0.1   
+{
+ tree [ flip 90 ] // compare with r -5..5
+}
+
+// spawn branches
+rule 0.05   
+{
+ tree [ s 0.99 r 1.5 flip 90 ]
+ tree [ x 0.5 s 0.6 r -60 ]
+ tree [ x -0.5 s 0.5 r 60 ]
+}

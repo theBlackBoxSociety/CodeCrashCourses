@@ -1,0 +1,19 @@
+/*
+NON PROPORTIONAL SCALING
+
+*/
+
+startshape bar
+
+shape bar
+{
+  CIRCLE [s 1 2]
+}
+
+/*
+// another example:
+shape volume
+{
+  loop i = 20 [ x 2 ] SQUARE [ s 1 i ]
+}
+*/

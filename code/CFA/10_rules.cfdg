@@ -1,34 +1,45 @@
-// rules
-
-
-startshape Tree
-
-
-// Another form of randomization: rules
-// no weight = weight 1
-
-shape Tree
-rule 1      // reguar stem-section
-{
- SQUARE []
- Tree [ y 1 s 0.99 r 1.5 ]
-}
-
-
 /*
-rule 0.1   // change curve direction
-{
- Tree [ flip 90 ]
-}
+RULES
 
+- Start new project
+- Weight: control of probability
+  (more control in randomization)
+- Execute specific actions in the middle of a recursion chain
 
-rule 0.05   // spawn branches
-{
- Tree [ s 0.99 r 1.5 flip 90 ]
- Tree [ x 0.5 s 0.6 r -60 ]
- Tree [ x -0.5 s 0.5 r 60 ]
-}
+1: Draw the stem of a tree
+2: Define a second rule to change the curve direction
+3: Set weighting
+4: Spawn branches
+
 */
 
+startshape tree
 
-// grow branches only to the right or left side?
+shape tree
+
+// stem-section
+// (if no weight given = weight 1)
+rule 1
+{
+ SQUARE []
+ tree [ y 1 s 0.99 r 1.5 ]
+}
+
+/*
+// 1% chance to change direction
+rule 0.1   
+{
+ tree [ flip 90 ] 
+ // Flip mirrors the iteration (the following are relative to it)
+ // Rotate would make an almost invisible change in the curve
+ 
+}
+
+// spawn branches
+rule 0.05 
+{
+ tree [ s 0.99 r 1.5 flip 90 ] // regular segment
+ tree [ x 0.5 s 0.6 r -60 ]    // split left
+ tree [ x -0.5 s 0.5 r 60 ]    // split right
+}
+*/

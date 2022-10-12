@@ -1,8 +1,20 @@
-// Transform
+/*
+TRANSFORM
 
+- Continuation of the previous file
+- Shape adjustments 
+  - position (x = horizontal, y = vertical)
+  - rotation (in degrees, positive values = counter-clockwise)
+    - long: rotate
+    - short: r
+- Kinds of of brackets
+  - [] for shape adjustments
+  - {} for functions
+- Positive and negative values
+
+*/
 
 startshape primitives
-
 
 shape primitives
 {
@@ -10,3 +22,4 @@ shape primitives
   TRIANGLE []
   CIRCLE [ y 1.2 ]
 }
+

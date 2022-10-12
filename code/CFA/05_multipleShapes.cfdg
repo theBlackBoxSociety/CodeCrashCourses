@@ -1,27 +1,39 @@
-// multiple shapes
+/*
+MULTIPLE SHAPES
 
+- Continuation of the previous file
+- The order of the shapes in the editor doesn’t matter:
+  The program follows pointers instead of 
+  reading the file top to bottom.
+
+1: make a ring of rings
+2: make a filled circle
+  - use scale adjustment: 's'
+
+*/
 
 startshape ring
-
 
 // 1: draw a ring
 shape ring
 {
   // note how transformations are used here
-  loop 36 [ rotate 10 ] rozetta [ y 120 ]
-  // shorthand rotate: r
+  loop 36 [ r -10 ] rozetta [ y 120 ]
+  
+  // Using the same transformations elsewhere
+  // example 1: 
+  // loop 36 [] rozetta [ r -10 y 120 ]
+  // example 2: 
+  // loop 36 [y 10] rozetta [ r -10 ]
 }
 
 // 2: nest rings inside of rings
 /*
 shape swoosh
 {
-  loop 50 [ r 5 s .86 ] ring []
-  // shorthand scale: s
+  loop 50 [ s .86 r 5  ] ring []
 }
 */
-
-
 
 // from the previous file
 shape rozetta

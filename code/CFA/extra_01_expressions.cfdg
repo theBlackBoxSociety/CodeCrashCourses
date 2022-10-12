@@ -1,0 +1,19 @@
+/*
+EXPRESSIONS
+
+Use math:
+https://github.com/MtnViewJohn/context-free/wiki/Expressions
+
+*/
+
+
+startshape oscilloscope
+
+shape oscilloscope
+{
+  loop i = 14400
+  [
+    x sin(i*0.475) 
+    y cos(i*0.5)
+  ] CIRCLE []
+}
