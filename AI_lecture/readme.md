@@ -265,3 +265,30 @@ Zach Blas [The Doors](https://zachblas.info/works/the-doors/) is a multimedia in
 
 ## 5.   Recent developments with text to image tech such as midjourney
    
+   
+https://openai.com/dall-e-2/
+https://imagen.research.google/
+https://www.midjourney.com/home/
+https://huggingface.co/spaces/multimodalart/latentdiffusion
+https://www.craiyon.com/
+https://beta.dreamstudio.ai/dream
+https://labs.openai.com/
+https://huggingface.co/spaces/dalle-mini/dalle-mini
+https://replicate.com/laion-ai/laionide-v3
+https://huggingface.co/spaces/multimodalart/rudalle
+https://creator.nightcafe.studio/create
+https://app.wombo.art/
+https://grisk.itch.io/stable-diffusion-gui?
+fbclid=IwAR3ps3vpH_OIoPrW_JSgKNR9jG4uKeFhVVacKrCsfes_cZ0AlTcjOQpi0ZY
+https://replicate.com/
+Photoshop plugin:
+One click install Stable Diff windows/linux:
+https://github.com/cmdr2/stable-diffusion-ui?
+fbclid=IwAR1HoTIR6ZxmBlHHqIXKToBdP_N20pPxYdfUjRBZI4vsPyQEFyBNuUjK8wk
+One click install m1 Mac:
+https://cdm.link/2022/09/run-stable-diffusion-ai-art-on-your-m1-mac/
+Training:
+https://liner.ai/
+Stable Diff Vid:
+
+   
