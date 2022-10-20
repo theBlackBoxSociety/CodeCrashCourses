@@ -267,8 +267,10 @@ Zach Blas [The Doors](https://zachblas.info/works/the-doors/) is a multimedia in
    
    This type of AI is all about prompt engineering. You can find a detailed cookbook here: https://github.com/sw-yx/prompt-eng
    
-   ![image](https://user-images.githubusercontent.com/23503827/196936364-b492196f-d160-4313-879e-65954f4207d2.png)
+   ![image](https://user-images.githubusercontent.com/23503827/196936364-b492196f-d160-4313-879e-65954f4207d2.png)<br>
 Prompt: My bee stepped on a dog (Midjourney)
+   
+   Below is a list with possible text to image versions. Most are free or work with credits.
    
 https://openai.com/dall-e-2/<br>
 https://imagen.research.google/<br>
@@ -299,7 +301,7 @@ https://liner.ai/
 
 ## 6.   This year we started with AIAIAI. Project run by Jerry Galle, Floor Toppets (master), Floor Vanden Berghe (ex-master) & Vincent Vanasten (3e bach) 
    
-   Everybody is free to join and experiment to create projects with AI. We have one fast pc at out disposal plus a small budget to realise mini projects.
+   Everybody is free to join and experiment to create projects with AI. We have one fast pc at out disposal plus a small budget to realise mini projects. We'll install diffusion and some Gans on this pc so that you can experiment with this tech free of charge.
 http://aiaiai.mediakunst.be/
 
    
