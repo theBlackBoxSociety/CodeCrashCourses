@@ -263,4 +263,5 @@ On 08.05.2021 KIOSK hosts the Critical AI Manifestation:
 
 Zach Blas [The Doors](https://zachblas.info/works/the-doors/) is a multimedia installation exploring psychedelia, drug use, and artificial intelligence. A sequel to   <span class="c3 c16">Contra-Internet: Jubilee 2033    —a film that follows author Ayn Rand on an acid trip, in which she bears witness to a dystopian future of the internet — The Doors    is the first installment in a trilogy of queer science fiction works that takes on the fantasies, beliefs, and Californian histories that influence Silicon Valley and the tech industry today.  
 
- 
+## 5.   Recent developments with text to image tech such as midjourney
+   
