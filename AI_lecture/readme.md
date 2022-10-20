@@ -291,5 +291,7 @@ https://cdm.link/2022/09/run-stable-diffusion-ai-art-on-your-m1-mac/<br>
 Training:<br>
 https://liner.ai/
 
+## 6.   This year we started with AIAIAI. Project run by Jerry Galle, Floor Toppets (master), Floor Vanden Berghe (ex-master) & Vincent Vanasten (3e bach)   
+http://aiaiai.mediakunst.be/
 
    
