@@ -265,6 +265,10 @@ Zach Blas [The Doors](https://zachblas.info/works/the-doors/) is a multimedia in
 
 ## 5.   Recent developments with text to image tech such as midjourney
    
+   This type of AI is all about prompt engineering. You can find a detailed cookbook here: https://github.com/sw-yx/prompt-eng
+   
+   ![image](https://user-images.githubusercontent.com/23503827/196936364-b492196f-d160-4313-879e-65954f4207d2.png)
+Prompt: My bee stepped on a dog (Midjourney)
    
 https://openai.com/dall-e-2/<br>
 https://imagen.research.google/<br>
