@@ -266,29 +266,30 @@ Zach Blas [The Doors](https://zachblas.info/works/the-doors/) is a multimedia in
 ## 5.   Recent developments with text to image tech such as midjourney
    
    
-https://openai.com/dall-e-2/
-https://imagen.research.google/
-https://www.midjourney.com/home/
-https://huggingface.co/spaces/multimodalart/latentdiffusion
-https://www.craiyon.com/
-https://beta.dreamstudio.ai/dream
-https://labs.openai.com/
-https://huggingface.co/spaces/dalle-mini/dalle-mini
-https://replicate.com/laion-ai/laionide-v3
-https://huggingface.co/spaces/multimodalart/rudalle
-https://creator.nightcafe.studio/create
-https://app.wombo.art/
-https://grisk.itch.io/stable-diffusion-gui?
-fbclid=IwAR3ps3vpH_OIoPrW_JSgKNR9jG4uKeFhVVacKrCsfes_cZ0AlTcjOQpi0ZY
-https://replicate.com/
-Photoshop plugin:
-One click install Stable Diff windows/linux:
-https://github.com/cmdr2/stable-diffusion-ui?
-fbclid=IwAR1HoTIR6ZxmBlHHqIXKToBdP_N20pPxYdfUjRBZI4vsPyQEFyBNuUjK8wk
-One click install m1 Mac:
-https://cdm.link/2022/09/run-stable-diffusion-ai-art-on-your-m1-mac/
-Training:
+https://openai.com/dall-e-2/<br>
+https://imagen.research.google/<br>
+https://www.midjourney.com/home/<br>
+https://huggingface.co/spaces/multimodalart/latentdiffusion<br>
+https://www.craiyon.com/<br>
+https://beta.dreamstudio.ai/dream<br>
+https://labs.openai.com/<br>
+https://huggingface.co/spaces/dalle-mini/dalle-mini<br>
+https://replicate.com/laion-ai/laionide-v3<br>
+https://huggingface.co/spaces/multimodalart/rudalle<br>
+https://creator.nightcafe.studio/create<br>
+https://app.wombo.art/<br>
+https://grisk.itch.io/stable-diffusion-gui?fbclid=IwAR3ps3vpH_OIoPrW_JSgKNR9jG4uKeFhVVacKrCsfes_cZ0AlTcjOQpi0ZY<br>
+https://replicate.com/<br>
+   
+Photoshop plugin:<br>
+One click install Stable Diff windows/linux:<br>
+https://github.com/cmdr2/stable-diffusion-ui?fbclid=IwAR1HoTIR6ZxmBlHHqIXKToBdP_N20pPxYdfUjRBZI4vsPyQEFyBNuUjK8wk<br>
+   
+One click install m1 Mac:<br>
+https://cdm.link/2022/09/run-stable-diffusion-ai-art-on-your-m1-mac/<br>
+   
+Training:<br>
 https://liner.ai/
-Stable Diff Vid:
+
 
    
