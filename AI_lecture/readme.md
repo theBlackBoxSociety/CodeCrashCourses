@@ -282,6 +282,8 @@ https://grisk.itch.io/stable-diffusion-gui?fbclid=IwAR3ps3vpH_OIoPrW_JSgKNR9jG4u
 https://replicate.com/<br>
    
 Photoshop plugin:<br>
+https://www.youtube.com/watch?v=XdctF1uTLBo<br>
+   
 One click install Stable Diff windows/linux:<br>
 https://github.com/cmdr2/stable-diffusion-ui?fbclid=IwAR1HoTIR6ZxmBlHHqIXKToBdP_N20pPxYdfUjRBZI4vsPyQEFyBNuUjK8wk<br>
    
