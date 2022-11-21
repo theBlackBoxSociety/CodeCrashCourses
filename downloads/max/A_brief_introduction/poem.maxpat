@@ -2,14 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 6,
-			"architecture" : "x86",
+			"major" : 8,
+			"minor" : 5,
+			"revision" : 1,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 261.0, 157.0, 640.0, 480.0 ],
+		"classnamespace" : "box",
+		"rect" : [ 195.0, 87.0, 880.0, 779.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -46,7 +48,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1101.25, 707.0, 87.0, 22.0 ],
-					"style" : "",
 					"text" : "zl filter symbol"
 				}
 
@@ -59,8 +60,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 796.5, 140.0, 20.0, 20.0 ],
-					"style" : ""
+					"patching_rect" : [ 796.5, 140.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -74,7 +74,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 796.5, 203.0, 61.0, 22.0 ],
-					"style" : "",
 					"text" : "random 4"
 				}
 
@@ -89,7 +88,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 796.5, 170.0, 71.0, 22.0 ],
-					"style" : "",
 					"text" : "metro 1000"
 				}
 
@@ -104,23 +102,7 @@
 					"numoutlets" : 6,
 					"outlettype" : [ "bang", "bang", "bang", "bang", "bang", "" ],
 					"patching_rect" : [ 796.5, 237.0, 92.0, 22.0 ],
-					"style" : "",
 					"text" : "select 0 1 2 3 4"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-119",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 1317.5, 932.0, 94.0, 47.0 ],
-					"style" : "",
-					"text" : "<-- won't dump everything into message box"
 				}
 
 			}
@@ -134,7 +116,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 855.5, 818.0, 63.0, 23.0 ],
-					"style" : "",
 					"text" : "sort -1 -1"
 				}
 
@@ -148,7 +129,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 709.25, 900.0, 34.0, 22.0 ],
-					"style" : "",
 					"text" : "print"
 				}
 
@@ -163,8 +143,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 625.5, 932.0, 673.0, 38.0 ],
-					"style" : "",
+					"patching_rect" : [ 709.25, 932.0, 673.0, 38.0 ],
 					"text" : "my small I see little one leave young you part make person see see they try place different place she public feel my but company little he come feel"
 				}
 
@@ -179,7 +158,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 803.5, 818.0, 43.0, 23.0 ],
-					"style" : "",
 					"text" : "dump"
 				}
 
@@ -194,7 +172,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 736.5, 818.0, 58.0, 23.0 ],
-					"style" : "",
 					"text" : "sort 1 -1"
 				}
 
@@ -208,8 +185,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 734.5, 679.0, 113.0, 20.0 ],
-					"style" : "",
-					"text" : "<-- save sentance"
+					"text" : "<-- save sentence"
 				}
 
 			}
@@ -220,8 +196,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 709.25, 679.0, 20.0, 20.0 ],
-					"style" : ""
+					"parameter_enable" : 0,
+					"patching_rect" : [ 709.25, 679.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -235,7 +211,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 709.25, 818.0, 23.0, 22.0 ],
-					"style" : "",
 					"text" : "t s"
 				}
 
@@ -251,10 +226,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 709.25, 852.0, 87.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 0
+						"embed" : 0,
+						"precision" : 6
 					}
 ,
-					"style" : "",
 					"text" : "coll sentance2"
 				}
 
@@ -269,7 +244,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 709.25, 780.0, 97.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend insert 1"
 				}
 
@@ -284,7 +258,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"patching_rect" : [ 1087.25, 621.0, 33.0, 22.0 ],
-					"style" : "",
 					"text" : "t s b"
 				}
 
@@ -299,7 +272,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1137.25, 649.0, 37.0, 22.0 ],
-					"style" : "",
 					"text" : "clear"
 				}
 
@@ -314,7 +286,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1101.25, 649.0, 32.5, 22.0 ],
-					"style" : "",
 					"text" : "1"
 				}
 
@@ -324,12 +295,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-101",
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 709.25, 743.0, 642.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 709.25, 743.0, 642.0, 49.0 ],
+					"text" : "use life few man hand person eye way world they be early his important day know say feel work the case all high make this all year and will be will case day man public say all know thing thing go world next there make own say there bad week give they bad eye public she small man work this this all bad week thing large I few look come an"
 				}
 
 			}
@@ -343,7 +315,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1101.25, 580.0, 102.0, 22.0 ],
-					"style" : "",
 					"text" : "prepend merge 1"
 				}
 
@@ -359,10 +330,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1101.25, 680.0, 60.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 0
+						"embed" : 0,
+						"precision" : 6
 					}
 ,
-					"style" : "",
 					"text" : "coll stack"
 				}
 
@@ -377,7 +348,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 1216.75, 504.0, 33.0, 22.0 ],
-					"style" : "",
 					"text" : "t b s"
 				}
 
@@ -392,7 +362,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 1016.25, 492.0, 33.0, 22.0 ],
-					"style" : "",
 					"text" : "t b s"
 				}
 
@@ -513,10 +482,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1294.0, 217.0, 59.5, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 1
+						"embed" : 1,
+						"precision" : 6
 					}
 ,
-					"style" : "",
 					"text" : "coll other"
 				}
 
@@ -605,10 +574,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1213.0, 217.0, 59.5, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 1
+						"embed" : 1,
+						"precision" : 6
 					}
 ,
-					"style" : "",
 					"text" : "coll prep"
 				}
 
@@ -729,10 +698,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1127.0, 217.0, 59.5, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 1
+						"embed" : 1,
+						"precision" : 6
 					}
 ,
-					"style" : "",
 					"text" : "coll verb"
 				}
 
@@ -853,10 +822,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1040.0, 217.0, 59.5, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 1
+						"embed" : 1,
+						"precision" : 6
 					}
 ,
-					"style" : "",
 					"text" : "coll adj"
 				}
 
@@ -977,10 +946,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 946.0, 217.0, 65.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 1
+						"embed" : 1,
+						"precision" : 6
 					}
 ,
-					"style" : "",
 					"text" : "coll nouns"
 				}
 
@@ -995,7 +964,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1301.75, 458.0, 87.0, 22.0 ],
-					"style" : "",
 					"text" : "zl filter symbol"
 				}
 
@@ -1007,8 +975,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1301.75, 354.0, 20.0, 20.0 ],
-					"style" : ""
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1301.75, 354.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -1022,7 +990,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 1301.75, 386.0, 68.0, 22.0 ],
-					"style" : "",
 					"text" : "random 17"
 				}
 
@@ -1037,7 +1004,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1237.25, 354.0, 63.0, 22.0 ],
-					"style" : "",
 					"text" : "refer prep"
 				}
 
@@ -1052,7 +1018,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1216.75, 534.0, 104.0, 22.0 ],
-					"style" : "",
 					"text" : "about"
 				}
 
@@ -1141,10 +1106,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1301.75, 421.0, 59.5, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 1
+						"embed" : 1,
+						"precision" : 6
 					}
 ,
-					"style" : "",
 					"text" : "coll"
 				}
 
@@ -1159,7 +1124,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1101.25, 458.0, 87.0, 22.0 ],
-					"style" : "",
 					"text" : "zl filter symbol"
 				}
 
@@ -1171,8 +1135,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1101.25, 354.0, 20.0, 20.0 ],
-					"style" : ""
+					"parameter_enable" : 0,
+					"patching_rect" : [ 1101.25, 354.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -1186,7 +1150,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 1101.25, 386.0, 68.0, 22.0 ],
-					"style" : "",
 					"text" : "random 25"
 				}
 
@@ -1201,7 +1164,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1019.0, 354.0, 71.0, 22.0 ],
-					"style" : "",
 					"text" : "refer nouns"
 				}
 
@@ -1216,7 +1178,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1019.0, 323.0, 55.0, 22.0 ],
-					"style" : "",
 					"text" : "refer adj"
 				}
 
@@ -1231,7 +1192,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 946.0, 323.0, 62.0, 22.0 ],
-					"style" : "",
 					"text" : "refer verb"
 				}
 
@@ -1246,8 +1206,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1016.25, 525.0, 104.0, 22.0 ],
-					"style" : "",
-					"text" : "time"
+					"text" : "an"
 				}
 
 			}
@@ -1261,7 +1220,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 946.0, 354.0, 66.0, 22.0 ],
-					"style" : "",
 					"text" : "refer other"
 				}
 
@@ -1272,103 +1230,103 @@
 						"count" : 25,
 						"data" : [ 							{
 								"key" : 1,
-								"value" : [ "be" ]
+								"value" : [ "time" ]
 							}
 , 							{
 								"key" : 2,
-								"value" : [ "have" ]
+								"value" : [ "person" ]
 							}
 , 							{
 								"key" : 3,
-								"value" : [ "do" ]
+								"value" : [ "year" ]
 							}
 , 							{
 								"key" : 4,
-								"value" : [ "say" ]
+								"value" : [ "way" ]
 							}
 , 							{
 								"key" : 5,
-								"value" : [ "get" ]
+								"value" : [ "day" ]
 							}
 , 							{
 								"key" : 6,
-								"value" : [ "make" ]
+								"value" : [ "thing" ]
 							}
 , 							{
 								"key" : 7,
-								"value" : [ "go" ]
+								"value" : [ "man" ]
 							}
 , 							{
 								"key" : 8,
-								"value" : [ "know" ]
+								"value" : [ "world" ]
 							}
 , 							{
 								"key" : 9,
-								"value" : [ "take" ]
+								"value" : [ "life" ]
 							}
 , 							{
 								"key" : 10,
-								"value" : [ "see" ]
+								"value" : [ "hand" ]
 							}
 , 							{
 								"key" : 11,
-								"value" : [ "come" ]
+								"value" : [ "part" ]
 							}
 , 							{
 								"key" : 12,
-								"value" : [ "think" ]
+								"value" : [ "child" ]
 							}
 , 							{
 								"key" : 13,
-								"value" : [ "look" ]
+								"value" : [ "eye" ]
 							}
 , 							{
 								"key" : 14,
-								"value" : [ "want" ]
+								"value" : [ "woman" ]
 							}
 , 							{
 								"key" : 15,
-								"value" : [ "give" ]
+								"value" : [ "place" ]
 							}
 , 							{
 								"key" : 16,
-								"value" : [ "use" ]
-							}
-, 							{
-								"key" : 17,
-								"value" : [ "find" ]
-							}
-, 							{
-								"key" : 18,
-								"value" : [ "tell" ]
-							}
-, 							{
-								"key" : 19,
-								"value" : [ "ask" ]
-							}
-, 							{
-								"key" : 20,
 								"value" : [ "work" ]
 							}
 , 							{
+								"key" : 17,
+								"value" : [ "week" ]
+							}
+, 							{
+								"key" : 18,
+								"value" : [ "case" ]
+							}
+, 							{
+								"key" : 19,
+								"value" : [ "point" ]
+							}
+, 							{
+								"key" : 20,
+								"value" : [ "government" ]
+							}
+, 							{
 								"key" : 21,
-								"value" : [ "seem" ]
+								"value" : [ "company" ]
 							}
 , 							{
 								"key" : 22,
-								"value" : [ "feel" ]
+								"value" : [ "number" ]
 							}
 , 							{
 								"key" : 23,
-								"value" : [ "try" ]
+								"value" : [ "group" ]
 							}
 , 							{
 								"key" : 24,
-								"value" : [ "leave" ]
+								"value" : [ "problem" ]
 							}
 , 							{
 								"key" : 25,
-								"value" : [ "call" ]
+								"value" : [ "fact" ]
 							}
  ]
 					}
@@ -1382,10 +1340,10 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 1101.25, 421.0, 59.5, 22.0 ],
 					"saved_object_attributes" : 					{
-						"embed" : 1
+						"embed" : 1,
+						"precision" : 6
 					}
 ,
-					"style" : "",
 					"text" : "coll"
 				}
 
@@ -1503,7 +1461,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"midpoints" : [ 835.200012, 291.0, 955.5, 291.0 ],
+					"midpoints" : [ 835.200000000000045, 306.0, 955.5, 306.0 ],
 					"order" : 1,
 					"source" : [ "obj-122", 2 ]
 				}
@@ -1512,7 +1470,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-48", 0 ],
-					"midpoints" : [ 806.0, 275.5, 955.5, 275.5 ],
+					"midpoints" : [ 806.0, 290.5, 955.5, 290.5 ],
 					"order" : 1,
 					"source" : [ "obj-122", 0 ]
 				}
@@ -1521,7 +1479,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-56", 0 ],
-					"midpoints" : [ 820.599976, 275.5, 1028.5, 275.5 ],
+					"midpoints" : [ 820.600000000000023, 290.5, 1028.5, 290.5 ],
 					"order" : 1,
 					"source" : [ "obj-122", 1 ]
 				}
@@ -1530,7 +1488,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
-					"midpoints" : [ 849.799988, 291.0, 1028.5, 291.0 ],
+					"midpoints" : [ 849.799999999999955, 306.0, 1028.5, 306.0 ],
 					"order" : 1,
 					"source" : [ "obj-122", 3 ]
 				}
@@ -1539,7 +1497,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-61", 0 ],
-					"midpoints" : [ 849.799988, 305.0, 1110.75, 305.0 ],
+					"midpoints" : [ 849.799999999999955, 306.0, 1110.75, 306.0 ],
 					"order" : 0,
 					"source" : [ "obj-122", 3 ]
 				}
@@ -1548,7 +1506,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-61", 0 ],
-					"midpoints" : [ 835.200012, 305.0, 1110.75, 305.0 ],
+					"midpoints" : [ 835.200000000000045, 306.0, 1110.75, 306.0 ],
 					"order" : 0,
 					"source" : [ "obj-122", 2 ]
 				}
@@ -1557,7 +1515,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-61", 0 ],
-					"midpoints" : [ 820.599976, 305.0, 1110.75, 305.0 ],
+					"midpoints" : [ 820.600000000000023, 306.0, 1110.75, 306.0 ],
 					"order" : 0,
 					"source" : [ "obj-122", 1 ]
 				}
@@ -1566,7 +1524,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-61", 0 ],
-					"midpoints" : [ 806.0, 305.0, 1110.75, 305.0 ],
+					"midpoints" : [ 806.0, 306.0, 1110.75, 306.0 ],
 					"order" : 0,
 					"source" : [ "obj-122", 0 ]
 				}
@@ -1575,7 +1533,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-66", 0 ],
-					"midpoints" : [ 864.400024, 305.0, 1311.25, 305.0 ],
+					"midpoints" : [ 864.399999999999977, 306.0, 1311.25, 306.0 ],
 					"order" : 0,
 					"source" : [ "obj-122", 4 ]
 				}
@@ -1584,7 +1542,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-71", 0 ],
-					"midpoints" : [ 864.400024, 305.0, 1246.75, 305.0 ],
+					"midpoints" : [ 864.399999999999977, 306.0, 1246.75, 306.0 ],
 					"order" : 1,
 					"source" : [ "obj-122", 4 ]
 				}

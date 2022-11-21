@@ -2,14 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 6,
-			"architecture" : "x86",
+			"major" : 8,
+			"minor" : 5,
+			"revision" : 1,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 450.0, 417.0 ],
+		"classnamespace" : "box",
+		"rect" : [ 34.0, 87.0, 450.0, 417.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"bubble" : 1,
@@ -48,20 +50,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 250.0, 89.0, 110.0, 42.0 ],
-					"style" : "",
 					"text" : "click to open the patchers",
 					"textcolor" : [ 0.862745, 0.009587, 0.050288, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-10",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 284.0, 133.0, 150.0, 20.0 ],
-					"style" : ""
 				}
 
 			}
@@ -76,7 +66,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 90.0, 381.0, 29.5, 17.0 ],
-					"style" : "",
 					"text" : "open"
 				}
 
@@ -91,7 +80,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 27.5, 378.0, 46.0, 17.0 ],
-					"style" : "",
 					"text" : "CREDITS"
 				}
 
@@ -107,7 +95,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 90.0, 405.0, 43.0, 19.0 ],
-					"style" : "",
 					"text" : "pcontrol"
 				}
 
@@ -122,14 +109,15 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 3,
-							"revision" : 6,
-							"architecture" : "x86",
+							"major" : 8,
+							"minor" : 5,
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 84.0, 129.0, 493.0, 235.0 ],
+						"classnamespace" : "box",
+						"rect" : [ 84.0, 129.0, 426.0, 198.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -156,7 +144,91 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
+								"box" : 								{
+									"handoff" : "",
+									"id" : "obj-8",
+									"maxclass" : "ubutton",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "bang", "bang", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 21.0, 69.0, 354.0, 21.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"hidden" : 1,
+									"id" : "obj-7",
+									"linecount" : 3,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 237.0, 200.0, 270.0, 49.0 ],
+									"presentation_linecount" : 3,
+									"text" : ";\rmax launchbrowser https://github.com/nnimar/Max-for-the-Visual-Arts"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"handoff" : "",
+									"id" : "obj-15",
+									"maxclass" : "ubutton",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "bang", "bang", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 21.0, 115.0, 354.0, 36.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"hidden" : 1,
+									"id" : "obj-5",
+									"linecount" : 4,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 140.0, 270.0, 299.0, 62.0 ],
+									"text" : ";\rmax launchbrowser https://www.kadenze.com/courses/programming-max-structuring-interactive-software-for-digital-arts/info"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial Bold",
+									"fontsize" : 13.0,
+									"id" : "obj-3",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 22.0, 92.0, 19.0, 21.0 ],
+									"text" : "&"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial Bold",
+									"fontsize" : 13.0,
+									"id" : "obj-1",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 21.0, 112.0, 354.0, 50.0 ],
+									"presentation_linecount" : 2,
+									"text" : "the Kadenze course \"Programming Max: Structuring Interactive Software for Digital Arts\" by Matthew Wright\n"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"comment" : "",
 									"hidden" : 1,
@@ -166,21 +238,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 401.0, 21.0, 30.0, 30.0 ],
-									"style" : ""
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontsize" : 13.0,
-									"id" : "obj-5",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 21.0, 178.0, 300.0, 21.0 ],
-									"style" : "",
-									"text" : "you can find it in the Package Manager (file menu)"
+									"patching_rect" : [ 401.0, 21.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -192,24 +250,8 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 21.0, 69.0, 580.0, 21.0 ],
-									"style" : "",
+									"patching_rect" : [ 21.0, 69.0, 341.0, 21.0 ],
 									"text" : "Max-for-the-Visual-Arts compiled by Nicolas Marechal"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 13.0,
-									"id" : "obj-3",
-									"linecount" : 4,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 21.0, 112.0, 463.0, 65.0 ],
-									"style" : "",
-									"text" : "Max for the Visual Arts (Max 7) is a self-learning tool and a repository for the Max patches made or used on the BA interaction design arts (IDA) and the MA interactive design communication (IDC) at the London College of Communication (University of the Arts London, United Kingdom)."
 								}
 
 							}
@@ -221,14 +263,29 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 21.0, 47.0, 489.0, 21.0 ],
-									"style" : "",
+									"patching_rect" : [ 21.0, 47.0, 238.0, 21.0 ],
 									"text" : "This brief MAX introduction builds upon "
 								}
 
 							}
  ],
-						"lines" : [  ]
+						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"hidden" : 1,
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"hidden" : 1,
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+ ]
 					}
 ,
 					"patching_rect" : [ 90.0, 429.0, 56.0, 22.0 ],
@@ -236,11 +293,9 @@
 						"description" : "",
 						"digest" : "",
 						"globalpatchername" : "",
-						"style" : "",
 						"tags" : ""
 					}
 ,
-					"style" : "",
 					"text" : "p credits"
 				}
 
@@ -256,7 +311,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 326.0, 87.0, 108.0, 17.0 ],
-					"style" : "",
 					"text" : "A brief MAX (8) introduction"
 				}
 
@@ -274,13 +328,14 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 7,
-							"minor" : 3,
-							"revision" : 6,
-							"architecture" : "x86",
+							"major" : 8,
+							"minor" : 5,
+							"revision" : 1,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
+						"classnamespace" : "box",
 						"rect" : [ 777.0, 141.0, 294.0, 167.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -308,17 +363,17 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
-									"fontsize" : 10.435669,
+									"fontsize" : 10.435669000000001,
 									"id" : "obj-5",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 21.0, 121.0, 48.0, 20.0 ],
-									"style" : "",
 									"text" : "pcontrol"
 								}
 
@@ -326,14 +381,13 @@
 , 							{
 								"box" : 								{
 									"fontname" : "Arial",
-									"fontsize" : 10.435669,
+									"fontsize" : 10.435669000000001,
 									"id" : "obj-4",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 21.0, 88.0, 45.0, 20.0 ],
-									"style" : "",
 									"text" : "load $1"
 								}
 
@@ -348,8 +402,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 21.0, 40.0, 18.0, 18.0 ],
-									"prototypename" : "Arial9",
-									"style" : ""
+									"prototypename" : "Arial9"
 								}
 
 							}
@@ -371,17 +424,15 @@
  ]
 					}
 ,
-					"patching_rect" : [ 127.0, 325.0, 40.0, 20.0 ],
+					"patching_rect" : [ 136.0, 348.0, 40.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
 						"fontsize" : 9.0,
 						"globalpatchername" : "",
-						"style" : "",
 						"tags" : ""
 					}
 ,
-					"style" : "",
 					"text" : "p sub"
 				}
 
@@ -390,7 +441,7 @@
 				"box" : 				{
 					"button" : 1,
 					"fontname" : "Arial Bold",
-					"fontsize" : 13.0,
+					"fontsize" : 14.0,
 					"hint" : "",
 					"htabcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"id" : "obj-1",
@@ -400,7 +451,6 @@
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 27.5, 128.0, 218.0, 181.0 ],
-					"style" : "",
 					"tabcolor" : [ 0.0, 0.0, 0.0, 0.188235 ],
 					"tabs" : [ "01_patchingBasics.maxpat", "02_maxObjects.maxpat", "03_styleGuide.maxpat", "04_patchingRules.maxpat", "05_maxPlayground.maxpat", "06_maxhelp_a_day.maxpat" ],
 					"textcolor" : [ 0.101961, 0.121569, 0.172549, 1.0 ],
@@ -419,7 +469,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 32.5, 30.0, 207.0, 84.0 ],
-					"style" : "",
 					"text" : "A Brief Introduction \nin MAX ",
 					"textcolor" : [ 0.266117, 0.267399, 0.355108, 1.0 ]
 				}
@@ -435,7 +484,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 447.0, 87.0, 28.0, 19.0 ],
-					"style" : "",
 					"text" : "print"
 				}
 
@@ -451,7 +499,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 367.0, 30.0, 48.0, 19.0 ],
-					"style" : "",
 					"text" : "loadbang"
 				}
 
@@ -467,7 +514,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 424.0, 30.0, 47.0, 19.0 ],
-					"style" : "",
 					"text" : "onecopy"
 				}
 
@@ -484,7 +530,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 311.0, 57.0, 72.0, 26.0 ],
-					"style" : "",
 					"text" : ";\rmax maxwindow"
 				}
 
