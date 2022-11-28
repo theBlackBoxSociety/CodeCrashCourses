@@ -43,3 +43,5 @@ Deze initiatie is een stuk uitgebreider en volgt een duidelijke opdeling tussen 
 * [Max/MSP/Jitter Introductory Course](https://www.youtube.com/playlist?list=PLRc5WfOZXC4nRlW4GOXO-0LZDsoG82ZVv) by Federico Foderaro
 * All [Amazing Max Tutorials](https://www.youtube.com/playlist?list=PLRc5WfOZXC4ktigvYCDhek0475hizrnM5) by Federico Foderaro
 * [Delicious Max Tutorials](https://www.youtube.com/playlist?list=PLD45EDA6F67827497) van your good buddy Sam (aka dude837)
+* [codelabMAX_.zip](https://github.com/theBlackBoxSociety/CodeCrashCourses/files/10106908/codelabMAX_.zip)
+
