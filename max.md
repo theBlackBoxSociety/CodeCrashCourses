@@ -36,6 +36,8 @@ Download [deze patches](downloads/max/A_More_Elaborated_Overview.zip) (verouderd
 Deze initiatie is een stuk uitgebreider en volgt een duidelijke opdeling tussen werken met video, geluid, Open GL, etc maar is ontwikkeld voor een vroegere MAX versie (6) en gaat niet in op werken met de GPU.
 <hr>
 
+* Some more messy patches: [codelabMAX_.zip](https://github.com/theBlackBoxSociety/CodeCrashCourses/files/10106908/codelabMAX_.zip)
+
 ### Video tutorials en lessen van anderen
 * [KADENZE](https://www.kadenze.com/courses/programming-MAX-structuring-interactive-software-for-digital-arts-i/info)
 * Cycling74 artikel "[An Introduction to Video Lessons for Max Users](https://cycling74.com/articles/an-introduction-to-free-video-lessons-for-max-msp-users)"
@@ -43,5 +45,5 @@ Deze initiatie is een stuk uitgebreider en volgt een duidelijke opdeling tussen 
 * [Max/MSP/Jitter Introductory Course](https://www.youtube.com/playlist?list=PLRc5WfOZXC4nRlW4GOXO-0LZDsoG82ZVv) by Federico Foderaro
 * All [Amazing Max Tutorials](https://www.youtube.com/playlist?list=PLRc5WfOZXC4ktigvYCDhek0475hizrnM5) by Federico Foderaro
 * [Delicious Max Tutorials](https://www.youtube.com/playlist?list=PLD45EDA6F67827497) van your good buddy Sam (aka dude837)
-* [codelabMAX_.zip](https://github.com/theBlackBoxSociety/CodeCrashCourses/files/10106908/codelabMAX_.zip)
+
 
