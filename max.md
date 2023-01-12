@@ -20,7 +20,6 @@ MAX groeide over de jaren heen, het is ontstaan midden de jaren 80, uit tot een 
 
 ☞ Verzameling [DEMO](downloads/max/Demos.zip) patchers
 
-
 ## Max leren
 De [Learn Max](https://cycling74.com/learn) sectie op de C74 website bundelt de Max Ducumentatie, een reeks tutorials, artikels en boeken over het weriken met Max.    
 
@@ -34,9 +33,11 @@ Download **[deze patches](downloads/max/A_brief_introduction.zip)** (zip file ±
 Download [deze patches](downloads/max/A_More_Elaborated_Overview.zip) (verouderd) (zip file ±5MB)
 
 Deze initiatie is een stuk uitgebreider en volgt een duidelijke opdeling tussen werken met video, geluid, Open GL, etc maar is ontwikkeld voor een vroegere MAX versie (6) en gaat niet in op werken met de GPU.
-<hr>
 
-* Some more messy patches: [codelabMAX_.zip](https://github.com/theBlackBoxSociety/CodeCrashCourses/files/10106908/codelabMAX_.zip)
+### Some more messy patches 
+[codelabMAX_.zip](downloads/max/codelabMAX_jerry.zip)
+
+<hr>
 
 ### Video tutorials en lessen van anderen
 * [KADENZE](https://www.kadenze.com/courses/programming-MAX-structuring-interactive-software-for-digital-arts-i/info)
