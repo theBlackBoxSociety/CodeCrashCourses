@@ -35,7 +35,7 @@ Download [deze patches](downloads/max/A_More_Elaborated_Overview.zip) (verouderd
 Deze initiatie is een stuk uitgebreider en volgt een duidelijke opdeling tussen werken met video, geluid, Open GL, etc maar is ontwikkeld voor een vroegere MAX versie (6) en gaat niet in op werken met de GPU.
 
 ### Some more messy patches 
-[codelabMAX_.zip](downloads/max/codelabMAX_jerry.zip)
+download ook [deze patches](downloads/max/codelabMAX_jerry.zip) die Jerry samen stelde.
 
 <hr>
 
