@@ -1,9 +1,10 @@
 # Physical Computing with the Arduino
-<sup>last updated: 20/9/2022</sup>
+
+<sup>last updated: 20/2/2023</sup>
 
 👋🏼 Hi, welcome 👋🏼    
 
-You will learn the basics of physical computing <sup>[1](#1)</sup> with the Arduino. This includes learning to know and setting up the workflow, reading and reproducing circuits, program the Arduino, ...
+You will learn the basics of **physical computing** <sup>[1](#1)</sup> with the Arduino. This includes learning to know and setting up the workflow, reading and reproducing circuits, program the Arduino, ...
 
 ![Arduino Board & IDE](images/arduino/intro.png)
 
@@ -48,27 +49,28 @@ You will learn the basics of physical computing <sup>[1](#1)</sup> with the Ardu
 
 ## 1. Introduction
 
-[Arduino](https://www.arduino.cc/) is an open source physical computing platform based on a simple input/output (I/O) board and a development environment that is based on [Processing](http://www.processing.org).     
-Arduino can be used to develop standalone interactive objects or can be connected to software on your computer, such as [Processing](https://processing.org/), the internet with a.o. [P5.JS](https://p5js.org/) with [the p5.bots library](https://github.com/sarahgp/p5bots), [Pure Data](https://puredata.info/), [TouchDesigner](https://www.derivative.ca/), [VVVV](https://vvvv.org/), [Max](https://cycling74.com/products/max/), ...  
+[Arduino](https://www.arduino.cc/) is an open source physical computing platform based on a simple input/output (I/O) board and a computer program.     
+Arduino can be used to develop standalone interactive objects or can be connected to software on your computer, such as [Processing](https://processing.org/), the internet with a.o. [P5.JS](https://p5js.org/), [Pure Data](https://puredata.info/), [TouchDesigner](https://www.derivative.ca/), [VVVV](https://vvvv.org/), [Max](https://cycling74.com/products/max/), ...  
 
 ## 2. The Arduino Platform
 
 Arduino is composed of two major parts: **the Arduino board**, which is the piece of hardware you work on when you build your objects, and **the Arduino software**, an editor (IDE) that runs on your computer or in a webbrowser. In the editor you write a sketch (a computer program with a set of instructions) that you upload to the Arduino board. This program tells the board what to do.
 
-Arduino has a worldwide **community** of over 30 million active users. The Arduino website is a nice place to start exploring projects built on Arduino, learn, ask for help etc.    
-👉🏻 a series of [tutorials](https://docs.arduino.cc/tutorials/)    
-👉🏻 the deprecated [playground](https://playground.arduino.cc/) user section with projects and tutorials and it's new version, [the projecthub] (https://create.arduino.cc/projecthub)    
+Arduino has a worldwide **community** of over 30 million active users. The [Arduino website](https://www.arduino.cc/) is a nice place to start exploring projects built on Arduino, learn, ask for help etc.    
+👉🏻 Learn the basics of Arduino through [the Built-in Examples](https://docs.arduino.cc/built-in-examples/) collection tutorials.    
+👉🏻 a vast repository of [tutorials](https://docs.arduino.cc/tutorials/)    
+👉🏻 [The projecthub](https://projecthub.arduino.cc/) documents projects created by the arduino community    
 👉🏻 the discussion [Forum](https://forum.arduino.cc/)
 
 ## 3. The Arduino Board
-The Arduino board is a small microcontroller or, in other words, a small computer chip on a circuitboard. This computer is at least a thousand times less powerful than your laptop, but it is also a lot cheaper and very useful to build interesting devices.
+The Arduino board is a small microcontroller or, in other words, a small computer chip on a circuitboard. This computer is at least a thousand times less powerful than your laptop, but it is also a lot cheaper and very useful to build applied devices.
 
 There are many different Arduino boards on the market. All official boards are listed [here](https://www.arduino.cc/en/hardware).
 
-We have 2 different Arduino boards in use: the [Arduino Uno Rev3](https://store.arduino.cc/products/arduino-uno-rev3) in both the official version and [keyestudio Uno R3](https://www.keyestudio.com/keyestudio-uno-r3-atmega328p-development-board-usb-cable-for-arduino-p0513-p0513.html) (a clone) and the [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every).
+In the studio we have 2 different Arduino boards in use: the [Arduino Uno Rev3](https://store.arduino.cc/products/arduino-uno-rev3) and the [Arduino Nano Every](https://store.arduino.cc/products/arduino-nano-every).
 
 ### The UNO
-![](images/arduino/keyesudio_arduino.jpg)
+![](images/arduino/arduino.jpg)
 
 Looking at the Arduino board: you’ll see a black chip with 28 *legs*. That chip is the ATmega328P, the heart of your board.
 The arduino UNO / ATmega328 features:
@@ -158,7 +160,7 @@ Then, we need to **select the board** that we are going to use. We can do this b
 ![Image](images/arduino/boardselect.png)    
 *screenshot of the board & port select procedure*
 
-To finally upload some code we first take a look at the toolbar at the top of the editor.    
+To finally **upload some code** we first take a look at the toolbar at the top of the editor.    
 At the very left, there are 2 buttons: a **checkmark**, used used *to verify* and **an arrow pointing right**, used *to upload*.    
 The verify tool simply goes through your sketch, checks for errors and compiles it. The upload tool does the same, but when it finishes compiling, it also uploads it to the board.
 
@@ -731,7 +733,7 @@ There is [a second part of this tutorial](MaxArduinoDMX.md) in the make about co
 
 <hr>
 <span name="1">1.</span> What Is Physical Computing?     
-All computing is physical. We work with computational systems by taking action with our bodies, on devices. The construction of computing devices, and their use, consumes raw materials and energy as well. In short, the virtual always has physical consequences.  
+All computing is physical. We work with computational systems by taking action with our bodies, on devices. The construction of computing devices, and their use, consumes raw materials and energy as well. In short, the virtual always has physical consequences.    
 Physical Computing here refers especially to creating or using devices that interact with the world around them. A computer senses its environment (as touch, movement, temperature, ...), processes that information, and then performs some action (with lights, motors, ...).
 
 <div style="text-align:center;">This tutorial is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)</div>
