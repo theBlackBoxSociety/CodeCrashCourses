@@ -51,7 +51,7 @@ void loop() {
   // if there's any serial available, read it:
   while (Serial.available() > 0) {
     // look for the next valid integer in the incoming serial stream:
-    int mtr = Serial.parseInt();
+    int mtr = Serial.parseInt();x
     int stps = Serial.parseInt();
     int spd = Serial.parseInt();
     // look for the newline. That's the end of your sentence:

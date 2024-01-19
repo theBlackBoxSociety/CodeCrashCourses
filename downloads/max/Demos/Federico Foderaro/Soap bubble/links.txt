@@ -1,4 +1,0 @@
-links:
-https://cycling74.com/articles/an-interview-with-federico-foderaro
-https://www.martinbackes.com/nature-changes-along-with-us/
-https://www.patreon.com/posts/shadertoy-soap-21771669

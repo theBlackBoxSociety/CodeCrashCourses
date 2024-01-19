@@ -18,15 +18,17 @@ void setup() {
   //being serial communication
   Serial.begin(9600);
   // Sets the maximum permitted speed, default is 1step/s
-  stepperX.setMaxSpeed(200.0);
+  stepperX.setMaxSpeed(5000);
   // sets the acceleration/deceleration rate
-  // desired acceleration in steps per second per second
+  // desired acceleration in steps per second
   // thus the lower the number the shorter the acceleration
-  stepperX.setAcceleration(100.0);
-  stepperY.setMaxSpeed(200.0);
-  stepperY.setAcceleration(100.0);
-  stepperZ.setMaxSpeed(200.0);
-  stepperZ.setAcceleration(100.0);
+  //stepperX.setAcceleration(100);
+  stepperY.setMaxSpeed(5000);
+  //stepperY.setAcceleration(100);
+  stepperZ.setMaxSpeed(5000);
+  //stepperZ.setAcceleration(100);
+  //stepperA.setMaxSpeed(1000);
+  //stepperA.setAcceleration(100);
 }
 void loop() {
   // if there's any serial available, read it:
@@ -38,21 +40,24 @@ void loop() {
     // look for the newline. That's the end of your sentence:
     if (Serial.read() == '\n') {
       if (mtr == 1) {
-        rotateX(stps*16, spd*16);
+        rotateX(stps * 16, spd * 16);
       } else if (mtr == 2) {
-        rotateY(stps*16, spd*16);
+        rotateY(stps * 16, spd * 16);
       } else if (mtr == 3) {
-        rotateZ(stps*16, spd*16);
-      }else if (mtr == 0) {
+        rotateZ(stps * 16, spd * 16);
+      //} else if (mtr == 4) {
+      //  rotateA(stps * 16, spd * 16);
+      } else if (mtr == 0) {
         handbrake();
       }
     }
   }
 
-// Poll the motor and step it if a step is due
-stepperX.run();
-stepperY.run();
-stepperZ.run();
+  // Poll the motor and step it if a step is due
+  stepperX.run();
+  stepperY.run();
+  stepperZ.run();
+  //stepperA.run();
 }
 
 void rotateX(int steps, int spd) {
@@ -63,24 +68,34 @@ void rotateX(int steps, int spd) {
   stepperX.move(steps);
 }
 void rotateY(int steps, int spd) {
+  stepperY.setSpeed(spd);
   // the acceleration & deceleration is relative to the speed
-  stepperY.setAcceleration(spd / 4.);
-  stepperY.setMaxSpeed(spd);
+  //stepperY.setAcceleration(spd / 4.);
+  //stepperY.setMaxSpeed(spd);
   // Set the target position relative to the current position
   stepperY.move(steps);
 }
 void rotateZ(int steps, int spd) {
+  stepperZ.setSpeed(spd);
   // the acceleration & deceleration is relative to the speed
-  stepperZ.setAcceleration(spd / 4.);
-  stepperZ.setMaxSpeed(spd);
+  //stepperZ.setAcceleration(spd / 4.);
+  //stepperZ.setMaxSpeed(spd);
   // Set the target position relative to the current position
   stepperZ.move(steps);
 }
-
-
+/*
+void rotateA(int steps, int spd) {
+  // the acceleration & deceleration is relative to the speed
+  stepperA.setAcceleration(spd / 4.);
+  stepperA.setMaxSpeed(spd);
+  // Set the target position relative to the current position
+  stepperA.move(steps);
+}
+*/
 void handbrake() {
   // Stop as fast as possible
   stepperX.stop();
   stepperY.stop();
   stepperZ.stop();
+  //stepperA.stop();
 }
